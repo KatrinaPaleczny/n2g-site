@@ -404,10 +404,11 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div></div>
 
 <script>
-function setLang(lang){
+function setLang(lang,skipUrl){
   document.documentElement.lang=lang;
   document.body.classList.toggle('thai',lang==='th');
   document.querySelectorAll('.lang-btn').forEach(function(b){var isTh=b.textContent.trim()==='ไทย';b.classList.toggle('active',lang==='th'?isTh:!isTh)});
+  if(!skipUrl){var u=new URL(window.location);if(lang==='th')u.searchParams.set('lang','th');else u.searchParams.delete('lang');history.replaceState(null,'',u)}
 }
 function closeMenu(){
   var h=document.querySelector('.hamburger');if(h)h.classList.remove('open');
@@ -443,5 +444,6 @@ document.querySelectorAll('.carousel').forEach(function(el){
     if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){ms(id,dx<0?1:-1)}
   },{passive:true});
 });
+if(new URLSearchParams(window.location.search).get('lang')==='th')setLang('th',true);
 </script>
 </body></html>
