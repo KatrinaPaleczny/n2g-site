@@ -69,7 +69,8 @@ img{display:block;max-width:100%}
 
 /* Tea */
 .tea-g{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
-.tea-c{padding:14px;border:1px solid var(--border);background:var(--white)}
+.tea-c{padding:14px;border:1px solid var(--border);background:var(--white);transition:border-color .2s,box-shadow .2s}
+.tea-c:hover{border-color:var(--terra);box-shadow:0 2px 8px rgba(184,92,56,0.08)}
 .tea-c-type{font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--text4)}
 .tea-c-name{font-family:'EB Garamond',serif;font-size:14px;margin-top:2px}
 .tea-c-note{font-size:11px;color:var(--text3);margin-top:5px;line-height:1.4;font-style:italic}
