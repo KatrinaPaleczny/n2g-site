@@ -3,9 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Native2Global</title>
+<title>Native2Global — Specialty Coffee & Tea from Doi Tung, Chiang Rai</title>
+<meta name="description" content="Single-estate specialty coffee and heritage teas from Doi Tung, Chiang Rai. Arabica forest coffee, 16 heritage teas, wholesale and direct.">
+<meta property="og:title" content="Native2Global — Specialty Coffee & Tea from Doi Tung">
+<meta property="og:description" content="Single-estate specialty coffee and heritage teas from Doi Tung, Chiang Rai. Grown, processed, and roasted on-site.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://n2g-site.vercel.app">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%233A6B4A'/><text x='50' y='62' text-anchor='middle' font-size='32' font-family='serif' fill='white'>N2G</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Karla:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Karla:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&display=swap');
 :root{
   --white:#fff;--cream:#FDFBF7;--sand:#F3EFE7;
   --text:#2C2417;--text2:#5A4D3C;--text3:#8E8070;--text4:#B5AA9A;
@@ -75,6 +83,16 @@ img{display:block;max-width:100%}
 
 
 
+/* Hamburger */
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px;width:28px;height:28px;position:relative}
+.hamburger span{display:block;width:18px;height:2px;background:var(--text2);position:absolute;left:5px;transition:all 0.25s}
+.hamburger span:nth-child(1){top:7px}
+.hamburger span:nth-child(2){top:13px}
+.hamburger span:nth-child(3){top:19px}
+.hamburger.open span:nth-child(1){transform:rotate(45deg);top:13px}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg);top:13px}
+
 /* CTA */
 .cta-btn{display:inline-block;padding:10px 24px;border:1px solid var(--border);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text2);cursor:pointer;transition:all 0.2s}.cta-btn:hover{border-color:var(--green);color:var(--green)}
 
@@ -115,13 +133,21 @@ textarea.fi{resize:vertical;min-height:72px}
 .lang-th{display:none}
 body.thai .lang-en{display:none}
 body.thai .lang-th{display:block}
+.flav .lang-en,.flav .lang-th{display:inline}
+body.thai .flav .lang-en{display:none}
+body.thai .flav .lang-th{display:inline}
 body.thai .lang-th-inline{display:inline}
 body.thai .lang-en-inline{display:none}
 
 @media(max-width:680px){
 .w{padding:0 20px}.two,.con-g,.tea-g{grid-template-columns:1fr}
 .ws,.grow{flex-wrap:wrap}.ws-i,.grow-i{min-width:50%}
-.nav{padding:14px 16px}.nav-links{gap:14px}.nav-links a{font-size:10px}
+.nav{padding:14px 16px}
+.hamburger{display:flex;align-items:center;justify-content:center}
+.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(253,251,247,0.97);backdrop-filter:blur(10px);flex-direction:column;padding:16px 20px;gap:0;border-bottom:1px solid var(--border)}
+.nav-links.open{display:flex}
+.nav-links a{font-size:13px;padding:10px 0;border-bottom:1px solid var(--border)}
+.nav-links a:last-child{border-bottom:none}
 .hero{padding:60px 20px 48px}
 .ev-row{grid-template-columns:1fr}
 }
@@ -132,12 +158,13 @@ body.thai .lang-en-inline{display:none}
 <nav class="nav">
 <div class="nav-brand" onclick="go('home')"><div class="nav-dot">N2G</div><span class="nav-name">Native2Global</span></div>
 <div class="nav-right">
+  <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
   <div class="nav-links">
-    <a onclick="go('coffee')" id="nav-coffee"><span class="lang-en-inline">Coffee</span><span class="lang-th-inline th-text" style="display:none">กาแฟ</span></a>
-    <a onclick="go('tea')" id="nav-tea"><span class="lang-en-inline">Tea</span><span class="lang-th-inline th-text" style="display:none">ชา</span></a>
-    <a onclick="go('events')" id="nav-events"><span class="lang-en-inline">Events</span><span class="lang-th-inline th-text" style="display:none">อีเวนต์</span></a>
-    <a onclick="go('about')" id="nav-about"><span class="lang-en-inline">About</span><span class="lang-th-inline th-text" style="display:none">เกี่ยวกับ</span></a>
-    <a onclick="go('home','connect')" id="nav-connect"><span class="lang-en-inline">Connect</span><span class="lang-th-inline th-text" style="display:none">ติดต่อ</span></a>
+    <a href="#coffee" onclick="go('coffee');closeMenu();return false" id="nav-coffee" tabindex="0"><span class="lang-en-inline">Coffee</span><span class="lang-th-inline th-text" style="display:none">กาแฟ</span></a>
+    <a href="#tea" onclick="go('tea');closeMenu();return false" id="nav-tea" tabindex="0"><span class="lang-en-inline">Tea</span><span class="lang-th-inline th-text" style="display:none">ชา</span></a>
+    <a href="#events" onclick="go('events');closeMenu();return false" id="nav-events" tabindex="0"><span class="lang-en-inline">Events</span><span class="lang-th-inline th-text" style="display:none">อีเวนต์</span></a>
+    <a href="#about" onclick="go('about');closeMenu();return false" id="nav-about" tabindex="0"><span class="lang-en-inline">About</span><span class="lang-th-inline th-text" style="display:none">เกี่ยวกับ</span></a>
+    <a href="#connect" onclick="go('home','connect');closeMenu();return false" id="nav-connect" tabindex="0"><span class="lang-en-inline">Connect</span><span class="lang-th-inline th-text" style="display:none">ติดต่อ</span></a>
   </div>
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="setLang('en')">EN</button>
@@ -152,7 +179,7 @@ body.thai .lang-en-inline{display:none}
 <!-- Green hero -->
 <div class="hero-wrap">
 <div class="hero">
-  <div class="hero-loc">Chiang Rai, Thailand</div>
+  <div class="hero-loc"><span class="lang-en">Chiang Rai, Thailand</span><span class="lang-th th-text">เชียงราย ประเทศไทย</span></div>
   <h1 class="hero-h">
     <span class="lang-en">Specialty coffee and teas from a single estate</span>
     <span class="lang-th th-text">กาแฟพิเศษและชาจากไร่เดียว</span>
@@ -182,9 +209,9 @@ body.thai .lang-en-inline{display:none}
   <div class="accent"></div>
   <div class="sec-label"><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div>
   <p class="sec-p"><span class="lang-en">Arabica. Catimor, Caturra, Catuai. Fully washed, sun-dried on raised beds. Available roasted or as green beans.</span><span class="lang-th th-text">อราบิก้า Catimor, Caturra, Catuai ล้างสะอาด ตากแดดบนแคร่ยกสูง มีทั้งคั่วแล้วและกรีนบีน</span></p>
-  <div class="prod"><div><div class="prod-name">Drip Select X.O.</div><div class="prod-sub"><span class="lang-en">Filter / Pour-over · AA-A</span><span class="lang-th th-text">ฟิลเตอร์ / พัวร์โอเวอร์ · AA-A</span></div><div class="flavs"><span class="flav">Brown sugar</span><span class="flav">Orange blossom</span><span class="flav">Mandarin</span><span class="flav">Lychee</span><span class="flav">Peach</span></div></div></div>
-  <div class="prod"><div><div class="prod-name">Espresso Select Special</div><div class="prod-sub"><span class="lang-en">Espresso · AA-A</span><span class="lang-th th-text">เอสเพรสโซ่ · AA-A</span></div><div class="flavs"><span class="flav">Caramel</span><span class="flav">Osmanthus</span><span class="flav">Passion fruit</span><span class="flav">Dark chocolate</span></div></div></div>
-  <div class="prod"><div><div class="prod-name">Espresso Select Classic</div><div class="prod-sub"><span class="lang-en">Espresso · Mixed</span><span class="lang-th th-text">เอสเพรสโซ่ · มิกซ์</span></div><div class="flavs"><span class="flav">Butterscotch</span><span class="flav">Sweet orange</span><span class="flav">Vanilla</span></div></div></div>
+  <div class="prod"><div><div class="prod-name">Drip Select X.O.</div><div class="prod-sub"><span class="lang-en">Filter / Pour-over · AA-A</span><span class="lang-th th-text">ฟิลเตอร์ / พัวร์โอเวอร์ · AA-A</span></div><div class="flavs"><span class="flav"><span class="lang-en">Brown sugar</span><span class="lang-th th-text">น้ำตาลทราย</span></span><span class="flav"><span class="lang-en">Orange blossom</span><span class="lang-th th-text">ดอกส้ม</span></span><span class="flav"><span class="lang-en">Mandarin</span><span class="lang-th th-text">แมนดาริน</span></span><span class="flav"><span class="lang-en">Lychee</span><span class="lang-th th-text">ลิ้นจี่</span></span><span class="flav"><span class="lang-en">Peach</span><span class="lang-th th-text">พีช</span></span></div></div></div>
+  <div class="prod"><div><div class="prod-name">Espresso Select Special</div><div class="prod-sub"><span class="lang-en">Espresso · AA-A</span><span class="lang-th th-text">เอสเพรสโซ่ · AA-A</span></div><div class="flavs"><span class="flav"><span class="lang-en">Caramel</span><span class="lang-th th-text">คาราเมล</span></span><span class="flav"><span class="lang-en">Osmanthus</span><span class="lang-th th-text">ออสแมนทัส</span></span><span class="flav"><span class="lang-en">Passion fruit</span><span class="lang-th th-text">เสาวรส</span></span><span class="flav"><span class="lang-en">Dark chocolate</span><span class="lang-th th-text">ดาร์กช็อกโกแลต</span></span></div></div></div>
+  <div class="prod"><div><div class="prod-name">Espresso Select Classic</div><div class="prod-sub"><span class="lang-en">Espresso · Mixed</span><span class="lang-th th-text">เอสเพรสโซ่ · มิกซ์</span></div><div class="flavs"><span class="flav"><span class="lang-en">Butterscotch</span><span class="lang-th th-text">บัตเตอร์สก็อตช์</span></span><span class="flav"><span class="lang-en">Sweet orange</span><span class="lang-th th-text">ส้มหวาน</span></span><span class="flav"><span class="lang-en">Vanilla</span><span class="lang-th th-text">วานิลลา</span></span></div></div></div>
   <span class="more-link" onclick="go('coffee')"><span class="lang-en">See all coffee details →</span><span class="lang-th th-text">ดูข้อมูลกาแฟทั้งหมด →</span></span>
 </div>
 
@@ -272,9 +299,9 @@ body.thai .lang-en-inline{display:none}
 <div class="sec-h"><span class="lang-en">2025/2026 harvest</span><span class="lang-th th-text">เก็บเกี่ยว 2025/2026</span></div>
 <p class="sec-p" style="margin-bottom:32px"><span class="lang-en">Arabica from our single estate at Doi Tung. Catimor, Caturra, and Catuai varieties grown at 1,200–1,400m. Fully washed and sun-dried on raised beds. Available roasted to your specification, or as green beans.</span><span class="lang-th th-text">อราบิก้าจากไร่เดียวที่ดอยตุง พันธุ์ Catimor, Caturra, Catuai ปลูกที่ 1,200–1,400 เมตร ล้างสะอาดและตากแดดบนแคร่ยกสูง มีทั้งคั่วตามสั่งหรือกรีนบีน</span></p>
 
-<div class="prod"><div><div class="prod-name">Drip Select X.O.</div><div class="prod-sub"><span class="lang-en">Filter / Pour-over · AA-A · Roast: Cinnamon, Light, City</span><span class="lang-th th-text">ฟิลเตอร์ / พัวร์โอเวอร์ · AA-A · คั่ว: Cinnamon, Light, City</span></div><div class="flavs"><span class="flav">Brown sugar</span><span class="flav">Orange blossom</span><span class="flav">Sweet mandarin</span><span class="flav">Lychee</span><span class="flav">Peach</span></div><p style="font-size:12px;color:var(--text3);margin-top:8px;font-style:italic"><span class="lang-en">Soft body with juicy sweet finish</span><span class="lang-th th-text">บอดี้นุ่มกับฟินิชหวานฉ่ำ</span></p><p style="font-size:13px;color:var(--text2);margin-top:8px;line-height:1.6"><span class="lang-en">Grade X.O. — carefully selected ripe cherries, fully washed and gradual sun dried. Our finest selection.</span><span class="lang-th th-text">เกรด X.O. — คัดเชอรี่สุกอย่างพิถีพิถัน ล้างสะอาดและตากแดดอย่างช้าๆ</span></p></div></div>
-<div class="prod"><div><div class="prod-name">Espresso Select Special</div><div class="prod-sub"><span class="lang-en">Espresso · AA-A · Roast: City, Medium, Full City</span><span class="lang-th th-text">เอสเพรสโซ่ · AA-A · คั่ว: City, Medium, Full City</span></div><div class="flavs"><span class="flav">Caramel</span><span class="flav">Palm sugar</span><span class="flav">Osmanthus</span><span class="flav">Passion fruit</span><span class="flav">Dark chocolate</span></div><p style="font-size:12px;color:var(--text3);margin-top:8px;font-style:italic"><span class="lang-en">Good body with long sweet finish</span><span class="lang-th th-text">บอดี้ดีกับฟินิชหวานยาว</span></p><p style="font-size:13px;color:var(--text2);margin-top:8px;line-height:1.6"><span class="lang-en">The osmanthus flower note is distinctive to our Doi Tung terroir.</span><span class="lang-th th-text">กลิ่นดอกออสแมนทัสเป็นเอกลักษณ์ของพื้นที่ดอยตุงของเรา</span></p></div></div>
-<div class="prod"><div><div class="prod-name">Espresso Select Classic</div><div class="prod-sub"><span class="lang-en">Espresso · Mixed · Roast: Medium, Full City</span><span class="lang-th th-text">เอสเพรสโซ่ · มิกซ์ · คั่ว: Medium, Full City</span></div><div class="flavs"><span class="flav">Butterscotch</span><span class="flav">Sweet orange</span><span class="flav">Vanilla</span></div><p style="font-size:12px;color:var(--text3);margin-top:8px;font-style:italic"><span class="lang-en">Mellow body with lingering sweet finish</span><span class="lang-th th-text">บอดี้นุ่มนวลกับฟินิชหวานยาวนาน</span></p><p style="font-size:13px;color:var(--text2);margin-top:8px;line-height:1.6"><span class="lang-en">Our approachable everyday espresso. Works beautifully in milk-based drinks.</span><span class="lang-th th-text">เอสเพรสโซ่ที่ดื่มง่ายสำหรับทุกวัน เข้ากันดีกับเครื่องดื่มนม</span></p></div></div>
+<div class="prod"><div><div class="prod-name">Drip Select X.O.</div><div class="prod-sub"><span class="lang-en">Filter / Pour-over · AA-A · Roast: Cinnamon, Light, City</span><span class="lang-th th-text">ฟิลเตอร์ / พัวร์โอเวอร์ · AA-A · คั่ว: Cinnamon, Light, City</span></div><div class="flavs"><span class="flav"><span class="lang-en">Brown sugar</span><span class="lang-th th-text">น้ำตาลทราย</span></span><span class="flav"><span class="lang-en">Orange blossom</span><span class="lang-th th-text">ดอกส้ม</span></span><span class="flav"><span class="lang-en">Sweet mandarin</span><span class="lang-th th-text">แมนดารินหวาน</span></span><span class="flav"><span class="lang-en">Lychee</span><span class="lang-th th-text">ลิ้นจี่</span></span><span class="flav"><span class="lang-en">Peach</span><span class="lang-th th-text">พีช</span></span></div><p style="font-size:12px;color:var(--text3);margin-top:8px;font-style:italic"><span class="lang-en">Soft body with juicy sweet finish</span><span class="lang-th th-text">บอดี้นุ่มกับฟินิชหวานฉ่ำ</span></p><p style="font-size:13px;color:var(--text2);margin-top:8px;line-height:1.6"><span class="lang-en">Grade X.O. — carefully selected ripe cherries, fully washed and gradual sun dried. Our finest selection.</span><span class="lang-th th-text">เกรด X.O. — คัดเชอรี่สุกอย่างพิถีพิถัน ล้างสะอาดและตากแดดอย่างช้าๆ</span></p></div></div>
+<div class="prod"><div><div class="prod-name">Espresso Select Special</div><div class="prod-sub"><span class="lang-en">Espresso · AA-A · Roast: City, Medium, Full City</span><span class="lang-th th-text">เอสเพรสโซ่ · AA-A · คั่ว: City, Medium, Full City</span></div><div class="flavs"><span class="flav"><span class="lang-en">Caramel</span><span class="lang-th th-text">คาราเมล</span></span><span class="flav"><span class="lang-en">Palm sugar</span><span class="lang-th th-text">น้ำตาลปาล์ม</span></span><span class="flav"><span class="lang-en">Osmanthus</span><span class="lang-th th-text">ออสแมนทัส</span></span><span class="flav"><span class="lang-en">Passion fruit</span><span class="lang-th th-text">เสาวรส</span></span><span class="flav"><span class="lang-en">Dark chocolate</span><span class="lang-th th-text">ดาร์กช็อกโกแลต</span></span></div><p style="font-size:12px;color:var(--text3);margin-top:8px;font-style:italic"><span class="lang-en">Good body with long sweet finish</span><span class="lang-th th-text">บอดี้ดีกับฟินิชหวานยาว</span></p><p style="font-size:13px;color:var(--text2);margin-top:8px;line-height:1.6"><span class="lang-en">The osmanthus flower note is distinctive to our Doi Tung terroir.</span><span class="lang-th th-text">กลิ่นดอกออสแมนทัสเป็นเอกลักษณ์ของพื้นที่ดอยตุงของเรา</span></p></div></div>
+<div class="prod"><div><div class="prod-name">Espresso Select Classic</div><div class="prod-sub"><span class="lang-en">Espresso · Mixed · Roast: Medium, Full City</span><span class="lang-th th-text">เอสเพรสโซ่ · มิกซ์ · คั่ว: Medium, Full City</span></div><div class="flavs"><span class="flav"><span class="lang-en">Butterscotch</span><span class="lang-th th-text">บัตเตอร์สก็อตช์</span></span><span class="flav"><span class="lang-en">Sweet orange</span><span class="lang-th th-text">ส้มหวาน</span></span><span class="flav"><span class="lang-en">Vanilla</span><span class="lang-th th-text">วานิลลา</span></span></div><p style="font-size:12px;color:var(--text3);margin-top:8px;font-style:italic"><span class="lang-en">Mellow body with lingering sweet finish</span><span class="lang-th th-text">บอดี้นุ่มนวลกับฟินิชหวานยาวนาน</span></p><p style="font-size:13px;color:var(--text2);margin-top:8px;line-height:1.6"><span class="lang-en">Our approachable everyday espresso. Works beautifully in milk-based drinks.</span><span class="lang-th th-text">เอสเพรสโซ่ที่ดื่มง่ายสำหรับทุกวัน เข้ากันดีกับเครื่องดื่มนม</span></p></div></div>
 
 <div class="carousel" style="aspect-ratio:21/9;margin-top:32px" id="c-coffee"><div class="carousel-inner" id="c-coffee-s"><div class="carousel-slide"><div class="ph-num">1</div><div class="ph-label">Roasted beans</div><div class="ph-desc">Beans + brewed cup</div></div><div class="carousel-slide"><div class="ph-num">2</div><div class="ph-label">Drying beds</div><div class="ph-desc">Green beans on raised beds</div></div><div class="carousel-slide"><div class="ph-num">3</div><div class="ph-label">Green beans</div><div class="ph-desc">Unroasted, ready for export</div></div><div class="carousel-slide"><div class="ph-num">4</div><div class="ph-label">Quality control</div><div class="ph-desc">Moisture meter</div></div></div><div class="carousel-dots"><div class="carousel-dot active" onclick="gs('c-coffee',0)"></div><div class="carousel-dot" onclick="gs('c-coffee',1)"></div><div class="carousel-dot" onclick="gs('c-coffee',2)"></div><div class="carousel-dot" onclick="gs('c-coffee',3)"></div></div><div class="carousel-nav prev" onclick="ms('c-coffee',-1)">‹</div><div class="carousel-nav next" onclick="ms('c-coffee',1)">›</div></div>
 
@@ -368,8 +395,13 @@ body.thai .lang-en-inline{display:none}
 
 <script>
 function setLang(lang){
+  document.documentElement.lang=lang;
   document.body.classList.toggle('thai',lang==='th');
   document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.textContent.trim()===lang.toUpperCase())});
+}
+function closeMenu(){
+  var h=document.querySelector('.hamburger');if(h)h.classList.remove('open');
+  var m=document.querySelector('.nav-links');if(m)m.classList.remove('open');
 }
 function go(page,scrollTo){
   document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
@@ -382,5 +414,14 @@ function go(page,scrollTo){
 var cState={};
 function gs(id,n){cState[id]=n;document.getElementById(id+'-s').style.transform='translateX(-'+n*100+'%)';document.querySelectorAll('#'+id+' .carousel-dot').forEach(function(d,i){d.classList.toggle('active',i===n)})}
 function ms(id,dir){var t=document.querySelectorAll('#'+id+' .carousel-slide').length;var c=cState[id]||0;var nx=c+dir;if(nx<0)nx=t-1;if(nx>=t)nx=0;gs(id,nx)}
+document.querySelectorAll('.carousel').forEach(function(el){
+  var id=el.id,sx=0,sy=0,moving=false;
+  el.addEventListener('touchstart',function(e){sx=e.touches[0].clientX;sy=e.touches[0].clientY;moving=true},{passive:true});
+  el.addEventListener('touchend',function(e){
+    if(!moving)return;moving=false;
+    var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;
+    if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){ms(id,dx<0?1:-1)}
+  },{passive:true});
+});
 </script>
 </body></html>
