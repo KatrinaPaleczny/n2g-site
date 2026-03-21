@@ -99,7 +99,7 @@ img{display:block;max-width:100%}
 
 /* Contact page */
 .ff{margin-bottom:12px}.fl{font-size:10px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text4);margin-bottom:4px}
-.fi{width:100%;padding:10px 12px;font-size:14px;font-family:'Karla',sans-serif;border:1px solid var(--border);background:var(--white);color:var(--text);outline:none;font-weight:300}.fi:focus{border-color:var(--green)}.fi::placeholder{color:var(--text4)}
+.fi{width:100%;padding:10px 12px;font-size:14px;font-family:'Karla',sans-serif;border:1px solid var(--border);background:var(--white);color:var(--text);font-weight:300}.fi:focus{border-color:var(--green);outline:2px solid rgba(58,107,74,0.3);outline-offset:1px}.fi::placeholder{color:var(--text4)}
 textarea.fi{resize:vertical;min-height:72px}
 .fb{padding:11px 24px;background:var(--green);color:#fff;border:none;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;font-family:'Karla',sans-serif;margin-top:4px}.fb:hover{background:var(--green-dark)}
 .ci{font-size:12px;color:var(--text3);line-height:1.8}.ci strong{color:var(--text2);font-weight:400}
@@ -111,7 +111,7 @@ textarea.fi{resize:vertical;min-height:72px}
 .carousel-slide{min-width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center}
 .carousel-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
 .carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(44,36,23,0.15);cursor:pointer}.carousel-dot.active{background:var(--terra)}
-.carousel-nav{position:absolute;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.8);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text3)}.carousel-nav.prev{left:8px}.carousel-nav.next{right:8px}
+.carousel-nav{position:absolute;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.8);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text3);padding:0;font-family:inherit;line-height:1}.carousel-nav.prev{left:8px}.carousel-nav.next{right:8px}
 .ph-label{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);font-weight:500;margin-bottom:4px}
 .ph-desc{font-size:11px;color:var(--text3);line-height:1.4;max-width:200px}
 .ph-num{font-size:24px;color:rgba(44,36,23,0.1);font-weight:500;margin-bottom:4px}
@@ -152,12 +152,17 @@ body.thai .lang-en-inline{display:none}
 .hero{padding:60px 20px 48px}
 .ev-row{grid-template-columns:1fr}
 }
+
+/* Accessibility: focus-visible outlines */
+a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-visible,.carousel-nav:focus-visible,.carousel-dot:focus-visible,.nav-brand:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:2px}
+.skip-link{position:absolute;top:-40px;left:0;background:var(--green);color:#fff;padding:8px 16px;font-size:12px;z-index:1000;transition:top 0.2s}.skip-link:focus{top:0}
 </style>
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to content</a>
 <nav class="nav">
-<div class="nav-brand" onclick="go('home')"><div class="nav-dot">N2G</div><span class="nav-name">Native2Global</span></div>
+<div class="nav-brand" tabindex="0" role="button" onclick="go('home')" onkeydown="if(event.key==='Enter')go('home')"><div class="nav-dot">N2G</div><span class="nav-name">Native2Global</span></div>
 <div class="nav-right">
   <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
   <div class="nav-links">
@@ -179,7 +184,7 @@ body.thai .lang-en-inline{display:none}
 
 <!-- Green hero -->
 <div class="hero-wrap">
-<div class="hero">
+<div class="hero" id="main-content">
   <div class="hero-loc"><span class="lang-en">Chiang Rai, Thailand</span><span class="lang-th th-text">เชียงราย ประเทศไทย</span></div>
   <h1 class="hero-h">
     <span class="lang-en">Specialty coffee and teas from a single estate</span>
@@ -264,10 +269,10 @@ body.thai .lang-en-inline{display:none}
   <div class="sec-h"><span class="lang-en">Let's talk.</span><span class="lang-th th-text">มาคุยกัน</span></div>
   <div class="con-g">
     <div>
-      <div class="ff"><div class="fl"><span class="lang-en">Name</span><span class="lang-th th-text">ชื่อ</span></div><input class="fi" placeholder="Your name"></div>
-      <div class="ff"><div class="fl"><span class="lang-en">Café / Company</span><span class="lang-th th-text">ร้าน / บริษัท</span></div><input class="fi" placeholder="Optional"></div>
-      <div class="ff"><div class="fl"><span class="lang-en">Email or LINE</span><span class="lang-th th-text">อีเมลหรือ LINE</span></div><input class="fi" placeholder="How can we reach you?"></div>
-      <div class="ff"><div class="fl"><span class="lang-en">What are you interested in?</span><span class="lang-th th-text">สนใจอะไร?</span></div><textarea class="fi" placeholder="Coffee, tea, samples, wholesale, green beans, events"></textarea></div>
+      <div class="ff"><div class="fl"><span class="lang-en">Name</span><span class="lang-th th-text">ชื่อ</span></div><input class="fi" placeholder="Your name" aria-label="Name"></div>
+      <div class="ff"><div class="fl"><span class="lang-en">Café / Company</span><span class="lang-th th-text">ร้าน / บริษัท</span></div><input class="fi" placeholder="Optional" aria-label="Café or Company"></div>
+      <div class="ff"><div class="fl"><span class="lang-en">Email or LINE</span><span class="lang-th th-text">อีเมลหรือ LINE</span></div><input class="fi" placeholder="How can we reach you?" aria-label="Email or LINE"></div>
+      <div class="ff"><div class="fl"><span class="lang-en">What are you interested in?</span><span class="lang-th th-text">สนใจอะไร?</span></div><textarea class="fi" placeholder="Coffee, tea, samples, wholesale, green beans, events" aria-label="What are you interested in?"></textarea></div>
       <button class="fb"><span class="lang-en">Send</span><span class="lang-th th-text">ส่ง</span></button>
     </div>
     <div class="ci">
@@ -282,7 +287,7 @@ body.thai .lang-en-inline{display:none}
 <footer class="foot">
   <div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div>
   <div class="foot-right">
-    <a onclick="go('about')">About</a>
+    <a href="#about" onclick="go('about');return false">About</a>
     <a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a>
     <a href="https://instagram.com">Instagram</a>
     <a href="mailto:n2g.contact&#64;gmail.com">Email</a>
@@ -294,7 +299,7 @@ body.thai .lang-en-inline{display:none}
 <!-- ===== COFFEE ===== -->
 <div class="page" id="page-coffee">
 <div class="w" style="padding-top:80px">
-<span class="back-link" onclick="go('home')">← <span class="lang-en">Back</span><span class="lang-th th-text">กลับ</span></span>
+<span class="back-link" tabindex="0" role="button" onclick="go('home')" onkeydown="if(event.key==='Enter')go('home')">← <span class="lang-en">Back</span><span class="lang-th th-text">กลับ</span></span>
 <div class="accent"></div>
 <div class="sec-label"><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div>
 <div class="sec-h"><span class="lang-en">2025/2026 harvest</span><span class="lang-th th-text">เก็บเกี่ยว 2025/2026</span></div>
@@ -304,17 +309,17 @@ body.thai .lang-en-inline{display:none}
 <div class="prod"><div><div class="prod-name">Espresso Select Special</div><div class="prod-sub"><span class="lang-en">Espresso · AA-A · Roast: City, Medium, Full City</span><span class="lang-th th-text">เอสเพรสโซ่ · AA-A · คั่ว: City, Medium, Full City</span></div><div class="flavs"><span class="flav"><span class="lang-en">Caramel</span><span class="lang-th th-text">คาราเมล</span></span><span class="flav"><span class="lang-en">Palm sugar</span><span class="lang-th th-text">น้ำตาลปาล์ม</span></span><span class="flav"><span class="lang-en">Osmanthus</span><span class="lang-th th-text">ออสแมนทัส</span></span><span class="flav"><span class="lang-en">Passion fruit</span><span class="lang-th th-text">เสาวรส</span></span><span class="flav"><span class="lang-en">Dark chocolate</span><span class="lang-th th-text">ดาร์กช็อกโกแลต</span></span></div><p style="font-size:12px;color:var(--text3);margin-top:8px;font-style:italic"><span class="lang-en">Good body with long sweet finish</span><span class="lang-th th-text">บอดี้ดีกับฟินิชหวานยาว</span></p><p style="font-size:13px;color:var(--text2);margin-top:8px;line-height:1.6"><span class="lang-en">The osmanthus flower note is distinctive to our Doi Tung terroir.</span><span class="lang-th th-text">กลิ่นดอกออสแมนทัสเป็นเอกลักษณ์ของพื้นที่ดอยตุงของเรา</span></p></div></div>
 <div class="prod"><div><div class="prod-name">Espresso Select Classic</div><div class="prod-sub"><span class="lang-en">Espresso · Mixed · Roast: Medium, Full City</span><span class="lang-th th-text">เอสเพรสโซ่ · มิกซ์ · คั่ว: Medium, Full City</span></div><div class="flavs"><span class="flav"><span class="lang-en">Butterscotch</span><span class="lang-th th-text">บัตเตอร์สก็อตช์</span></span><span class="flav"><span class="lang-en">Sweet orange</span><span class="lang-th th-text">ส้มหวาน</span></span><span class="flav"><span class="lang-en">Vanilla</span><span class="lang-th th-text">วานิลลา</span></span></div><p style="font-size:12px;color:var(--text3);margin-top:8px;font-style:italic"><span class="lang-en">Mellow body with lingering sweet finish</span><span class="lang-th th-text">บอดี้นุ่มนวลกับฟินิชหวานยาวนาน</span></p><p style="font-size:13px;color:var(--text2);margin-top:8px;line-height:1.6"><span class="lang-en">Our approachable everyday espresso. Works beautifully in milk-based drinks.</span><span class="lang-th th-text">เอสเพรสโซ่ที่ดื่มง่ายสำหรับทุกวัน เข้ากันดีกับเครื่องดื่มนม</span></p></div></div>
 
-<div class="carousel" style="aspect-ratio:21/9;margin-top:32px" id="c-coffee"><div class="carousel-inner" id="c-coffee-s"><div class="carousel-slide"><div class="ph-num">1</div><div class="ph-label">Roasted beans</div><div class="ph-desc">Beans + brewed cup</div></div><div class="carousel-slide"><div class="ph-num">2</div><div class="ph-label">Drying beds</div><div class="ph-desc">Green beans on raised beds</div></div><div class="carousel-slide"><div class="ph-num">3</div><div class="ph-label">Green beans</div><div class="ph-desc">Unroasted, ready for export</div></div><div class="carousel-slide"><div class="ph-num">4</div><div class="ph-label">Quality control</div><div class="ph-desc">Moisture meter</div></div></div><div class="carousel-dots"><div class="carousel-dot active" onclick="gs('c-coffee',0)"></div><div class="carousel-dot" onclick="gs('c-coffee',1)"></div><div class="carousel-dot" onclick="gs('c-coffee',2)"></div><div class="carousel-dot" onclick="gs('c-coffee',3)"></div></div><div class="carousel-nav prev" onclick="ms('c-coffee',-1)">‹</div><div class="carousel-nav next" onclick="ms('c-coffee',1)">›</div></div>
+<div class="carousel" style="aspect-ratio:21/9;margin-top:32px" id="c-coffee"><div class="carousel-inner" id="c-coffee-s"><div class="carousel-slide"><div class="ph-num">1</div><div class="ph-label">Roasted beans</div><div class="ph-desc">Beans + brewed cup</div></div><div class="carousel-slide"><div class="ph-num">2</div><div class="ph-label">Drying beds</div><div class="ph-desc">Green beans on raised beds</div></div><div class="carousel-slide"><div class="ph-num">3</div><div class="ph-label">Green beans</div><div class="ph-desc">Unroasted, ready for export</div></div><div class="carousel-slide"><div class="ph-num">4</div><div class="ph-label">Quality control</div><div class="ph-desc">Moisture meter</div></div></div><div class="carousel-dots"><div class="carousel-dot active" onclick="gs('c-coffee',0)"></div><div class="carousel-dot" onclick="gs('c-coffee',1)"></div><div class="carousel-dot" onclick="gs('c-coffee',2)"></div><div class="carousel-dot" onclick="gs('c-coffee',3)"></div></div><button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-coffee',-1)">‹</button><button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-coffee',1)">›</button></div>
 
 <div class="sec"><div class="sec-label"><span class="lang-en">Processing</span><span class="lang-th th-text">การแปรรูป</span></div><p class="sec-p"><span class="lang-en">All coffee is processed on-site. Cherries are hand-picked at peak ripeness, fully washed, and sun-dried on raised beds. Moisture is monitored with precision equipment. Roasting is done to order — or we supply green beans direct to roasters. Single estate, full traceability.</span><span class="lang-th th-text">กาแฟทั้งหมดแปรรูปที่ไร่ เก็บเชอรี่ด้วยมือเมื่อสุกเต็มที่ ล้างสะอาดและตากแดดบนแคร่ คั่วตามออเดอร์ — หรือส่งกรีนบีนตรงถึงโรสเตอร์ ไร่เดียว ตรวจสอบย้อนกลับได้</span></p></div>
 <div style="text-align:center;padding:32px 0"><span class="cta-btn" onclick="go('home','connect')"><span class="lang-en">Interested? Let's talk →</span><span class="lang-th th-text">สนใจ? มาคุยกัน →</span></span></div>
-<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a onclick="go('about')">About</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
+<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="#about" onclick="go('about');return false">About</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
 </div></div>
 
 <!-- ===== TEA ===== -->
 <div class="page" id="page-tea">
 <div class="w" style="padding-top:80px">
-<span class="back-link" onclick="go('home')">← <span class="lang-en">Back</span><span class="lang-th th-text">กลับ</span></span>
+<span class="back-link" tabindex="0" role="button" onclick="go('home')" onkeydown="if(event.key==='Enter')go('home')">← <span class="lang-en">Back</span><span class="lang-th th-text">กลับ</span></span>
 <div class="accent" style="background:var(--terra)"></div>
 <div class="sec-label" style="color:var(--terra)"><span class="lang-en">Heritage tea · TeaOrganique</span><span class="lang-th th-text">ชามรดก · TeaOrganique</span></div>
 <div class="sec-h"><span class="lang-en">16 teas from wild and cultivated trees</span><span class="lang-th th-text">ชา 16 ชนิดจากต้นชาป่าและต้นชาปลูก</span></div>
@@ -336,16 +341,16 @@ body.thai .lang-en-inline{display:none}
 <div class="tea-c"><div class="tea-c-type"><span class="lang-en">Green Tea</span><span class="lang-th th-text">ชาเขียว</span></div><div class="tea-c-name">Matcha</div><div class="tea-c-note"><span class="lang-en">100% natural.</span><span class="lang-th th-text">100% ธรรมชาติ</span></div></div></div>
 
 <!-- Tea photo carousel -->
-<div class="carousel" style="aspect-ratio:21/9;margin-top:32px" id="c-tea"><div class="carousel-inner" id="c-tea-s"><div class="carousel-slide"><div class="ph-num">1</div><div class="ph-label">Tea tasting spread</div></div><div class="carousel-slide"><div class="ph-num">2</div><div class="ph-label">Gushu trees</div></div><div class="carousel-slide"><div class="ph-num">3</div><div class="ph-label">Dried leaves</div></div><div class="carousel-slide"><div class="ph-num">4</div><div class="ph-label">Packaging</div></div></div><div class="carousel-dots"><div class="carousel-dot active" onclick="gs('c-tea',0)"></div><div class="carousel-dot" onclick="gs('c-tea',1)"></div><div class="carousel-dot" onclick="gs('c-tea',2)"></div><div class="carousel-dot" onclick="gs('c-tea',3)"></div></div><div class="carousel-nav prev" onclick="ms('c-tea',-1)">‹</div><div class="carousel-nav next" onclick="ms('c-tea',1)">›</div></div>
+<div class="carousel" style="aspect-ratio:21/9;margin-top:32px" id="c-tea"><div class="carousel-inner" id="c-tea-s"><div class="carousel-slide"><div class="ph-num">1</div><div class="ph-label">Tea tasting spread</div></div><div class="carousel-slide"><div class="ph-num">2</div><div class="ph-label">Gushu trees</div></div><div class="carousel-slide"><div class="ph-num">3</div><div class="ph-label">Dried leaves</div></div><div class="carousel-slide"><div class="ph-num">4</div><div class="ph-label">Packaging</div></div></div><div class="carousel-dots"><div class="carousel-dot active" onclick="gs('c-tea',0)"></div><div class="carousel-dot" onclick="gs('c-tea',1)"></div><div class="carousel-dot" onclick="gs('c-tea',2)"></div><div class="carousel-dot" onclick="gs('c-tea',3)"></div></div><button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-tea',-1)">‹</button><button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-tea',1)">›</button></div>
 
 <div style="text-align:center;padding:32px 0"><span class="cta-btn" onclick="go('home','connect')"><span class="lang-en">Interested? Let's talk →</span><span class="lang-th th-text">สนใจ? มาคุยกัน →</span></span></div>
-<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a onclick="go('about')">About</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
+<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="#about" onclick="go('about');return false">About</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
 </div></div>
 
 <!-- ===== EVENTS ===== -->
 <div class="page" id="page-events">
 <div class="w" style="padding-top:80px">
-<span class="back-link" onclick="go('home')">← <span class="lang-en">Back</span><span class="lang-th th-text">กลับ</span></span>
+<span class="back-link" tabindex="0" role="button" onclick="go('home')" onkeydown="if(event.key==='Enter')go('home')">← <span class="lang-en">Back</span><span class="lang-th th-text">กลับ</span></span>
 <div class="accent" style="background:var(--green-dark)"></div>
 <div class="sec-label"><span class="lang-en">Events & tastings</span><span class="lang-th th-text">อีเวนต์และชิม</span></div>
 <div class="sec-h"><span class="lang-en">Chiang Rai & Bangkok</span><span class="lang-th th-text">เชียงรายและกรุงเทพ</span></div>
@@ -363,13 +368,13 @@ body.thai .lang-en-inline{display:none}
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:24px"><span class="events-tag"><span class="lang-en">Chiang Rai</span><span class="lang-th th-text">เชียงราย</span></span><span class="events-tag"><span class="lang-en">Bangkok</span><span class="lang-th th-text">กรุงเทพ</span></span><span class="events-tag"><span class="lang-en">Cuppings</span><span class="lang-th th-text">คัปปิ้ง</span></span><span class="events-tag"><span class="lang-en">Farm visits</span><span class="lang-th th-text">เยี่ยมชมไร่</span></span><span class="events-tag"><span class="lang-en">Pop-ups</span><span class="lang-th th-text">ป๊อปอัพ</span></span></div>
 
 <div style="text-align:center;padding:32px 0"><span class="cta-btn" onclick="go('home','connect')"><span class="lang-en">Interested? Let's talk →</span><span class="lang-th th-text">สนใจ? มาคุยกัน →</span></span></div>
-<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a onclick="go('about')">About</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
+<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="#about" onclick="go('about');return false">About</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
 </div></div>
 
 <!-- ===== ABOUT ===== -->
 <div class="page" id="page-about">
 <div class="w" style="padding-top:80px">
-<span class="back-link" onclick="go('home')">← <span class="lang-en">Back</span><span class="lang-th th-text">กลับ</span></span>
+<span class="back-link" tabindex="0" role="button" onclick="go('home')" onkeydown="if(event.key==='Enter')go('home')">← <span class="lang-en">Back</span><span class="lang-th th-text">กลับ</span></span>
 
 <div class="accent"></div>
 <div class="sec-label"><span class="lang-en">About N2G</span><span class="lang-th th-text">เกี่ยวกับ N2G</span></div>
