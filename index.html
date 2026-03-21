@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Native2Global — Specialty Coffee & Tea from Doi Tung, Chiang Rai</title>
-<meta name="description" content="Single-estate specialty coffee and heritage teas from Doi Tung, Chiang Rai. Arabica forest coffee, 16 heritage teas, wholesale and direct.">
+<meta name="description" content="Single-estate specialty coffee and heritage teas from Doi Tung, Chiang Rai. Arabica forest coffee, 15 heritage teas, wholesale and direct.">
 <meta property="og:title" content="Native2Global — Specialty Coffee & Tea from Doi Tung">
 <meta property="og:description" content="Single-estate specialty coffee and heritage teas from Doi Tung, Chiang Rai. Grown, processed, and roasted on-site.">
 <meta property="og:type" content="website">
@@ -131,7 +131,7 @@ textarea.fi{resize:vertical;min-height:72px}
 .ev-row{display:grid;grid-template-columns:1fr 200px;gap:24px;align-items:start}
 
 .th-text{font-family:'Noto Sans Thai','Karla',sans-serif}
-.lang-th{display:none}
+.lang-th,.lang-th-inline{display:none}
 body.thai .lang-en{display:none}
 body.thai .lang-th{display:block}
 .flav .lang-en{display:inline}.flav .lang-th{display:none}
@@ -143,7 +143,9 @@ body.thai .lang-en-inline{display:none}
 @media(max-width:680px){
 .w{padding:0 20px}.two,.con-g,.tea-g{grid-template-columns:1fr}
 .ws,.grow{flex-wrap:wrap}.ws-i,.grow-i{min-width:50%}
-.nav{padding:14px 16px}
+.nav{padding:14px 12px}
+.nav-name{font-size:15px}
+.nav-right{gap:12px}
 .hamburger{display:flex;align-items:center;justify-content:center}
 .nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(253,251,247,0.97);backdrop-filter:blur(10px);flex-direction:column;padding:16px 20px;gap:0;border-bottom:1px solid var(--border)}
 .nav-links.open{display:flex}
@@ -166,11 +168,11 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="nav-right">
   <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
   <div class="nav-links">
-    <a href="#coffee" onclick="go('coffee');closeMenu();return false" id="nav-coffee" tabindex="0"><span class="lang-en-inline">Coffee</span><span class="lang-th-inline th-text" style="display:none">กาแฟ</span></a>
-    <a href="#tea" onclick="go('tea');closeMenu();return false" id="nav-tea" tabindex="0"><span class="lang-en-inline">Tea</span><span class="lang-th-inline th-text" style="display:none">ชา</span></a>
-    <a href="#events" onclick="go('events');closeMenu();return false" id="nav-events" tabindex="0"><span class="lang-en-inline">Events</span><span class="lang-th-inline th-text" style="display:none">อีเวนต์</span></a>
-    <a href="#about" onclick="go('about');closeMenu();return false" id="nav-about" tabindex="0"><span class="lang-en-inline">About</span><span class="lang-th-inline th-text" style="display:none">เกี่ยวกับ</span></a>
-    <a href="#connect" onclick="go('home','connect');closeMenu();return false" id="nav-connect" tabindex="0"><span class="lang-en-inline">Connect</span><span class="lang-th-inline th-text" style="display:none">ติดต่อ</span></a>
+    <a href="#coffee" onclick="go('coffee');closeMenu();return false" id="nav-coffee" tabindex="0"><span class="lang-en-inline">Coffee</span><span class="lang-th-inline th-text">กาแฟ</span></a>
+    <a href="#tea" onclick="go('tea');closeMenu();return false" id="nav-tea" tabindex="0"><span class="lang-en-inline">Tea</span><span class="lang-th-inline th-text">ชา</span></a>
+    <a href="#events" onclick="go('events');closeMenu();return false" id="nav-events" tabindex="0"><span class="lang-en-inline">Events</span><span class="lang-th-inline th-text">อีเวนต์</span></a>
+    <a href="#about" onclick="go('about');closeMenu();return false" id="nav-about" tabindex="0"><span class="lang-en-inline">About</span><span class="lang-th-inline th-text">เกี่ยวกับ</span></a>
+    <a href="#connect" onclick="go('home','connect');closeMenu();return false" id="nav-connect" tabindex="0"><span class="lang-en-inline">Connect</span><span class="lang-th-inline th-text">ติดต่อ</span></a>
   </div>
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="setLang('en')">EN</button>
@@ -225,14 +227,14 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="sec">
   <div class="accent" style="background:var(--terra)"></div>
   <div class="sec-label" style="color:var(--terra)"><span class="lang-en">Heritage tea · TeaOrganique</span><span class="lang-th th-text">ชามรดก · TeaOrganique</span></div>
-  <p class="sec-p"><span class="lang-en">16 teas from wild and cultivated trees. Oolongs, wild red teas, aged puer, white tea, flower blends, and natural matcha. Some gushu trees are 200–500 years old.</span><span class="lang-th th-text">ชา 16 ชนิดจากต้นชาป่าและต้นชาปลูก อู่หลง ชาแดงป่า ผู่เอ๋อร์บ่ม ชาขาว ชาดอกไม้ และมัทฉะไทย ต้นชากู่ซู่บางต้นอายุ 200–500 ปี</span></p>
+  <p class="sec-p"><span class="lang-en">15 teas from wild and cultivated trees. Oolongs, wild red teas, aged puer, white tea, flower blends, and natural matcha. Some gushu trees are 200–500 years old.</span><span class="lang-th th-text">ชา 15 ชนิดจากต้นชาป่าและต้นชาปลูก อู่หลง ชาแดงป่า ผู่เอ๋อร์บ่ม ชาขาว ชาดอกไม้ และมัทฉะไทย ต้นชากู่ซู่บางต้นอายุ 200–500 ปี</span></p>
   <div class="tea-g">
     <div class="tea-c"><span class="tea-tag">Rare</span><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">Oriental Beauty</div><div class="tea-c-note"><span class="lang-en">Once-a-year harvest. Tea grasshopper bites create the signature profile.</span><span class="lang-th th-text">เก็บเกี่ยวปีละครั้ง ตั๊กแตนชากัดใบสร้างโปรไฟล์เฉพาะตัว</span></div></div>
     <div class="tea-c"><span class="tea-tag">Aged 8yr</span><div class="tea-c-type"><span class="lang-en">Raw Puer</span><span class="lang-th th-text">ผู่เอ๋อร์ดิบ</span></div><div class="tea-c-name">Gushu Sheng Puer</div><div class="tea-c-note"><span class="lang-en">Wild ancient trees. Jasmine, sweetness, agarwood.</span><span class="lang-th th-text">ต้นชาป่าโบราณ มะลิ หวาน กฤษณา</span></div></div>
     <div class="tea-c"><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Wild Red Tea</div><div class="tea-c-note"><span class="lang-en">Flora, fruity, good body. Great for cafés.</span><span class="lang-th th-text">ดอกไม้ ผลไม้ บอดี้ดี เหมาะสำหรับร้านกาแฟ</span></div></div>
     <div class="tea-c"><div class="tea-c-type"><span class="lang-en">Green Tea</span><span class="lang-th th-text">ชาเขียว</span></div><div class="tea-c-name">Matcha</div><div class="tea-c-note"><span class="lang-en">100% natural.</span><span class="lang-th th-text">100% ธรรมชาติ</span></div></div>
   </div>
-  <span class="more-link" onclick="go('tea')" style="border-color:var(--terra);color:var(--terra)"><span class="lang-en">See all 16 teas →</span><span class="lang-th th-text">ดูชาทั้ง 16 ชนิด →</span></span>
+  <span class="more-link" onclick="go('tea')" style="border-color:var(--terra);color:var(--terra)"><span class="lang-en">See all 15 teas →</span><span class="lang-th th-text">ดูชาทั้ง 15 ชนิด →</span></span>
 </div>
 
 <!-- Events -->
@@ -257,7 +259,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <p class="sec-p" style="margin-bottom:20px"><span class="lang-en">We work with cafés, hotels, restaurants, roasters, and anyone curious about our products. Samples available on request.</span><span class="lang-th th-text">เราทำงานร่วมกับร้านกาแฟ โรงแรม ร้านอาหาร โรสเตอร์ และทุกคนที่สนใจผลิตภัณฑ์ของเรา ตัวอย่างสินค้ามีให้ตามคำขอ</span></p>
   <div class="grow">
     <div class="grow-i" onclick="go('coffee')"><div class="grow-n"><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div><div class="grow-s"><span class="lang-en">Green beans or roasted</span><span class="lang-th th-text">กรีนบีนหรือคั่วแล้ว</span></div></div>
-    <div class="grow-i" onclick="go('tea')"><div class="grow-n"><span class="lang-en">Heritage tea</span><span class="lang-th th-text">ชามรดก</span></div><div class="grow-s"><span class="lang-en">16 varieties</span><span class="lang-th th-text">16 ชนิด</span></div></div>
+    <div class="grow-i" onclick="go('tea')"><div class="grow-n"><span class="lang-en">Heritage tea</span><span class="lang-th th-text">ชามรดก</span></div><div class="grow-s"><span class="lang-en">15 varieties</span><span class="lang-th th-text">15 ชนิด</span></div></div>
     <div class="grow-i"><div class="grow-n"><span class="lang-en">Mountain produce</span><span class="lang-th th-text">ผลผลิตจากดอย</span></div><div class="grow-s"><span class="lang-en">Ginger, osmanthus, chrysanthemum</span><span class="lang-th th-text">ขิง ออสแมนทัส เบญจมาศ</span></div></div>
   </div>
 </div>
@@ -268,17 +270,18 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div class="sec-label" style="color:var(--terra)"><span class="lang-en">Connect</span><span class="lang-th th-text">ติดต่อ</span></div>
   <div class="sec-h"><span class="lang-en">Let's talk.</span><span class="lang-th th-text">มาคุยกัน</span></div>
   <div class="con-g">
-    <div>
-      <div class="ff"><div class="fl"><span class="lang-en">Name</span><span class="lang-th th-text">ชื่อ</span></div><input class="fi" placeholder="Your name" aria-label="Name"></div>
-      <div class="ff"><div class="fl"><span class="lang-en">Café / Company</span><span class="lang-th th-text">ร้าน / บริษัท</span></div><input class="fi" placeholder="Optional" aria-label="Café or Company"></div>
-      <div class="ff"><div class="fl"><span class="lang-en">Email or LINE</span><span class="lang-th th-text">อีเมลหรือ LINE</span></div><input class="fi" placeholder="How can we reach you?" aria-label="Email or LINE"></div>
-      <div class="ff"><div class="fl"><span class="lang-en">What are you interested in?</span><span class="lang-th th-text">สนใจอะไร?</span></div><textarea class="fi" placeholder="Coffee, tea, samples, wholesale, green beans, events" aria-label="What are you interested in?"></textarea></div>
-      <button class="fb"><span class="lang-en">Send</span><span class="lang-th th-text">ส่ง</span></button>
-    </div>
+    <form id="contact-form" onsubmit="return handleContact(event)">
+      <div class="ff"><div class="fl"><span class="lang-en">Name</span><span class="lang-th th-text">ชื่อ</span></div><input class="fi" name="name" placeholder="Your name" aria-label="Name" required></div>
+      <div class="ff"><div class="fl"><span class="lang-en">Café / Company</span><span class="lang-th th-text">ร้าน / บริษัท</span></div><input class="fi" name="company" placeholder="Optional" aria-label="Café or Company"></div>
+      <div class="ff"><div class="fl"><span class="lang-en">Email or LINE</span><span class="lang-th th-text">อีเมลหรือ LINE</span></div><input class="fi" name="contact" placeholder="How can we reach you?" aria-label="Email or LINE" required></div>
+      <div class="ff"><div class="fl"><span class="lang-en">What are you interested in?</span><span class="lang-th th-text">สนใจอะไร?</span></div><textarea class="fi" name="message" placeholder="Coffee, tea, samples, wholesale, green beans, events" aria-label="What are you interested in?"></textarea></div>
+      <button class="fb" type="submit"><span class="lang-en">Send</span><span class="lang-th th-text">ส่ง</span></button>
+    </form>
     <div class="ci">
       <strong>Native2Global</strong><br>Doi Tung, Amphoe Mae Ai<br>Chiang Rai, Thailand<br><br>
       n2g.contact&#64;gmail.com<br><br>
-      <a href="https://www.facebook.com/teaorganique.hill.5" style="color:var(--green)">Facebook</a> ·
+      <a href="https://www.facebook.com/nativetoglobal.organique" style="color:var(--green)">Facebook (Coffee)</a> ·
+      <a href="https://www.facebook.com/teaorganique.hill.5" style="color:var(--green)">Facebook (Tea)</a> ·
       <a href="https://instagram.com" style="color:var(--green)">Instagram</a>
     </div>
   </div>
@@ -288,8 +291,8 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div>
   <div class="foot-right">
     <a href="#about" onclick="go('about');return false">About</a>
-    <a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a>
-    <a href="https://instagram.com">Instagram</a>
+    <a href="https://www.facebook.com/nativetoglobal.organique">Facebook (Coffee)</a>
+    <a href="https://www.facebook.com/teaorganique.hill.5">Facebook (Tea)</a>
     <a href="mailto:n2g.contact&#64;gmail.com">Email</a>
   </div>
 </footer>
@@ -313,7 +316,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <div class="sec"><div class="sec-label"><span class="lang-en">Processing</span><span class="lang-th th-text">การแปรรูป</span></div><p class="sec-p"><span class="lang-en">All coffee is processed on-site. Cherries are hand-picked at peak ripeness, fully washed, and sun-dried on raised beds. Moisture is monitored with precision equipment. Roasting is done to order — or we supply green beans direct to roasters. Single estate, full traceability.</span><span class="lang-th th-text">กาแฟทั้งหมดแปรรูปที่ไร่ เก็บเชอรี่ด้วยมือเมื่อสุกเต็มที่ ล้างสะอาดและตากแดดบนแคร่ คั่วตามออเดอร์ — หรือส่งกรีนบีนตรงถึงโรสเตอร์ ไร่เดียว ตรวจสอบย้อนกลับได้</span></p></div>
 <div style="text-align:center;padding:32px 0"><span class="cta-btn" onclick="go('home','connect')"><span class="lang-en">Interested? Let's talk →</span><span class="lang-th th-text">สนใจ? มาคุยกัน →</span></span></div>
-<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="#about" onclick="go('about');return false">About</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
+<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="#about" onclick="go('about');return false">About</a><a href="https://www.facebook.com/nativetoglobal.organique">Facebook (Coffee)</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook (Tea)</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
 </div></div>
 
 <!-- ===== TEA ===== -->
@@ -322,11 +325,11 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <span class="back-link" tabindex="0" role="button" onclick="go('home')" onkeydown="if(event.key==='Enter')go('home')">← <span class="lang-en">Back</span><span class="lang-th th-text">กลับ</span></span>
 <div class="accent" style="background:var(--terra)"></div>
 <div class="sec-label" style="color:var(--terra)"><span class="lang-en">Heritage tea · TeaOrganique</span><span class="lang-th th-text">ชามรดก · TeaOrganique</span></div>
-<div class="sec-h"><span class="lang-en">16 teas from wild and cultivated trees</span><span class="lang-th th-text">ชา 16 ชนิดจากต้นชาป่าและต้นชาปลูก</span></div>
+<div class="sec-h"><span class="lang-en">15 teas from wild and cultivated trees</span><span class="lang-th th-text">ชา 15 ชนิดจากต้นชาป่าและต้นชาปลูก</span></div>
 <p class="sec-p" style="margin-bottom:32px"><span class="lang-en">Oolongs, wild red teas, aged raw puer, white tea, flower blends with mountain osmanthus and rose, and a natural matcha. The wild gushu teas come from ancient trees 200–500 years old.</span><span class="lang-th th-text">อู่หลง ชาแดงป่า ผู่เอ๋อร์บ่ม ชาขาว ชาดอกไม้ และมัทฉะไทย ต้นชากู่ซู่บางต้นอายุ 200–500 ปี</span></p>
 
 <div class="sec-label" style="color:var(--terra)"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div>
-<div class="tea-g"><div class="tea-c"><span class="tea-tag">Rare</span><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">Oriental Beauty</div><div class="tea-c-note"><span class="lang-en">Once-a-year harvest. Tea grasshopper bites create the signature profile.</span><span class="lang-th th-text">เก็บเกี่ยวปีละครั้ง ตั๊กแตนชากัดใบสร้างโปรไฟล์เฉพาะตัว</span></div></div><div class="tea-c"><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">High Mountain Oolong </div><div class="tea-c-note"><span class="lang-en">Lightly oxidized spring harvest. Orchid-like flora.</span><span class="lang-th th-text">เก็บเกี่ยวฤดูใบไม้ผลิ ออกซิไดซ์เบาๆ กลิ่นกล้วยไม้</span></div></div></div>
+<div class="tea-g"><div class="tea-c"><span class="tea-tag">Rare</span><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">Oriental Beauty</div><div class="tea-c-note"><span class="lang-en">Once-a-year harvest. Tea grasshopper bites create the signature profile.</span><span class="lang-th th-text">เก็บเกี่ยวปีละครั้ง ตั๊กแตนชากัดใบสร้างโปรไฟล์เฉพาะตัว</span></div></div><div class="tea-c"><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">High Mountain Oolong</div><div class="tea-c-note"><span class="lang-en">Lightly oxidized spring harvest. Orchid-like flora.</span><span class="lang-th th-text">เก็บเกี่ยวฤดูใบไม้ผลิ ออกซิไดซ์เบาๆ กลิ่นกล้วยไม้</span></div></div></div>
 
 <div class="sec-label" style="color:var(--terra);margin-top:32px"><span class="lang-en">Red tea</span><span class="lang-th th-text">ชาแดง</span></div>
 <div class="tea-g"><div class="tea-c"><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Wild Red Tea</div><div class="tea-c-note"><span class="lang-en">Flora, fruity, good body. Perfect breakfast tea for cafés.</span><span class="lang-th th-text">ดอกไม้ ผลไม้ บอดี้ดี ชาเช้าที่สมบูรณ์แบบสำหรับร้านกาแฟ</span></div></div><div class="tea-c"><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Wild Red Tea (Medium Roast)</div><div class="tea-c-note"><span class="lang-en">Smokiness enhances the sweet aroma.</span><span class="lang-th th-text">ความหอมควันช่วยเพิ่มกลิ่นหวาน</span></div></div><div class="tea-c"><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Wild Baihao Red</div><div class="tea-c-note"><span class="lang-en">1 bud 1 leaf. Bolder fruity body, dark chocolate hint.</span><span class="lang-th th-text">1 ยอด 1 ใบ บอดี้ผลไม้เข้มข้น กลิ่นดาร์กช็อกโกแลต</span></div></div><div class="tea-c"><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Red Concubine</div><div class="tea-c-note"><span class="lang-en">Similar to Oriental Beauty but bolder body.</span><span class="lang-th th-text">คล้ายออเรียนทัลบิวตี้แต่บอดี้เข้มกว่า</span></div></div><div class="tea-c"><span class="tea-tag">Aged 8yr</span><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Red Gushu (8+ year)</div><div class="tea-c-note"><span class="lang-en">Profile develops from red tea to ripe puer with each steep. Agarwood.</span><span class="lang-th th-text">โปรไฟล์เปลี่ยนจากชาแดงเป็นผู่เอ๋อร์สุกในแต่ละรอบชง กฤษณา</span></div></div><div class="tea-c"><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Red Oolong</div><div class="tea-c-note"><span class="lang-en">Oolong processed as red tea. Honey, date/jujube.</span><span class="lang-th th-text">อู่หลงแปรรูปเป็นชาแดง น้ำผึ้ง พุทราจีน</span></div></div></div>
@@ -344,7 +347,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="carousel" style="aspect-ratio:21/9;margin-top:32px" id="c-tea"><div class="carousel-inner" id="c-tea-s"><div class="carousel-slide"><div class="ph-num">1</div><div class="ph-label">Tea tasting spread</div></div><div class="carousel-slide"><div class="ph-num">2</div><div class="ph-label">Gushu trees</div></div><div class="carousel-slide"><div class="ph-num">3</div><div class="ph-label">Dried leaves</div></div><div class="carousel-slide"><div class="ph-num">4</div><div class="ph-label">Packaging</div></div></div><div class="carousel-dots"><div class="carousel-dot active" onclick="gs('c-tea',0)"></div><div class="carousel-dot" onclick="gs('c-tea',1)"></div><div class="carousel-dot" onclick="gs('c-tea',2)"></div><div class="carousel-dot" onclick="gs('c-tea',3)"></div></div><button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-tea',-1)">‹</button><button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-tea',1)">›</button></div>
 
 <div style="text-align:center;padding:32px 0"><span class="cta-btn" onclick="go('home','connect')"><span class="lang-en">Interested? Let's talk →</span><span class="lang-th th-text">สนใจ? มาคุยกัน →</span></span></div>
-<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="#about" onclick="go('about');return false">About</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
+<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="#about" onclick="go('about');return false">About</a><a href="https://www.facebook.com/nativetoglobal.organique">Facebook (Coffee)</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook (Tea)</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
 </div></div>
 
 <!-- ===== EVENTS ===== -->
@@ -368,7 +371,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:24px"><span class="events-tag"><span class="lang-en">Chiang Rai</span><span class="lang-th th-text">เชียงราย</span></span><span class="events-tag"><span class="lang-en">Bangkok</span><span class="lang-th th-text">กรุงเทพ</span></span><span class="events-tag"><span class="lang-en">Cuppings</span><span class="lang-th th-text">คัปปิ้ง</span></span><span class="events-tag"><span class="lang-en">Farm visits</span><span class="lang-th th-text">เยี่ยมชมไร่</span></span><span class="events-tag"><span class="lang-en">Pop-ups</span><span class="lang-th th-text">ป๊อปอัพ</span></span></div>
 
 <div style="text-align:center;padding:32px 0"><span class="cta-btn" onclick="go('home','connect')"><span class="lang-en">Interested? Let's talk →</span><span class="lang-th th-text">สนใจ? มาคุยกัน →</span></span></div>
-<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="#about" onclick="go('about');return false">About</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
+<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="#about" onclick="go('about');return false">About</a><a href="https://www.facebook.com/nativetoglobal.organique">Facebook (Coffee)</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook (Tea)</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
 </div></div>
 
 <!-- ===== ABOUT ===== -->
@@ -390,13 +393,13 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div class="sec-label"><span class="lang-en">From the estate</span><span class="lang-th th-text">จากไร่ของเรา</span></div>
   <div class="grow">
     <div class="grow-i" onclick="go('coffee')"><div class="grow-n"><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div><div class="grow-s"><span class="lang-en">3 grades</span><span class="lang-th th-text">3 เกรด</span> · <span style="color:var(--green)">→</span></div></div>
-    <div class="grow-i" onclick="go('tea')"><div class="grow-n"><span class="lang-en">Heritage tea</span><span class="lang-th th-text">ชามรดก</span></div><div class="grow-s"><span class="lang-en">16 varieties</span><span class="lang-th th-text">16 ชนิด</span> · <span style="color:var(--terra)">→</span></div></div>
+    <div class="grow-i" onclick="go('tea')"><div class="grow-n"><span class="lang-en">Heritage tea</span><span class="lang-th th-text">ชามรดก</span></div><div class="grow-s"><span class="lang-en">15 varieties</span><span class="lang-th th-text">15 ชนิด</span> · <span style="color:var(--terra)">→</span></div></div>
     <div class="grow-i"><div class="grow-n"><span class="lang-en">Mountain produce</span><span class="lang-th th-text">ผลผลิตจากดอย</span></div><div class="grow-s"><span class="lang-en">Ginger, osmanthus, chrysanthemum</span><span class="lang-th th-text">ขิง ออสแมนทัส เบญจมาศ</span></div></div>
   </div>
 </div>
 
 <div style="text-align:center;padding:32px 0"><span class="cta-btn" onclick="go('home','connect')"><span class="lang-en">Interested? Let's talk →</span><span class="lang-th th-text">สนใจ? มาคุยกัน →</span></span></div>
-<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="https://www.facebook.com/teaorganique.hill.5">Facebook</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
+<footer class="foot"><div class="foot-left">© 2026 Native2Global<br>Doi Tung, Amphoe Mae Ai, Chiang Rai<br>n2g.contact&#64;gmail.com</div><div class="foot-right"><a href="https://www.facebook.com/nativetoglobal.organique">Facebook (Coffee)</a><a href="https://www.facebook.com/teaorganique.hill.5">Facebook (Tea)</a><a href="https://www.facebook.com/hillorganique">Hill Organique</a><a href="https://instagram.com">Instagram</a><a href="mailto:n2g.contact&#64;gmail.com">Email</a></div></footer>
 </div></div>
 
 <script>
@@ -416,6 +419,16 @@ function go(page,scrollTo){
   var n=document.getElementById('nav-'+page);if(n)n.classList.add('active');
   if(scrollTo){setTimeout(function(){var el=document.getElementById(scrollTo);if(el)el.scrollIntoView({behavior:'smooth'})},100)}
   else{window.scrollTo(0,0)}
+}
+function handleContact(e){
+  e.preventDefault();
+  var f=document.getElementById('contact-form');
+  var d=new FormData(f);
+  var name=d.get('name'),contact=d.get('contact'),company=d.get('company')||'',message=d.get('message')||'';
+  var body='Name: '+name+'\n'+(company?'Company: '+company+'\n':'')+'Contact: '+contact+'\n'+(message?'Interested in: '+message:'');
+  window.location.href='mailto:n2g.contact@gmail.com?subject='+encodeURIComponent('Inquiry from '+name)+'&body='+encodeURIComponent(body);
+  f.reset();
+  return false;
 }
 var cState={};
 function gs(id,n){cState[id]=n;document.getElementById(id+'-s').style.transform='translateX(-'+n*100+'%)';document.querySelectorAll('#'+id+' .carousel-dot').forEach(function(d,i){d.classList.toggle('active',i===n)})}
