@@ -271,10 +271,10 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div class="sec-h"><span class="lang-en">Let's talk.</span><span class="lang-th th-text">มาคุยกัน</span></div>
   <div class="con-g">
     <form id="contact-form" onsubmit="return handleContact(event)">
-      <div class="ff"><div class="fl"><span class="lang-en">Name</span><span class="lang-th th-text">ชื่อ</span></div><input class="fi" name="name" placeholder="Your name" aria-label="Name" required></div>
-      <div class="ff"><div class="fl"><span class="lang-en">Café / Company</span><span class="lang-th th-text">ร้าน / บริษัท</span></div><input class="fi" name="company" placeholder="Optional" aria-label="Café or Company"></div>
-      <div class="ff"><div class="fl"><span class="lang-en">Email or LINE</span><span class="lang-th th-text">อีเมลหรือ LINE</span></div><input class="fi" name="contact" placeholder="How can we reach you?" aria-label="Email or LINE" required></div>
-      <div class="ff"><div class="fl"><span class="lang-en">What are you interested in?</span><span class="lang-th th-text">สนใจอะไร?</span></div><textarea class="fi" name="message" placeholder="Coffee, tea, samples, wholesale, green beans, events" aria-label="What are you interested in?"></textarea></div>
+      <div class="ff"><div class="fl"><span class="lang-en">Name</span><span class="lang-th th-text">ชื่อ</span></div><input class="fi" name="name" placeholder="Your name" data-placeholder-en="Your name" data-placeholder-th="ชื่อของคุณ" aria-label="Name" required></div>
+      <div class="ff"><div class="fl"><span class="lang-en">Café / Company</span><span class="lang-th th-text">ร้าน / บริษัท</span></div><input class="fi" name="company" placeholder="Optional" data-placeholder-en="Optional" data-placeholder-th="ไม่จำเป็น" aria-label="Café or Company"></div>
+      <div class="ff"><div class="fl"><span class="lang-en">Email or LINE</span><span class="lang-th th-text">อีเมลหรือ LINE</span></div><input class="fi" name="contact" placeholder="How can we reach you?" data-placeholder-en="How can we reach you?" data-placeholder-th="ติดต่อคุณได้อย่างไร?" aria-label="Email or LINE" required></div>
+      <div class="ff"><div class="fl"><span class="lang-en">What are you interested in?</span><span class="lang-th th-text">สนใจอะไร?</span></div><textarea class="fi" name="message" placeholder="Coffee, tea, samples, wholesale, green beans, events" data-placeholder-en="Coffee, tea, samples, wholesale, green beans, events" data-placeholder-th="กาแฟ, ชา, ตัวอย่าง, ค้าส่ง, กรีนบีน, อีเวนต์" aria-label="What are you interested in?"></textarea></div>
       <button class="fb" type="submit"><span class="lang-en">Send</span><span class="lang-th th-text">ส่ง</span></button>
     </form>
     <div class="ci">
@@ -408,6 +408,7 @@ function setLang(lang,skipUrl){
   document.documentElement.lang=lang;
   document.body.classList.toggle('thai',lang==='th');
   document.querySelectorAll('.lang-btn').forEach(function(b){var isTh=b.textContent.trim()==='ไทย';b.classList.toggle('active',lang==='th'?isTh:!isTh)});
+  document.querySelectorAll('[data-placeholder-'+lang+']').forEach(function(el){el.placeholder=el.getAttribute('data-placeholder-'+lang)});
   if(!skipUrl){var u=new URL(window.location);if(lang==='th')u.searchParams.set('lang','th');else u.searchParams.delete('lang');history.replaceState(null,'',u)}
 }
 function closeMenu(){
