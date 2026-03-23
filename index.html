@@ -189,8 +189,11 @@ body.thai .lang-en-inline{display:none}
 .photo-carousel .carousel-dots{display:flex!important}
 .photo-carousel .carousel-nav{display:flex!important}
 .photo-carousel .photo-grid-overlay{opacity:1}
-.tea-pkg-scroll{display:flex!important;grid-template-columns:none!important;gap:12px!important;overflow-x:auto!important;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
-.tea-pkg-scroll>div{min-width:85vw!important;scroll-snap-align:start;flex-shrink:0}
+.tea-pkg-carousel{overflow:hidden!important;border:none!important;background:var(--cream)!important;padding-bottom:28px!important}
+.tea-pkg-carousel .carousel-inner{display:flex!important;grid-template-columns:unset!important;gap:0!important;transform:translateX(0);transition:transform 0.4s ease!important;height:auto}
+.tea-pkg-carousel .carousel-slide{min-width:100%!important;height:auto;padding:0!important}
+.tea-pkg-carousel .carousel-dots{display:flex!important}
+.tea-pkg-carousel .carousel-nav{display:flex!important}
 .offer-row{display:grid!important;grid-template-columns:repeat(2,1fr)!important;gap:12px}
 .offer-card{min-width:unset}
 .coffee-card{grid-template-columns:1fr;padding:20px 16px;margin-bottom:12px}
@@ -249,6 +252,10 @@ body.thai .lang-en-inline{display:none}
 .photo-carousel .carousel-slide{min-width:unset!important;height:auto!important;padding:0!important}
 .photo-carousel .carousel-dots,.photo-carousel .carousel-nav{display:none!important}
 .photo-carousel .photo-grid-item{cursor:pointer}
+.tea-pkg-carousel{border:none!important;background:none!important;overflow:visible!important;padding-bottom:0!important}
+.tea-pkg-carousel .carousel-inner{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:12px!important;transform:none!important;transition:none!important;height:auto!important;max-width:700px}
+.tea-pkg-carousel .carousel-slide{min-width:unset!important;height:auto!important;padding:0!important}
+.tea-pkg-carousel .carousel-dots,.tea-pkg-carousel .carousel-nav{display:none!important}
 }
 
 /* Lightbox */
@@ -258,7 +265,7 @@ body.thai .lang-en-inline{display:none}
 .lightbox-close{position:absolute;top:16px;right:20px;color:#fff;font-size:28px;cursor:pointer;font-family:inherit;background:none;border:none;padding:8px}
 
 /* Tea packaging scroll */
-.tea-pkg-scroll{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:700px}
+/* tea-pkg-scroll replaced by tea-pkg-carousel */
 
 /* Offer cards (compact horizontal row) */
 .offer-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
@@ -561,10 +568,19 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="sec" style="margin-top:16px">
   <div class="sec-label" style="color:var(--terra)"><span class="lang-en">Packaging</span><span class="lang-th th-text">บรรจุภัณฑ์</span></div>
   <p class="sec-p" style="margin-bottom:16px"><span class="lang-en">Available as loose leaf in sampler sets and bulk.</span><span class="lang-th th-text">มีทั้งใบชาแบบชุดชิมและแบบเบิ้ล</span></p>
-  <div class="tea-pkg-scroll">
-    <div style="overflow:hidden;border-radius:4px;flex-shrink:0"><img src="img/tea-sampler-box.jpg" alt="Tea sampler box with three varieties" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div>
-    <div style="overflow:hidden;border-radius:4px;flex-shrink:0"><img src="img/tea-sampler-herbal.jpg" alt="Tea sampler box with herbal blends" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div>
-    <div style="overflow:hidden;border-radius:4px;flex-shrink:0"><img src="img/tea-varieties-dishes.jpg" alt="Six tea varieties displayed in small white dishes" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div>
+  <div class="carousel tea-pkg-carousel" id="c-teapkg">
+    <div class="carousel-inner" id="c-teapkg-s">
+      <div class="carousel-slide"><div style="overflow:hidden;border-radius:4px;width:100%"><img src="img/tea-sampler-box.jpg" alt="Tea sampler box with three varieties" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div></div>
+      <div class="carousel-slide"><div style="overflow:hidden;border-radius:4px;width:100%"><img src="img/tea-sampler-herbal.jpg" alt="Tea sampler box with herbal blends" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div></div>
+      <div class="carousel-slide"><div style="overflow:hidden;border-radius:4px;width:100%"><img src="img/tea-varieties-dishes.jpg" alt="Six tea varieties displayed in small white dishes" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div></div>
+    </div>
+    <div class="carousel-dots">
+      <div class="carousel-dot active" onclick="gs('c-teapkg',0)"></div>
+      <div class="carousel-dot" onclick="gs('c-teapkg',1)"></div>
+      <div class="carousel-dot" onclick="gs('c-teapkg',2)"></div>
+    </div>
+    <button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-teapkg',-1)">‹</button>
+    <button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-teapkg',1)">›</button>
   </div>
 </div>
 
