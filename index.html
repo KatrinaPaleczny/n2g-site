@@ -298,10 +298,11 @@ body.thai .lang-en-inline{display:none}
 .tea-item-tag{display:inline-block;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;background:var(--terra-bg);color:var(--terra);padding:2px 8px;border-radius:3px;margin-bottom:6px;font-weight:500}
 .tea-item-img{position:absolute;inset:0;opacity:0;transition:opacity 0.3s;z-index:2;border-radius:5px;overflow:hidden}
 .tea-item-img img{width:100%;height:100%;object-fit:cover}
+.tea-item-img::before{content:'';position:absolute;top:0;left:0;right:0;height:55%;background:linear-gradient(to bottom,#fff 35%,rgba(255,255,255,0.9) 55%,transparent);z-index:1;pointer-events:none}
 .tea-item:hover .tea-item-img{opacity:1}
 .tea-item:hover .tea-item-text{opacity:0}
 .produce-grid{display:flex;flex-direction:column;gap:48px}
-.produce-card{display:grid;grid-template-columns:3fr 2fr;gap:32px;align-items:center}
+.produce-card{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
 .produce-card.reverse .produce-card-img{order:1}
 .produce-card-img{overflow:hidden;border-radius:6px}
 .produce-card-img img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
@@ -675,8 +676,8 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <!-- Ginger & Turmeric -->
   <div class="produce-card">
     <div class="produce-card-img" style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-      <img src="img/ginger-display.jpg" alt="Fresh ginger and purple turmeric roots" loading="lazy">
-      <img src="img/fresh-turmeric-root-cut-open.jpg" alt="Fresh turmeric root cut open showing vibrant orange" loading="lazy">
+      <img src="img/ginger-display.jpg" alt="Fresh ginger roots" loading="lazy">
+      <img src="img/black-ginger.jpg" alt="Black ginger (Krachai Dam)" loading="lazy">
     </div>
     <div class="produce-card-body">
       <div class="sec-label" style="color:var(--gold);margin-bottom:16px"><span class="lang-en">Ginger & Turmeric</span><span class="lang-th th-text">ขิงและขมิ้น</span></div>
@@ -688,10 +689,11 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
   <!-- Flowers & Herbs -->
   <div class="produce-card reverse">
-    <div class="produce-card-img" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+    <div class="produce-card-img" style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
       <img src="img/roses-drying.png" alt="Roses drying" loading="lazy">
       <img src="img/jasmine-drying.png" alt="Jasmine drying" loading="lazy">
       <img src="img/chrysanthemum-field.jpg" alt="Chrysanthemum field" loading="lazy">
+      <img src="img/osmanthus-blossoms.jpg" alt="Osmanthus blossoms" loading="lazy">
     </div>
     <div class="produce-card-body">
       <div class="sec-label" style="color:var(--gold);margin-bottom:16px"><span class="lang-en">Flowers & Herbs</span><span class="lang-th th-text">ดอกไม้และสมุนไพร</span></div>
@@ -703,7 +705,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
   <!-- Seasonal Fruit -->
   <div class="produce-card">
-    <div class="produce-card-img"><img src="img/fresh-mulberries-bowl-overhead.jpg" alt="Fresh mulberries in a bowl" style="aspect-ratio:1/1;max-width:280px" loading="lazy"></div>
+    <div class="produce-card-img"><img src="img/fresh-mulberries-bowl-overhead.jpg" alt="Fresh mulberries in a bowl" loading="lazy"></div>
     <div class="produce-card-body">
       <div class="sec-label" style="color:var(--gold);margin-bottom:16px"><span class="lang-en">Seasonal Fruit</span><span class="lang-th th-text">ผลไม้ตามฤดูกาล</span></div>
       <div class="produce-item"><div class="produce-item-name"><span class="lang-en">Mulberry</span><span class="lang-th th-text">หม่อน</span></div><div class="produce-item-note"><span class="lang-en">Fresh from the estate. Rich, sweet, and deep purple. Available seasonally.</span><span class="lang-th th-text">หม่อนสดจากไร่ หวาน สีม่วงเข้ม มีตามฤดูกาล</span></div></div>
