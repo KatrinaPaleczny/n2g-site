@@ -66,9 +66,13 @@ img{display:block;max-width:100%}
 .hero-h{font-family:'EB Garamond',serif;font-size:clamp(36px,5vw,52px);font-weight:400;line-height:1.2;color:rgba(253,251,247,0.95);margin-bottom:24px}
 .hero-h em{font-style:italic;color:var(--gold)}
 .hero-p{font-size:17px;line-height:1.8;color:rgba(253,251,247,0.55);font-weight:300;max-width:520px}
+.hero-cta{display:inline-block;padding:10px 24px;border:1px solid rgba(253,251,247,0.3);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:rgba(253,251,247,0.7);cursor:pointer;transition:all 0.2s;margin-top:24px;font-family:'Karla',sans-serif;font-weight:500}
+.hero-cta:hover{border-color:var(--gold);color:var(--gold)}
 
 /* Products */
 .prod{padding:14px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.prod:first-child{border-top:1px solid var(--border)}
+.prod-with-thumb{display:grid;grid-template-columns:56px 1fr;gap:12px}
+.prod-thumb{width:56px;height:56px;border-radius:4px;object-fit:cover;flex-shrink:0}
 .prod-name{font-family:'EB Garamond',serif;font-size:16px}
 .prod-sub{font-size:11px;color:var(--text3);margin-top:2px}
 .prod-tag{font-size:9px;letter-spacing:0.06em;text-transform:uppercase;padding:3px 8px;background:var(--green-bg);color:var(--green);font-weight:500;white-space:nowrap}
@@ -91,6 +95,7 @@ img{display:block;max-width:100%}
 .grow-i:hover{background:var(--white)}
 .grow-icon{width:20px;height:20px;margin:0 auto 6px;color:var(--text3)}
 .grow-n{font-family:'EB Garamond',serif;font-size:14px}.grow-s{font-size:10px;color:var(--text4);margin-top:2px}
+.grow-i-img{width:100%;aspect-ratio:3/2;object-fit:cover;margin-bottom:10px;border-radius:0}
 .foot-icon{width:14px;height:14px;vertical-align:-2px;margin-right:5px}
 .sec-icon{width:14px;height:14px;vertical-align:-1px;margin-right:4px}
 
@@ -382,6 +387,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
     <span class="lang-en">N2G is a team based in Doi Tung, Chiang Rai. We grow, process, and roast everything on-site, working directly with the farming communities who have cultivated this land for generations.</span>
     <span class="lang-th th-text">N2G เป็นทีม ในดอยตุง เชียงราย เราปลูก แปรรูป และคั่วทุกอย่างที่ไร่ ทำงานร่วมกับชุมชนเกษตรกรที่สืบทอดผืนดินนี้มาหลายชั่วอายุคน</span>
   </p>
+  <a class="hero-cta" onclick="go('home','connect');return false" href="#connect"><span class="lang-en">Request samples →</span><span class="lang-th th-text">ขอตัวอย่างสินค้า →</span></a>
 </div>
 </div>
 
@@ -405,9 +411,9 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div class="accent"></div>
   <div class="sec-label"><svg class="sec-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div>
   <p class="sec-p"><span class="lang-en">Arabica. Catimor, Caturra, Catuai. Fully washed, sun-dried on raised beds. Available as green beans or roasted.</span><span class="lang-th th-text">อราบิก้า Catimor, Caturra, Catuai ล้างสะอาด ตากแดดบนแคร่ยกสูง มีทั้งกรีนบีนและคั่วแล้ว</span></p>
-  <div class="prod"><div><div class="prod-name">Drip Select X.O.</div><div class="prod-sub"><span class="lang-en">Filter / Pour-over · AA-A</span><span class="lang-th th-text">ฟิลเตอร์ / พัวร์โอเวอร์ · AA-A</span></div><div class="flavs"><span class="flav"><span class="lang-en">Brown sugar</span><span class="lang-th th-text">น้ำตาลทราย</span></span><span class="flav"><span class="lang-en">Orange blossom</span><span class="lang-th th-text">ดอกส้ม</span></span><span class="flav"><span class="lang-en">Mandarin</span><span class="lang-th th-text">แมนดาริน</span></span><span class="flav"><span class="lang-en">Lychee</span><span class="lang-th th-text">ลิ้นจี่</span></span><span class="flav"><span class="lang-en">Peach</span><span class="lang-th th-text">พีช</span></span></div></div></div>
-  <div class="prod"><div><div class="prod-name">Espresso Select Special</div><div class="prod-sub"><span class="lang-en">Espresso · AA-A</span><span class="lang-th th-text">เอสเพรสโซ่ · AA-A</span></div><div class="flavs"><span class="flav"><span class="lang-en">Caramel</span><span class="lang-th th-text">คาราเมล</span></span><span class="flav"><span class="lang-en">Osmanthus</span><span class="lang-th th-text">ออสแมนทัส</span></span><span class="flav"><span class="lang-en">Passion fruit</span><span class="lang-th th-text">เสาวรส</span></span><span class="flav"><span class="lang-en">Dark chocolate</span><span class="lang-th th-text">ดาร์กช็อกโกแลต</span></span></div></div></div>
-  <div class="prod"><div><div class="prod-name">Espresso Select Classic</div><div class="prod-sub"><span class="lang-en">Espresso · Mixed</span><span class="lang-th th-text">เอสเพรสโซ่ · มิกซ์</span></div><div class="flavs"><span class="flav"><span class="lang-en">Butterscotch</span><span class="lang-th th-text">บัตเตอร์สก็อตช์</span></span><span class="flav"><span class="lang-en">Sweet orange</span><span class="lang-th th-text">ส้มหวาน</span></span><span class="flav"><span class="lang-en">Vanilla</span><span class="lang-th th-text">วานิลลา</span></span></div></div></div>
+  <div class="prod prod-with-thumb"><img class="prod-thumb" src="img/pourover-brewing.jpg" alt="Pour-over brewing" loading="lazy"><div><div class="prod-name">Drip Select X.O.</div><div class="prod-sub"><span class="lang-en">Filter / Pour-over · AA-A</span><span class="lang-th th-text">ฟิลเตอร์ / พัวร์โอเวอร์ · AA-A</span></div><div class="flavs"><span class="flav"><span class="lang-en">Brown sugar</span><span class="lang-th th-text">น้ำตาลทราย</span></span><span class="flav"><span class="lang-en">Orange blossom</span><span class="lang-th th-text">ดอกส้ม</span></span><span class="flav"><span class="lang-en">Mandarin</span><span class="lang-th th-text">แมนดาริน</span></span><span class="flav"><span class="lang-en">Lychee</span><span class="lang-th th-text">ลิ้นจี่</span></span><span class="flav"><span class="lang-en">Peach</span><span class="lang-th th-text">พีช</span></span></div></div></div>
+  <div class="prod prod-with-thumb"><img class="prod-thumb" src="img/coffee-roast-profiles.jpg" alt="Coffee roast profiles" loading="lazy"><div><div class="prod-name">Espresso Select Special</div><div class="prod-sub"><span class="lang-en">Espresso · AA-A</span><span class="lang-th th-text">เอสเพรสโซ่ · AA-A</span></div><div class="flavs"><span class="flav"><span class="lang-en">Caramel</span><span class="lang-th th-text">คาราเมล</span></span><span class="flav"><span class="lang-en">Osmanthus</span><span class="lang-th th-text">ออสแมนทัส</span></span><span class="flav"><span class="lang-en">Passion fruit</span><span class="lang-th th-text">เสาวรส</span></span><span class="flav"><span class="lang-en">Dark chocolate</span><span class="lang-th th-text">ดาร์กช็อกโกแลต</span></span></div></div></div>
+  <div class="prod prod-with-thumb"><img class="prod-thumb" src="img/roasted-beans-plate.jpg" alt="Roasted coffee beans" loading="lazy"><div><div class="prod-name">Espresso Select Classic</div><div class="prod-sub"><span class="lang-en">Espresso · Mixed</span><span class="lang-th th-text">เอสเพรสโซ่ · มิกซ์</span></div><div class="flavs"><span class="flav"><span class="lang-en">Butterscotch</span><span class="lang-th th-text">บัตเตอร์สก็อตช์</span></span><span class="flav"><span class="lang-en">Sweet orange</span><span class="lang-th th-text">ส้มหวาน</span></span><span class="flav"><span class="lang-en">Vanilla</span><span class="lang-th th-text">วานิลลา</span></span></div></div></div>
   <span class="more-link" onclick="go('coffee')"><span class="lang-en">See all coffee details →</span><span class="lang-th th-text">ดูข้อมูลกาแฟทั้งหมด →</span></span>
 </div>
 
@@ -417,31 +423,44 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div class="sec-label" style="color:var(--terra)"><svg class="sec-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><span class="lang-en">Heritage tea · <span style="font-weight:600">TEA</span><span style="font-weight:300;text-transform:lowercase">organique</span></span><span class="lang-th th-text">ชามรดก · <span style="font-weight:600">TEA</span><span style="font-weight:300;text-transform:lowercase">organique</span></span> <svg style="width:18px;height:18px;vertical-align:-3px;margin-left:2px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="48" r="42" fill="none" stroke="#8BC34A" stroke-width="2.5" opacity="0.5"/><polygon points="30,62 42,30 54,62" fill="#4CAF50"/><polygon points="40,62 52,34 64,62" fill="#66BB6A"/><polygon points="50,62 60,38 72,62" fill="#81C784"/><path d="M26,62 Q50,50 74,62" fill="#4FC3F7" opacity="0.8"/><path d="M70,50 C78,38 82,25 75,18" fill="none" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="74" cy="20" rx="5" ry="8" transform="rotate(-30 74 20)" fill="#4CAF50"/><ellipse cx="80" cy="28" rx="4" ry="7" transform="rotate(-50 80 28)" fill="#66BB6A"/></svg></div>
   <p class="sec-p"><span class="lang-en">15 teas from wild and cultivated trees. Oolongs, wild red teas, aged puer, white tea, flower blends, and natural matcha. Some gushu trees are 200–500 years old.</span><span class="lang-th th-text">ชา 15 ชนิดจากต้นชาป่าและต้นชาปลูก อู่หลง ชาแดงป่า ผู่เอ๋อร์บ่ม ชาขาว ชาดอกไม้ และมัทฉะไทย ต้นชากู่ซู่บางต้นอายุ 200–500 ปี</span></p>
   <div class="tea-g">
-    <div class="tea-c"><span class="tea-tag">Rare</span><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">Oriental Beauty</div><div class="tea-c-note"><span class="lang-en">Once-a-year harvest. Tea grasshopper bites create the signature profile.</span><span class="lang-th th-text">เก็บเกี่ยวปีละครั้ง ตั๊กแตนชากัดใบสร้างโปรไฟล์เฉพาะตัว</span></div></div>
-    <div class="tea-c tea-c-puer"><span class="tea-tag">Aged 8yr</span><div class="tea-c-type"><span class="lang-en">Raw Puer</span><span class="lang-th th-text">ผู่เอ๋อร์ดิบ</span></div><div class="tea-c-name">Gushu Sheng Puer</div><div class="tea-c-note"><span class="lang-en">Wild ancient trees. Jasmine, sweetness, agarwood.</span><span class="lang-th th-text">ต้นชาป่าโบราณ มะลิ หวาน กฤษณา</span></div></div>
-    <div class="tea-c"><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Wild Red Tea</div><div class="tea-c-note"><span class="lang-en">Flora, fruity, good body. Great for cafés.</span><span class="lang-th th-text">ดอกไม้ ผลไม้ บอดี้ดี เหมาะสำหรับร้านกาแฟ</span></div></div>
-    <div class="tea-c tea-c-green"><div class="tea-c-type"><span class="lang-en">Green Tea</span><span class="lang-th th-text">ชาเขียว</span></div><div class="tea-c-name">Matcha</div><div class="tea-c-note"><span class="lang-en">100% natural.</span><span class="lang-th th-text">100% ธรรมชาติ</span></div></div>
+    <div class="tea-c tea-c-with-thumb"><img class="tea-c-thumb" src="img/tea-oriental-beauty.jpg" alt="Oriental Beauty tea" loading="lazy"><div><span class="tea-tag">Rare</span><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">Oriental Beauty</div><div class="tea-c-note"><span class="lang-en">Once-a-year harvest. Tea grasshopper bites create the signature profile.</span><span class="lang-th th-text">เก็บเกี่ยวปีละครั้ง ตั๊กแตนชากัดใบสร้างโปรไฟล์เฉพาะตัว</span></div></div></div>
+    <div class="tea-c tea-c-puer tea-c-with-thumb"><img class="tea-c-thumb" src="img/tea-gushu-shengpu-8yr.jpg" alt="Gushu Sheng Puer tea" loading="lazy"><div><span class="tea-tag">Aged 8yr</span><div class="tea-c-type"><span class="lang-en">Raw Puer</span><span class="lang-th th-text">ผู่เอ๋อร์ดิบ</span></div><div class="tea-c-name">Gushu Sheng Puer</div><div class="tea-c-note"><span class="lang-en">Wild ancient trees. Jasmine, sweetness, agarwood.</span><span class="lang-th th-text">ต้นชาป่าโบราณ มะลิ หวาน กฤษณา</span></div></div></div>
+    <div class="tea-c tea-c-with-thumb"><img class="tea-c-thumb" src="img/tea-wild-red.jpg" alt="Wild Red Tea" loading="lazy"><div><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Wild Red Tea</div><div class="tea-c-note"><span class="lang-en">Flora, fruity, good body. Great for cafés.</span><span class="lang-th th-text">ดอกไม้ ผลไม้ บอดี้ดี เหมาะสำหรับร้านกาแฟ</span></div></div></div>
+    <div class="tea-c tea-c-green tea-c-with-thumb"><img class="tea-c-thumb" src="img/tea-matcha.jpg" alt="Matcha tea" loading="lazy"><div><div class="tea-c-type"><span class="lang-en">Green Tea</span><span class="lang-th th-text">ชาเขียว</span></div><div class="tea-c-name">Matcha</div><div class="tea-c-note"><span class="lang-en">100% natural.</span><span class="lang-th th-text">100% ธรรมชาติ</span></div></div></div>
   </div>
   <span class="more-link" onclick="go('tea')" style="border-color:var(--terra);color:var(--terra)"><span class="lang-en">See all 15 teas →</span><span class="lang-th th-text">ดูชาทั้ง 15 ชนิด →</span></span>
 </div>
 
 <!-- Events -->
 <div class="sec">
-  <div>
+  <div class="ev-row">
+    <div>
       <div class="accent" style="background:var(--green-dark)"></div>
       <div class="sec-label"><svg class="sec-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="13" rx="1.5"/><path d="M3 8h14"/><path d="M7 2v4"/><path d="M13 2v4"/><circle cx="10" cy="13" r="1" fill="currentColor" stroke="none"/></svg><span class="lang-en">Events & tastings</span><span class="lang-th th-text">อีเวนต์และชิม</span></div>
       <p class="sec-p"><span class="lang-en">Cupping sessions, tea tastings, farm visits, and pop-ups. Chiang Rai and Bangkok.</span><span class="lang-th th-text">คัปปิ้ง ชิมชา เยี่ยมชมไร่ และป๊อปอัพ เชียงรายและกรุงเทพ</span></p>
       <span class="more-link" onclick="go('events')"><span class="lang-en">See events →</span><span class="lang-th th-text">ดูอีเวนต์ →</span></span>
+    </div>
+    <img src="img/cupping-team.jpg" alt="N2G team cupping session" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px">
+  </div>
+</div>
+
+<!-- Estate trust-builder -->
+<div class="sec">
+  <img src="img/doi-tung-panorama.jpg" alt="Panoramic view of the Doi Tung estate" loading="lazy" style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px">
+  <div style="margin-top:20px">
+    <div class="sec-label"><span class="lang-en">The estate</span><span class="lang-th th-text">ไร่ของเรา</span></div>
+    <p class="sec-p" style="margin-bottom:12px"><span class="lang-en">Doi Tung, Chiang Rai · 1,200–1,400m · Everything grown and processed on-site.</span><span class="lang-th th-text">ดอยตุง เชียงราย · 1,200–1,400 เมตร · ปลูกและแปรรูปทุกอย่างที่ไร่</span></p>
+    <span class="more-link" onclick="go('about')"><span class="lang-en">Meet the team →</span><span class="lang-th th-text">พบทีมของเรา →</span></span>
   </div>
 </div>
 
 <div class="sec sec-lg">
   <h2 class="sec-h" style="font-size:26px;margin-bottom:16px"><span class="lang-en">Wholesale</span><span class="lang-th th-text">ขายส่ง</span></h2>
   <p class="sec-p" style="margin-bottom:20px"><span class="lang-en">We work with cafés, hotels, restaurants, roasters, and anyone curious about our products. Samples available on request.</span><span class="lang-th th-text">เราทำงานร่วมกับร้านกาแฟ โรงแรม ร้านอาหาร โรสเตอร์ และทุกคนที่สนใจผลิตภัณฑ์ของเรา ตัวอย่างสินค้ามีให้ตามคำขอ</span></p>
-  <div class="grow">
-    <div class="grow-i" onclick="go('coffee')"><svg class="grow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><div class="grow-n"><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div><div class="grow-s"><span class="lang-en">Green beans or roasted</span><span class="lang-th th-text">กรีนบีนหรือคั่วแล้ว</span></div></div>
-    <div class="grow-i" onclick="go('tea')"><svg class="grow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><div class="grow-n"><span class="lang-en">Heritage tea</span><span class="lang-th th-text">ชามรดก</span></div><div class="grow-s"><span class="lang-en">15 varieties</span><span class="lang-th th-text">15 ชนิด</span></div></div>
-    <div class="grow-i" onclick="go('produce')"><svg class="grow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="2.5"/><path d="M10 5.5c0-2.5 2-3.5 2-3.5"/><path d="M7.5 8c-2-1-3.5.5-3.5.5"/><path d="M12.5 8c2-1 3.5.5 3.5.5"/><path d="M8 10.2c-1.5 1.5-1 3.5-1 3.5"/><path d="M12 10.2c1.5 1.5 1 3.5 1 3.5"/><path d="M10 10.5V18"/></svg><div class="grow-n"><span class="lang-en">Produce</span><span class="lang-th th-text">ผลผลิต</span></div><div class="grow-s"><span class="lang-en">Ginger, osmanthus, chrysanthemum</span><span class="lang-th th-text">ขิง ออสแมนทัส เบญจมาศ</span></div></div>
+  <div class="grow grow-with-img">
+    <div class="grow-i" onclick="go('coffee')"><img class="grow-i-img" src="img/shade-grown-forest.jpg" alt="Shade-grown coffee forest" loading="lazy"><svg class="grow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><div class="grow-n"><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div><div class="grow-s"><span class="lang-en">Green beans or roasted</span><span class="lang-th th-text">กรีนบีนหรือคั่วแล้ว</span></div></div>
+    <div class="grow-i" onclick="go('tea')"><img class="grow-i-img" src="img/tea-mountain-landscape.jpg" alt="Tea mountain landscape" loading="lazy"><svg class="grow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><div class="grow-n"><span class="lang-en">Heritage tea</span><span class="lang-th th-text">ชามรดก</span></div><div class="grow-s"><span class="lang-en">15 varieties</span><span class="lang-th th-text">15 ชนิด</span></div></div>
+    <div class="grow-i" onclick="go('produce')"><img class="grow-i-img" src="img/chrysanthemum-field.jpg" alt="Chrysanthemum field" loading="lazy"><svg class="grow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="2.5"/><path d="M10 5.5c0-2.5 2-3.5 2-3.5"/><path d="M7.5 8c-2-1-3.5.5-3.5.5"/><path d="M12.5 8c2-1 3.5.5 3.5.5"/><path d="M8 10.2c-1.5 1.5-1 3.5-1 3.5"/><path d="M12 10.2c1.5 1.5 1 3.5 1 3.5"/><path d="M10 10.5V18"/></svg><div class="grow-n"><span class="lang-en">Produce</span><span class="lang-th th-text">ผลผลิต</span></div><div class="grow-s"><span class="lang-en">Ginger, osmanthus, chrysanthemum</span><span class="lang-th th-text">ขิง ออสแมนทัส เบญจมาศ</span></div></div>
   </div>
 </div>
 
@@ -822,6 +841,6 @@ document.querySelectorAll('.carousel').forEach(function(el){
 });
 if(new URLSearchParams(window.location.search).get('lang')==='th')setLang('th',true);
 var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1});
-document.querySelectorAll('.sec,.tea-g,.ev-row,.con-g,.grow,.hero').forEach(function(el){el.classList.add('fade-in');obs.observe(el)});
+document.querySelectorAll('.sec,.tea-g,.ev-row,.con-g,.grow,.hero,.story-strip').forEach(function(el){el.classList.add('fade-in');obs.observe(el)});
 </script>
 </body></html>
