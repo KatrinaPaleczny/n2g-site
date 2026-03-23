@@ -186,7 +186,6 @@ body.thai .lang-en-inline{display:none}
 .story-block{grid-template-columns:1fr}
 .story-block.reverse .story-block-img{order:0}
 .about-editorial{grid-template-columns:1fr;gap:24px}
-.tea-grid{grid-template-columns:1fr}
 .produce-card{grid-template-columns:1fr}
 .produce-card.reverse .produce-card-img{order:0}
 .event-block{grid-template-columns:1fr}
@@ -289,18 +288,16 @@ body.thai .lang-en-inline{display:none}
 .about-images{display:flex;flex-direction:column;gap:16px}
 .about-text{padding-top:8px}
 .tea-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.tea-item{position:relative;border:1px solid var(--border);border-radius:6px;padding:20px;cursor:default;overflow:hidden;min-height:160px;display:flex;flex-direction:column;justify-content:center;transition:border-color 0.2s}
+.tea-item{border:1px solid var(--border);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:border-color 0.2s}
 .tea-item:hover{border-color:var(--terra)}
-.tea-item-text{position:relative;z-index:1;transition:opacity 0.25s}
+.tea-item-img{overflow:hidden}
+.tea-item-img img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.tea-item-text{padding:16px 20px 20px}
 .tea-item-type{font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);margin-bottom:4px;font-weight:500}
 .tea-item-name{font-family:'EB Garamond',serif;font-size:19px;font-weight:400;margin-bottom:6px}
 .tea-item-note{font-size:13px;color:var(--text3);line-height:1.5;font-style:italic}
 .tea-item-tag{display:inline-block;font-size:9px;letter-spacing:0.08em;text-transform:uppercase;background:var(--terra-bg);color:var(--terra);padding:2px 8px;border-radius:3px;margin-bottom:6px;font-weight:500}
-.tea-item-img{position:absolute;inset:0;opacity:0;transition:opacity 0.3s;z-index:2;border-radius:5px;overflow:hidden}
-.tea-item-img img{width:100%;height:100%;object-fit:cover}
-.tea-item-img::before{content:'';position:absolute;top:0;left:0;right:0;height:55%;background:linear-gradient(to bottom,#fff 35%,rgba(255,255,255,0.9) 55%,transparent);z-index:1;pointer-events:none}
-.tea-item:hover .tea-item-img{opacity:1}
-.tea-item:hover .tea-item-text{opacity:0}
+@media(max-width:680px){.tea-grid{grid-template-columns:repeat(2,1fr)}}
 .produce-grid{display:flex;flex-direction:column;gap:48px}
 .produce-card{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
 .produce-card.reverse .produce-card-img{order:1}
