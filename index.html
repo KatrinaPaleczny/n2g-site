@@ -885,14 +885,17 @@ function go(page,scrollTo,skipHash){
   document.querySelectorAll('.nav-links a').forEach(function(a){a.classList.remove('active')});
   var n=document.getElementById('nav-'+page);if(n)n.classList.add('active');
   if(!skipHash){
-    if(page==='home'&&!scrollTo){history.replaceState(null,'',window.location.pathname)}
+    if(page==='home'&&!scrollTo){history.replaceState(null,'',window.location.pathname+window.location.search)}
     else{window.location.hash=scrollTo||page}
   }
   if(scrollTo){setTimeout(function(){var el=document.getElementById(scrollTo);if(el)el.scrollIntoView({behavior:'smooth'})},100)}
   else{window.scrollTo(0,0)}
 }
 (function(){
-  var h=window.location.hash.replace('#','');
+  var raw=window.location.hash.replace('#','');
+  var h=raw.split('?')[0];
+  var hParams=raw.indexOf('?')>-1?new URLSearchParams(raw.split('?')[1]):null;
+  if(hParams&&hParams.get('lang')==='th')setLang('th',true);
   if(h==='connect'){go('home','connect',true);setTimeout(function(){var el=document.getElementById('connect');if(el)el.scrollIntoView({behavior:'smooth'})},300)}
   else if(h&&document.getElementById('page-'+h)){go(h,null,true)}
 })();
