@@ -39,11 +39,12 @@ img{display:block;max-width:100%}
 .nav-brand{display:flex;align-items:center;gap:10px;cursor:pointer}
 .nav-dot{width:28px;height:28px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:500}
 .nav-name{font-family:'EB Garamond',serif;font-size:17px;font-weight:500}
-.nav-tagline{font-size:9px;letter-spacing:0.08em;color:var(--text4);font-family:'Karla',sans-serif;font-weight:300;margin-left:8px}
+.nav-tagline{display:none}
 .nav-right{display:flex;align-items:center;gap:20px}
 .nav-links{display:flex;gap:20px}
 .nav-links a{font-size:11px;letter-spacing:0.06em;color:var(--text3);cursor:pointer}
 .nav-links a:hover,.nav-links a.active{color:var(--green)}
+.nav-links-tagline{display:none}
 .lang-toggle{display:flex;border:1px solid var(--border);overflow:hidden;border-radius:3px}
 .lang-btn{padding:4px 10px;font-size:10px;cursor:pointer;border:none;background:transparent;color:var(--text3);font-family:'Karla',sans-serif;transition:all 0.2s}
 .lang-btn.active{background:var(--green);color:#fff}
@@ -187,7 +188,7 @@ body.thai .lang-en-inline{display:none}
 .nav-links.open{display:flex!important}
 .nav-links a{font-size:22px;font-family:'EB Garamond',serif;padding:14px 0;border-bottom:none;color:var(--text);text-align:center;width:auto;letter-spacing:0.01em}
 .nav-links a:last-child{border-bottom:none}
-.nav-links-tagline{font-size:9px;letter-spacing:0.08em;color:var(--text4);font-family:Karla,sans-serif;font-weight:300;margin-top:24px;text-align:center}
+.nav-links-tagline{display:block;font-size:9px;letter-spacing:0.08em;color:var(--text4);font-family:Karla,sans-serif;font-weight:300;margin-top:24px;text-align:center}
 body.menu-open{overflow:hidden}
 .hero{padding:60px 20px 48px}
 .ev-row{grid-template-columns:1fr}
