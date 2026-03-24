@@ -175,8 +175,8 @@ body.thai .lang-en-inline{display:none}
 
 @media(max-width:680px){
 .w{padding:0 20px}.two,.con-g,.tea-g{grid-template-columns:1fr}
-.ws,.grow{flex-wrap:wrap}.ws-i,.grow-i{min-width:50%}
-.diff-strip{grid-template-columns:1fr}.diff-strip-i{border-right:none;border-bottom:1px solid var(--border)}.diff-strip-i:last-child{border-bottom:none}
+.ws{flex-wrap:wrap}.ws-i{min-width:50%}.grow{display:grid!important;grid-template-columns:1fr 1fr}.grow-i{border-right:none;border-bottom:1px solid var(--border)}.grow-i:last-child{border-bottom:none}
+.diff-strip{grid-template-columns:1fr!important}.diff-strip-i{border-right:none;border-bottom:1px solid var(--border)}.diff-strip-i:last-child{border-bottom:none}
 .specs-grid{grid-template-columns:repeat(2,1fr)!important;row-gap:12px}.specs-grid-i:nth-child(odd){border-left:none;padding-left:0}
 .nav{padding:14px 12px}
 .nav-name{font-size:15px}
@@ -190,12 +190,13 @@ body.thai .lang-en-inline{display:none}
 .hero{padding:60px 20px 48px}
 .ev-row{grid-template-columns:1fr}
 .ph[style*="3/4"]{aspect-ratio:4/3 !important}
+.ev-hero-img{aspect-ratio:4/3!important}
 .story-strip{grid-template-columns:1fr 1fr}
 .ev-grid{grid-template-columns:1fr 1fr}
 .photo-carousel{overflow:hidden!important;border:none!important;background:var(--cream)!important;padding-bottom:28px!important}
 .photo-carousel .carousel-inner{display:flex!important;grid-template-columns:unset!important;gap:0!important;transform:translateX(0);transition:transform 0.4s ease!important;height:auto}
-.photo-carousel .carousel-slide{min-width:100%!important;height:auto;aspect-ratio:4/5;padding:0!important}
-.photo-carousel .carousel-slide .photo-grid-item{aspect-ratio:4/5!important;border-radius:0;width:100%}
+.photo-carousel .carousel-slide{min-width:100%!important;height:auto;aspect-ratio:4/3;padding:0!important}
+.photo-carousel .carousel-slide .photo-grid-item{aspect-ratio:4/3!important;border-radius:0;width:100%}
 .photo-carousel .carousel-dots{display:flex!important}
 .photo-carousel .carousel-nav{display:flex!important}
 .photo-carousel .photo-grid-overlay{opacity:1}
@@ -458,7 +459,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
       <p class="sec-p"><span class="lang-en">Coffee cuppings, tea tastings, farm visits, and pop-ups. Chiang Rai and Bangkok.</span><span class="lang-th th-text">คัปปิ้งกาแฟ ชิมชา เยี่ยมชมไร่ และป๊อปอัพ เชียงรายและกรุงเทพ</span></p>
       <span class="more-link" onclick="go('events')"><span class="lang-en">See events →</span><span class="lang-th th-text">ดูอีเวนต์ →</span></span>
     </div>
-    <img src="img/cupping-team.jpg" alt="N2G team cupping session" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px">
+    <img class="ev-hero-img" src="img/cupping-team.jpg" alt="N2G team cupping session" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px">
   </div>
 </div>
 
