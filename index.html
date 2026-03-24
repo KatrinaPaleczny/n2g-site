@@ -750,30 +750,18 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="sec-label"><span class="lang-en">About N2G</span><span class="lang-th th-text">เกี่ยวกับ N2G</span></div>
 <h2 class="sec-h"><span class="lang-en">Amphoe Mae Ai, Chiang Rai. Since 2018.</span><span class="lang-th th-text">อำเภอแม่อาย เชียงราย ตั้งแต่ 2018</span></h2>
 
-<!-- Story cards - alternating layout -->
-<div class="produce-grid" style="margin-top:32px">
+<!-- Story: text block + image strip (mobile-first restructure) -->
+<div class="about-story" style="margin-top:32px">
+  <p class="sec-p" style="font-size:17px;line-height:1.9;margin-bottom:8px"><span class="lang-en">N2G — Native2Global — was founded in 2018 to connect the agricultural knowledge of Doi Tung's highland communities with the wider market.</span><span class="lang-th th-text">N2G — Native2Global — ก่อตั้งในปี 2018 เพื่อเชื่อมโยงความรู้ด้านการเกษตรของชุมชนบนดอยตุงกับตลาดที่กว้างขึ้น</span></p>
+  <p class="sec-p" style="font-size:17px;line-height:1.9;margin-bottom:8px"><span class="lang-en">The team works directly with local growers to process and develop specialty products while maintaining the ecology of the mountain and creating sustainable livelihoods.</span><span class="lang-th th-text">ทีมงานทำงานร่วมกับเกษตรกรท้องถิ่นโดยตรงเพื่อแปรรูปและพัฒนาผลิตภัณฑ์พิเศษ</span></p>
+  <p class="sec-p" style="font-size:17px;line-height:1.9"><span class="lang-en">Everything is grown and processed on the estate. We pick, wash, dry, roast, cure, and age ourselves.</span><span class="lang-th th-text">ทุกอย่างปลูกและแปรรูปที่ไร่ เราเก็บ ล้าง ตาก คั่ว บ่ม และหมักเอง</span></p>
+</div>
 
-  <div class="produce-card">
-    <div class="produce-card-img"><img src="img/forest-sunburst.jpg" alt="Sunlight through the forest canopy on the estate" loading="lazy"></div>
-    <div class="produce-card-body" style="display:flex;align-items:center">
-      <p class="sec-p" style="font-size:17px;line-height:1.9"><span class="lang-en">N2G — Native2Global — was founded in 2018 to connect the agricultural knowledge of Doi Tung's highland communities with the wider market.</span><span class="lang-th th-text">N2G — Native2Global — ก่อตั้งในปี 2018 เพื่อเชื่อมโยงความรู้ด้านการเกษตรของชุมชนบนดอยตุงกับตลาดที่กว้างขึ้น</span></p>
-    </div>
-  </div>
-
-  <div class="produce-card reverse">
-    <div class="produce-card-img"><img src="img/village-visit.jpg" alt="N2G team visiting farming community" loading="lazy"></div>
-    <div class="produce-card-body" style="display:flex;align-items:center">
-      <p class="sec-p" style="font-size:17px;line-height:1.9"><span class="lang-en">The team works directly with local growers to process and develop specialty products while maintaining the ecology of the mountain and creating sustainable livelihoods.</span><span class="lang-th th-text">ทีมงานทำงานร่วมกับเกษตรกรท้องถิ่นโดยตรงเพื่อแปรรูปและพัฒนาผลิตภัณฑ์พิเศษ</span></p>
-    </div>
-  </div>
-
-  <div class="produce-card">
-    <div class="produce-card-img"><img src="img/roast-master.jpg" alt="Roast master operating the coffee roaster" loading="lazy"></div>
-    <div class="produce-card-body" style="display:flex;align-items:center">
-      <p class="sec-p" style="font-size:17px;line-height:1.9"><span class="lang-en">Everything is grown and processed on the estate. We pick, wash, dry, roast, cure, and age ourselves.</span><span class="lang-th th-text">ทุกอย่างปลูกและแปรรูปที่ไร่ เราเก็บ ล้าง ตาก คั่ว บ่ม และหมักเอง</span></p>
-    </div>
-  </div>
-
+<!-- Image strip -->
+<div class="about-img-strip" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:28px 0 0">
+  <img src="img/forest-sunburst.jpg" alt="Sunlight through the forest canopy on the estate" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px">
+  <img src="img/village-visit.jpg" alt="N2G team visiting farming community" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px">
+  <img src="img/roast-master.jpg" alt="Roast master operating the coffee roaster" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px">
 </div>
 
 <!-- The estate -->
@@ -781,6 +769,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div class="accent" style="background:var(--gold)"></div>
   <div class="sec-label" style="color:var(--gold)"><span class="lang-en">The AHLI Estate</span><span class="lang-th th-text">ไร่ AHLI</span></div>
   <p class="sec-p" style="font-size:17px;line-height:1.9;margin-bottom:16px"><span class="lang-en">The N2G AHLI Estate sits at 1,200–1,400m in the highlands of Doi Tung. Coffee grows under native forest canopy alongside wild tea trees — some over 200 years old. The estate model is built around community development: local farming families grow and harvest, while N2G handles processing, roasting, and connecting their products to global markets. Mountain to cup, from one estate.</span><span class="lang-th th-text">ไร่ N2G AHLI ตั้งอยู่ที่ระดับ 1,200–1,400 เมตร บนที่สูงของดอยตุง กาแฟเติบโตใต้ร่มเงาป่าดั้งเดิมเคียงข้างต้นชาป่า บางต้นอายุกว่า 200 ปี รูปแบบไร่สร้างขึ้นจากการพัฒนาชุมชน ครอบครัวเกษตรกรท้องถิ่นปลูกและเก็บเกี่ยว ขณะที่ N2G ดูแลการแปรรูป คั่ว และเชื่อมโยงผลิตภัณฑ์สู่ตลาดโลก จากภูเขาสู่ถ้วย จากไร่เดียว</span></p>
+  <img src="img/doi-tung-estate-shade-grown-hillside.jpg" alt="Shade-grown coffee hillside on the AHLI Estate" loading="lazy" style="width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:4px">
 </div>
 
 <!-- The team -->
