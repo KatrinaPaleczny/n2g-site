@@ -35,7 +35,7 @@ a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 
 /* Nav - cream, always */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;background:rgba(253,251,247,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:16px 32px;display:flex;justify-content:space-between;align-items:center;background:rgba(253,251,247,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
 .nav-brand{display:flex;align-items:center;gap:10px;cursor:pointer}
 .nav-dot{width:28px;height:28px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:9px;color:#fff;font-weight:500}
 .nav-name{font-family:'EB Garamond',serif;font-size:17px;font-weight:500}
@@ -183,10 +183,12 @@ body.thai .lang-en-inline{display:none}
 .nav-tagline{display:none}
 .nav-right{gap:12px}
 .hamburger{display:flex;align-items:center;justify-content:center}
-.nav-links{display:none;position:absolute;top:100%;left:0;right:0;background:#fdfbf7;flex-direction:column;padding:16px 20px;gap:0;border-bottom:1px solid var(--border)}
-.nav-links.open{display:flex}
-.nav-links a{font-size:13px;padding:10px 0;border-bottom:1px solid var(--border)}
+.nav-links{display:none!important;position:fixed!important;top:0!important;left:0!important;right:0!important;bottom:0!important;height:100vh!important;width:100vw!important;background:var(--cream)!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:0!important;z-index:999!important;padding:0 40px!important}
+.nav-links.open{display:flex!important}
+.nav-links a{font-size:22px;font-family:'EB Garamond',serif;padding:14px 0;border-bottom:none;color:var(--text);text-align:center;width:auto;letter-spacing:0.01em}
 .nav-links a:last-child{border-bottom:none}
+.nav-links-tagline{font-size:9px;letter-spacing:0.08em;color:var(--text4);font-family:Karla,sans-serif;font-weight:300;margin-top:24px;text-align:center}
+body.menu-open{overflow:hidden}
 .hero{padding:60px 20px 48px}
 .ev-row{grid-template-columns:1fr}
 .ph[style*="3/4"]{aspect-ratio:4/3 !important}
@@ -377,7 +379,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <nav class="nav">
 <div class="nav-brand" tabindex="0" role="button" onclick="go('home')" onkeydown="if(event.key==='Enter')go('home')"><div class="nav-dot">N2G</div><span class="nav-name">Native2Global</span><span class="nav-tagline"><span class="lang-en">Mountain | People | Ecology</span><span class="lang-th th-text">ภูเขา | ผู้คน | ระบบนิเวศ</span></span></div>
 <div class="nav-right">
-  <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
+  <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open');document.body.classList.toggle('menu-open')"><span></span><span></span><span></span></button>
   <div class="nav-links">
     <a href="#coffee" onclick="go('coffee');closeMenu();return false" id="nav-coffee" tabindex="0"><span class="lang-en-inline">Coffee</span><span class="lang-th-inline th-text">กาแฟ</span></a>
     <a href="#tea" onclick="go('tea');closeMenu();return false" id="nav-tea" tabindex="0"><span class="lang-en-inline">Tea</span><span class="lang-th-inline th-text">ชา</span></a>
@@ -385,6 +387,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
     <a href="#produce" onclick="go('produce');closeMenu();return false" id="nav-produce" tabindex="0"><span class="lang-en-inline">Produce</span><span class="lang-th-inline th-text">ผลผลิต</span></a>
     <a href="#about" onclick="go('about');closeMenu();return false" id="nav-about" tabindex="0"><span class="lang-en-inline">About</span><span class="lang-th-inline th-text">เกี่ยวกับ</span></a>
     <a href="#connect" onclick="go('home','connect');closeMenu();return false" id="nav-connect" tabindex="0"><span class="lang-en-inline">Contact Us</span><span class="lang-th-inline th-text">ติดต่อ</span></a>
+    <div class="nav-links-tagline"><span class="lang-en">Mountain | People | Ecology</span><span class="lang-th th-text">ภูเขา | ผู้คน | ระบบนิเวศ</span></div>
   </div>
   <div class="lang-toggle">
     <button class="lang-btn active" onclick="setLang('en')">EN</button>
@@ -878,6 +881,7 @@ function setLang(lang,skipUrl){
 function closeMenu(){
   var h=document.querySelector('.hamburger');if(h)h.classList.remove('open');
   var m=document.querySelector('.nav-links');if(m)m.classList.remove('open');
+  document.body.classList.remove('menu-open');
 }
 function go(page,scrollTo){
   document.querySelectorAll('.page').forEach(function(p){p.classList.remove('active')});
