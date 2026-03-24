@@ -383,8 +383,9 @@ body.thai .lang-en-inline{display:none}
 .prod-flowers .prod-circle{width:100px;height:100px;position:absolute;bottom:-20px;right:0}
 
 /* Section 3: Herbs */
-.prod-herbs .prod-circle{width:90px;height:90px}
-.prod-herbs .prod-main-img{width:55%;aspect-ratio:4/3;margin-left:auto}
+.prod-herbs .prod-img-pair{display:flex;align-items:flex-end;gap:16px;margin-bottom:20px}
+.prod-herbs .prod-main-img{width:55%;aspect-ratio:4/3;margin:0}
+.prod-herbs .prod-circle{width:90px;height:90px;margin-bottom:12px}
 
 /* Section 4: Fruit */
 .prod-fruit .prod-circle{width:100px;height:100px}
@@ -396,8 +397,8 @@ body.thai .lang-en-inline{display:none}
   .prod-roots .produce-ed-list{overflow:hidden}
   .prod-flowers .prod-main-img{width:50%}
   .prod-flowers .prod-circle{width:130px;height:130px;bottom:-30px}
-  .prod-herbs .prod-main-img{float:right;width:35%;margin:0 0 16px 32px}
-  .prod-herbs .produce-ed-list{overflow:hidden}
+  .prod-herbs .prod-main-img{width:45%}
+  .prod-herbs .prod-circle{width:110px;height:110px}
   .prod-fruit{display:grid;grid-template-columns:2fr 3fr;gap:32px;align-items:start}
   .prod-fruit .prod-main-img{width:100%}
 }
@@ -849,9 +850,9 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
       <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Roots</span><span class="lang-th th-text">ราก</span></div>
       <div class="produce-ed-title"><span class="lang-en">Highland ginger and turmeric</span><span class="lang-th th-text">ขิงและขมิ้นจากที่สูง</span></div>
     </div>
-    <img class="prod-circle" src="img/black-ginger.jpg" alt="Black ginger from Doi Tung" loading="lazy">
+    <img class="prod-circle" src="img/fresh-turmeric-root-cut-open.jpg" alt="Fresh turmeric root" loading="lazy">
   </div>
-  <img class="prod-main-img" src="img/fresh-turmeric-root-cut-open.jpg" alt="Fresh turmeric root" loading="lazy">
+  <img class="prod-main-img" src="img/black-ginger.jpg" alt="Black ginger from Doi Tung" loading="lazy">
   <div class="produce-ed-list">
     <div><div class="produce-ed-item-name"><span class="lang-en">Mountain Ginger</span><span class="lang-th th-text">ขิงภูเขา</span></div><div class="produce-ed-item-desc"><span class="lang-en">Grown at altitude. Fresh or dried. Strong, warm aroma.</span><span class="lang-th th-text">ปลูกบนที่สูง สดหรือแห้ง กลิ่นแรงอบอุ่น</span></div></div>
     <div><div class="produce-ed-item-name"><span class="lang-en">Black Ginger (Krachai Dam)</span><span class="lang-th th-text">กระชายดำ</span></div><div class="produce-ed-item-desc"><span class="lang-en">Thai superfood. Dried slices or powder.</span><span class="lang-th th-text">สมุนไพรซูเปอร์ฟู้ดไทย แผ่นแห้งหรือผง</span></div></div>
@@ -881,14 +882,12 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <!-- Herbs & Botanicals -->
 <div class="produce-sec-wrap">
 <div class="prod-herbs">
-  <div class="prod-visual">
+  <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Herbs & Botanicals</span><span class="lang-th th-text">สมุนไพรและพฤกษศาสตร์</span></div>
+  <div class="produce-ed-title"><span class="lang-en">Leaves, herbs, and dried botanicals</span><span class="lang-th th-text">ใบไม้ สมุนไพร และพฤกษศาสตร์อบแห้ง</span></div>
+  <div class="prod-img-pair">
+    <img class="prod-main-img" src="img/pandan-leaves-drying.jpg" alt="Chopped pandan leaves drying at the estate" loading="lazy">
     <img class="prod-circle" src="img/lemon-slices-drying.jpg" alt="Lemon slices drying" loading="lazy">
-    <div>
-      <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Herbs & Botanicals</span><span class="lang-th th-text">สมุนไพรและพฤกษศาสตร์</span></div>
-      <div class="produce-ed-title"><span class="lang-en">Leaves, herbs, and dried botanicals</span><span class="lang-th th-text">ใบไม้ สมุนไพร และพฤกษศาสตร์อบแห้ง</span></div>
-    </div>
   </div>
-  <img class="prod-main-img" src="img/pandan-leaves-drying.jpg" alt="Chopped pandan leaves drying at the estate" loading="lazy">
   <div class="produce-ed-list">
     <div><div class="produce-ed-item-name"><span class="lang-en">Pandan</span><span class="lang-th th-text">ใบเตย</span></div><div class="produce-ed-item-desc"><span class="lang-en">Fresh leaves, dried and chopped. Sweet, grassy fragrance.</span><span class="lang-th th-text">ใบสด อบแห้งและหั่น กลิ่นหวานหอมหญ้า</span></div></div>
     <div><div class="produce-ed-item-name"><span class="lang-en">Dried Lemon Slices</span><span class="lang-th th-text">มะนาวอบแห้ง</span></div><div class="produce-ed-item-desc"><span class="lang-en">Bright, citrusy. For tea or cooking.</span><span class="lang-th th-text">สดใส กลิ่นซิตรัส สำหรับชงชาหรือทำอาหาร</span></div></div>
@@ -900,13 +899,8 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="produce-sec-wrap">
 <div class="prod-fruit">
   <div>
-    <div class="prod-visual">
-      <div>
-        <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Seasonal Fruit</span><span class="lang-th th-text">ผลไม้ตามฤดูกาล</span></div>
-        <div class="produce-ed-title"><span class="lang-en">Fresh from the estate</span><span class="lang-th th-text">สดจากไร่</span></div>
-      </div>
-      <img class="prod-circle" src="img/fresh-mulberries-bowl-overhead.jpg" alt="Fresh mulberries" loading="lazy">
-    </div>
+    <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Seasonal Fruit</span><span class="lang-th th-text">ผลไม้ตามฤดูกาล</span></div>
+    <div class="produce-ed-title"><span class="lang-en">Fresh from the estate</span><span class="lang-th th-text">สดจากไร่</span></div>
     <div class="produce-ed-list">
       <div><div class="produce-ed-item-name"><span class="lang-en">Mulberry</span><span class="lang-th th-text">หม่อน</span></div><div class="produce-ed-item-desc"><span class="lang-en">Rich, sweet, and deep purple. Available seasonally.</span><span class="lang-th th-text">หวาน สีม่วงเข้ม มีตามฤดูกาล</span></div></div>
       <div><div class="produce-ed-item-name"><span class="lang-en">Lychee</span><span class="lang-th th-text">ลิ้นจี่</span></div><div class="produce-ed-item-desc"><span class="lang-en">Estate-grown. Sweet and fragrant. Summer harvest.</span><span class="lang-th th-text">ปลูกในไร่ หวานและหอม เก็บเกี่ยวฤดูร้อน</span></div></div>
