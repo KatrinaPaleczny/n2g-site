@@ -367,36 +367,39 @@ body.thai .lang-en-inline{display:none}
 .produce-ed-list{display:flex;flex-direction:column;gap:14px}
 .produce-ed-item-name{font-family:'EB Garamond',serif;font-size:17px;margin-bottom:2px}
 .produce-ed-item-desc{font-size:13px;color:var(--text3);font-style:italic;line-height:1.5}
-.prod-circle{border-radius:50%;object-fit:cover}
-.clearfix::after{content:'';display:table;clear:both}
+.prod-circle{border-radius:50%;object-fit:cover;flex-shrink:0}
 
-/* Section 1: Roots — ginger circle top-right, turmeric square below title */
-.prod-roots .prod-circle{float:right;width:140px;height:140px;margin:0 0 16px 24px}
-.prod-roots .prod-img-sq{width:200px;height:200px;object-fit:cover;border-radius:6px;float:left;margin:8px 24px 16px 0}
+/* Visual zone: title + accent image side by side */
+.prod-visual{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px}
+.prod-main-img{display:block;object-fit:cover;border-radius:6px;margin-bottom:20px}
 
-/* Section 2: Flowers — osmanthus main left, roses circle overlapping area */
-.prod-flowers .prod-img{float:left;width:45%;aspect-ratio:4/3;object-fit:cover;margin:0 32px 16px 0;border-radius:6px}
-.prod-flowers .prod-circle{float:right;width:120px;height:120px;margin:8px 0 16px 20px}
+/* Section 1: Roots */
+.prod-roots .prod-circle{width:120px;height:120px}
+.prod-roots .prod-main-img{width:65%;aspect-ratio:4/3}
 
-/* Section 3: Herbs — pandan main, lemon circle integrated */
-.prod-herbs .prod-img{float:right;width:38%;aspect-ratio:4/3;object-fit:cover;margin:0 0 16px 28px;border-radius:6px}
-.prod-herbs .prod-circle{float:left;width:110px;height:110px;margin:4px 20px 12px 0}
+/* Section 2: Flowers — image area with circle overlay */
+.prod-flowers .prod-img-area{position:relative;margin-bottom:20px;width:fit-content}
+.prod-flowers .prod-main-img{width:60%;aspect-ratio:4/3}
+.prod-flowers .prod-circle{width:100px;height:100px;position:absolute;bottom:-20px;right:0}
 
-/* Section 4: Fruit — lychee main right, mulberry small square */
-.prod-fruit{display:grid;grid-template-columns:2fr 3fr;gap:32px;align-items:start}
-.prod-fruit .prod-img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px}
-.prod-fruit .prod-img-sq{width:120px;height:120px;object-fit:cover;border-radius:6px;margin:16px 0 0}
+/* Section 3: Herbs */
+.prod-herbs .prod-circle{width:90px;height:90px}
+.prod-herbs .prod-main-img{width:55%;aspect-ratio:4/3;margin-left:auto}
 
-/* Mobile */
-@media(max-width:680px){
-  .prod-roots .prod-circle{width:100px;height:100px;margin:0 0 12px 16px}
-  .prod-roots .prod-img-sq{width:140px;height:140px;margin:8px 16px 12px 0}
-  .prod-flowers .prod-img{float:left;width:55%;margin:0 16px 12px 0;aspect-ratio:1/1}
-  .prod-flowers .prod-circle{width:90px;height:90px;margin:4px 0 12px 12px}
-  .prod-herbs .prod-img{float:right;width:45%;margin:0 0 12px 16px}
-  .prod-herbs .prod-circle{width:80px;height:80px;margin:4px 16px 8px 0}
-  .prod-fruit{display:block}.prod-fruit .prod-img{width:80%;aspect-ratio:3/2;margin:0 auto 20px 0;display:block}
-  .prod-fruit .prod-img-sq{width:100px;height:100px;margin:12px 0 0}
+/* Section 4: Fruit */
+.prod-fruit .prod-circle{width:100px;height:100px}
+.prod-fruit .prod-main-img{width:75%;aspect-ratio:3/2}
+
+/* Desktop: wider layouts with floats */
+@media(min-width:681px){
+  .prod-roots .prod-main-img{float:left;width:40%;margin:0 32px 16px 0}
+  .prod-roots .produce-ed-list{overflow:hidden}
+  .prod-flowers .prod-main-img{width:50%}
+  .prod-flowers .prod-circle{width:130px;height:130px;bottom:-30px}
+  .prod-herbs .prod-main-img{float:right;width:35%;margin:0 0 16px 32px}
+  .prod-herbs .produce-ed-list{overflow:hidden}
+  .prod-fruit{display:grid;grid-template-columns:2fr 3fr;gap:32px;align-items:start}
+  .prod-fruit .prod-main-img{width:100%}
 }
 .diff-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);margin-bottom:32px}
 .diff-strip-i{padding:16px 20px;border-right:1px solid var(--border)}
@@ -838,13 +841,17 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <!-- Produce hero photo -->
 <div style="overflow:hidden;border-radius:4px;aspect-ratio:3/1;margin-bottom:24px"><img src="img/chrysanthemum-harvest.jpg" alt="Worker harvesting chrysanthemums on the hillside at Doi Tung" style="width:100%;height:100%;object-fit:cover"></div>
 
-<!-- Roots — ginger circle top-right, turmeric square with items -->
+<!-- Roots -->
 <div class="produce-sec-wrap">
-<div class="prod-roots clearfix">
-  <img class="prod-circle" src="img/black-ginger.jpg" alt="Black ginger from Doi Tung" loading="lazy">
-  <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Roots</span><span class="lang-th th-text">ราก</span></div>
-  <div class="produce-ed-title"><span class="lang-en">Highland ginger and turmeric</span><span class="lang-th th-text">ขิงและขมิ้นจากที่สูง</span></div>
-  <img class="prod-img-sq" src="img/fresh-turmeric-root-cut-open.jpg" alt="Fresh turmeric root" loading="lazy">
+<div class="prod-roots">
+  <div class="prod-visual">
+    <div>
+      <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Roots</span><span class="lang-th th-text">ราก</span></div>
+      <div class="produce-ed-title"><span class="lang-en">Highland ginger and turmeric</span><span class="lang-th th-text">ขิงและขมิ้นจากที่สูง</span></div>
+    </div>
+    <img class="prod-circle" src="img/black-ginger.jpg" alt="Black ginger from Doi Tung" loading="lazy">
+  </div>
+  <img class="prod-main-img" src="img/fresh-turmeric-root-cut-open.jpg" alt="Fresh turmeric root" loading="lazy">
   <div class="produce-ed-list">
     <div><div class="produce-ed-item-name"><span class="lang-en">Mountain Ginger</span><span class="lang-th th-text">ขิงภูเขา</span></div><div class="produce-ed-item-desc"><span class="lang-en">Grown at altitude. Fresh or dried. Strong, warm aroma.</span><span class="lang-th th-text">ปลูกบนที่สูง สดหรือแห้ง กลิ่นแรงอบอุ่น</span></div></div>
     <div><div class="produce-ed-item-name"><span class="lang-en">Black Ginger (Krachai Dam)</span><span class="lang-th th-text">กระชายดำ</span></div><div class="produce-ed-item-desc"><span class="lang-en">Thai superfood. Dried slices or powder.</span><span class="lang-th th-text">สมุนไพรซูเปอร์ฟู้ดไทย แผ่นแห้งหรือผง</span></div></div>
@@ -853,13 +860,15 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div>
 </div>
 
-<!-- Flowers — osmanthus main left, roses circle right -->
+<!-- Flowers -->
 <div class="produce-sec-wrap">
-<div class="prod-flowers clearfix">
-  <img class="prod-img" src="img/osmanthus-blossoms.jpg" alt="Osmanthus blossoms on the Doi Tung estate" loading="lazy">
+<div class="prod-flowers">
   <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Flowers</span><span class="lang-th th-text">ดอกไม้</span></div>
   <div class="produce-ed-title"><span class="lang-en">Dried flowers from the estate</span><span class="lang-th th-text">ดอกไม้อบแห้งจากไร่</span></div>
-  <img class="prod-circle" src="img/roses-drying.jpg" alt="Rose petals drying" loading="lazy">
+  <div class="prod-img-area">
+    <img class="prod-main-img" src="img/osmanthus-blossoms.jpg" alt="Osmanthus blossoms on the Doi Tung estate" loading="lazy">
+    <img class="prod-circle" src="img/roses-drying.jpg" alt="Rose petals drying" loading="lazy">
+  </div>
   <div class="produce-ed-list">
     <div><div class="produce-ed-item-name"><span class="lang-en">Osmanthus</span><span class="lang-th th-text">ออสแมนทัส</span></div><div class="produce-ed-item-desc"><span class="lang-en">Sweet, apricot-like aroma. Used in our tea blends.</span><span class="lang-th th-text">กลิ่นหวานคล้ายแอปริคอต ใช้ในชาเบลนด์</span></div></div>
     <div><div class="produce-ed-item-name"><span class="lang-en">Chrysanthemum</span><span class="lang-th th-text">เบญจมาศ</span></div><div class="produce-ed-item-desc"><span class="lang-en">Sun-dried whole flowers. Brew as tisane or blend with tea.</span><span class="lang-th th-text">ดอกทั้งดอกตากแห้ง ชงเป็นชาสมุนไพร</span></div></div>
@@ -869,13 +878,17 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div>
 </div>
 
-<!-- Herbs — pandan main right, lemon circle left -->
+<!-- Herbs & Botanicals -->
 <div class="produce-sec-wrap">
-<div class="prod-herbs clearfix">
-  <img class="prod-img" src="img/pandan-leaves-drying.jpg" alt="Chopped pandan leaves drying at the estate" loading="lazy">
-  <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Herbs & Botanicals</span><span class="lang-th th-text">สมุนไพรและพฤกษศาสตร์</span></div>
-  <div class="produce-ed-title"><span class="lang-en">Leaves, herbs, and dried botanicals</span><span class="lang-th th-text">ใบไม้ สมุนไพร และพฤกษศาสตร์อบแห้ง</span></div>
-  <img class="prod-circle" src="img/lemon-slices-drying.jpg" alt="Lemon slices drying" loading="lazy">
+<div class="prod-herbs">
+  <div class="prod-visual">
+    <img class="prod-circle" src="img/lemon-slices-drying.jpg" alt="Lemon slices drying" loading="lazy">
+    <div>
+      <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Herbs & Botanicals</span><span class="lang-th th-text">สมุนไพรและพฤกษศาสตร์</span></div>
+      <div class="produce-ed-title"><span class="lang-en">Leaves, herbs, and dried botanicals</span><span class="lang-th th-text">ใบไม้ สมุนไพร และพฤกษศาสตร์อบแห้ง</span></div>
+    </div>
+  </div>
+  <img class="prod-main-img" src="img/pandan-leaves-drying.jpg" alt="Chopped pandan leaves drying at the estate" loading="lazy">
   <div class="produce-ed-list">
     <div><div class="produce-ed-item-name"><span class="lang-en">Pandan</span><span class="lang-th th-text">ใบเตย</span></div><div class="produce-ed-item-desc"><span class="lang-en">Fresh leaves, dried and chopped. Sweet, grassy fragrance.</span><span class="lang-th th-text">ใบสด อบแห้งและหั่น กลิ่นหวานหอมหญ้า</span></div></div>
     <div><div class="produce-ed-item-name"><span class="lang-en">Dried Lemon Slices</span><span class="lang-th th-text">มะนาวอบแห้ง</span></div><div class="produce-ed-item-desc"><span class="lang-en">Bright, citrusy. For tea or cooking.</span><span class="lang-th th-text">สดใส กลิ่นซิตรัส สำหรับชงชาหรือทำอาหาร</span></div></div>
@@ -883,19 +896,23 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div>
 </div>
 
-<!-- Seasonal Fruit — text + mulberry square left, lychee right -->
+<!-- Seasonal Fruit -->
 <div class="produce-sec-wrap">
 <div class="prod-fruit">
   <div>
-    <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Seasonal Fruit</span><span class="lang-th th-text">ผลไม้ตามฤดูกาล</span></div>
-    <div class="produce-ed-title"><span class="lang-en">Fresh from the estate</span><span class="lang-th th-text">สดจากไร่</span></div>
+    <div class="prod-visual">
+      <div>
+        <div class="sec-label" style="color:var(--gold);margin-bottom:8px"><span class="lang-en">Seasonal Fruit</span><span class="lang-th th-text">ผลไม้ตามฤดูกาล</span></div>
+        <div class="produce-ed-title"><span class="lang-en">Fresh from the estate</span><span class="lang-th th-text">สดจากไร่</span></div>
+      </div>
+      <img class="prod-circle" src="img/fresh-mulberries-bowl-overhead.jpg" alt="Fresh mulberries" loading="lazy">
+    </div>
     <div class="produce-ed-list">
       <div><div class="produce-ed-item-name"><span class="lang-en">Mulberry</span><span class="lang-th th-text">หม่อน</span></div><div class="produce-ed-item-desc"><span class="lang-en">Rich, sweet, and deep purple. Available seasonally.</span><span class="lang-th th-text">หวาน สีม่วงเข้ม มีตามฤดูกาล</span></div></div>
       <div><div class="produce-ed-item-name"><span class="lang-en">Lychee</span><span class="lang-th th-text">ลิ้นจี่</span></div><div class="produce-ed-item-desc"><span class="lang-en">Estate-grown. Sweet and fragrant. Summer harvest.</span><span class="lang-th th-text">ปลูกในไร่ หวานและหอม เก็บเกี่ยวฤดูร้อน</span></div></div>
     </div>
-    <img class="prod-img-sq" src="img/fresh-mulberries-bowl-overhead.jpg" alt="Fresh mulberries from the estate" loading="lazy">
   </div>
-  <img class="prod-img" src="img/lychee-hand-harvest.jpg" alt="Lychee harvest from the estate" loading="lazy">
+  <img class="prod-main-img" src="img/lychee-hand-harvest.jpg" alt="Lychee harvest from the estate" loading="lazy">
 </div>
 </div>
 
