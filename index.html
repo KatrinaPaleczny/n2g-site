@@ -177,7 +177,7 @@ body.thai .lang-en-inline{display:none}
 .w{padding:0 20px}.two,.con-g,.tea-g{grid-template-columns:1fr}
 .ws,.grow{flex-wrap:wrap}.ws-i,.grow-i{min-width:50%}
 .diff-strip{grid-template-columns:1fr}.diff-strip-i{border-right:none;border-bottom:1px solid var(--border)}.diff-strip-i:last-child{border-bottom:none}
-.specs-grid{grid-template-columns:repeat(3,1fr);row-gap:12px}.specs-grid-i:nth-child(4){border-left:none;padding-left:0}
+.specs-grid{grid-template-columns:repeat(2,1fr)!important;row-gap:12px}.specs-grid-i:nth-child(odd){border-left:none;padding-left:0}
 .nav{padding:14px 12px}
 .nav-name{font-size:15px}
 .nav-tagline{display:none}
@@ -290,6 +290,7 @@ body.thai .lang-en-inline{display:none}
 .coffee-card .prod-name{font-size:18px;margin-bottom:6px}
 .coffee-card .prod-sub{margin-bottom:10px}
 .coffee-card .flavs{margin-top:12px}
+@media(max-width:680px){.coffee-card-img{aspect-ratio:4/3}}
 .coffee-card-tasting{display:block;margin-top:12px;padding-top:10px;border-top:1px solid rgba(44,36,23,0.08);font-size:12px;color:var(--text3);font-style:italic}
 .spec-line{font-size:10px;color:var(--text4);margin-top:6px;letter-spacing:0.02em}
 .coffee-carousel{aspect-ratio:21/9;margin-top:32px;border:none;border-radius:8px}
@@ -538,6 +539,22 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <!-- Coffee hero -->
 <img class="page-hero" src="img/coffee-picker-harvesting-cherries.jpeg" alt="Coffee picker harvesting ripe cherries at the N2G estate" loading="lazy">
 
+<!-- Why this coffee strip -->
+<div class="diff-strip" style="margin-bottom:32px">
+  <div class="diff-strip-i">
+    <div class="diff-strip-label"><span class="lang-en">GI Protected Origin</span><span class="lang-th th-text">สิ่งบ่งชี้ทางภูมิศาสตร์ (GI)</span></div>
+    <div class="diff-strip-desc"><span class="lang-en">Geographical Indication status in Thailand and the EU. One of few Thai coffees with this designation.</span><span class="lang-th th-text">ได้รับสถานะ GI ในไทยและสหภาพยุโรป กาแฟไทยไม่กี่แห่งที่ได้รับการรับรองนี้</span></div>
+  </div>
+  <div class="diff-strip-i">
+    <div class="diff-strip-label"><span class="lang-en">Shade-Grown Forest Coffee</span><span class="lang-th th-text">กาแฟป่าใต้ร่มเงา</span></div>
+    <div class="diff-strip-desc"><span class="lang-en">Arabica grows under native forest canopy alongside wild tea trees — some over 200 years old.</span><span class="lang-th th-text">อราบิก้าเติบโตใต้ร่มเงาป่าดั้งเดิม เคียงข้างต้นชาป่าอายุกว่า 200 ปี</span></div>
+  </div>
+  <div class="diff-strip-i">
+    <div class="diff-strip-label"><span class="lang-en">Osmanthus Terroir</span><span class="lang-th th-text">เทอร์รัวร์ออสแมนทัส</span></div>
+    <div class="diff-strip-desc"><span class="lang-en">The osmanthus flower note in our Espresso Special is distinctive to Doi Tung — you won't find it in other Thai origins.</span><span class="lang-th th-text">กลิ่นดอกออสแมนทัสในเอสเพรสโซ่สเปเชียลเป็นเอกลักษณ์ของดอยตุง ไม่พบในแหล่งกาแฟไทยอื่น</span></div>
+  </div>
+</div>
+
 <div class="accent"></div>
 <div class="sec-label"><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div>
 <h2 class="sec-h"><span class="lang-en">2025/2026 harvest</span><span class="lang-th th-text">เก็บเกี่ยว 2025/2026</span></h2>
@@ -552,23 +569,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
     <div class="specs-grid-i"><div class="specs-grid-label"><span class="lang-en">Process</span><span class="lang-th th-text">กระบวนการ</span></div><div class="specs-grid-val"><span class="lang-en">Fully washed</span><span class="lang-th th-text">ล้างสะอาด</span></div></div>
     <div class="specs-grid-i"><div class="specs-grid-label">MOQ</div><div class="specs-grid-val"><span class="lang-en">30kg per grade</span><span class="lang-th th-text">30 กก. ต่อเกรด</span></div></div>
   </div>
-  <p style="font-size:13px;color:var(--text2);line-height:1.6;margin:0"><span class="lang-en">Three grades available — X.O., Special, and Classic. Scroll to compare flavor profiles, or <span class="more-link" style="margin-top:0;font-size:13px" onclick="go('home','connect')">request a sample kit →</span></span><span class="lang-th th-text">มี 3 เกรด — X.O., Special, Classic เลื่อนดูเปรียบเทียบโปรไฟล์รสชาติ หรือ<span class="more-link" style="margin-top:0;font-size:13px" onclick="go('home','connect')">ขอชุดตัวอย่าง →</span></span></p>
-</div>
-
-<!-- Why this coffee strip -->
-<div class="diff-strip">
-  <div class="diff-strip-i">
-    <div class="diff-strip-label"><span class="lang-en">GI Protected Origin</span><span class="lang-th th-text">สิ่งบ่งชี้ทางภูมิศาสตร์ (GI)</span></div>
-    <div class="diff-strip-desc"><span class="lang-en">Geographical Indication status in Thailand and the EU. One of few Thai coffees with this designation.</span><span class="lang-th th-text">ได้รับสถานะ GI ในไทยและสหภาพยุโรป กาแฟไทยไม่กี่แห่งที่ได้รับการรับรองนี้</span></div>
-  </div>
-  <div class="diff-strip-i">
-    <div class="diff-strip-label"><span class="lang-en">Shade-Grown Forest Coffee</span><span class="lang-th th-text">กาแฟป่าใต้ร่มเงา</span></div>
-    <div class="diff-strip-desc"><span class="lang-en">Arabica grows under native forest canopy alongside wild tea trees — some over 200 years old.</span><span class="lang-th th-text">อราบิก้าเติบโตใต้ร่มเงาป่าดั้งเดิม เคียงข้างต้นชาป่าอายุกว่า 200 ปี</span></div>
-  </div>
-  <div class="diff-strip-i">
-    <div class="diff-strip-label"><span class="lang-en">Osmanthus Terroir</span><span class="lang-th th-text">เทอร์รัวร์ออสแมนทัส</span></div>
-    <div class="diff-strip-desc"><span class="lang-en">The osmanthus flower note in our Espresso Special is distinctive to Doi Tung — you won't find it in other Thai origins.</span><span class="lang-th th-text">กลิ่นดอกออสแมนทัสในเอสเพรสโซ่สเปเชียลเป็นเอกลักษณ์ของดอยตุง ไม่พบในแหล่งกาแฟไทยอื่น</span></div>
-  </div>
+  <p style="font-size:13px;color:var(--text2);line-height:1.6;margin:0"><span class="lang-en">Three grades available — X.O., Special, and Classic. Scroll for more info or <span class="more-link" style="margin-top:0;font-size:13px" onclick="go('home','connect')">contact us</span> for more details.</span><span class="lang-th th-text">มี 3 เกรด — X.O., Special, Classic เลื่อนดูข้อมูลเพิ่มเติม หรือ<span class="more-link" style="margin-top:0;font-size:13px" onclick="go('home','connect')">ติดต่อเรา</span>สำหรับรายละเอียด</span></p>
 </div>
 
 <!-- Coffee product cards with photos -->
@@ -586,7 +587,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div>
 
 <!-- From estate to cup: copy only -->
-<div class="sec" style="padding-top:40px">
+<div class="sec" style="padding-top:24px">
   <div class="sec-label"><span class="lang-en">From estate to cup</span><span class="lang-th th-text">จากไร่สู่แก้ว</span></div>
   <p class="sec-p" style="margin-bottom:12px"><span class="lang-en">Cherries are picked by hand at peak ripeness and sorted on-site. We roast in small batches on the estate — or ship green beans direct. Beyond whole beans, we produce capsules, drip bags, and curated gift boxes.</span><span class="lang-th th-text">เชอรี่ถูกเก็บด้วยมือเมื่อสุกเต็มที่และคัดแยกที่ไร่ เราคั่วเป็นล็อตเล็กที่ไร่ หรือส่งกรีนบีนตรง นอกจากเมล็ดกาแฟ เรายังผลิตแคปซูล ดริปแบ็ก และกล่องของขวัญ</span></p>
 </div>
