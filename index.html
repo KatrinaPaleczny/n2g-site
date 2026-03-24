@@ -175,6 +175,7 @@ body.thai .lang-en-inline{display:none}
 @media(max-width:680px){
 .w{padding:0 20px}.two,.con-g,.tea-g{grid-template-columns:1fr}
 .ws,.grow{flex-wrap:wrap}.ws-i,.grow-i{min-width:50%}
+.diff-strip{grid-template-columns:1fr}.diff-strip-i{border-right:none;border-bottom:1px solid var(--border)}.diff-strip-i:last-child{border-bottom:none}
 .nav{padding:14px 12px}
 .nav-name{font-size:15px}
 .nav-right{gap:12px}
@@ -341,6 +342,11 @@ body.thai .lang-en-inline{display:none}
 .produce-item-name{font-family:'EB Garamond',serif;font-size:18px;margin-bottom:4px}
 .produce-item-note{font-size:13px;color:var(--text3);font-style:italic;line-height:1.5}
 .produce-items-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.diff-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);margin-bottom:32px}
+.diff-strip-i{padding:16px 20px;border-right:1px solid var(--border)}
+.diff-strip-i:last-child{border-right:none}
+.diff-strip-label{font-family:'EB Garamond',serif;font-size:14px;color:var(--text);margin-bottom:6px}
+.diff-strip-desc{font-size:11px;color:var(--text3);line-height:1.5}
 .team-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
 .team-strip img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px}
 
@@ -514,6 +520,22 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="sec-label"><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div>
 <h2 class="sec-h"><span class="lang-en">2025/2026 harvest</span><span class="lang-th th-text">เก็บเกี่ยว 2025/2026</span></h2>
 <p class="sec-p" style="margin-bottom:32px"><span class="lang-en">Arabica from our single estate at Doi Tung. Catimor, Caturra, and Catuai varieties grown at 1,200–1,400m. Fully washed and sun-dried on raised beds. Available as green beans or roasted to your specification.</span><span class="lang-th th-text">อราบิก้าจากไร่เดียวที่ดอยตุง พันธุ์ Catimor, Caturra, Catuai ปลูกที่ 1,200–1,400 เมตร ล้างสะอาดและตากแดดบนแคร่ยกสูง มีทั้งกรีนบีนหรือคั่วตามสั่ง</span></p>
+
+<!-- Why this coffee strip -->
+<div class="diff-strip">
+  <div class="diff-strip-i">
+    <div class="diff-strip-label"><span class="lang-en">GI Protected Origin</span><span class="lang-th th-text">สิ่งบ่งชี้ทางภูมิศาสตร์ (GI)</span></div>
+    <div class="diff-strip-desc"><span class="lang-en">Geographical Indication status in Thailand and the EU. One of few Thai coffees with this designation.</span><span class="lang-th th-text">ได้รับสถานะ GI ในไทยและสหภาพยุโรป กาแฟไทยไม่กี่แห่งที่ได้รับการรับรองนี้</span></div>
+  </div>
+  <div class="diff-strip-i">
+    <div class="diff-strip-label"><span class="lang-en">Shade-Grown Forest Coffee</span><span class="lang-th th-text">กาแฟป่าใต้ร่มเงา</span></div>
+    <div class="diff-strip-desc"><span class="lang-en">Arabica grows under native forest canopy alongside wild tea trees — some over 200 years old.</span><span class="lang-th th-text">อราบิก้าเติบโตใต้ร่มเงาป่าดั้งเดิม เคียงข้างต้นชาป่าอายุกว่า 200 ปี</span></div>
+  </div>
+  <div class="diff-strip-i">
+    <div class="diff-strip-label"><span class="lang-en">Osmanthus Terroir</span><span class="lang-th th-text">เทอร์รัวร์ออสแมนทัส</span></div>
+    <div class="diff-strip-desc"><span class="lang-en">The osmanthus flower note in our Espresso Special is distinctive to Doi Tung — you won't find it in other Thai origins.</span><span class="lang-th th-text">กลิ่นดอกออสแมนทัสในเอสเพรสโซ่สเปเชียลเป็นเอกลักษณ์ของดอยตุง ไม่พบในแหล่งกาแฟไทยอื่น</span></div>
+  </div>
+</div>
 
 <!-- Coffee product cards with photos -->
 <div class="coffee-card">
