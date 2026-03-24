@@ -879,7 +879,7 @@ function go(page,scrollTo,skipHash){
   var n=document.getElementById('nav-'+page);if(n)n.classList.add('active');
   if(!skipHash){
     if(page==='home'&&!scrollTo){history.replaceState(null,'',window.location.pathname+window.location.search)}
-    else{window.location.hash=scrollTo||page}
+    else{history.replaceState(null,'',window.location.pathname+window.location.search+'#'+(scrollTo||page))}
   }
   if(scrollTo){setTimeout(function(){var el=document.getElementById(scrollTo);if(el)el.scrollIntoView({behavior:'smooth'})},100)}
   else{window.scrollTo(0,0)}
@@ -892,6 +892,12 @@ function go(page,scrollTo,skipHash){
   if(h==='connect'){go('home','connect',true);setTimeout(function(){var el=document.getElementById('connect');if(el)el.scrollIntoView({behavior:'smooth'})},300)}
   else if(h&&document.getElementById('page-'+h)){go(h,null,true)}
 })();
+window.addEventListener('hashchange',function(){
+  var h=window.location.hash.replace('#','').split('?')[0];
+  if(h==='connect'){go('home','connect',true);setTimeout(function(){var el=document.getElementById('connect');if(el)el.scrollIntoView({behavior:'smooth'})},100)}
+  else if(h&&document.getElementById('page-'+h)){go(h,null,true)}
+  else if(!h){go('home',null,true)}
+});
 function handleContact(e){
   e.preventDefault();
   var f=document.getElementById('contact-form');
