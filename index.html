@@ -513,26 +513,27 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   </div>
 </div>
 
-<!-- Events -->
-<div class="sec">
-  <div class="ev-row">
-    <div>
-      <div class="accent" style="background:var(--green-dark)"></div>
-      <div class="sec-label"><svg class="sec-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" rx="1.5"/><path d="M3 8h14"/><path d="M7 2v4"/><path d="M13 2v4"/><circle cx="10" cy="13" r="1" fill="currentColor" stroke="none"/></svg><span class="lang-en">Events & tastings</span><span class="lang-th th-text">อีเวนต์และชิม</span></div>
-      <p class="sec-p"><span class="lang-en">Coffee cuppings, tea tastings, farm visits, and pop-ups. Chiang Rai and Bangkok.</span><span class="lang-th th-text">คัปปิ้งกาแฟ ชิมชา เยี่ยมชมไร่ และป๊อปอัพ เชียงรายและกรุงเทพ</span></p>
-      <span class="more-link" onclick="go('events')"><span class="lang-en">See events →</span><span class="lang-th th-text">ดูอีเวนต์ →</span></span>
+<!-- Events & Estate — two-card layout -->
+<div class="sec" style="padding-bottom:32px">
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <!-- Events card -->
+    <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="go('events')">
+      <img src="img/coffee-tea-festival-judges-tasting.jpg" alt="Judges tasting tea at Eastern Lanna Coffee and Tea Festival" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center center;display:block">
+      <div style="padding:16px 18px">
+        <div class="sec-label" style="margin-bottom:6px"><svg class="sec-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" rx="1.5"/><path d="M3 8h14"/><path d="M7 2v4"/><path d="M13 2v4"/><circle cx="10" cy="13" r="1" fill="currentColor" stroke="none"/></svg><span class="lang-en">Events & tastings</span><span class="lang-th th-text">อีเวนต์และชิม</span></div>
+        <p style="font-size:14px;color:var(--text2);line-height:1.5;margin-bottom:10px"><span class="lang-en">Coffee cuppings, tea tastings, farm visits, and pop-ups. Chiang Rai and Bangkok.</span><span class="lang-th th-text">คัปปิ้งกาแฟ ชิมชา เยี่ยมชมไร่ และป๊อปอัพ เชียงรายและกรุงเทพ</span></p>
+        <span class="more-link"><span class="lang-en">See events →</span><span class="lang-th th-text">ดูอีเวนต์ →</span></span>
+      </div>
     </div>
-    <picture><img class="ev-hero-img" src="img/coffee-tea-festival-judges-tasting.jpg" alt="Judges tasting tea at Eastern Lanna Coffee and Tea Festival" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;object-position:center center;border-radius:4px"></picture>
-  </div>
-</div>
-
-<!-- Estate trust-builder -->
-<div class="sec">
-  <img class="estate-hero-img" src="img/doi-tung-estate-shade-grown-hillside.jpg" alt="Shade-grown coffee hillside on the Doi Tung estate" loading="lazy" style="width:100%;aspect-ratio:2.2/1;object-fit:cover;border-radius:4px">
-  <div style="margin-top:20px">
-    <div class="sec-label"><span class="lang-en">AHLI Estate</span><span class="lang-th th-text">ไร่ AHLI</span></div>
-    <p class="sec-p" style="margin-bottom:12px"><span class="lang-en">Doi Tung, Chiang Rai, Thailand · 1,200–1,400m · Coffee grown and processed on-site. Teas sourced from Doi Tung and Mae Salong.</span><span class="lang-th th-text">ดอยตุง เชียงราย ประเทศไทย · 1,200–1,400 เมตร · กาแฟปลูกและแปรรูปที่ไร่ ชาจากดอยตุงและแม่สลอง</span></p>
-    <span class="more-link" onclick="go('about')"><span class="lang-en">Meet the team →</span><span class="lang-th th-text">พบทีมของเรา →</span></span>
+    <!-- Estate card -->
+    <div style="border-radius:8px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="go('about')">
+      <img src="img/doi-tung-estate-shade-grown-hillside.jpg" alt="Shade-grown coffee hillside on the Doi Tung estate" loading="lazy" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block">
+      <div style="padding:16px 18px">
+        <div class="sec-label" style="margin-bottom:6px"><span class="lang-en">AHLI Estate</span><span class="lang-th th-text">ไร่ AHLI</span></div>
+        <p style="font-size:14px;color:var(--text2);line-height:1.5;margin-bottom:10px"><span class="lang-en">Doi Tung, 1,200–1,400m. Single-estate coffee grown and processed on-site.</span><span class="lang-th th-text">ดอยตุง 1,200–1,400 เมตร กาแฟจากไร่เดียว ปลูกและแปรรูปที่ไร่</span></p>
+        <span class="more-link"><span class="lang-en">Meet the team →</span><span class="lang-th th-text">พบทีมของเรา →</span></span>
+      </div>
+    </div>
   </div>
 </div>
 
