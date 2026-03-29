@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Native2Global — Specialty Coffee & Tea from Doi Tung, Chiang Rai</title>
 <meta name="description" content="Single-estate specialty coffee and heritage teas from Doi Tung, Chiang Rai. Arabica forest coffee, 15 heritage teas, wholesale and direct.">
+<meta name="description" lang="th" content="กาแฟพิเศษและชามรดกจากไร่เดียว ดอยตุง เชียงราย กาแฟป่าอราบิก้า ชา 15 ชนิด ขายส่งและส่งตรง">
+<link rel="alternate" hreflang="en" href="https://n2g-site.vercel.app/">
+<link rel="alternate" hreflang="th" href="https://n2g-site.vercel.app/th/">
 <meta property="og:title" content="Native2Global — Specialty Coffee & Tea from Doi Tung">
 <meta property="og:description" content="Single-estate specialty coffee and heritage teas from Doi Tung, Chiang Rai. Grown, processed, and roasted on-site.">
 <meta property="og:type" content="website">
@@ -945,7 +948,7 @@ function setLang(lang,skipUrl){
   document.body.classList.toggle('thai',lang==='th');
   document.querySelectorAll('.lang-btn').forEach(function(b){var isTh=b.textContent.trim()==='ไทย';b.classList.toggle('active',lang==='th'?isTh:!isTh)});
   document.querySelectorAll('[data-placeholder-'+lang+']').forEach(function(el){el.placeholder=el.getAttribute('data-placeholder-'+lang)});
-  if(!skipUrl){var u=new URL(window.location);if(lang==='th')u.searchParams.set('lang','th');else u.searchParams.delete('lang');history.replaceState(null,'',u)}
+  if(!skipUrl){var hash=window.location.hash;if(lang==='th'){if(!window.location.pathname.startsWith('/th')){window.location.href='/th/'+hash;return}}else{if(window.location.pathname.startsWith('/th')){window.location.href='/'+hash;return}}}
 }
 function closeMenu(){
   var h=document.querySelector('.hamburger');if(h)h.classList.remove('open');
@@ -957,8 +960,9 @@ function go(page,scrollTo,skipHash){
   document.querySelectorAll('.nav-links a').forEach(function(a){a.classList.remove('active')});
   var n=document.getElementById('nav-'+page);if(n)n.classList.add('active');
   if(!skipHash){
-    if(page==='home'&&!scrollTo){history.replaceState(null,'',window.location.pathname+window.location.search)}
-    else{history.replaceState(null,'',window.location.pathname+window.location.search+'#'+(scrollTo||page))}
+    var bp=window.location.pathname.startsWith('/th')?'/th/':'/';
+    if(page==='home'&&!scrollTo){history.replaceState(null,'',bp)}
+    else{history.replaceState(null,'',bp+'#'+(scrollTo||page))}
   }
   if(scrollTo){setTimeout(function(){var el=document.getElementById(scrollTo);if(el)el.scrollIntoView({behavior:'smooth'})},100)}
   else{window.scrollTo(0,0)}
@@ -999,7 +1003,7 @@ document.querySelectorAll('.carousel').forEach(function(el){
     if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)){ms(id,dx<0?1:-1)}
   },{passive:true});
 });
-if(new URLSearchParams(window.location.search).get('lang')==='th')setLang('th',true);
+if(window.location.pathname.startsWith('/th')||new URLSearchParams(window.location.search).get('lang')==='th')setLang('th',true);
 var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1});
 document.querySelectorAll('.sec,.tea-g,.ev-row,.con-g,.grow,.hero,.story-strip').forEach(function(el){el.classList.add('fade-in');obs.observe(el)});
 </script>
