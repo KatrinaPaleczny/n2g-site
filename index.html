@@ -255,7 +255,7 @@ body.thai .lang-en-inline{display:none}
 /* Landing: 4-thumbnail story strip */
 .story-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-bottom:0}
 .story-strip-item{position:relative;overflow:hidden;cursor:pointer}
-.story-strip-item img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform 0.3s ease}
+.story-strip-item img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform 0.3s ease}
 .story-strip-item:hover img{transform:scale(1.05)}
 .story-strip-label{position:absolute;bottom:0;left:0;right:0;padding:8px 12px;background:linear-gradient(transparent,rgba(0,0,0,0.5));color:#fff;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;font-weight:500}
 
@@ -268,7 +268,7 @@ body.thai .lang-en-inline{display:none}
 
 /* Photo grid (magazine/editorial) */
 .photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.photo-grid-item{position:relative;overflow:hidden;aspect-ratio:1/1;border-radius:6px}
+.photo-grid-item{position:relative;overflow:hidden;aspect-ratio:4/3;border-radius:6px}
 .photo-grid-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s ease}
 .photo-grid-item:hover img{transform:scale(1.05)}
 .photo-grid-overlay{position:absolute;bottom:0;left:0;right:0;padding:12px 14px;background:linear-gradient(transparent,rgba(0,0,0,0.6));color:#fff;opacity:0;transition:opacity 0.3s ease}
@@ -337,7 +337,7 @@ body.thai .lang-en-inline{display:none}
 
 /* Produce: 3-col gallery */
 .produce-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0}
-.produce-gallery img{aspect-ratio:1/1;object-fit:cover;border-radius:4px;width:100%}
+.produce-gallery img{aspect-ratio:4/3;object-fit:cover;border-radius:4px;width:100%}
 
 /* Team photo */
 .team-photo{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;margin:24px 0}
@@ -626,12 +626,12 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <!-- Product photo grid with captions -->
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px">
-  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="img/parchment.jpeg" alt="Parchment coffee beans" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:11px;color:var(--text3);margin-top:6px;letter-spacing:0.02em"><span class="lang-en">Parchment</span><span class="lang-th th-text">กาแฟกะลา</span></div></div>
-  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="img/green-beans.jpeg" alt="Green coffee beans" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:11px;color:var(--text3);margin-top:6px;letter-spacing:0.02em"><span class="lang-en">Green beans</span><span class="lang-th th-text">กรีนบีน</span></div></div>
-  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/roasted-beans-closeup.webp" type="image/webp"><img src="img/roasted-beans-closeup.jpg" alt="Roasted coffee beans close-up" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:11px;color:var(--text3);margin-top:6px;letter-spacing:0.02em"><span class="lang-en">Roasted</span><span class="lang-th th-text">เมล็ดคั่ว</span></div></div>
-  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/coffee-capsules-box-lineup.webp" type="image/webp"><img src="img/coffee-capsules-box-lineup.jpeg" alt="Espresso capsules" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:11px;color:var(--text3);margin-top:6px;letter-spacing:0.02em"><span class="lang-en">Capsules</span><span class="lang-th th-text">แคปซูล</span></div></div>
-  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/drip-box-open.webp" type="image/webp"><img src="img/drip-box-open.jpg" alt="Mountain to Cup drip bag gift box" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:11px;color:var(--text3);margin-top:6px;letter-spacing:0.02em"><span class="lang-en">Drip bags</span><span class="lang-th th-text">ดริปแบ็ก</span></div></div>
-  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/cube-box-front-straight.webp" type="image/webp"><img src="img/cube-box-front-straight.jpg" alt="Mountain to Cup cube box packaging" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:11px;color:var(--text3);margin-top:6px;letter-spacing:0.02em"><span class="lang-en">Gift box</span><span class="lang-th th-text">กล่องของขวัญ</span></div></div>
+  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="img/parchment.jpeg" alt="Parchment coffee beans" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Parchment</span><span class="lang-th th-text">กาแฟกะลา</span></div></div>
+  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="img/green-beans.jpeg" alt="Green coffee beans" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Green beans</span><span class="lang-th th-text">กรีนบีน</span></div></div>
+  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/roasted-beans-closeup.webp" type="image/webp"><img src="img/roasted-beans-closeup.jpg" alt="Roasted coffee beans close-up" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Roasted</span><span class="lang-th th-text">เมล็ดคั่ว</span></div></div>
+  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/coffee-capsules-box-lineup.webp" type="image/webp"><img src="img/coffee-capsules-box-lineup.jpeg" alt="Espresso capsules" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Capsules</span><span class="lang-th th-text">แคปซูล</span></div></div>
+  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/drip-box-open.webp" type="image/webp"><img src="img/drip-box-open.jpg" alt="Mountain to Cup drip bag gift box" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Drip bags</span><span class="lang-th th-text">ดริปแบ็ก</span></div></div>
+  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/cube-box-front-straight.webp" type="image/webp"><img src="img/cube-box-front-straight.jpg" alt="Mountain to Cup cube box packaging" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Gift box</span><span class="lang-th th-text">กล่องของขวัญ</span></div></div>
 </div>
 
 <!-- Coffee photo carousel -->
@@ -681,9 +681,9 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div class="sec-label" style="padding-top:0;color:var(--terra)"><span class="lang-en">Available as</span><span class="lang-th th-text">รูปแบบที่มี</span></div>
   <p class="sec-p" style="margin-bottom:24px"><span class="lang-en">Loose leaf — bulk or sampler sets.</span><span class="lang-th th-text">ใบชาแบบเบิ้ลหรือชุดชิม</span></p>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
-    <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/tea-sampler-box.webp" type="image/webp"><img src="img/tea-sampler-box.jpg" alt="Tea sampler box with three varieties" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:11px;color:var(--text3);margin-top:6px;letter-spacing:0.02em"><span class="lang-en">Sampler set</span><span class="lang-th th-text">ชุดชิม</span></div></div>
-    <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/tea-sampler-herbal.webp" type="image/webp"><img src="img/tea-sampler-herbal.jpg" alt="Tea sampler box with herbal blends" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:11px;color:var(--text3);margin-top:6px;letter-spacing:0.02em"><span class="lang-en">Herbal set</span><span class="lang-th th-text">ชุดสมุนไพร</span></div></div>
-    <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="img/tea-varieties-dishes.jpg" alt="Six tea varieties displayed in small white dishes" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:11px;color:var(--text3);margin-top:6px;letter-spacing:0.02em"><span class="lang-en">Loose leaf</span><span class="lang-th th-text">ใบชา</span></div></div>
+    <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/tea-sampler-box.webp" type="image/webp"><img src="img/tea-sampler-box.jpg" alt="Tea sampler box with three varieties" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Sampler set</span><span class="lang-th th-text">ชุดชิม</span></div></div>
+    <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="img/tea-sampler-herbal.webp" type="image/webp"><img src="img/tea-sampler-herbal.jpg" alt="Tea sampler box with herbal blends" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Herbal set</span><span class="lang-th th-text">ชุดสมุนไพร</span></div></div>
+    <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="img/tea-varieties-dishes.jpg" alt="Six tea varieties displayed in small white dishes" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Loose leaf</span><span class="lang-th th-text">ใบชา</span></div></div>
   </div>
 </div>
 
