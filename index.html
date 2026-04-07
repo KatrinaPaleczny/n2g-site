@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Native2Global — Specialty Coffee & Tea from Doi Tung, Chiang Rai</title>
+<title>Native2Global | Specialty Coffee & Tea from Doi Tung, Chiang Rai</title>
 <meta name="description" content="Single-estate specialty coffee and heritage teas from Doi Tung, Chiang Rai. Arabica forest coffee, 15 heritage teas, wholesale and direct.">
 <meta name="description" lang="th" content="กาแฟพิเศษและชามรดกจากไร่เดียว ดอยตุง เชียงราย กาแฟป่าอราบิก้า ชา 15 ชนิด ขายส่งและส่งตรง">
 <link rel="alternate" hreflang="en" href="https://n2g-site.vercel.app/">
 <link rel="alternate" hreflang="th" href="https://n2g-site.vercel.app/th/">
-<meta property="og:title" content="Native2Global — Specialty Coffee & Tea from Doi Tung">
+<meta property="og:title" content="Native2Global | Specialty Coffee & Tea from Doi Tung">
 <meta property="og:description" content="Single-estate specialty coffee and heritage teas from Doi Tung, Chiang Rai. Grown, processed, and roasted on-site.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://n2g-site.vercel.app">
@@ -16,7 +16,7 @@
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="533">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Native2Global — Specialty Coffee & Tea from Doi Tung">
+<meta name="twitter:title" content="Native2Global | Specialty Coffee & Tea from Doi Tung">
 <meta name="twitter:description" content="Single-estate specialty coffee and heritage teas from Doi Tung, Chiang Rai. Grown, processed, and roasted on-site.">
 <meta name="twitter:image" content="https://n2g-site.vercel.app/img/shade-grown-forest.jpg">
 <meta name="theme-color" content="#2D5239">
@@ -137,12 +137,12 @@ source{display:none}
 .cta-btn{display:inline-block;padding:10px 24px;border:1px solid var(--border);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text2);cursor:pointer;transition:all 0.2s}.cta-btn:hover{border-color:var(--green);color:var(--green)}
 
 /* Contact page */
-.ff{margin-bottom:12px}.fl{font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text4);margin-bottom:4px}
+.ff{margin-bottom:16px}.fl{font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text4);margin-bottom:4px}
 .fi{width:100%;padding:10px 12px;font-size:16px;font-family:'Karla',sans-serif;border:1px solid var(--border);background:var(--white);color:var(--text);font-weight:300}.fi:focus{border-color:var(--green);outline:2px solid rgba(58,107,74,0.3);outline-offset:1px}.fi::placeholder{color:var(--text4)}
 textarea.fi{resize:vertical;min-height:72px}
 .fb{padding:11px 24px;background:var(--green);color:#fff;border:none;font-size:11px;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;font-family:'Karla',sans-serif;margin-top:4px}.fb:hover{background:var(--green-dark)}
 .ci{font-size:14px;color:var(--text3);line-height:1.8}.ci strong{color:var(--text2);font-weight:400}
-.con-g{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:24px}
+.con-g{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:32px}
 
 /* Carousel */
 .carousel{position:relative;background:var(--sand);border:2px dashed rgba(44,36,23,0.12);overflow:hidden}
@@ -158,7 +158,7 @@ textarea.fi{resize:vertical;min-height:72px}
 .events-tag{font-size:11px;padding:4px 10px;border:1px solid rgba(44,36,23,0.1);color:var(--text3);display:inline-block;margin:4px 4px 0 0}
 
 /* Contact card */
-.con-card{background:var(--white);padding:28px;border:1px solid var(--border)}
+.con-card{background:var(--white);padding:36px;border:1px solid var(--border)}
 
 /* Footer */
 .foot-waves{line-height:0;margin-top:48px}.foot-waves svg{width:100%;height:auto;display:block}
@@ -318,8 +318,15 @@ body.thai .lang-en-inline{display:none}
 /* Lightbox */
 .lightbox{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;cursor:pointer}
 .lightbox.open{display:flex}
-.lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:4px}
-.lightbox-close{position:absolute;top:16px;right:20px;color:#fff;font-size:28px;cursor:pointer;font-family:inherit;background:none;border:none;padding:8px}
+.lightbox-content{display:flex;flex-direction:column;align-items:center;max-width:90vw;max-height:90vh}
+.lightbox img{max-width:90vw;max-height:calc(90vh - 48px);object-fit:contain;border-radius:4px}
+.lightbox-close{position:absolute;top:16px;right:20px;color:#fff;font-size:28px;cursor:pointer;font-family:inherit;background:none;border:none;padding:8px;z-index:1}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);color:#fff;font-size:36px;cursor:pointer;background:rgba(255,255,255,0.12);border:none;padding:12px 16px;border-radius:4px;font-family:inherit;line-height:1;z-index:1}
+.lightbox-nav:hover{background:rgba(255,255,255,0.25)}
+.lightbox-prev{left:16px}
+.lightbox-next{right:16px}
+.lightbox:not(.has-gallery) .lightbox-nav{display:none}
+.lightbox-caption{color:rgba(255,255,255,0.8);font-size:14px;text-align:center;margin-top:12px;max-width:600px}
 
 /* Tea packaging scroll */
 /* tea-pkg-scroll replaced by tea-pkg-carousel */
@@ -575,9 +582,9 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <!-- Brand story bridge -->
 <div class="brand-bridge">
-  <span class="draft-label">Draft — pending team review</span>
+
   <p class="brand-bridge-text">
-    <span class="lang-en">Since 2018, we've grown, processed, and roasted single-estate coffee at 1,200 to 1,400 meters on Doi Tung — in partnership with the Akha highland community who've cultivated this land for generations. Our estate produces specialty Arabica, heritage teas from ancient trees, and seasonal mountain produce. Everything from cherry to cup, from one estate.</span>
+    <span class="lang-en">Since 2018, we've grown, processed, and roasted single-estate coffee at 1,200 to 1,400 meters on Doi Tung, in partnership with the Akha highland community who've cultivated this land for generations. Our estate produces specialty Arabica, heritage teas from ancient trees, and seasonal mountain produce. Mountain to cup, from one estate.</span>
     <span class="lang-th th-text"><!-- TODO: Professional Thai translation needed -->ตั้งแต่ปี 2018 เราปลูก แปรรูป และคั่วกาแฟจากไร่เดียวที่ระดับ 1,200 ถึง 1,400 เมตร บนดอยตุง — ร่วมมือกับชุมชนอาข่าบนดอยผู้เพาะปลูกผืนดินนี้มาหลายชั่วอายุคน ไร่ของเราผลิตกาแฟอราบิก้าพิเศษ ชามรดกจากต้นชาโบราณ และผลผลิตตามฤดูกาล ทุกอย่างจากต้นจนถึงถ้วย จากไร่เดียว</span>
   </p>
   <div class="terroir-bar">
@@ -596,23 +603,6 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   </div>
 </div>
 
-</div><!-- close .w for full-width email capture -->
-
-<!-- Newsletter signup — primary placement -->
-<div style="background:var(--sand)">
-<div class="w">
-<div class="email-capture" style="padding:48px 0;border-top:none">
-  <h3 class="email-capture-h" style="font-size:20px"><span class="lang-en">Join the harvest list.</span><span class="lang-th th-text">เข้าร่วมรายชื่อเก็บเกี่ยว</span></h3>
-  <p class="email-capture-p" style="font-size:14px"><span class="lang-en">Be the first to know when new lots are available.</span><span class="lang-th th-text">เป็นคนแรกที่รู้เมื่อมีล็อตใหม่</span></p>
-  <form class="email-capture-form" style="max-width:520px" onsubmit="return false">
-    <input class="email-capture-input" type="email" placeholder="Your email" aria-label="Email address" required>
-    <button class="email-capture-btn" type="submit"><span class="lang-en">Subscribe</span><span class="lang-th th-text">สมัคร</span></button>
-  </form>
-</div>
-</div>
-</div>
-
-<div class="w"><!-- reopen .w -->
 
 <!-- From the estate -->
 <div id="from-estate" style="padding-top:48px">
@@ -638,10 +628,10 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div class="sec-label" style="color:var(--terra)"><svg class="sec-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><span class="lang-en">Heritage tea · <span style="font-weight:600;color:var(--text)">TEA</span><span style="font-weight:300;text-transform:lowercase;color:var(--text)">organique</span> · <span style="color:#4CAF50;font-size:9px;letter-spacing:0.02em">山青茶語</span></span><span class="lang-th th-text">ชามรดก · <span style="font-weight:600;color:var(--text)">TEA</span><span style="font-weight:300;text-transform:lowercase;color:var(--text)">organique</span> · <span style="color:#4CAF50;font-size:9px;letter-spacing:0.02em">山青茶語</span></span> <svg style="width:20px;height:20px;vertical-align:-4px;margin-left:3px" viewBox="-5 0 115 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="48" r="42" fill="none" stroke="#8BC34A" stroke-width="2.5" opacity="0.7"/><polygon points="30,62 42,30 54,62" fill="#4CAF50"/><polygon points="40,62 52,34 64,62" fill="#66BB6A"/><polygon points="50,62 60,38 72,62" fill="#81C784"/><path d="M26,62 Q50,50 74,62" fill="#4FC3F7" opacity="0.8"/><path d="M70,50 C78,38 82,25 75,18" fill="none" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="74" cy="20" rx="5" ry="8" transform="rotate(-30 74 20)" fill="#4CAF50"/><ellipse cx="80" cy="28" rx="4" ry="7" transform="rotate(-50 80 28)" fill="#66BB6A"/></svg></div>
   <p class="sec-p"><span class="lang-en">15 teas from wild and cultivated trees. Oolongs, wild red teas, aged puer, white tea, flower blends, and natural matcha. Some gushu trees are 200–500 years old.</span><span class="lang-th th-text">ชา 15 ชนิดจากต้นชาป่าและต้นชาปลูก อู่หลง ชาแดงป่า ผู่เอ๋อร์บ่ม ชาขาว ชาดอกไม้ และมัทฉะไทย ต้นชากู่ซู่บางต้นอายุ 200–500 ปี</span></p>
   <div class="tea-g">
-    <div class="tea-c tea-c-with-thumb"><picture><source srcset="/img/tea-oriental-beauty.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-oriental-beauty.jpg" alt="Oriental Beauty tea" loading="lazy"></picture><div><span class="tea-tag">Rare</span><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">Oriental Beauty</div><div class="tea-c-note"><span class="lang-en">Once-a-year harvest. Tea grasshopper bites create the signature profile.</span><span class="lang-th th-text">เก็บเกี่ยวปีละครั้ง ตั๊กแตนชากัดใบสร้างโปรไฟล์เฉพาะตัว</span></div></div></div>
-    <div class="tea-c tea-c-puer tea-c-with-thumb"><picture><source srcset="/img/tea-gushu-shengpu-8yr.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-gushu-shengpu-8yr.jpg" alt="Gushu Sheng Puer tea" loading="lazy"></picture><div><span class="tea-tag">Aged 8yr</span><div class="tea-c-type"><span class="lang-en">Raw Puer</span><span class="lang-th th-text">ผู่เอ๋อร์ดิบ</span></div><div class="tea-c-name">Gushu Sheng Puer</div><div class="tea-c-note"><span class="lang-en">Wild ancient trees. Jasmine, sweetness, agarwood.</span><span class="lang-th th-text">ต้นชาป่าโบราณ มะลิ หวาน กฤษณา</span></div></div></div>
-    <div class="tea-c tea-c-with-thumb"><picture><source srcset="/img/tea-wild-red.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-wild-red.jpg" alt="Wild Red Tea" loading="lazy"></picture><div><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Wild Red Tea</div><div class="tea-c-note"><span class="lang-en">Floral, fruity, good body. Perfect breakfast tea for cafés.</span><span class="lang-th th-text">ดอกไม้ ผลไม้ บอดี้ดี เหมาะสำหรับร้านกาแฟ</span></div></div></div>
-    <div class="tea-c tea-c-green tea-c-with-thumb"><picture><source srcset="/img/tea-matcha.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-matcha.jpg" alt="Matcha tea" loading="lazy"></picture><div><div class="tea-c-type"><span class="lang-en">Green Tea</span><span class="lang-th th-text">ชาเขียว</span></div><div class="tea-c-name">Matcha</div><div class="tea-c-note"><span class="lang-en">Thai-grown, Japanese matcha process. 100% natural.</span><span class="lang-th th-text">ปลูกในไทย กระบวนการมัทฉะญี่ปุ่น 100% ธรรมชาติ</span></div></div></div>
+    <div class="tea-c tea-c-with-thumb"><picture><source srcset="/img/tea-oriental-beauty.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-oriental-beauty.jpg" alt="Oriental Beauty tea" loading="lazy" onclick="openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><span class="tea-tag">Rare</span><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">Oriental Beauty</div><div class="tea-c-note"><span class="lang-en">Once-a-year harvest. Tea grasshopper bites create the signature profile.</span><span class="lang-th th-text">เก็บเกี่ยวปีละครั้ง ตั๊กแตนชากัดใบสร้างโปรไฟล์เฉพาะตัว</span></div></div></div>
+    <div class="tea-c tea-c-puer tea-c-with-thumb"><picture><source srcset="/img/tea-gushu-shengpu-8yr.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-gushu-shengpu-8yr.jpg" alt="Gushu Sheng Puer tea" loading="lazy" onclick="openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><span class="tea-tag">Aged 8yr</span><div class="tea-c-type"><span class="lang-en">Raw Puer</span><span class="lang-th th-text">ผู่เอ๋อร์ดิบ</span></div><div class="tea-c-name">Gushu Sheng Puer</div><div class="tea-c-note"><span class="lang-en">Wild ancient trees. Jasmine, sweetness, agarwood.</span><span class="lang-th th-text">ต้นชาป่าโบราณ มะลิ หวาน กฤษณา</span></div></div></div>
+    <div class="tea-c tea-c-with-thumb"><picture><source srcset="/img/tea-wild-red.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-wild-red.jpg" alt="Wild Red Tea" loading="lazy" onclick="openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Wild Red Tea</div><div class="tea-c-note"><span class="lang-en">Floral, fruity, good body. Perfect breakfast tea for cafés.</span><span class="lang-th th-text">ดอกไม้ ผลไม้ บอดี้ดี เหมาะสำหรับร้านกาแฟ</span></div></div></div>
+    <div class="tea-c tea-c-green tea-c-with-thumb"><picture><source srcset="/img/tea-matcha.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-matcha.jpg" alt="Matcha tea" loading="lazy" onclick="openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><div class="tea-c-type"><span class="lang-en">Green Tea</span><span class="lang-th th-text">ชาเขียว</span></div><div class="tea-c-name">Matcha</div><div class="tea-c-note"><span class="lang-en">Thai-grown, Japanese matcha process. 100% natural.</span><span class="lang-th th-text">ปลูกในไทย กระบวนการมัทฉะญี่ปุ่น 100% ธรรมชาติ</span></div></div></div>
   </div>
   <span class="more-link" onclick="go('tea')" style="border-color:var(--terra);color:var(--terra)"><span class="lang-en">See all 15 teas →</span><span class="lang-th th-text">ดูชาทั้ง 15 ชนิด →</span></span>
   <a class="section-cta" onclick="go('home','connect');return false" href="#connect"><span class="lang-en">Inquire about our teas →</span><span class="lang-th th-text">สอบถามเกี่ยวกับชาของเรา →</span></a>
@@ -663,7 +653,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <div class="why-n2g">
 <div class="w">
-  <span class="draft-label">Draft — pending team review</span>
+
   <h2 class="sec-h sec-h-lg" style="text-align:center;margin-bottom:0"><span class="lang-en">Why N2G</span><span class="lang-th th-text">ทำไม N2G</span></h2>
   <div class="why-n2g-grid">
     <div class="why-n2g-item">
@@ -676,15 +666,15 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
     </div>
     <div class="why-n2g-item">
       <div class="why-n2g-item-h"><span class="lang-en">Community Co-Production</span><span class="lang-th th-text">ร่วมผลิตกับชุมชน</span></div>
-      <div class="why-n2g-item-p"><span class="lang-en">We don't just source from the Akha community — we build with them. Our harvest is planned collaboratively with village leadership, and community members are joining as business partners.</span><span class="lang-th th-text"><!-- TODO: Professional Thai translation needed -->เราไม่ได้แค่ซื้อจากชุมชนอาข่า — เราสร้างร่วมกัน แผนเก็บเกี่ยววางร่วมกับผู้นำชุมชน และสมาชิกชุมชนกำลังเข้าร่วมเป็นหุ้นส่วนธุรกิจ</span></div>
+      <div class="why-n2g-item-p"><span class="lang-en">We don't just source from the Akha community. We build with them. Our harvest is planned collaboratively with village leadership, and community members are joining as business partners.</span><span class="lang-th th-text"><!-- TODO: Professional Thai translation needed -->เราไม่ได้แค่ซื้อจากชุมชนอาข่า — เราสร้างร่วมกัน แผนเก็บเกี่ยววางร่วมกับผู้นำชุมชน และสมาชิกชุมชนกำลังเข้าร่วมเป็นหุ้นส่วนธุรกิจ</span></div>
     </div>
     <div class="why-n2g-item">
       <div class="why-n2g-item-h"><span class="lang-en">Own Roasting Program</span><span class="lang-th th-text">โปรแกรมคั่วของเราเอง</span></div>
-      <div class="why-n2g-item-p"><span class="lang-en">We roast to profile in Chiang Rai, with cupping validated in Bangkok. Not just green beans — finished product, ready for your menu.</span><span class="lang-th th-text"><!-- TODO: Professional Thai translation needed -->เราคั่วตามโปรไฟล์ในเชียงราย คัปปิ้งตรวจสอบในกรุงเทพ ไม่ใช่แค่กรีนบีน — สินค้าสำเร็จรูป พร้อมเสิร์ฟในเมนูของคุณ</span></div>
+      <div class="why-n2g-item-p"><span class="lang-en">We roast to profile in Chiang Rai, with cupping validated in Bangkok. Not just green beans. Finished product, ready for your menu.</span><span class="lang-th th-text"><!-- TODO: Professional Thai translation needed -->เราคั่วตามโปรไฟล์ในเชียงราย คัปปิ้งตรวจสอบในกรุงเทพ ไม่ใช่แค่กรีนบีน — สินค้าสำเร็จรูป พร้อมเสิร์ฟในเมนูของคุณ</span></div>
     </div>
     <div class="why-n2g-item" style="grid-column:1/-1">
       <div class="why-n2g-item-h"><span class="lang-en">Credentialed Sustainability</span><span class="lang-th th-text">ความยั่งยืนที่พิสูจน์ได้</span></div>
-      <div class="why-n2g-item-p"><span class="lang-en">Our partnership with the University of Phayao covers 10,000 coffee and tea plants in low-carbon, water-managed production. This isn't a pledge — it's an active, measured program.</span><span class="lang-th th-text"><!-- TODO: Professional Thai translation needed -->ความร่วมมือของเรากับมหาวิทยาลัยพะเยาครอบคลุมต้นกาแฟและชา 10,000 ต้นในระบบการผลิตคาร์บอนต่ำ จัดการน้ำ นี่ไม่ใช่คำมั่นสัญญา — เป็นโปรแกรมที่ดำเนินการจริงและวัดผลได้</span></div>
+      <div class="why-n2g-item-p"><span class="lang-en">Our partnership with the University of Phayao covers 10,000 coffee and tea plants in low-carbon, water-managed production. This isn't a pledge. It's an active, measured program.</span><span class="lang-th th-text"><!-- TODO: Professional Thai translation needed -->ความร่วมมือของเรากับมหาวิทยาลัยพะเยาครอบคลุมต้นกาแฟและชา 10,000 ต้นในระบบการผลิตคาร์บอนต่ำ จัดการน้ำ นี่ไม่ใช่คำมั่นสัญญา — เป็นโปรแกรมที่ดำเนินการจริงและวัดผลได้</span></div>
     </div>
   </div>
 </div>
@@ -693,13 +683,13 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <!-- Sustainability -->
 <div class="sustainability">
 <div class="w">
-  <span class="draft-label" style="color:var(--gold);border-color:var(--gold)">Draft — pending team review</span>
+
   <div class="sustainability-grid">
     <div>
       <div class="sec-label"><span class="lang-en">Sustainability</span><span class="lang-th th-text">ความยั่งยืน</span></div>
-      <h2 class="sec-h sec-h-lg" style="color:rgba(253,251,247,0.95)"><span class="lang-en">Sustainability with Substance</span><span class="lang-th th-text">ความยั่งยืนที่จับต้องได้</span></h2>
+      <h2 class="sec-h sec-h-lg" style="color:rgba(253,251,247,0.95)"><span class="lang-en">How We Grow</span><span class="lang-th th-text">ความยั่งยืนที่จับต้องได้</span></h2>
       <p style="font-size:16px;line-height:1.7;color:rgba(253,251,247,0.72);max-width:520px">
-        <span class="lang-en">N2G partners with the University of Phayao on a green production initiative covering our coffee and tea plants across Doi Tung and Mae Salong. The program focuses on measurable outcomes: water management, soil health, and low-carbon processing methods. We report on progress, not promises.</span>
+        <span class="lang-en">N2G partners with the University of Phayao on a green production initiative covering our coffee and tea plants across Doi Tung and Mae Salong. The program focuses on measurable outcomes: water management, soil health, and low-carbon processing methods. We track and publish our results annually.</span>
         <span class="lang-th th-text"><!-- TODO: Professional Thai translation needed -->N2G ร่วมมือกับมหาวิทยาลัยพะเยาในโครงการผลิตสีเขียวที่ครอบคลุมต้นกาแฟและชาของเราทั่วดอยตุงและแม่สลอง โปรแกรมมุ่งเน้นผลลัพธ์ที่วัดได้: การจัดการน้ำ สุขภาพดิน และวิธีการแปรรูปคาร์บอนต่ำ</span>
       </p>
     </div>
@@ -749,9 +739,10 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   </div>
 </div>
 
-<!-- Newsletter signup — secondary placement -->
+<!-- Newsletter signup -->
 <div class="email-capture" style="border-top:1px solid var(--border);padding:32px 0">
-  <p class="email-capture-p" style="margin-bottom:16px"><span class="lang-en">Stay updated on new harvests and releases.</span><span class="lang-th th-text">ติดตามข่าวสารการเก็บเกี่ยวและผลผลิตใหม่</span></p>
+  <h3 class="email-capture-h"><span class="lang-en">Join our mailing list.</span><span class="lang-th th-text">สมัครรับข่าวสารจากเรา</span></h3>
+  <p class="email-capture-p" style="margin-bottom:16px"><span class="lang-en">New lots, seasonal releases, and estate updates.</span><span class="lang-th th-text">ล็อตใหม่ ผลผลิตตามฤดูกาล และข่าวสารจากไร่</span></p>
   <!-- TODO: Connect to Formspree/Mailchimp before launch -->
   <form class="email-capture-form" onsubmit="return false">
     <input class="email-capture-input" type="email" placeholder="Your email" aria-label="Email address" required>
@@ -760,11 +751,11 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div>
 
 <!-- Connect - form on landing -->
-<div class="sec" id="connect" style="padding-top:40px">
+<div class="sec" id="connect" style="padding-top:56px">
   <div class="accent" style="background:var(--terra)"></div>
   <div class="sec-label" style="color:var(--terra)"><span class="lang-en">Contact us</span><span class="lang-th th-text">ติดต่อ</span></div>
   <h2 class="sec-h"><span class="lang-en">Get in touch.</span><span class="lang-th th-text">มาคุยกัน</span></h2>
-  <p class="sec-p" style="margin-bottom:24px"><span class="lang-en">Wholesale, retail, or just curious. We'd love to hear from you. Samples available.</span><span class="lang-th th-text">ขายส่ง ขายปลีก หรือแค่อยากรู้ — เรายินดีพูดคุยกับคุณ ตัวอย่างสินค้าพร้อมให้</span></p>
+  <p class="sec-p" style="margin-bottom:24px"><span class="lang-en">Wholesale, retail, or just curious. We'd love to hear from you. Samples available.</span><span class="lang-th th-text">ขายส่ง ขายปลีก หรือแค่อยากรู้ เรายินดีพูดคุยกับคุณ ตัวอย่างสินค้าพร้อมให้</span></p>
   <div class="con-g">
     <div class="con-card">
     <!-- TODO: Replace with actual Formspree endpoint before launch — sign up at formspree.io -->
@@ -862,7 +853,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="/img/parchment.jpeg" alt="Parchment coffee beans" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Parchment</span><span class="lang-th th-text">กาแฟกะลา</span></div></div>
   <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="/img/green-beans.jpeg" alt="Green coffee beans" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Green beans</span><span class="lang-th th-text">กรีนบีน</span></div></div>
   <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="/img/roasted-beans-closeup.webp" type="image/webp"><img src="/img/roasted-beans-closeup.jpg" alt="Roasted coffee beans close-up" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Roasted</span><span class="lang-th th-text">เมล็ดคั่ว</span></div></div>
-  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="/img/roasted-beans-closeup-macro.webp" type="image/webp"><img src="/img/roasted-beans-closeup-macro.jpg" alt="Bulk bag roasted coffee" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Bulk bag</span><span class="lang-th th-text">ถุงบัลค์</span></div></div>
+  <div style="text-align:center"><div style="overflow:hidden;border-radius:6px;background:var(--sand);display:flex;align-items:center;justify-content:center;aspect-ratio:4/3"><span style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--text4)">Photo TBD</span></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Bulk bag</span><span class="lang-th th-text">ถุงบัลค์</span></div></div>
   <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="/img/coffee-capsules-box-lineup.webp" type="image/webp"><img src="/img/coffee-capsules-box-lineup.jpeg" alt="Espresso capsules" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Capsules</span><span class="lang-th th-text">แคปซูล</span></div></div>
   <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="/img/drip-box-open.webp" type="image/webp"><img src="/img/drip-box-open.jpg" alt="Mountain to Cup drip bag gift box" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Drip bags</span><span class="lang-th th-text">ดริปแบ็ก</span></div></div>
   <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="/img/cube-box-front-straight.webp" type="image/webp"><img src="/img/cube-box-front-straight.jpg" alt="Mountain to Cup cube box packaging" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Gift box</span><span class="lang-th th-text">กล่องของขวัญ</span></div></div>
@@ -943,21 +934,21 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="accent" style="background:var(--green-dark)"></div>
 <div class="sec-label"><span class="lang-en">Events & tastings</span><span class="lang-th th-text">อีเวนต์และชิม</span></div>
 <h1 class="sec-h"><span class="lang-en">Learn with us</span><span class="lang-th th-text">เรียนรู้กับเรา</span></h1>
-<p class="sec-p"><span class="lang-en">We host cupping sessions, tea tastings, and estate visits at 1,200 meters — try our current lots, see how we process, and meet the team. We also participate in pop-ups and markets around Thailand.</span><span class="lang-th th-text">เราจัดคัปปิ้ง ชิมชา และเยี่ยมชมไร่ที่ระดับ 1,200 เมตร — ชิมล็อตปัจจุบัน ดูกระบวนการแปรรูป และพบทีมงาน เรายังเข้าร่วมป๊อปอัพและตลาดทั่วประเทศไทย</span></p>
-<p class="sec-p" style="margin-bottom:8px"><span class="lang-en">The estate sits in Doi Tung's highland forest — shade-grown coffee, heritage tea gardens, and seasonal mountain produce all in one place. Visits can be arranged for buyers, partners, or anyone who wants to see how it all works.</span><span class="lang-th th-text">ไร่ตั้งอยู่ในป่าที่สูงของดอยตุง — กาแฟปลูกใต้ร่มเงา สวนชามรดก และผลผลิตจากดอยตามฤดูกาลอยู่ในที่เดียวกัน การเยี่ยมชมสามารถจัดได้สำหรับผู้ซื้อ พันธมิตร หรือใครก็ตามที่อยากมาดูว่าเราทำอะไรอยู่</span></p>
+<p class="sec-p"><span class="lang-en">We host cupping sessions, tea tastings, and estate visits at 1,200 meters. Try our current lots, see how we process, and meet the team. We also participate in pop-ups and markets around Thailand.</span><span class="lang-th th-text">เราจัดคัปปิ้ง ชิมชา และเยี่ยมชมไร่ที่ระดับ 1,200 เมตร — ชิมล็อตปัจจุบัน ดูกระบวนการแปรรูป และพบทีมงาน เรายังเข้าร่วมป๊อปอัพและตลาดทั่วประเทศไทย</span></p>
+<p class="sec-p" style="margin-bottom:8px"><span class="lang-en">The estate sits in Doi Tung's highland forest: shade-grown coffee, heritage tea gardens, and seasonal mountain produce all in one place. Visits can be arranged for buyers, partners, or anyone who wants to see how it all works.</span><span class="lang-th th-text">ไร่ตั้งอยู่ในป่าที่สูงของดอยตุง — กาแฟปลูกใต้ร่มเงา สวนชามรดก และผลผลิตจากดอยตามฤดูกาลอยู่ในที่เดียวกัน การเยี่ยมชมสามารถจัดได้สำหรับผู้ซื้อ พันธมิตร หรือใครก็ตามที่อยากมาดูว่าเราทำอะไรอยู่</span></p>
 <p class="sec-p" style="margin-bottom:32px"><span class="lang-en">Reach out to book a visit with us.</span><span class="lang-th th-text">ติดต่อเราเพื่อจองเยี่ยมชม</span></p>
 
 <!-- Photo grid / carousel -->
 <div class="carousel photo-carousel" id="c-events">
   <div class="carousel-inner" id="c-events-s">
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="if(window.innerWidth>680)openLightbox(this.querySelector('img').src,this.querySelector('img').alt)"><picture><source srcset="/img/events-guests-seated.webp" type="image/webp"><img src="/img/events-guests-seated.jpg" alt="Coffee tasting event" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Coffee cupping</span><span class="lang-th th-text">คัปปิ้งกาแฟ</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="if(window.innerWidth>680)openLightbox(this.querySelector('img').src,this.querySelector('img').alt)"><picture><source srcset="/img/events-tea-tasting-setup.webp" type="image/webp"><img src="/img/events-tea-tasting-setup.jpg" alt="Tea tasting with gaiwan" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Tea tasting</span><span class="lang-th th-text">ชิมชา</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="if(window.innerWidth>680)openLightbox(this.querySelector('img').src,this.querySelector('img').alt)"><img src="/img/farm-visit-trail.jpg" alt="Visitors on the farm trail" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Farm visit</span><span class="lang-th th-text">ดอยตุง · เยี่ยมชมไร่</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="if(window.innerWidth>680)openLightbox(this.querySelector('img').src,this.querySelector('img').alt)"><picture><source srcset="/img/events-popup-tasting.webp" type="image/webp"><img src="/img/events-popup-tasting.jpg" alt="Café pop-up tasting" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Pop-up tasting</span><span class="lang-th th-text">ป๊อปอัพชิม</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="if(window.innerWidth>680)openLightbox(this.querySelector('img').src,this.querySelector('img').alt)"><picture><source srcset="/img/cupping-team-session.webp" type="image/webp"><img src="/img/cupping-team-session.jpg" alt="Team cupping session" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Cupping session</span><span class="lang-th th-text">ดอยตุง · เซสชันคัปปิ้ง</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="if(window.innerWidth>680)openLightbox(this.querySelector('img').src,this.querySelector('img').alt)"><img src="/img/farm-cafe-brewing.jpg" alt="Educational tasting at the estate" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Educational tasting</span><span class="lang-th th-text">ดอยตุง · ชิมเพื่อเรียนรู้</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="if(window.innerWidth>680)openLightbox(this.querySelector('img').src,this.querySelector('img').alt)"><img src="/img/terrace-tasting.jpg" alt="Tasting on the mountain terrace" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Mountain Terrace</span><span class="lang-th th-text">ดอยตุง · ระเบียงภูเขา</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="if(window.innerWidth>680)openLightbox(this.querySelector('img').src,this.querySelector('img').alt)"><picture><source srcset="/img/tea-cupping-overhead.webp" type="image/webp"><img src="/img/tea-cupping-overhead.jpg" alt="Green tea cupping session" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Tea cupping</span><span class="lang-th th-text">คัปปิ้งชา</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/events-guests-seated.webp" type="image/webp"><img src="/img/events-guests-seated.jpg" alt="Coffee tasting event" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Coffee cupping</span><span class="lang-th th-text">คัปปิ้งกาแฟ</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/events-tea-tasting-setup.webp" type="image/webp"><img src="/img/events-tea-tasting-setup.jpg" alt="Tea tasting with gaiwan" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Tea tasting</span><span class="lang-th th-text">ชิมชา</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><img src="/img/farm-visit-trail.jpg" alt="Visitors on the farm trail" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Farm visit</span><span class="lang-th th-text">ดอยตุง · เยี่ยมชมไร่</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/events-popup-tasting.webp" type="image/webp"><img src="/img/events-popup-tasting.jpg" alt="Café pop-up tasting" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Pop-up tasting</span><span class="lang-th th-text">ป๊อปอัพชิม</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/cupping-team-session.webp" type="image/webp"><img src="/img/cupping-team-session.jpg" alt="Team cupping session" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Cupping session</span><span class="lang-th th-text">ดอยตุง · เซสชันคัปปิ้ง</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><img src="/img/farm-cafe-brewing.jpg" alt="Educational tasting at the estate" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Educational tasting</span><span class="lang-th th-text">ดอยตุง · ชิมเพื่อเรียนรู้</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><img src="/img/terrace-tasting.jpg" alt="Tasting on the mountain terrace" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Mountain Terrace</span><span class="lang-th th-text">ดอยตุง · ระเบียงภูเขา</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/tea-cupping-overhead.webp" type="image/webp"><img src="/img/tea-cupping-overhead.jpg" alt="Green tea cupping session" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Tea cupping</span><span class="lang-th th-text">คัปปิ้งชา</span></div></div></div></div>
   </div>
   <div class="carousel-dots">
     <div class="carousel-dot active" onclick="gs('c-events',0)"></div>
@@ -980,7 +971,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="offer-row">
   <div class="offer-card"><div class="offer-card-name"><span class="lang-en">Coffee cupping</span><span class="lang-th th-text">คัปปิ้งกาแฟ</span></div><div class="offer-card-desc"><span class="lang-en">Sample current lots and learn what makes our forest coffee unique.</span><span class="lang-th th-text">ชิมล็อตปัจจุบันและเรียนรู้สิ่งที่ทำให้กาแฟป่าพิเศษ</span></div></div>
   <div class="offer-card"><div class="offer-card-name"><span class="lang-en">Tea tasting</span><span class="lang-th th-text">ชิมชา</span></div><div class="offer-card-desc"><span class="lang-en">Guided session through our 15 heritage teas from wild and cultivated trees.</span><span class="lang-th th-text">เซสชันชิมชามรดก 15 ชนิดจากต้นชาป่าและต้นชาปลูก</span></div></div>
-  <div class="offer-card"><div class="offer-card-name"><span class="lang-en">Estate visit</span><span class="lang-th th-text">เยี่ยมชมไร่</span></div><div class="offer-card-desc"><span class="lang-en">Walk the estate at 1,200 meters — see the shade-grown coffee up close and cup what we're processing. By appointment.</span><span class="lang-th th-text">เดินชมไร่ที่ระดับ 1,200 เมตร ดูกาแฟใต้ร่มเงาใกล้ๆ และคัปปิ้งสิ่งที่เราแปรรูป นัดหมายล่วงหน้า</span></div></div>
+  <div class="offer-card"><div class="offer-card-name"><span class="lang-en">Estate visit</span><span class="lang-th th-text">เยี่ยมชมไร่</span></div><div class="offer-card-desc"><span class="lang-en">Walk the estate at 1,200 meters. See the shade-grown coffee up close and cup what we're processing. By appointment.</span><span class="lang-th th-text">เดินชมไร่ที่ระดับ 1,200 เมตร ดูกาแฟใต้ร่มเงาใกล้ๆ และคัปปิ้งสิ่งที่เราแปรรูป นัดหมายล่วงหน้า</span></div></div>
   <div class="offer-card"><div class="offer-card-name"><span class="lang-en">Pop-ups & markets</span><span class="lang-th th-text">ป๊อปอัพและตลาด</span></div><div class="offer-card-desc"><span class="lang-en">We participate in coffee and tea events across Thailand.</span><span class="lang-th th-text">เราเข้าร่วมงานกาแฟและชาทั่วประเทศไทย</span></div></div>
 </div>
 
@@ -1005,8 +996,8 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <!-- Story: text block + image strip (mobile-first restructure) -->
 <div class="about-story" style="margin-top:32px">
-  <p class="sec-p" style="font-size:17px;line-height:1.9;margin-bottom:8px;max-width:680px"><span class="lang-en">N2G — Native2Global — was founded in 2018 in the highlands of Doi Tung, Chiang Rai, in the heart of the Golden Triangle where Thailand, Laos, and Myanmar meet. We work alongside Akha highland farming families who have cultivated this land for generations — communities that helped transform Doi Tung from its opium-growing past into one of Southeast Asia's most promising specialty coffee origins.</span><span class="lang-th th-text">N2G — Native2Global — ก่อตั้งในปี 2018 บนที่สูงของดอยตุง เชียงราย ใจกลางสามเหลี่ยมทองคำที่ไทย ลาว และเมียนมาร์บรรจบกัน เราทำงานร่วมกับครอบครัวเกษตรกรชาวอาข่าบนดอย ผู้ที่เพาะปลูกบนผืนดินนี้มาหลายชั่วอายุคน — ชุมชนที่ช่วยเปลี่ยนดอยตุงจากอดีตที่ปลูกฝิ่นสู่แหล่งกาแฟพิเศษที่มีอนาคตสดใสที่สุดแห่งหนึ่งในเอเชียตะวันออกเฉียงใต้</span></p>
-  <p class="sec-p" style="font-size:17px;line-height:1.9;max-width:680px"><span class="lang-en">N2G operates under <a href="https://www.facebook.com/hillorganique" target="_blank" rel="noopener" style="color:var(--green);text-decoration:underline">HillOrganique</a> — a community initiative dedicated to conserving highland ecology and helping mountain communities build lasting livelihoods through agriculture. The wild tea trees on our estate — some 200 to 500 years old — are a living reminder that this land was cultivated long before coffee arrived.</span><span class="lang-th th-text">N2G ดำเนินงานภายใต้ <a href="https://www.facebook.com/hillorganique" target="_blank" rel="noopener" style="color:var(--green);text-decoration:underline">HillOrganique</a> — โครงการชุมชนที่มุ่งอนุรักษ์ระบบนิเวศบนดอยและช่วยชุมชนบนภูเขาสร้างอาชีพที่ยั่งยืนผ่านการเกษตร ต้นชาป่าในไร่ของเรา — บางต้นอายุ 200 ถึง 500 ปี — เป็นเครื่องเตือนใจว่าผืนดินนี้ได้รับการเพาะปลูกมานานก่อนที่กาแฟจะมาถึง</span></p>
+  <p class="sec-p" style="font-size:17px;line-height:1.9;margin-bottom:8px;max-width:680px"><span class="lang-en">N2G — Native2Global — was founded in 2018 in the highlands of Doi Tung, Chiang Rai, in the heart of the Golden Triangle where Thailand, Laos, and Myanmar meet. We work alongside Akha highland farming families who have cultivated this land for generations, communities that helped transform Doi Tung from its opium-growing past into one of Southeast Asia's most promising specialty coffee origins.</span><span class="lang-th th-text">N2G — Native2Global — ก่อตั้งในปี 2018 บนที่สูงของดอยตุง เชียงราย ใจกลางสามเหลี่ยมทองคำที่ไทย ลาว และเมียนมาร์บรรจบกัน เราทำงานร่วมกับครอบครัวเกษตรกรชาวอาข่าบนดอย ผู้ที่เพาะปลูกบนผืนดินนี้มาหลายชั่วอายุคน — ชุมชนที่ช่วยเปลี่ยนดอยตุงจากอดีตที่ปลูกฝิ่นสู่แหล่งกาแฟพิเศษที่มีอนาคตสดใสที่สุดแห่งหนึ่งในเอเชียตะวันออกเฉียงใต้</span></p>
+  <p class="sec-p" style="font-size:17px;line-height:1.9;max-width:680px"><span class="lang-en">N2G operates under <a href="https://www.facebook.com/hillorganique" target="_blank" rel="noopener" style="color:var(--green);text-decoration:underline">HillOrganique</a>, a community initiative dedicated to conserving highland ecology and helping mountain communities build lasting livelihoods through agriculture. The wild tea trees on our estate, some 200 to 500 years old, are a living reminder that this land was cultivated long before coffee arrived.</span><span class="lang-th th-text">N2G ดำเนินงานภายใต้ <a href="https://www.facebook.com/hillorganique" target="_blank" rel="noopener" style="color:var(--green);text-decoration:underline">HillOrganique</a> — โครงการชุมชนที่มุ่งอนุรักษ์ระบบนิเวศบนดอยและช่วยชุมชนบนภูเขาสร้างอาชีพที่ยั่งยืนผ่านการเกษตร ต้นชาป่าในไร่ของเรา — บางต้นอายุ 200 ถึง 500 ปี — เป็นเครื่องเตือนใจว่าผืนดินนี้ได้รับการเพาะปลูกมานานก่อนที่กาแฟจะมาถึง</span></p>
 </div>
 
 <!-- Image strip -->
@@ -1020,7 +1011,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="sec">
   <div class="accent" style="background:var(--gold)"></div>
   <div class="sec-label" style="color:var(--gold)"><span class="lang-en">The AHLI Estate</span><span class="lang-th th-text">ไร่ AHLI</span></div>
-  <p class="sec-p" style="font-size:17px;line-height:1.9;margin-bottom:16px;max-width:680px"><span class="lang-en">The AHLI Estate sits at 1,200–1,400m on Doi Tung. Arabica grows under native forest canopy — shade-grown alongside the ancient tea trees that have been here for centuries. Everything is processed on-site with water-managed, low-impact methods: we pick, wash, dry, roast, and age it all ourselves. Mountain to cup, from one estate.</span><span class="lang-th th-text"><!-- TODO: Verify Thai translation of "water-managed, low-impact methods" with team -->ไร่ AHLI ตั้งอยู่ที่ระดับ 1,200–1,400 เมตร บนดอยตุง อราบิก้าเติบโตใต้ร่มเงาป่าดั้งเดิม — ปลูกใต้ร่มเงาเคียงข้างต้นชาโบราณที่อยู่ที่นี่มาหลายร้อยปี ทุกอย่างแปรรูปที่ไร่ด้วยวิธีการจัดการน้ำที่ลดผลกระทบ เราเก็บ ล้าง ตาก คั่ว และหมักทุกอย่างเอง จากภูเขาสู่ถ้วย จากไร่เดียว</span></p>
+  <p class="sec-p" style="font-size:17px;line-height:1.9;margin-bottom:16px;max-width:680px"><span class="lang-en">The AHLI Estate sits at 1,200–1,400m on Doi Tung. Arabica grows under native forest canopy, shade-grown alongside the ancient tea trees that have been here for centuries. Everything is processed on-site with water-managed, low-impact methods: we pick, wash, dry, roast, and age it all ourselves. Mountain to cup, from one estate.</span><span class="lang-th th-text"><!-- TODO: Verify Thai translation of "water-managed, low-impact methods" with team -->ไร่ AHLI ตั้งอยู่ที่ระดับ 1,200–1,400 เมตร บนดอยตุง อราบิก้าเติบโตใต้ร่มเงาป่าดั้งเดิม — ปลูกใต้ร่มเงาเคียงข้างต้นชาโบราณที่อยู่ที่นี่มาหลายร้อยปี ทุกอย่างแปรรูปที่ไร่ด้วยวิธีการจัดการน้ำที่ลดผลกระทบ เราเก็บ ล้าง ตาก คั่ว และหมักทุกอย่างเอง จากภูเขาสู่ถ้วย จากไร่เดียว</span></p>
   <img src="/img/forest-trail-red-earth-path.jpg" alt="Red earth forest trail through the AHLI Estate" loading="lazy" style="width:100%;aspect-ratio:2/1;object-fit:cover;border-radius:4px">
 </div>
 
@@ -1152,12 +1143,16 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div>
 
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()"><button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">×</button><img id="lightbox-img" src="" alt="" onclick="event.stopPropagation()"></div>
+<div class="lightbox" id="lightbox" onclick="closeLightbox()"><button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">×</button><button class="lightbox-nav lightbox-prev" aria-label="Previous" onclick="event.stopPropagation();lbNav(-1)">‹</button><div class="lightbox-content" onclick="event.stopPropagation()"><img id="lightbox-img" src="" alt=""><div class="lightbox-caption" id="lightbox-caption"></div></div><button class="lightbox-nav lightbox-next" aria-label="Next" onclick="event.stopPropagation();lbNav(1)">›</button></div>
 
 <script>
-function openLightbox(src,alt){var lb=document.getElementById('lightbox');var img=document.getElementById('lightbox-img');img.src=src;img.alt=alt||'';lb.classList.add('open');document.body.style.overflow='hidden'}
-function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow=''}
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLightbox()});
+var lbGallery=[],lbIndex=0;
+function openLightbox(src,alt,gallery,idx){var lb=document.getElementById('lightbox');var img=document.getElementById('lightbox-img');img.src=src;img.alt=alt||'';if(gallery&&gallery.length>1){lbGallery=gallery;lbIndex=idx||0;lb.classList.add('has-gallery');lbCaption()}else{lbGallery=[];lbIndex=0;lb.classList.remove('has-gallery');document.getElementById('lightbox-caption').textContent=''}lb.classList.add('open');document.body.style.overflow='hidden'}
+function lbCaption(){var c=document.getElementById('lightbox-caption');if(lbGallery.length&&lbGallery[lbIndex]){c.textContent=lbGallery[lbIndex].caption}else{c.textContent=''}}
+function lbNav(dir){if(lbGallery.length<2)return;lbIndex+=dir;if(lbIndex<0)lbIndex=lbGallery.length-1;if(lbIndex>=lbGallery.length)lbIndex=0;var item=lbGallery[lbIndex];document.getElementById('lightbox-img').src=item.src;document.getElementById('lightbox-img').alt=item.alt||'';lbCaption()}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open','has-gallery');document.body.style.overflow='';lbGallery=[];lbIndex=0}
+function openGalleryLightbox(el){if(window.innerWidth<=680)return;var items=el.closest('.carousel-inner').querySelectorAll('.photo-grid-item');var gallery=[];var idx=0;var lang=document.body.classList.contains('thai')?'th':'en';items.forEach(function(item,i){var img=item.querySelector('img');var capEl=item.querySelector('.photo-grid-caption');var cap='';if(capEl){var span=capEl.querySelector('.lang-'+(lang==='th'?'th':'en'));if(span)cap=span.textContent}gallery.push({src:img.src,alt:img.alt,caption:cap});if(item===el)idx=i});openLightbox(el.querySelector('img').src,el.querySelector('img').alt,gallery,idx)}
+document.addEventListener('keydown',function(e){if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1)});
 
 function setLang(lang,skipUrl){
   document.documentElement.lang=lang;
