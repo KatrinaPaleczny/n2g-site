@@ -1,46 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="224" preserveAspectRatio="none" viewBox="0 0 141731 39789" style="fill-rule:evenodd;clip-rule:evenodd">
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="224" preserveAspectRatio="none" viewBox="0 0 141731 26000" style="fill-rule:evenodd;clip-rule:evenodd">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .fil4 {fill:#949699}
-    .fil28 {fill:#FFF686}
-    .fil38 {fill:#FFF200}
-    .fil29 {fill:#FCD3C2}
-    .fil31 {fill:#FED1A0}
-    .fil22 {fill:#FFCC1B}
-    .fil25 {fill:#F6AECE}
-    .fil23 {fill:#CC91AC}
-    .fil16 {fill:#F8ACAE}
-    .fil20 {fill:#F9A973}
-    .fil21 {fill:#F5854A}
-    .fil26 {fill:#F5842A}
-    .fil30 {fill:#F15E75}
-    .fil27 {fill:#EC168E}
-    .fil32 {fill:#8A9A78}
-    .fil11 {fill:#D2E38A}
-    .fil33 {fill:#AEBD74}
-    .fil15 {fill:#C8C5E3}
-    .fil18 {fill:#C8A1CB}
-    .fil17 {fill:#C780B6}
-    .fil24 {fill:#A76C99}
-    .fil19 {fill:#C75AA2}
-    .fil9 {fill:#8FD8F8}
-    .fil37 {fill:#9CD3AF}
-    .fil10 {fill:#A7CF3F}
-    .fil3 {fill:#677D9A}
-    .fil5 {fill:#677D9A}
-    .fil39 {fill:#A078B5}
-    .fil36 {fill:#59C6D0}
-    .fil7 {fill:#52A593}
-    .fil12 {fill:#418678}
-    .fil34 {fill:#58A378}
-    .fil8 {fill:#6F8DC8}
-    .fil14 {fill:#7872B4}
-    .fil6 {fill:#00AFEF}
-    .fil35 {fill:#00A755}
-    .fil13 {fill:#0097DA}
-    .fil2 {fill:#363894}
-    .fil1 {fill:#363894}
+    .fil4 {fill:#949699;stroke:#949699;stroke-width:300}
+    .fil28 {fill:#FFF686;stroke:#FFF686;stroke-width:300}
+    .fil38 {fill:#FFF200;stroke:#FFF200;stroke-width:300}
+    .fil29 {fill:#FCD3C2;stroke:#FCD3C2;stroke-width:300}
+    .fil31 {fill:#FED1A0;stroke:#FED1A0;stroke-width:300}
+    .fil22 {fill:#FFCC1B;stroke:#FFCC1B;stroke-width:300}
+    .fil25 {fill:#F6AECE;stroke:#F6AECE;stroke-width:300}
+    .fil23 {fill:#CC91AC;stroke:#CC91AC;stroke-width:300}
+    .fil16 {fill:#F8ACAE;stroke:#F8ACAE;stroke-width:300}
+    .fil20 {fill:#F9A973;stroke:#F9A973;stroke-width:300}
+    .fil21 {fill:#F5854A;stroke:#F5854A;stroke-width:300}
+    .fil26 {fill:#F5842A;stroke:#F5842A;stroke-width:300}
+    .fil30 {fill:#F15E75;stroke:#F15E75;stroke-width:300}
+    .fil27 {fill:#EC168E;stroke:#EC168E;stroke-width:300}
+    .fil32 {fill:#8A9A78;stroke:#8A9A78;stroke-width:300}
+    .fil11 {fill:#D2E38A;stroke:#D2E38A;stroke-width:300}
+    .fil33 {fill:#AEBD74;stroke:#AEBD74;stroke-width:300}
+    .fil15 {fill:#C8C5E3;stroke:#C8C5E3;stroke-width:300}
+    .fil18 {fill:#C8A1CB;stroke:#C8A1CB;stroke-width:300}
+    .fil17 {fill:#C780B6;stroke:#C780B6;stroke-width:300}
+    .fil24 {fill:#A76C99;stroke:#A76C99;stroke-width:300}
+    .fil19 {fill:#C75AA2;stroke:#C75AA2;stroke-width:300}
+    .fil9 {fill:#8FD8F8;stroke:#8FD8F8;stroke-width:300}
+    .fil37 {fill:#9CD3AF;stroke:#9CD3AF;stroke-width:300}
+    .fil10 {fill:#A7CF3F;stroke:#A7CF3F;stroke-width:300}
+    .fil3 {fill:#677D9A;stroke:#677D9A;stroke-width:300}
+    .fil5 {fill:#677D9A;stroke:#677D9A;stroke-width:300}
+    .fil39 {fill:#A078B5;stroke:#A078B5;stroke-width:300}
+    .fil36 {fill:#59C6D0;stroke:#59C6D0;stroke-width:300}
+    .fil7 {fill:#52A593;stroke:#52A593;stroke-width:300}
+    .fil12 {fill:#418678;stroke:#418678;stroke-width:300}
+    .fil34 {fill:#58A378;stroke:#58A378;stroke-width:300}
+    .fil8 {fill:#6F8DC8;stroke:#6F8DC8;stroke-width:300}
+    .fil14 {fill:#7872B4;stroke:#7872B4;stroke-width:300}
+    .fil6 {fill:#00AFEF;stroke:#00AFEF;stroke-width:300}
+    .fil35 {fill:#00A755;stroke:#00A755;stroke-width:300}
+    .fil13 {fill:#0097DA;stroke:#0097DA;stroke-width:300}
+    .fil2 {fill:#363894;stroke:#363894;stroke-width:300}
+    .fil1 {fill:#363894;stroke:#363894;stroke-width:300}
    ]]>
   </style>
  </defs>
