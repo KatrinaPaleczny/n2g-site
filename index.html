@@ -272,6 +272,26 @@ body.thai .lang-en-inline{display:none}
 .email-capture-input,.email-capture-btn{width:100%}
 }
 
+/* Responsive fixes */
+@media(min-width:681px) and (max-width:900px){
+.foot{grid-template-columns:1fr 1fr;gap:20px}
+.hero{padding:96px 32px 64px}
+}
+@media(max-width:680px){
+.hero-wrap{margin-top:53px}
+.nav-links a{display:block;width:100%}
+.formats-grid{grid-template-columns:repeat(2,1fr)!important;gap:10px!important}
+.about-img-strip{grid-template-columns:1fr!important}
+.produce-hero-wrap{aspect-ratio:2/1!important}
+.lightbox-nav{padding:8px 12px;font-size:28px}
+.lightbox-prev{left:4px}
+.lightbox-next{right:4px}
+.lightbox img{max-width:95vw;max-height:calc(85vh - 48px)}
+}
+@media(max-width:600px){
+#c-tea{aspect-ratio:16/9}
+}
+
 /* Page hero for inner pages */
 .page-hero{width:100%;aspect-ratio:21/9;object-fit:cover;border-radius:4px;margin-bottom:32px}
 
@@ -485,7 +505,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 @media(max-width:900px){
 .sustainability-grid{grid-template-columns:1fr}
-.sustainability-stat{order:-1;margin-bottom:16px}
+.sustainability-stat{margin-bottom:16px}
 .why-n2g-grid{grid-template-columns:1fr 1fr}
 .wholesale-table{font-size:12px}
 .wholesale-table th,.wholesale-table td{padding:8px 6px}
@@ -500,7 +520,6 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 .why-n2g-grid{grid-template-columns:1fr}
 .sustainability{padding:48px 0}
 .sustainability-grid{grid-template-columns:1fr}
-.sustainability-stat{order:-1}
 .sustainability-stat-num{font-size:42px}
 .wholesale{padding:64px 0}
 .wholesale-table{display:block;overflow-x:auto}
@@ -819,7 +838,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div>
 
 <!-- Product photo grid with captions -->
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px">
+<div class="formats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px">
   <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="/img/parchment.jpeg" alt="Parchment coffee beans" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Parchment</span><span class="lang-th th-text">กาแฟกะลา</span></div></div>
   <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="/img/green-beans.jpeg" alt="Green coffee beans" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Green beans</span><span class="lang-th th-text">กรีนบีน</span></div></div>
   <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="/img/roasted-beans-closeup.webp" type="image/webp"><img src="/img/roasted-beans-closeup.jpg" alt="Roasted coffee beans close-up" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Roasted</span><span class="lang-th th-text">เมล็ดคั่ว</span></div></div>
@@ -878,7 +897,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div style="background:var(--sand);border-radius:10px;padding:32px 28px;margin:40px 0">
   <div class="sec-label" style="padding-top:0;color:var(--terra)"><span class="lang-en">Available as</span><span class="lang-th th-text">รูปแบบที่มี</span></div>
   <p class="sec-p" style="margin-bottom:24px"><span class="lang-en">Loose leaf. Bulk or sampler sets.</span><span class="lang-th th-text">ใบชา ขายส่งหรือชุดชิม</span></p>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+  <div class="formats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
     <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="/img/tea-sampler-box.webp" type="image/webp"><img src="/img/tea-sampler-box.jpg" alt="Tea sampler box with three varieties" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Sampler set</span><span class="lang-th th-text">ชุดชิม</span></div></div>
     <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><picture><source srcset="/img/tea-sampler-herbal.webp" type="image/webp"><img src="/img/tea-sampler-herbal.jpg" alt="Tea sampler box with herbal blends" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></picture></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Herbal set</span><span class="lang-th th-text">ชุดสมุนไพร</span></div></div>
     <div style="text-align:center"><div style="overflow:hidden;border-radius:6px"><img src="/img/tea-varieties-dishes.jpg" alt="Six tea varieties displayed in small white dishes" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block" loading="lazy"></div><div style="font-size:13px;color:var(--text3);margin-top:8px;letter-spacing:0.02em"><span class="lang-en">Loose leaf</span><span class="lang-th th-text">ใบชา</span></div></div>
@@ -983,9 +1002,9 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <!-- Image strip -->
 <div class="about-img-strip" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin:28px 0 0">
-  <picture><source srcset="/img/drying-sunburst.webp" type="image/webp"><img src="/img/drying-sunburst.jpg" alt="Coffee drying in the sunlight" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px"></picture>
-  <img src="/img/village-visit.jpg" alt="N2G team visiting farming community" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px">
-  <picture><source srcset="/img/roast-master.webp" type="image/webp"><img src="/img/roast-master.jpg" alt="Roast master operating the coffee roaster" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:4px"></picture>
+  <div class="about-img-lb" onclick="openGalleryLightbox(this)" style="cursor:pointer;overflow:hidden;border-radius:4px"><picture><source srcset="/img/drying-sunburst.webp" type="image/webp"><img src="/img/drying-sunburst.jpg" alt="Coffee drying in the sunlight" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block"></picture></div>
+  <div class="about-img-lb" onclick="openGalleryLightbox(this)" style="cursor:pointer;overflow:hidden;border-radius:4px"><img src="/img/village-visit.jpg" alt="N2G team visiting farming community" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block"></div>
+  <div class="about-img-lb" onclick="openGalleryLightbox(this)" style="cursor:pointer;overflow:hidden;border-radius:4px"><picture><source srcset="/img/roast-master.webp" type="image/webp"><img src="/img/roast-master.jpg" alt="Roast master operating the coffee roaster" loading="lazy" style="width:100%;aspect-ratio:3/4;object-fit:cover;display:block"></picture></div>
 </div>
 
 <!-- The estate -->
@@ -1031,7 +1050,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <p class="sec-p" style="margin-bottom:24px"><span class="lang-en">Herbs, flowers, roots, and seasonal fruit. Grown at elevation, harvested by hand, processed on-site.</span><span class="lang-th th-text">สมุนไพร ดอกไม้ ราก และผลไม้ตามฤดูกาล — ปลูกบนที่สูง เก็บเกี่ยวด้วยมือ แปรรูปที่ไร่</span></p>
 
 <!-- Produce hero photo -->
-<div style="overflow:hidden;border-radius:4px;aspect-ratio:3/1;margin-bottom:24px"><picture><source srcset="/img/chrysanthemum-harvest.webp" type="image/webp"><img src="/img/chrysanthemum-harvest.jpg" alt="Worker harvesting chrysanthemums on the hillside at Doi Tung" style="width:100%;height:100%;object-fit:cover" loading="lazy"></picture></div>
+<div class="produce-hero-wrap" style="overflow:hidden;border-radius:4px;aspect-ratio:3/1;margin-bottom:24px"><picture><source srcset="/img/chrysanthemum-harvest.webp" type="image/webp"><img src="/img/chrysanthemum-harvest.jpg" alt="Worker harvesting chrysanthemums on the hillside at Doi Tung" style="width:100%;height:100%;object-fit:cover" loading="lazy"></picture></div>
 
 <!-- Roots -->
 <div class="produce-sec-wrap">
@@ -1180,8 +1199,9 @@ function openLightbox(src,alt,gallery,idx){var lb=document.getElementById('light
 function lbCaption(){var c=document.getElementById('lightbox-caption');if(lbGallery.length&&lbGallery[lbIndex]){c.textContent=lbGallery[lbIndex].caption}else{c.textContent=''}}
 function lbNav(dir){if(lbGallery.length<2)return;lbIndex+=dir;if(lbIndex<0)lbIndex=lbGallery.length-1;if(lbIndex>=lbGallery.length)lbIndex=0;var item=lbGallery[lbIndex];document.getElementById('lightbox-img').src=item.src;document.getElementById('lightbox-img').alt=item.alt||'';lbCaption()}
 function closeLightbox(){document.getElementById('lightbox').classList.remove('open','has-gallery');document.body.style.overflow='';lbGallery=[];lbIndex=0}
-function openGalleryLightbox(el){if(window.innerWidth<=680)return;var items=el.closest('.carousel-inner').querySelectorAll('.photo-grid-item');var gallery=[];var idx=0;var lang=document.body.classList.contains('thai')?'th':'en';items.forEach(function(item,i){var img=item.querySelector('img');var capEl=item.querySelector('.photo-grid-caption');var cap='';if(capEl){var span=capEl.querySelector('.lang-'+(lang==='th'?'th':'en'));if(span)cap=span.textContent}gallery.push({src:img.src,alt:img.alt,caption:cap});if(item===el)idx=i});openLightbox(el.querySelector('img').src,el.querySelector('img').alt,gallery,idx)}
+function openGalleryLightbox(el){var items=el.closest('.carousel-inner')?el.closest('.carousel-inner').querySelectorAll('.photo-grid-item'):el.closest('.about-img-strip')?el.closest('.about-img-strip').querySelectorAll('.about-img-lb'):null;if(!items){openLightbox(el.querySelector('img').src,el.querySelector('img').alt);return}var itemsArr=items;items=itemsArr;var gallery=[];var idx=0;var lang=document.body.classList.contains('thai')?'th':'en';items.forEach(function(item,i){var img=item.querySelector('img');var capEl=item.querySelector('.photo-grid-caption');var cap='';if(capEl){var span=capEl.querySelector('.lang-'+(lang==='th'?'th':'en'));if(span)cap=span.textContent}gallery.push({src:img.src,alt:img.alt,caption:cap});if(item===el)idx=i});openLightbox(el.querySelector('img').src,el.querySelector('img').alt,gallery,idx)}
 document.addEventListener('keydown',function(e){if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1)});
+(function(){var lb=document.getElementById('lightbox'),lsx=0,lsy=0;lb.addEventListener('touchstart',function(e){lsx=e.touches[0].clientX;lsy=e.touches[0].clientY},{passive:true});lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-lsx,dy=e.changedTouches[0].clientY-lsy;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)){e.preventDefault();lbNav(dx<0?1:-1)}},{passive:false})})();
 
 function setLang(lang,skipUrl){
   document.documentElement.lang=lang;
