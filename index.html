@@ -95,8 +95,8 @@ source{display:none}
 .legal-h2{font-family:'EB Garamond',serif;font-size:20px;font-weight:400;margin:28px 0 12px;color:var(--text1)}
 .prose{max-width:680px;font-size:15px;line-height:1.8;color:var(--text2)}
 .accent{height:3px;width:40px;background:var(--green);margin-bottom:16px;border-radius:2px}
-.accent-terra{background:var(--terra)}.accent-gold{background:var(--gold)}.accent-green-dark{background:var(--green-dark)}
-.sec-label-terra{color:var(--terra)}.sec-label-gold{color:var(--gold)}
+.accent-terra{background:var(--terra)}.accent-gold{background:var(--gold)}.accent-green{background:var(--green)}.accent-green-dark{background:var(--green-dark)}
+.sec-label-terra{color:var(--terra)}.sec-label-gold{color:var(--gold)}.sec-label-green{color:var(--green)}.sec-label-green-dark{color:var(--green-dark)}
 .more-link{display:inline-block;margin-top:16px;font-size:14px;color:var(--green);border-bottom:1px solid var(--green);padding:8px 4px 2px;cursor:pointer}.more-link:hover{color:var(--green-dark)}
 .more-link-terra{color:var(--terra);border-bottom-color:var(--terra)}.more-link-terra:hover{color:var(--terra)}
 /* Layout / spacing utilities */
@@ -533,6 +533,7 @@ body.thai .lang-en-inline{display:none}
 .produce-sec-wrap{background:transparent;border-top:1px solid var(--border);padding:48px 0;max-width:680px;margin:0 auto;box-shadow:none}
 .produce-sec-wrap:first-of-type{border-top:none;padding-top:24px}
 .produce-sec-wrap:last-of-type{padding-bottom:24px}
+.accent-sm{height:2px;width:28px;margin-bottom:10px;border-radius:2px}
 .produce-ed-title{font-family:'EB Garamond',serif;font-size:22px;margin-bottom:16px;line-height:1.3}
 .produce-ed-list{display:flex;flex-direction:column;gap:0}
 .produce-ed-item{display:flex;align-items:center;gap:18px;padding:16px 0;border-bottom:1px dotted var(--border)}
@@ -1101,7 +1102,8 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <!-- Roots -->
 <div class="produce-sec-wrap">
-  <div class="sec-label sec-label-gold sec-label-mb-tight"><span class="lang-en">Roots</span><span class="lang-th th-text">ราก</span></div>
+  <div class="accent accent-sm accent-terra"></div>
+  <div class="sec-label sec-label-terra sec-label-mb-tight"><span class="lang-en">Roots</span><span class="lang-th th-text">ราก</span></div>
   <div class="produce-ed-title"><span class="lang-en">Highland ginger and turmeric</span><span class="lang-th th-text">ขิงและขมิ้นจากที่สูง</span></div>
   <div class="produce-ed-list">
     <div class="produce-ed-item"><div class="produce-ed-item-text"><div class="prod-name"><span class="lang-en">Mountain Ginger</span><span class="lang-th th-text">ขิงภูเขา</span></div><div class="prod-sub"><span class="lang-en">Grown at altitude. Fresh or dried. Strong, warm aroma.</span><span class="lang-th th-text">ปลูกบนที่สูง สดหรือแห้ง กลิ่นแรงอบอุ่น</span></div></div><picture><source srcset="/img/ginger-drying.webp" type="image/webp"><img class="produce-ed-thumb" src="/img/ginger-drying.jpg" alt="Ginger drying" loading="lazy"></picture></div>
@@ -1112,6 +1114,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <!-- Flowers -->
 <div class="produce-sec-wrap">
+  <div class="accent accent-sm accent-gold"></div>
   <div class="sec-label sec-label-gold sec-label-mb-tight"><span class="lang-en">Flowers</span><span class="lang-th th-text">ดอกไม้</span></div>
   <div class="produce-ed-title"><span class="lang-en">Dried flowers from the estate</span><span class="lang-th th-text">ดอกไม้อบแห้งจากไร่</span></div>
   <div class="produce-ed-list">
@@ -1124,7 +1127,8 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <!-- Herbs & Botanicals -->
 <div class="produce-sec-wrap">
-  <div class="sec-label sec-label-gold sec-label-mb-tight"><span class="lang-en">Herbs & Botanicals</span><span class="lang-th th-text">สมุนไพรและพฤกษศาสตร์</span></div>
+  <div class="accent accent-sm accent-green"></div>
+  <div class="sec-label sec-label-green sec-label-mb-tight"><span class="lang-en">Herbs & Botanicals</span><span class="lang-th th-text">สมุนไพรและพฤกษศาสตร์</span></div>
   <div class="produce-ed-title"><span class="lang-en">Leaves, herbs, and dried botanicals</span><span class="lang-th th-text">ใบไม้ สมุนไพร และพฤกษศาสตร์อบแห้ง</span></div>
   <div class="produce-ed-list">
     <div class="produce-ed-item"><div class="produce-ed-item-text"><div class="prod-name"><span class="lang-en">Pandan</span><span class="lang-th th-text">ใบเตย</span></div><div class="prod-sub"><span class="lang-en">Fresh leaves, dried and chopped. Sweet, grassy fragrance.</span><span class="lang-th th-text">ใบสด อบแห้งและหั่น กลิ่นหวานหอมหญ้า</span></div></div><picture><source srcset="/img/pandan-leaves-drying.webp" type="image/webp"><img class="produce-ed-thumb" src="/img/pandan-leaves-drying.jpg" alt="Pandan leaves" loading="lazy"></picture></div>
@@ -1134,7 +1138,8 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <!-- Seasonal Fruit -->
 <div class="produce-sec-wrap">
-  <div class="sec-label sec-label-gold sec-label-mb-tight"><span class="lang-en">Seasonal Fruit</span><span class="lang-th th-text">ผลไม้ตามฤดูกาล</span></div>
+  <div class="accent accent-sm accent-green-dark"></div>
+  <div class="sec-label sec-label-green-dark sec-label-mb-tight"><span class="lang-en">Seasonal Fruit</span><span class="lang-th th-text">ผลไม้ตามฤดูกาล</span></div>
   <div class="produce-ed-title"><span class="lang-en">Fresh from the estate</span><span class="lang-th th-text">สดจากไร่</span></div>
   <div class="produce-ed-list">
     <div class="produce-ed-item"><div class="produce-ed-item-text"><div class="prod-name"><span class="lang-en">Mulberry</span><span class="lang-th th-text">หม่อน</span></div><div class="prod-sub"><span class="lang-en">Rich, sweet, and deep purple. Available seasonally.</span><span class="lang-th th-text">หวาน สีม่วงเข้ม มีตามฤดูกาล</span></div></div><picture><source srcset="/img/fresh-mulberries-bowl-overhead.webp" type="image/webp"><img class="produce-ed-thumb" src="/img/fresh-mulberries-bowl-overhead.jpg" alt="Fresh mulberries" loading="lazy"></picture></div>

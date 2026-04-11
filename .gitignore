@@ -6,3 +6,4 @@ photos/
 *.pdf
 *.xlsx
 img/originals/
+server.rb
