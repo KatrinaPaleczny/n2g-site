@@ -543,6 +543,27 @@ body.thai .lang-en-inline{display:none}
 .diff-strip-label{font-family:'EB Garamond',serif;font-size:18px;color:var(--text);margin-bottom:8px}
 .diff-strip-desc{font-size:14px;color:var(--text3);line-height:1.65}
 .diff-strip-img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:4px;margin-bottom:10px}
+/* ===== Hospitality partners strip ===== */
+.partners-strip{padding:64px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);position:relative;margin-top:8px}
+.partners-strip .sec-label{margin-bottom:8px}
+.partners-h{font-family:'EB Garamond',serif;font-size:var(--t-h2);font-weight:400;margin:0 0 36px;color:var(--text);letter-spacing:-0.005em}
+.partners-grid{display:grid;grid-template-columns:repeat(3,1fr);column-gap:32px;row-gap:0}
+.partner-item{padding:18px 0;border-top:1px solid var(--border)}
+.partner-item:nth-child(-n+3){border-top-color:var(--text4)}
+.partner-name{display:block;font-family:'EB Garamond',serif;font-size:17px;font-weight:500;color:var(--text);line-height:1.25}
+.partner-loc{display:block;font-family:'Karla',sans-serif;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text4);margin-top:5px}
+.partners-note{margin-top:28px;font-size:12px;color:var(--text4);font-style:italic}
+/* DRAFT flag — remove data-draft="true" from .partners-strip when verified */
+[data-draft="true"]{position:relative}
+[data-draft="true"]::before{content:"DRAFT · VERIFY PARTNERSHIPS";position:absolute;top:12px;right:16px;font-family:'Karla',sans-serif;font-size:9px;font-weight:500;letter-spacing:0.15em;color:var(--terra);background:rgba(184,92,56,0.08);padding:5px 9px;border:1px solid rgba(184,92,56,0.3);z-index:2}
+@media(max-width:720px){
+  .partners-strip{padding:48px 0}
+  .partners-h{font-size:24px;margin-bottom:24px}
+  .partners-grid{grid-template-columns:repeat(2,1fr);column-gap:20px}
+  .partner-item:nth-child(-n+2){border-top-color:var(--text4)}
+  .partner-item:nth-child(3){border-top-color:var(--border)}
+  [data-draft="true"]::before{top:8px;right:10px;font-size:8px;padding:3px 6px}
+}
 .roaster-panel{background:var(--sand);border-radius:8px;padding:28px;margin-bottom:32px}
 .specs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0 16px;row-gap:14px;margin:24px 0 20px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:18px 0}
 .specs-grid-i{padding:0 16px;border-left:1px solid var(--border);min-width:0}.specs-grid-i:nth-child(4n+1){border-left:none;padding-left:0}
@@ -834,6 +855,60 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
     <div class="diff-strip-desc"><span class="lang-en">Working with partners in Asia, Europe, and the Middle East. Samples shipped worldwide via DHL. Bulk air freight available for orders above 45kg.</span><span class="lang-th th-text">ทำงานร่วมกับพันธมิตรในเอเชีย ยุโรป และตะวันออกกลาง ตัวอย่างส่งทั่วโลกผ่าน DHL สั่งซื้อจำนวนมากทางอากาศสำหรับออเดอร์เกิน 45 กก.</span></div>
   </div>
 </div>
+
+<!--
+  ========================================================================
+  DRAFT: Hospitality partners strip
+  ========================================================================
+  PARTNERSHIP CLAIMS NOT YET VERIFIED.
+
+  These names are transcribed from the 2024 company deck (page 10, "Our
+  Partners") and may be out of date. Before public launch:
+
+    1. Confirm with Daniel which partnerships are still current in 2026.
+    2. Obtain written permission from EACH partner to display their trade
+       name on a public website (text-only is safer than logo reproduction
+       but still requires the partnership to be truthful).
+    3. Remove any that are no longer active. Add any new ones.
+    4. Once verified, remove the data-draft="true" attribute below — this
+       will hide the orange "DRAFT · VERIFY PARTNERSHIPS" badge in the top-
+       right corner of the section.
+
+  If you CANNOT verify any of these before May 18, delete this entire
+  section before launch. Do not ship false or unverified endorsements.
+  ========================================================================
+-->
+<section class="partners-strip" data-draft="true">
+  <div class="sec-label sec-label-gold"><span class="lang-en">Served at</span><span class="lang-th th-text">เสิร์ฟที่</span></div>
+  <h2 class="partners-h"><span class="lang-en">Hospitality partners</span><span class="lang-th th-text">พันธมิตรโรงแรมและร้านอาหาร</span></h2>
+  <div class="partners-grid">
+    <div class="partner-item">
+      <span class="partner-name">Siam Kempinski Hotel</span>
+      <span class="partner-loc">Bangkok</span>
+    </div>
+    <div class="partner-item">
+      <span class="partner-name">Capella</span>
+      <span class="partner-loc">Bangkok</span>
+    </div>
+    <div class="partner-item">
+      <span class="partner-name">JW Marriott</span>
+      <span class="partner-loc">Bangkok</span>
+    </div>
+    <div class="partner-item">
+      <span class="partner-name">Marriott Marquis</span>
+      <span class="partner-loc">Queens Park, Bangkok</span>
+    </div>
+    <div class="partner-item">
+      <span class="partner-name">1823 Tea Lounge</span>
+      <span class="partner-loc">By Ronnefeldt</span>
+    </div>
+    <div class="partner-item">
+      <span class="partner-name">TEPA Kitchen</span>
+      <span class="partner-loc">Bangkok</span>
+    </div>
+  </div>
+  <p class="partners-note"><span class="lang-en">Draft preview — partnership list being verified for 2026.</span><span class="lang-th th-text">ตัวอย่างฉบับร่าง — กำลังตรวจสอบรายชื่อพันธมิตรสำหรับปี 2026</span></p>
+</section>
 
 <!-- Events & Estate — two-card layout -->
 <div class="sec sec-pb-tight">

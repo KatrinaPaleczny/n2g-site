@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Logo lab · N2G NativeToGlobal</title>
+<meta name="description" content="Internal logo preview — not for public indexing">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Karla:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --white:#fff;--cream:#FDFBF7;--sand:#F3EFE7;
+  --text:#2C2417;--text2:#5A4D3C;--text3:#5C5047;--text4:#6B5F53;
+  --green:#3A6B4A;--green-dark:#2D5239;
+  --terra:#B85C38;--gold:#C8944A;
+  --border:rgba(44,36,23,0.08);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  padding:56px 24px 120px;
+  background:var(--cream);
+  color:var(--text);
+  font-family:'Karla',sans-serif;
+  font-weight:400;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.lab-w{max-width:1040px;margin:0 auto}
+.lab-h1{
+  font-family:'EB Garamond',serif;
+  font-style:italic;
+  font-size:44px;
+  font-weight:400;
+  margin:0 0 6px;
+  letter-spacing:-0.01em;
+}
+.lab-intro{
+  font-size:14px;
+  color:var(--text3);
+  margin:0 0 8px;
+  max-width:620px;
+}
+.lab-meta{
+  font-size:11px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--text4);
+  margin:0 0 56px;
+}
+
+.treatment{
+  border:1px solid var(--border);
+  background:var(--white);
+  margin-bottom:28px;
+  padding:36px 40px 40px;
+}
+.treatment-tag{
+  display:inline-block;
+  font-size:9px;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--text4);
+  margin-bottom:6px;
+}
+.treatment-h{
+  font-family:'EB Garamond',serif;
+  font-size:22px;
+  font-weight:500;
+  margin:0 0 6px;
+}
+.treatment-desc{
+  font-size:13px;
+  color:var(--text3);
+  margin:0 0 32px;
+  max-width:560px;
+  line-height:1.55;
+}
+
+.swatch-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+  margin-bottom:20px;
+}
+.swatch{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:56px 32px;
+  min-height:160px;
+}
+.swatch-cream{
+  background:var(--cream);
+  border:1px solid var(--border);
+}
+.swatch-green{
+  background:var(--green-dark);
+}
+.swatch-label{
+  font-size:9px;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--text4);
+  margin-bottom:8px;
+  display:block;
+}
+
+.nav-preview-wrap{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  padding:16px 20px;
+  background:rgba(44,36,23,0.03);
+  border-top:1px dashed var(--border);
+  margin-top:8px;
+}
+.nav-preview-label{
+  font-size:9px;
+  letter-spacing:0.15em;
+  text-transform:uppercase;
+  color:var(--text4);
+  white-space:nowrap;
+}
+
+/* ===== TREATMENT A · CURRENT (reference) ===== */
+.mark-a{display:flex;align-items:center;gap:12px}
+.mark-a-dot{
+  width:52px;height:52px;border-radius:50%;
+  background:var(--green);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Karla',sans-serif;font-size:17px;font-weight:500;
+}
+.mark-a-text{
+  font-family:'EB Garamond',serif;
+  font-size:26px;font-weight:400;
+  color:var(--text);
+}
+.swatch-green .mark-a-dot{background:#fff;color:var(--green-dark)}
+.swatch-green .mark-a-text{color:#fff}
+
+/* nav-sized variant */
+.mark-a-nav{gap:10px}
+.mark-a-nav .mark-a-dot{width:28px;height:28px;font-size:11px}
+.mark-a-nav .mark-a-text{font-size:14px}
+
+/* ===== TREATMENT B · RING MARK + SERIF ITALIC ===== */
+.mark-b{display:flex;align-items:center;gap:14px}
+.mark-b-ring{
+  width:56px;height:56px;border-radius:50%;
+  border:1.5px solid var(--green);
+  background:transparent;
+  color:var(--green);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'EB Garamond',serif;
+  font-style:italic;
+  font-size:22px;
+  font-weight:500;
+  letter-spacing:-0.02em;
+  padding-top:1px;
+}
+.mark-b-text{
+  font-family:'EB Garamond',serif;
+  font-size:26px;
+  color:var(--text);
+  letter-spacing:0.005em;
+}
+.swatch-green .mark-b-ring{border-color:#fff;color:#fff}
+.swatch-green .mark-b-text{color:#fff}
+
+.mark-b-nav{gap:10px}
+.mark-b-nav .mark-b-ring{width:30px;height:30px;font-size:12px;border-width:1px}
+.mark-b-nav .mark-b-text{font-size:14px}
+
+/* ===== TREATMENT C · WORDMARK LOCKUP (no mark) ===== */
+.mark-c{line-height:1;text-align:left}
+.mark-c-main{
+  display:block;
+  font-family:'EB Garamond',serif;
+  font-style:italic;
+  font-size:56px;
+  font-weight:500;
+  color:var(--text);
+  letter-spacing:-0.02em;
+  line-height:0.95;
+}
+.mark-c-sub{
+  display:block;
+  margin-top:10px;
+  font-family:'Karla',sans-serif;
+  font-size:10px;
+  font-weight:400;
+  letter-spacing:0.32em;
+  text-transform:uppercase;
+  color:var(--text3);
+}
+.swatch-green .mark-c-main{color:#fff}
+.swatch-green .mark-c-sub{color:rgba(255,255,255,0.72)}
+
+.mark-c-nav .mark-c-main{font-size:22px}
+.mark-c-nav .mark-c-sub{font-size:8px;margin-top:3px;letter-spacing:0.25em}
+
+/* ===== TREATMENT D · VERTICAL RULE + LOCKUP ===== */
+.mark-d{display:flex;align-items:stretch;gap:16px}
+.mark-d-rule{
+  width:2px;
+  background:var(--green);
+  flex-shrink:0;
+}
+.mark-d-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  line-height:1.05;
+}
+.mark-d-main{
+  font-family:'EB Garamond',serif;
+  font-size:32px;
+  font-weight:500;
+  color:var(--text);
+  letter-spacing:-0.005em;
+}
+.mark-d-sub{
+  margin-top:4px;
+  font-family:'Karla',sans-serif;
+  font-size:9px;
+  font-weight:400;
+  letter-spacing:0.28em;
+  text-transform:uppercase;
+  color:var(--text3);
+}
+.swatch-green .mark-d-rule{background:#fff}
+.swatch-green .mark-d-main{color:#fff}
+.swatch-green .mark-d-sub{color:rgba(255,255,255,0.72)}
+
+.mark-d-nav{gap:8px}
+.mark-d-nav .mark-d-rule{width:1px}
+.mark-d-nav .mark-d-main{font-size:14px}
+.mark-d-nav .mark-d-sub{font-size:7px;margin-top:1px}
+
+/* ===== FOOTNOTE ===== */
+.lab-footnote{
+  margin-top:56px;
+  padding:28px 32px;
+  background:var(--sand);
+  font-size:13px;
+  color:var(--text3);
+  line-height:1.7;
+  border-left:3px solid var(--gold);
+}
+.lab-footnote strong{color:var(--text);font-weight:500}
+.lab-footnote code{
+  font-family:'SFMono-Regular',Menlo,monospace;
+  font-size:12px;
+  background:rgba(44,36,23,0.06);
+  padding:2px 6px;
+  border-radius:2px;
+}
+.lab-footnote ul{margin:10px 0 0;padding-left:18px}
+.lab-footnote li{margin-bottom:4px}
+
+@media(max-width:720px){
+  body{padding:32px 16px 80px}
+  .lab-h1{font-size:32px}
+  .treatment{padding:24px 20px 28px}
+  .swatch-row{grid-template-columns:1fr}
+  .swatch{padding:40px 24px;min-height:120px}
+  .mark-c-main{font-size:44px}
+  .mark-d-main{font-size:26px}
+}
+</style>
+</head>
+<body>
+<div class="lab-w">
+  <h1 class="lab-h1">Logo lab</h1>
+  <p class="lab-intro">Four CSS-only treatments to compare. Each one uses the existing site type stack (EB Garamond + Karla) and color palette — no fabricated SVG illustrations. Pick one and it gets applied to the nav and footer across the main site, or use these as directional reference when commissioning a real logo from a designer.</p>
+  <p class="lab-meta">Not linked from the main site · noindex · preview only</p>
+
+  <!-- ========== TREATMENT A · CURRENT (reference) ========== -->
+  <div class="treatment">
+    <div class="treatment-tag">A · reference</div>
+    <h2 class="treatment-h">Current: filled circle + sans-serif "N2G"</h2>
+    <p class="treatment-desc">What's on the site today. Filled green circle with the N2G monogram in Karla sans-serif, paired with the EB Garamond wordmark. Legible and simple, but generic — the filled circle feels more like a startup badge than an editorial coffee brand.</p>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">On cream</span>
+        <div class="swatch swatch-cream">
+          <div class="mark-a"><div class="mark-a-dot">N2G</div><span class="mark-a-text">NativeToGlobal</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">On dark green</span>
+        <div class="swatch swatch-green">
+          <div class="mark-a"><div class="mark-a-dot">N2G</div><span class="mark-a-text">NativeToGlobal</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-preview-wrap">
+      <span class="nav-preview-label">Nav scale</span>
+      <div class="mark-a mark-a-nav"><div class="mark-a-dot">N2G</div><span class="mark-a-text">NativeToGlobal</span></div>
+    </div>
+  </div>
+
+  <!-- ========== TREATMENT B · RING MARK + SERIF ITALIC ========== -->
+  <div class="treatment">
+    <div class="treatment-tag">B · ring + italic</div>
+    <h2 class="treatment-h">Ring mark + serif italic "N2G"</h2>
+    <p class="treatment-desc">Thinner green ring in place of the filled circle. The "N2G" inside is set in EB Garamond italic, matching the hero tagline. More editorial, more craft-led — feels like a specialty roaster mark rather than a tech logo. Works at any scale without distortion.</p>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">On cream</span>
+        <div class="swatch swatch-cream">
+          <div class="mark-b"><div class="mark-b-ring">N2G</div><span class="mark-b-text">NativeToGlobal</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">On dark green</span>
+        <div class="swatch swatch-green">
+          <div class="mark-b"><div class="mark-b-ring">N2G</div><span class="mark-b-text">NativeToGlobal</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-preview-wrap">
+      <span class="nav-preview-label">Nav scale</span>
+      <div class="mark-b mark-b-nav"><div class="mark-b-ring">N2G</div><span class="mark-b-text">NativeToGlobal</span></div>
+    </div>
+  </div>
+
+  <!-- ========== TREATMENT C · WORDMARK LOCKUP (no mark) ========== -->
+  <div class="treatment">
+    <div class="treatment-tag">C · wordmark only</div>
+    <h2 class="treatment-h">Pure wordmark — no illustrated mark</h2>
+    <p class="treatment-desc">No mark at all. Oversized italic "N2G" as the anchor, with "NativeToGlobal" set below as a small-caps sans-serif subtitle. This is the most editorial option — closest to Cereal, Kinfolk, or Drift aesthetics. Lives or dies on typography alone, which is exactly the point. Also the cheapest to execute because there's nothing to design.</p>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">On cream</span>
+        <div class="swatch swatch-cream">
+          <div class="mark-c"><span class="mark-c-main">N2G</span><span class="mark-c-sub">NativeToGlobal</span></div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">On dark green</span>
+        <div class="swatch swatch-green">
+          <div class="mark-c"><span class="mark-c-main">N2G</span><span class="mark-c-sub">NativeToGlobal</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-preview-wrap">
+      <span class="nav-preview-label">Nav scale</span>
+      <div class="mark-c mark-c-nav"><span class="mark-c-main">N2G</span><span class="mark-c-sub">NativeToGlobal</span></div>
+    </div>
+  </div>
+
+  <!-- ========== TREATMENT D · VERTICAL RULE + LOCKUP ========== -->
+  <div class="treatment">
+    <div class="treatment-tag">D · rule + lockup</div>
+    <h2 class="treatment-h">Vertical rule + lockup</h2>
+    <p class="treatment-desc">A thin green vertical rule on the left — like the column rule in an editorial spread — followed by a serif "N2G" and a small-caps subtitle. Quiet but distinctive. The rule acts as a tiny brand element you could extend across packaging, tear-sheets, and business cards without needing a real icon.</p>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">On cream</span>
+        <div class="swatch swatch-cream">
+          <div class="mark-d"><div class="mark-d-rule"></div><div class="mark-d-text"><span class="mark-d-main">N2G</span><span class="mark-d-sub">NativeToGlobal</span></div></div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">On dark green</span>
+        <div class="swatch swatch-green">
+          <div class="mark-d"><div class="mark-d-rule"></div><div class="mark-d-text"><span class="mark-d-main">N2G</span><span class="mark-d-sub">NativeToGlobal</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-preview-wrap">
+      <span class="nav-preview-label">Nav scale</span>
+      <div class="mark-d mark-d-nav"><div class="mark-d-rule"></div><div class="mark-d-text"><span class="mark-d-main">N2G</span><span class="mark-d-sub">NativeToGlobal</span></div></div>
+    </div>
+  </div>
+
+  <div class="lab-footnote">
+    <strong>How to use this page</strong><br>
+    Preview at <code>https://nativetoglobal.com/logo-lab.html</code> once the domain is live, or at <code>https://n2g-site.vercel.app/logo-lab.html</code> right now. Tell me which letter (A, B, C, or D) you prefer and I'll apply it to the nav + footer on the main site in one pass. If none of them feel right, tell me which direction is closest and I'll iterate.
+    <br><br>
+    <strong>Notes</strong>
+    <ul>
+      <li>All four treatments use the site's existing type stack and colors — no new fonts or assets to load.</li>
+      <li>Treatment C is the cheapest to execute and the most editorial. Treatment B is the most brand-forward of the mark-based options.</li>
+      <li>Whatever you pick here is still a CSS placeholder. For launch, you should commission a real logo from a designer. These treatments can be handed to them as directional reference ("we're going in this direction").</li>
+      <li>This page is <code>noindex</code>, <code>nofollow</code>, and not linked from the main nav — it won't appear in search results or accidental navigation.</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>
