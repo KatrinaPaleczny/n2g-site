@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Logo lab · N2G NativeToGlobal</title>
+<title>Logo lab · N2G Native2Global</title>
 <meta name="description" content="Internal logo preview — not for public indexing">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -269,12 +269,46 @@ body{
   .mark-c-main{font-size:44px}
   .mark-d-main{font-size:26px}
 }
+
+/* ===== SVG TREATMENTS ===== */
+
+/* Treatment E · double ring */
+.mark-e{color:var(--green)}
+.mark-e svg{display:block;height:58px;width:auto}
+.swatch-green .mark-e{color:#fff}
+.mark-e-nav{color:var(--green)}
+.mark-e-nav svg{display:block;height:30px;width:auto}
+
+/* Treatment F · wordmark + hairline */
+.mark-f{color:var(--text)}
+.mark-f svg{display:block;height:76px;width:auto}
+.swatch-green .mark-f{color:#fff}
+.mark-f-nav{color:var(--text)}
+.mark-f-nav svg{display:block;height:30px;width:auto}
+
+/* Treatment G · vertical rule + gold cap */
+.mark-g{color:var(--text)}
+.mark-g svg{display:block;height:48px;width:auto}
+.swatch-green .mark-g{color:#fff}
+.mark-g-nav{color:var(--text)}
+.mark-g-nav svg{display:block;height:24px;width:auto}
+
+/* Treatment H · refined current (filled circle, serif italic monogram) */
+.mark-h{--dot-fill:var(--green);--dot-text:#fff;color:var(--text)}
+.mark-h svg{display:block;height:58px;width:auto}
+.swatch-green .mark-h{--dot-fill:#fff;--dot-text:var(--green-dark);color:#fff}
+.mark-h-nav{--dot-fill:var(--green);--dot-text:#fff;color:var(--text)}
+.mark-h-nav svg{display:block;height:30px;width:auto}
+
+/* Icon row — override parent height to use HTML attributes */
+.icon-row{display:flex;align-items:center;gap:20px}
+.icon-row svg{display:block;height:auto;width:auto}
 </style>
 </head>
 <body>
 <div class="lab-w">
   <h1 class="lab-h1">Logo lab</h1>
-  <p class="lab-intro">Four CSS-only treatments to compare. Each one uses the existing site type stack (EB Garamond + Karla) and color palette — no fabricated SVG illustrations. Pick one and it gets applied to the nav and footer across the main site, or use these as directional reference when commissioning a real logo from a designer.</p>
+  <p class="lab-intro">Eight treatments to compare — four CSS-only (A–D) and four refined SVGs (E–H). All use the existing type stack (EB Garamond + Karla) and color palette. E–G evolve the editorial directions of B, C, and D; H refines A with a serif italic monogram upgrade. SVG treatments offer precise geometry, multi-scale icon variants, and packaging-ready exports.</p>
   <p class="lab-meta">Not linked from the main site · noindex · preview only</p>
 
   <!-- ========== TREATMENT A · CURRENT (reference) ========== -->
@@ -377,15 +411,248 @@ body{
     </div>
   </div>
 
+  <!-- SVG symbol definitions for treatments E–G -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden">
+    <symbol id="e-ring" viewBox="0 0 58 58">
+      <circle cx="29" cy="29" r="27" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="29" cy="29" r="22" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+      <text x="29" y="35" text-anchor="middle" font-family="'EB Garamond',serif" font-style="italic" font-size="21" font-weight="500" fill="currentColor" letter-spacing="-0.4">N2G</text>
+    </symbol>
+    <symbol id="e-lockup" viewBox="0 0 280 58">
+      <circle cx="29" cy="29" r="27" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <circle cx="29" cy="29" r="22" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.3"/>
+      <text x="29" y="35" text-anchor="middle" font-family="'EB Garamond',serif" font-style="italic" font-size="21" font-weight="500" fill="currentColor" letter-spacing="-0.4">N2G</text>
+      <text x="72" y="36" font-family="'EB Garamond',serif" font-size="26" fill="currentColor" letter-spacing="0.1">Native2Global</text>
+    </symbol>
+    <symbol id="f-frame" viewBox="0 0 44 44">
+      <rect x="2" y="2" width="40" height="40" fill="none" stroke="currentColor" stroke-width="1" rx="1"/>
+      <text x="22" y="28" text-anchor="middle" font-family="'EB Garamond',serif" font-style="italic" font-size="17" font-weight="500" fill="currentColor" letter-spacing="-0.3">N2G</text>
+    </symbol>
+    <symbol id="f-wordmark" viewBox="0 0 165 76">
+      <text x="2" y="48" font-family="'EB Garamond',serif" font-style="italic" font-size="56" font-weight="500" fill="currentColor" letter-spacing="-1">N2G</text>
+      <line x1="2" y1="56" x2="105" y2="56" stroke="currentColor" stroke-width="0.5" opacity="0.25"/>
+      <text x="3" y="72" font-family="'Karla',sans-serif" font-size="10" font-weight="300" letter-spacing="3.2" fill="currentColor" opacity="0.6">NATIVE2GLOBAL</text>
+    </symbol>
+    <symbol id="g-abstract" viewBox="0 0 44 44">
+      <circle cx="22" cy="22" r="20" fill="none" stroke="currentColor" stroke-width="1"/>
+      <circle cx="22" cy="10" r="2.5" fill="#C8944A"/>
+      <line x1="22" y1="14.5" x2="22" y2="35" stroke="currentColor" stroke-width="2"/>
+    </symbol>
+    <symbol id="g-lockup" viewBox="0 0 180 48">
+      <circle cx="3" cy="2.5" r="2.5" fill="#C8944A"/>
+      <line x1="3" y1="7" x2="3" y2="46" stroke="currentColor" stroke-width="2"/>
+      <text x="18" y="28" font-family="'EB Garamond',serif" font-size="32" font-weight="500" fill="currentColor" letter-spacing="-0.3">N2G</text>
+      <text x="18.5" y="42" font-family="'Karla',sans-serif" font-size="9" font-weight="300" letter-spacing="2.5" fill="currentColor" opacity="0.6">NATIVE2GLOBAL</text>
+    </symbol>
+    <symbol id="h-dot" viewBox="0 0 58 58">
+      <circle cx="29" cy="29" r="27" fill="var(--dot-fill,currentColor)"/>
+      <text x="29" y="35" text-anchor="middle" font-family="'EB Garamond',serif" font-style="italic" font-size="21" font-weight="500" fill="var(--dot-text,#fff)" letter-spacing="-0.4">N2G</text>
+    </symbol>
+    <symbol id="h-lockup" viewBox="0 0 280 58">
+      <circle cx="29" cy="29" r="27" fill="var(--dot-fill,currentColor)"/>
+      <text x="29" y="35" text-anchor="middle" font-family="'EB Garamond',serif" font-style="italic" font-size="21" font-weight="500" fill="var(--dot-text,#fff)" letter-spacing="-0.4">N2G</text>
+      <text x="72" y="36" font-family="'EB Garamond',serif" font-size="26" fill="currentColor" letter-spacing="0.1">Native2Global</text>
+    </symbol>
+  </svg>
+
+  <!-- ========== TREATMENT E · DOUBLE RING MARK (SVG) ========== -->
+  <div class="treatment">
+    <div class="treatment-tag">E · double ring · SVG</div>
+    <h2 class="treatment-h">Double-ring mark + serif wordmark</h2>
+    <p class="treatment-desc">Evolves Treatment B into a precise SVG. A thin outer ring and subtle inner ring create a wax-seal quality-stamp feel. The italic serif "N2G" is optically centered in the double ring, paired with a serif wordmark. Scales cleanly from packaging to 16px favicon — the inner ring disappears gracefully at small sizes, leaving the outer ring and monogram.</p>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">On cream</span>
+        <div class="swatch swatch-cream">
+          <div class="mark-e"><svg viewBox="0 0 280 58"><use href="#e-lockup"/></svg></div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">On dark green</span>
+        <div class="swatch swatch-green">
+          <div class="mark-e"><svg viewBox="0 0 280 58"><use href="#e-lockup"/></svg></div>
+        </div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">Icon · 56 / 32 / 16 px</span>
+        <div class="swatch swatch-cream">
+          <div class="icon-row mark-e">
+            <svg viewBox="0 0 58 58" width="56" height="56"><use href="#e-ring"/></svg>
+            <svg viewBox="0 0 58 58" width="32" height="32"><use href="#e-ring"/></svg>
+            <svg viewBox="0 0 58 58" width="16" height="16"><use href="#e-ring"/></svg>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">Icon on dark</span>
+        <div class="swatch swatch-green">
+          <div class="icon-row mark-e">
+            <svg viewBox="0 0 58 58" width="56" height="56"><use href="#e-ring"/></svg>
+            <svg viewBox="0 0 58 58" width="32" height="32"><use href="#e-ring"/></svg>
+            <svg viewBox="0 0 58 58" width="16" height="16"><use href="#e-ring"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-preview-wrap">
+      <span class="nav-preview-label">Nav scale</span>
+      <div class="mark-e-nav"><svg viewBox="0 0 280 58"><use href="#e-lockup"/></svg></div>
+    </div>
+  </div>
+
+  <!-- ========== TREATMENT F · WORDMARK + HAIRLINE (SVG) ========== -->
+  <div class="treatment">
+    <div class="treatment-tag">F · wordmark · SVG</div>
+    <h2 class="treatment-h">Wordmark + hairline separator</h2>
+    <p class="treatment-desc">Evolves Treatment C with SVG precision. The oversized italic "N2G" is the sole anchor, with a delicate hairline rule separating it from the tracked sans-serif subtitle. Even more editorial than the CSS version — the hairline adds just enough structure without introducing a mark. The thin-framed monogram icon solves the favicon problem that a pure wordmark can't.</p>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">On cream</span>
+        <div class="swatch swatch-cream">
+          <div class="mark-f"><svg viewBox="0 0 165 76"><use href="#f-wordmark"/></svg></div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">On dark green</span>
+        <div class="swatch swatch-green">
+          <div class="mark-f"><svg viewBox="0 0 165 76"><use href="#f-wordmark"/></svg></div>
+        </div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">Icon · 48 / 32 / 16 px</span>
+        <div class="swatch swatch-cream">
+          <div class="icon-row mark-f">
+            <svg viewBox="0 0 44 44" width="48" height="48"><use href="#f-frame"/></svg>
+            <svg viewBox="0 0 44 44" width="32" height="32"><use href="#f-frame"/></svg>
+            <svg viewBox="0 0 44 44" width="16" height="16"><use href="#f-frame"/></svg>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">Icon on dark</span>
+        <div class="swatch swatch-green">
+          <div class="icon-row mark-f">
+            <svg viewBox="0 0 44 44" width="48" height="48"><use href="#f-frame"/></svg>
+            <svg viewBox="0 0 44 44" width="32" height="32"><use href="#f-frame"/></svg>
+            <svg viewBox="0 0 44 44" width="16" height="16"><use href="#f-frame"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-preview-wrap">
+      <span class="nav-preview-label">Nav scale</span>
+      <div class="mark-f-nav"><svg viewBox="0 0 165 76"><use href="#f-wordmark"/></svg></div>
+    </div>
+  </div>
+
+  <!-- ========== TREATMENT G · VERTICAL RULE + GOLD CAP (SVG) ========== -->
+  <div class="treatment">
+    <div class="treatment-tag">G · rule + gold cap · SVG</div>
+    <h2 class="treatment-h">Vertical rule + gold accent cap</h2>
+    <p class="treatment-desc">Evolves Treatment D with a gold accent. The thin vertical rule gains a small gold dot cap at its top — a subtle but distinctive brand detail that could extend to packaging, tear-sheets, and stationery. The rule + text lockup is tighter and more intentional than the CSS version. The abstract icon (vertical stroke + gold dot inside a thin circle) distills the concept into a compact favicon.</p>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">On cream</span>
+        <div class="swatch swatch-cream">
+          <div class="mark-g"><svg viewBox="0 0 180 48"><use href="#g-lockup"/></svg></div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">On dark green</span>
+        <div class="swatch swatch-green">
+          <div class="mark-g"><svg viewBox="0 0 180 48"><use href="#g-lockup"/></svg></div>
+        </div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">Icon · 44 / 32 / 16 px</span>
+        <div class="swatch swatch-cream">
+          <div class="icon-row mark-g">
+            <svg viewBox="0 0 44 44" width="44" height="44"><use href="#g-abstract"/></svg>
+            <svg viewBox="0 0 44 44" width="32" height="32"><use href="#g-abstract"/></svg>
+            <svg viewBox="0 0 44 44" width="16" height="16"><use href="#g-abstract"/></svg>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">Icon on dark</span>
+        <div class="swatch swatch-green">
+          <div class="icon-row mark-g">
+            <svg viewBox="0 0 44 44" width="44" height="44"><use href="#g-abstract"/></svg>
+            <svg viewBox="0 0 44 44" width="32" height="32"><use href="#g-abstract"/></svg>
+            <svg viewBox="0 0 44 44" width="16" height="16"><use href="#g-abstract"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-preview-wrap">
+      <span class="nav-preview-label">Nav scale</span>
+      <div class="mark-g-nav"><svg viewBox="0 0 180 48"><use href="#g-lockup"/></svg></div>
+    </div>
+  </div>
+
+  <!-- ========== TREATMENT H · REFINED CURRENT (SVG) ========== -->
+  <div class="treatment">
+    <div class="treatment-tag">H · refined current · SVG</div>
+    <h2 class="treatment-h">Filled circle + serif italic monogram</h2>
+    <p class="treatment-desc">The current filled-circle mark with the monogram upgraded from sans-serif to serif italic — minimal change, maximum polish. Same green circle, same overall shape and weight. The only difference is the "N2G" inside: EB Garamond italic replaces Karla, bringing the mark into alignment with the editorial type system used across the rest of the brand.</p>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">On cream</span>
+        <div class="swatch swatch-cream">
+          <div class="mark-h"><svg viewBox="0 0 280 58"><use href="#h-lockup"/></svg></div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">On dark green</span>
+        <div class="swatch swatch-green">
+          <div class="mark-h"><svg viewBox="0 0 280 58"><use href="#h-lockup"/></svg></div>
+        </div>
+      </div>
+    </div>
+    <div class="swatch-row">
+      <div>
+        <span class="swatch-label">Icon · 56 / 32 / 16 px</span>
+        <div class="swatch swatch-cream">
+          <div class="mark-h icon-row">
+            <svg viewBox="0 0 58 58" width="56" height="56"><use href="#h-dot"/></svg>
+            <svg viewBox="0 0 58 58" width="32" height="32"><use href="#h-dot"/></svg>
+            <svg viewBox="0 0 58 58" width="16" height="16"><use href="#h-dot"/></svg>
+          </div>
+        </div>
+      </div>
+      <div>
+        <span class="swatch-label">Icon · dark green</span>
+        <div class="swatch swatch-green">
+          <div class="mark-h icon-row">
+            <svg viewBox="0 0 58 58" width="56" height="56"><use href="#h-dot"/></svg>
+            <svg viewBox="0 0 58 58" width="32" height="32"><use href="#h-dot"/></svg>
+            <svg viewBox="0 0 58 58" width="16" height="16"><use href="#h-dot"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-preview-wrap">
+      <span class="nav-preview-label">Nav scale</span>
+      <div class="mark-h-nav"><svg viewBox="0 0 280 58"><use href="#h-lockup"/></svg></div>
+    </div>
+  </div>
+
   <div class="lab-footnote">
     <strong>How to use this page</strong><br>
-    Preview at <code>https://nativetoglobal.com/logo-lab.html</code> once the domain is live, or at <code>https://n2g-site.vercel.app/logo-lab.html</code> right now. Tell me which letter (A, B, C, or D) you prefer and I'll apply it to the nav + footer on the main site in one pass. If none of them feel right, tell me which direction is closest and I'll iterate.
+    Preview at <code>https://native2global.com/logo-lab.html</code> once the domain is live, or at <code>https://n2g-site.vercel.app/logo-lab.html</code> right now. Tell me which letter (A through H) you prefer and I'll apply it to the nav + footer on the main site in one pass. If none of them feel right, tell me which direction is closest and I'll iterate.
     <br><br>
     <strong>Notes</strong>
     <ul>
       <li>All four treatments use the site's existing type stack and colors — no new fonts or assets to load.</li>
       <li>Treatment C is the cheapest to execute and the most editorial. Treatment B is the most brand-forward of the mark-based options.</li>
-      <li>Whatever you pick here is still a CSS placeholder. For launch, you should commission a real logo from a designer. These treatments can be handed to them as directional reference ("we're going in this direction").</li>
+      <li>Treatments A–D are CSS placeholders. E–H are inline SVGs that can be extracted for packaging, print, or handed to a designer as production-ready starting points.</li>
+      <li>E–H use <code>&lt;symbol&gt;</code>/<code>&lt;use&gt;</code> for deduplication. Each SVG references the page's Google Fonts — the same EB Garamond + Karla loaded by the site.</li>
       <li>This page is <code>noindex</code>, <code>nofollow</code>, and not linked from the main nav — it won't appear in search results or accidental navigation.</li>
     </ul>
   </div>
