@@ -36,7 +36,7 @@
 @font-face{font-family:'Noto Sans Thai';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/notosansthai/v29/iJWQBXeUZi_OHPqn4wq6hQ2_hbJ1xyN9wd43SofNWcdfPI2hTWsb-A.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
 @font-face{font-family:'Noto Sans Thai';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/notosansthai/v29/iJWQBXeUZi_OHPqn4wq6hQ2_hbJ1xyN9wd43SofNWcdfKI2hTWsb-P2c.woff2) format('woff2');unicode-range:U+02D7,U+0303,U+0331,U+0E01-0E5B,U+200C-200D,U+25CC}
 @font-face{font-family:'Noto Sans Thai';font-style:normal;font-weight:500;font-stretch:100%;font-display:swap;src:url(https://fonts.gstatic.com/s/notosansthai/v29/iJWQBXeUZi_OHPqn4wq6hQ2_hbJ1xyN9wd43SofNWcdfPI2hTWsb-A.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-:root{
+:root{color-scheme:light;
   --white:#fff;--cream:#FDFBF7;--sand:#F3EFE7;
   --text:#2C2417;--text2:#5A4D3C;--text3:#5C5047;--text4:#6B5F53;
   --green:#3A6B4A;--green-dark:#2D5239;--green-bg:rgba(58,107,74,0.06);
@@ -59,7 +59,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Karla',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased;font-weight:400}
 a{color:inherit;text-decoration:none}
-.skip-link{position:absolute;top:-40px;left:0;background:var(--green);color:#fff;padding:8px 16px;z-index:1000;font-size:14px;transition:top 0.2s}.skip-link:focus{top:0}
+.skip-link{position:absolute;top:-40px;left:0;background:var(--green);color:#fff;padding:8px 16px;z-index:1000;font-size:14px;transition:top 0.2s}.skip-link:focus-visible{top:0}
 img{display:block;max-width:100%}
 
 /* Nav - cream, always */
@@ -88,13 +88,13 @@ source{display:none}
 .sec-bleed.bg-sand{background:var(--sand)}
 .sec-bleed.bg-green{background:var(--green-dark);color:rgba(253,251,247,0.92)}
 .sec-bleed.bg-green .sec-p{color:rgba(253,251,247,0.72)}
-.sec-label{font-size:var(--t-eyebrow);letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:10px;font-weight:500}
-.sec-h{font-family:'EB Garamond',serif;font-size:var(--t-h2);font-weight:400;line-height:1.3;margin-bottom:12px}.sec-h-lg{font-size:var(--t-h2-lg)}
-.sec-p{font-size:var(--t-body);line-height:var(--lh-body);color:var(--text2);font-weight:300;max-width:540px}
-.sec-p-lead{font-size:var(--t-body-lead);line-height:var(--lh-loose);color:var(--text2);font-weight:300;max-width:64ch;margin:0 0 var(--s2)}
+.sec-label{font-size:var(--t-eyebrow);letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:8px;font-weight:500}
+.sec-h{font-family:'EB Garamond',serif;font-size:var(--t-h2);font-weight:400;line-height:1.3;margin-bottom:16px}.sec-h-lg{font-size:var(--t-h2-lg)}
+.sec-p{font-size:var(--t-body);line-height:var(--lh-body);color:var(--text2);font-weight:300;max-width:60ch}
+.sec-p-lead{font-size:var(--t-body-lead);line-height:var(--lh-loose);color:var(--text2);font-weight:300;max-width:58ch;margin:0 0 var(--s2)}
 .legal-h2{font-family:'EB Garamond',serif;font-size:20px;font-weight:400;margin:28px 0 12px;color:var(--text1)}
 .prose{max-width:680px;font-size:15px;line-height:1.8;color:var(--text2)}
-.accent{height:3px;width:40px;background:var(--green);margin-bottom:16px;border-radius:2px}
+.accent{height:3px;width:40px;background:var(--green);margin-bottom:20px;border-radius:2px}
 .accent-terra{background:var(--terra)}.accent-gold{background:var(--gold)}.accent-green{background:var(--green)}.accent-green-dark{background:var(--green-dark)}
 .sec-label-terra{color:var(--terra)}.sec-label-gold{color:var(--gold)}.sec-label-green{color:var(--green)}.sec-label-green-dark{color:var(--green-dark)}
 .more-link{display:inline-block;margin-top:16px;font-size:14px;color:var(--green);border-bottom:1px solid var(--green);padding:8px 4px 2px;cursor:pointer}.more-link:hover{color:var(--green-dark)}
@@ -126,7 +126,7 @@ source{display:none}
 .hero-wrap{background:var(--green-dark);margin-top:61px}
 .hero{max-width:1120px;margin:0 auto;padding:80px 32px 88px}
 .hero-loc{font-size:11px;letter-spacing:0.14em;color:#D4A85C;margin-bottom:24px;font-weight:500;text-transform:uppercase}
-.hero-h{font-family:'EB Garamond',serif;font-size:clamp(32px,5.5vw,52px);font-weight:400;line-height:1.15;color:rgba(253,251,247,0.95);margin-bottom:24px;text-wrap:balance}
+.hero-h{font-family:'EB Garamond',serif;font-size:clamp(32px,5.5vw,52px);font-weight:400;line-height:1.15;color:rgba(253,251,247,0.95);margin-bottom:16px;text-wrap:balance}
 .hero-h em{font-style:italic;color:var(--gold)}
 .hero-p{font-size:17px;line-height:1.8;color:rgba(253,251,247,0.72);font-weight:300;max-width:520px}
 .hero-tagline{font-family:'EB Garamond',serif;font-size:22px;font-style:italic;font-weight:500;letter-spacing:0.04em;color:var(--gold);margin-bottom:20px}
@@ -195,7 +195,7 @@ textarea.fi{resize:vertical;min-height:84px}
 .carousel-inner{display:flex;transition:transform 0.4s ease;height:100%}
 .carousel-slide{min-width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;text-align:center}
 .carousel-dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
-.carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(44,36,23,0.15);cursor:pointer}.carousel-dot.active{background:var(--terra)}
+.carousel-dot{width:8px;height:8px;border-radius:50%;background:rgba(44,36,23,0.15);cursor:pointer;border:none;padding:0}.carousel-dot.active{background:var(--terra)}
 .carousel-nav{position:absolute;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.8);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text3);padding:0;font-family:inherit;line-height:1}.carousel-nav.prev{left:8px}.carousel-nav.next{right:8px}
 .ph-label{font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);font-weight:500;margin-bottom:4px}
 .ph-desc{font-size:11px;color:var(--text3);line-height:1.4;max-width:200px}
@@ -464,7 +464,7 @@ body.thai .lang-en-inline{display:none}
 .spec-line{font-size:11px;color:var(--text4);margin-top:6px;letter-spacing:0.02em}
 .coffee-carousel{aspect-ratio:21/9;margin-top:32px;border:none;border-radius:8px}
 @media(max-width:600px){.coffee-carousel{aspect-ratio:16/9}}
-.home-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.home-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .sec-pb-tight{padding-bottom:32px}
 .home-card{border-radius:8px;overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:box-shadow 0.2s,transform 0.2s}
 .home-card:hover{box-shadow:0 4px 16px rgba(44,36,23,0.1);transform:translateY(-2px)}
@@ -556,21 +556,21 @@ body.thai .lang-en-inline{display:none}
 .section-img{width:100%;object-fit:cover;border-radius:4px}
 
 /* Accessibility: focus-visible outlines */
-a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-visible,.carousel-nav:focus-visible,.carousel-dot:focus-visible,.nav-brand:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:2px}
+a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-visible,.carousel-nav:focus-visible,.carousel-dot:focus-visible,.nav-brand:focus-visible,.home-card:focus-visible,.grow-i:focus-visible,.photo-grid-item:focus-visible,.about-img-lb:focus-visible{outline:2px solid var(--green);outline-offset:2px;border-radius:2px}
 
 /* Brand story bridge */
-.brand-bridge{padding:var(--section-y) 0;text-align:center}
-.brand-bridge-text{font-family:'EB Garamond',serif;font-size:20px;line-height:1.7;color:var(--text2);max-width:640px;margin:0 auto 40px}
+.brand-bridge{padding:var(--s9) 0;text-align:center}
+.brand-bridge-text{font-family:'EB Garamond',serif;font-size:22px;line-height:1.65;color:var(--text2);max-width:640px;margin:0 auto 40px}
 .terroir-bar{display:flex;justify-content:center;gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:16px 0;max-width:640px;margin:0 auto}
 .terroir-bar-item{padding:0 24px;border-left:1px solid var(--border);text-align:center}
 .terroir-bar-item:first-child{border-left:none;padding-left:0}
-.terroir-bar-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text4);margin-bottom:4px;font-family:'Karla',sans-serif}
+.terroir-bar-label{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--text4);margin-bottom:6px;font-family:'Karla',sans-serif}
 .terroir-bar-val{font-family:'EB Garamond',serif;font-size:16px;color:var(--text)}
 
 /* Why N2G section */
-.why-n2g-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px}
+.why-n2g-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px 24px;margin-top:32px}
 .why-n2g-item{padding:0}
-.why-n2g-item-h{font-size:16px;font-weight:500;color:var(--text);margin-bottom:6px}
+.why-n2g-item-h{font-size:15px;font-weight:500;color:var(--text);margin-bottom:6px;letter-spacing:0.04em;text-transform:uppercase}
 .why-n2g-item-p{font-size:15px;color:var(--text2);line-height:1.6}
 
 /* Sustainability section */
@@ -666,7 +666,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <nav class="nav">
 <div class="nav-brand" tabindex="0" role="button" onclick="go('home')" onkeydown="if(event.key==='Enter')go('home')"><div class="nav-dot">N2G</div><span class="nav-name">Native2Global</span><span class="nav-tagline"><span class="lang-en">Mountain | People | Ecology</span><span class="lang-th th-text">ภูเขา | ผู้คน | ระบบนิเวศ</span></span></div>
 <div class="nav-right">
-  <button class="hamburger" aria-label="Menu" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
+  <button class="hamburger" aria-label="Menu" aria-expanded="false" onclick="this.classList.toggle('open');document.querySelector('.nav-links').classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))"><span></span><span></span><span></span></button>
   <div class="nav-links">
     <a href="#coffee" onclick="go('coffee');closeMenu();return false" id="nav-coffee" tabindex="0"><span class="lang-en-inline">Coffee</span><span class="lang-th-inline th-text">กาแฟ</span></a>
     <a href="#tea" onclick="go('tea');closeMenu();return false" id="nav-tea" tabindex="0"><span class="lang-en-inline">Tea</span><span class="lang-th-inline th-text">ชา</span></a>
@@ -677,18 +677,19 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
     <a href="#contact" onclick="go('contact');closeMenu();return false" id="nav-contact" tabindex="0"><span class="lang-en-inline">Contact Us</span><span class="lang-th-inline th-text">ติดต่อ</span></a>
   </div>
   <div class="lang-toggle">
-    <button class="lang-btn active" onclick="setLang('en')">EN</button>
-    <button class="lang-btn th-text" onclick="setLang('th')">ไทย</button>
+    <button class="lang-btn active" aria-pressed="true" onclick="setLang('en')">EN</button>
+    <button class="lang-btn th-text" aria-pressed="false" onclick="setLang('th')">ไทย</button>
   </div>
 </div>
 </nav>
 
+<main id="main-content">
 <!-- ===== LANDING ===== -->
 <div class="page active" id="page-home">
 
 <!-- Green hero -->
 <div class="hero-wrap">
-<div class="hero" id="main-content">
+<div class="hero">
   <div class="hero-loc"><span class="lang-en">Chiang Rai, Thailand</span><span class="lang-th th-text">เชียงราย ประเทศไทย</span></div>
   <h1 class="hero-h">
     <span class="lang-en">Specialty coffee, teas, and produce from a single estate</span>
@@ -701,7 +702,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <!-- Landscape photo strip -->
 <div class="land-strip">
-  <img src="/img/coffee-forest-sunburst.jpg" alt="Sunlight through the coffee forest canopy at Doi Tung" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;object-position:center 70%">
+  <img src="/img/coffee-forest-sunburst.jpg" alt="Sunlight through the coffee forest canopy at Doi Tung" width="1120" height="427" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;object-position:center 70%">
 </div>
 
 
@@ -734,46 +735,46 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <!-- Coffee teaser -->
 <div class="sec sec-sm" id="forest-coffee">
   <div class="accent"></div>
-  <div class="sec-label"><svg class="sec-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div>
+  <div class="sec-label"><svg class="sec-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div>
   <p class="sec-p"><span class="lang-en">Arabica. Catimor, Caturra, Catuai. Fully washed, sun-dried on raised beds. Available as parchment, green beans, roasted beans, capsules, and drip bags.</span><span class="lang-th th-text">อราบิก้า Catimor, Caturra, Catuai ล้างสะอาด ตากแดดบนแคร่ยกสูง มีทั้งกาแฟกะลา กรีนบีน เมล็ดคั่ว แคปซูล และดริปแบ็ก</span></p>
   <div class="prod prod-with-thumb"><picture><source srcset="/img/pourover-brewing.webp" type="image/webp"><img class="prod-thumb" src="/img/pourover-brewing.jpg" alt="Pour-over brewing" loading="lazy"></picture><div><div class="prod-name">Drip Select X.O.</div><div class="prod-sub"><span class="lang-en">Filter / Pour-over · AA-A</span><span class="lang-th th-text">ฟิลเตอร์ / พัวร์โอเวอร์ · AA-A</span></div><div class="flavs"><span class="flav"><span class="lang-en">Brown sugar</span><span class="lang-th th-text">บราวน์ชูการ์</span></span><span class="flav"><span class="lang-en">Orange blossom</span><span class="lang-th th-text">ดอกส้ม</span></span><span class="flav"><span class="lang-en">Mandarin</span><span class="lang-th th-text">แมนดาริน</span></span><span class="flav"><span class="lang-en">Lychee</span><span class="lang-th th-text">ลิ้นจี่</span></span><span class="flav"><span class="lang-en">Peach</span><span class="lang-th th-text">พีช</span></span></div></div></div>
   <div class="prod prod-with-thumb"><picture><source srcset="/img/roasted-beans-container-closeup.webp" type="image/webp"><img class="prod-thumb" src="/img/roasted-beans-container-closeup.jpg" alt="Roasted coffee beans in container" loading="lazy"></picture><div><div class="prod-name">Espresso Select Special</div><div class="prod-sub"><span class="lang-en">Espresso · AA-A</span><span class="lang-th th-text">เอสเพรสโซ่ · AA-A</span></div><div class="flavs"><span class="flav"><span class="lang-en">Caramel</span><span class="lang-th th-text">คาราเมล</span></span><span class="flav"><span class="lang-en">Osmanthus</span><span class="lang-th th-text">ออสแมนทัส</span></span><span class="flav"><span class="lang-en">Passion fruit</span><span class="lang-th th-text">เสาวรส</span></span><span class="flav"><span class="lang-en">Dark chocolate</span><span class="lang-th th-text">ดาร์กช็อกโกแลต</span></span></div></div></div>
   <div class="prod prod-with-thumb"><picture><source srcset="/img/roasted-beans-closeup-macro.webp" type="image/webp"><img class="prod-thumb" src="/img/roasted-beans-closeup-macro.jpg" alt="Roasted coffee beans closeup" loading="lazy"></picture><div><div class="prod-name">Espresso Select Classic</div><div class="prod-sub"><span class="lang-en">Espresso · Mixed</span><span class="lang-th th-text">เอสเพรสโซ่ · มิกซ์</span></div><div class="flavs"><span class="flav"><span class="lang-en">Butterscotch</span><span class="lang-th th-text">บัตเตอร์สก็อตช์</span></span><span class="flav"><span class="lang-en">Sweet orange</span><span class="lang-th th-text">ส้มหวาน</span></span><span class="flav"><span class="lang-en">Vanilla</span><span class="lang-th th-text">วานิลลา</span></span></div></div></div>
-  <span class="more-link" onclick="go('coffee')"><span class="lang-en">See all coffee details →</span><span class="lang-th th-text">ดูข้อมูลกาแฟทั้งหมด →</span></span>
+  <a class="more-link" href="#coffee" onclick="go('coffee');return false"><span class="lang-en">See all coffee details →</span><span class="lang-th th-text">ดูข้อมูลกาแฟทั้งหมด →</span></a>
 </div>
 
 <!-- Tea teaser -->
-<div class="sec sec-sm">
+<div class="sec sec-sm sec-divided">
   <div class="accent accent-terra"></div>
-  <div class="sec-label sec-label-terra"><svg class="sec-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><span class="lang-en">Heritage tea · <span style="font-weight:600;color:var(--text)">TEA</span><span style="font-weight:300;text-transform:lowercase;color:var(--text)">organique</span> · <span style="color:#4CAF50;font-size:9px;letter-spacing:0.02em">山青茶語</span></span><span class="lang-th th-text">ชามรดก · <span style="font-weight:600;color:var(--text)">TEA</span><span style="font-weight:300;text-transform:lowercase;color:var(--text)">organique</span> · <span style="color:#4CAF50;font-size:9px;letter-spacing:0.02em">山青茶語</span></span> <svg style="width:20px;height:20px;vertical-align:-4px;margin-left:3px" viewBox="-5 0 115 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="48" r="42" fill="none" stroke="#8BC34A" stroke-width="2.5" opacity="0.7"/><polygon points="30,62 42,30 54,62" fill="#4CAF50"/><polygon points="40,62 52,34 64,62" fill="#66BB6A"/><polygon points="50,62 60,38 72,62" fill="#81C784"/><path d="M26,62 Q50,50 74,62" fill="#4FC3F7" opacity="0.8"/><path d="M70,50 C78,38 82,25 75,18" fill="none" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="74" cy="20" rx="5" ry="8" transform="rotate(-30 74 20)" fill="#4CAF50"/><ellipse cx="80" cy="28" rx="4" ry="7" transform="rotate(-50 80 28)" fill="#66BB6A"/></svg></div>
+  <div class="sec-label sec-label-terra"><svg class="sec-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><span class="lang-en">Heritage tea · <span style="font-weight:600;color:var(--text)">TEA</span><span style="font-weight:300;text-transform:lowercase;color:var(--text)">organique</span> · <span style="color:#4CAF50;font-size:9px;letter-spacing:0.02em">山青茶語</span></span><span class="lang-th th-text">ชามรดก · <span style="font-weight:600;color:var(--text)">TEA</span><span style="font-weight:300;text-transform:lowercase;color:var(--text)">organique</span> · <span style="color:#4CAF50;font-size:9px;letter-spacing:0.02em">山青茶語</span></span> <svg aria-hidden="true" style="width:20px;height:20px;vertical-align:-4px;margin-left:3px" viewBox="-5 0 115 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="48" r="42" fill="none" stroke="#8BC34A" stroke-width="2.5" opacity="0.7"/><polygon points="30,62 42,30 54,62" fill="#4CAF50"/><polygon points="40,62 52,34 64,62" fill="#66BB6A"/><polygon points="50,62 60,38 72,62" fill="#81C784"/><path d="M26,62 Q50,50 74,62" fill="#4FC3F7" opacity="0.8"/><path d="M70,50 C78,38 82,25 75,18" fill="none" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="74" cy="20" rx="5" ry="8" transform="rotate(-30 74 20)" fill="#4CAF50"/><ellipse cx="80" cy="28" rx="4" ry="7" transform="rotate(-50 80 28)" fill="#66BB6A"/></svg></div>
   <p class="sec-p"><span class="lang-en">15 teas from wild and cultivated trees. Oolongs, wild red teas, aged puer, white tea, flower blends, and natural matcha. Some gushu trees are over 500 years old.</span><span class="lang-th th-text">ชา 15 ชนิดจากต้นชาป่าและต้นชาปลูก อู่หลง ชาแดงป่า ผู่เอ๋อร์บ่ม ชาขาว ชาดอกไม้ และมัทฉะธรรมชาติ ต้นชากู่ซู่บางต้นอายุกว่า 500 ปี</span></p>
   <div class="tea-g">
-    <div class="tea-c tea-c-with-thumb"><picture><source srcset="/img/tea-oriental-beauty.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-oriental-beauty.jpg" alt="Oriental Beauty tea" loading="lazy" onclick="openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><span class="tea-tag">Rare</span><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">Oriental Beauty</div><div class="tea-c-note"><span class="lang-en">Once-a-year harvest. Tea grasshopper bites create the signature profile.</span><span class="lang-th th-text">เก็บเกี่ยวปีละครั้ง ตั๊กแตนชากัดใบสร้างโปรไฟล์เฉพาะตัว</span></div></div></div>
-    <div class="tea-c tea-c-puer tea-c-with-thumb"><picture><source srcset="/img/tea-gushu-shengpu-8yr.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-gushu-shengpu-8yr.jpg" alt="Gushu Sheng Puer tea" loading="lazy" onclick="openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><span class="tea-tag">Aged 8yr</span><div class="tea-c-type"><span class="lang-en">Raw Puer</span><span class="lang-th th-text">ผู่เอ๋อร์ดิบ</span></div><div class="tea-c-name">Gushu Sheng Puer</div><div class="tea-c-note"><span class="lang-en">Wild ancient trees. Jasmine, sweetness, agarwood.</span><span class="lang-th th-text">ต้นชาป่าโบราณ มะลิ หวาน กฤษณา</span></div></div></div>
-    <div class="tea-c tea-c-with-thumb"><picture><source srcset="/img/tea-wild-red.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-wild-red.jpg" alt="Wild Red Tea" loading="lazy" onclick="openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Wild Red Tea</div><div class="tea-c-note"><span class="lang-en">Floral, fruity, good body. Perfect breakfast tea for cafés.</span><span class="lang-th th-text">ดอกไม้ ผลไม้ บอดี้ดี เหมาะสำหรับร้านกาแฟ</span></div></div></div>
-    <div class="tea-c tea-c-green tea-c-with-thumb"><picture><source srcset="/img/tea-matcha.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-matcha.jpg" alt="Matcha tea" loading="lazy" onclick="openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><div class="tea-c-type"><span class="lang-en">Green Tea</span><span class="lang-th th-text">ชาเขียว</span></div><div class="tea-c-name">Matcha</div><div class="tea-c-note"><span class="lang-en">Thai-grown, Japanese matcha process. 100% natural.</span><span class="lang-th th-text">ปลูกในไทย กระบวนการมัทฉะญี่ปุ่น 100% ธรรมชาติ</span></div></div></div>
+    <div class="tea-c tea-c-with-thumb"><picture><source srcset="/img/tea-oriental-beauty.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-oriental-beauty.jpg" alt="Oriental Beauty tea" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this.src,this.alt)" onkeydown="if(event.key==='Enter')openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><span class="tea-tag">Rare</span><div class="tea-c-type"><span class="lang-en">Oolong</span><span class="lang-th th-text">อู่หลง</span></div><div class="tea-c-name">Oriental Beauty</div><div class="tea-c-note"><span class="lang-en">Once-a-year harvest. Tea grasshopper bites create the signature profile.</span><span class="lang-th th-text">เก็บเกี่ยวปีละครั้ง ตั๊กแตนชากัดใบสร้างโปรไฟล์เฉพาะตัว</span></div></div></div>
+    <div class="tea-c tea-c-puer tea-c-with-thumb"><picture><source srcset="/img/tea-gushu-shengpu-8yr.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-gushu-shengpu-8yr.jpg" alt="Gushu Sheng Puer tea" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this.src,this.alt)" onkeydown="if(event.key==='Enter')openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><span class="tea-tag">Aged 8yr</span><div class="tea-c-type"><span class="lang-en">Raw Puer</span><span class="lang-th th-text">ผู่เอ๋อร์ดิบ</span></div><div class="tea-c-name">Gushu Sheng Puer</div><div class="tea-c-note"><span class="lang-en">Wild ancient trees. Jasmine, sweetness, agarwood.</span><span class="lang-th th-text">ต้นชาป่าโบราณ มะลิ หวาน กฤษณา</span></div></div></div>
+    <div class="tea-c tea-c-with-thumb"><picture><source srcset="/img/tea-wild-red.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-wild-red.jpg" alt="Wild Red Tea" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this.src,this.alt)" onkeydown="if(event.key==='Enter')openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><div class="tea-c-type"><span class="lang-en">Red Tea</span><span class="lang-th th-text">ชาแดง</span></div><div class="tea-c-name">Wild Red Tea</div><div class="tea-c-note"><span class="lang-en">Floral, fruity, good body. Perfect breakfast tea for cafés.</span><span class="lang-th th-text">ดอกไม้ ผลไม้ บอดี้ดี เหมาะสำหรับร้านกาแฟ</span></div></div></div>
+    <div class="tea-c tea-c-green tea-c-with-thumb"><picture><source srcset="/img/tea-matcha.webp" type="image/webp"><img class="tea-c-thumb" src="/img/tea-matcha.jpg" alt="Matcha tea" loading="lazy" tabindex="0" role="button" onclick="openLightbox(this.src,this.alt)" onkeydown="if(event.key==='Enter')openLightbox(this.src,this.alt)" style="cursor:pointer"></picture><div><div class="tea-c-type"><span class="lang-en">Green Tea</span><span class="lang-th th-text">ชาเขียว</span></div><div class="tea-c-name">Matcha</div><div class="tea-c-note"><span class="lang-en">Thai-grown, Japanese matcha process. 100% natural.</span><span class="lang-th th-text">ปลูกในไทย กระบวนการมัทฉะญี่ปุ่น 100% ธรรมชาติ</span></div></div></div>
   </div>
-  <span class="more-link more-link-terra" onclick="go('tea')"><span class="lang-en">See all 15 teas →</span><span class="lang-th th-text">ดูชาทั้ง 15 ชนิด →</span></span>
+  <a class="more-link more-link-terra" href="#tea" onclick="go('tea');return false"><span class="lang-en">See all 15 teas →</span><span class="lang-th th-text">ดูชาทั้ง 15 ชนิด →</span></a>
 </div>
 
 <!-- One estate — product nav hub -->
-<div class="sec text-center">
+<div class="sec-lg text-center">
   <h2 class="sec-h sec-h-lg sec-h-mb-tight"><span class="lang-en">One estate. Your entire beverage program.</span><span class="lang-th th-text">ไร่เดียว ครบทุกเครื่องดื่มของคุณ</span></h2>
   <p class="sec-p sec-p-center"><span class="lang-en">Coffee, heritage teas, and mountain botanicals. Grown and sourced from our estate and partner gardens in Chiang Rai.</span><span class="lang-th th-text">กาแฟ ชามรดก และสมุนไพรภูเขา — ปลูกและจัดหาจากไร่ของเราและสวนพันธมิตรในเชียงราย</span></p>
   <div class="grow grow-with-img">
-    <div class="grow-i" onclick="go('coffee')"><img class="grow-i-img" src="/img/shade-grown-forest.jpg" alt="Shade-grown coffee forest" loading="lazy"><svg class="grow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><div class="grow-n"><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div><div class="grow-s"><span class="lang-en">Green beans or roasted</span><span class="lang-th th-text">กรีนบีนหรือคั่วแล้ว</span></div></div>
-    <div class="grow-i" onclick="go('tea')"><picture><source srcset="/img/tea-pickers-field.webp" type="image/webp"><img class="grow-i-img" src="/img/tea-pickers-field.jpg" alt="Tea pickers in the field at Doi Tung" loading="lazy"></picture><svg class="grow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><div class="grow-n"><span class="lang-en">Heritage tea</span><span class="lang-th th-text">ชามรดก</span></div><div class="grow-s"><span class="lang-en">15 varieties</span><span class="lang-th th-text">15 ชนิด</span></div></div>
-    <div class="grow-i" onclick="go('produce')"><picture><source srcset="/img/chrysanthemum-field.webp" type="image/webp"><img class="grow-i-img" src="/img/chrysanthemum-field.jpg" alt="Chrysanthemum field" loading="lazy"></picture><svg class="grow-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="2.5"/><path d="M10 5.5c0-2.5 2-3.5 2-3.5"/><path d="M7.5 8c-2-1-3.5.5-3.5.5"/><path d="M12.5 8c2-1 3.5.5 3.5.5"/><path d="M8 10.2c-1.5 1.5-1 3.5-1 3.5"/><path d="M12 10.2c1.5 1.5 1 3.5 1 3.5"/><path d="M10 10.5V18"/></svg><div class="grow-n"><span class="lang-en">Mountain Produce</span><span class="lang-th th-text">ผลผลิตจากดอย</span></div><div class="grow-s"><span class="lang-en">Herbs, flowers, roots & seasonal fruit</span><span class="lang-th th-text">สมุนไพร ดอกไม้ ราก และผลไม้ตามฤดูกาล</span></div></div>
+    <div class="grow-i" tabindex="0" role="button" onclick="go('coffee')" onkeydown="if(event.key==='Enter')go('coffee')"><img class="grow-i-img" src="/img/shade-grown-forest.jpg" alt="Shade-grown coffee forest" loading="lazy"><svg class="grow-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><div class="grow-n"><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div><div class="grow-s"><span class="lang-en">Green beans or roasted</span><span class="lang-th th-text">กรีนบีนหรือคั่วแล้ว</span></div></div>
+    <div class="grow-i" tabindex="0" role="button" onclick="go('tea')" onkeydown="if(event.key==='Enter')go('tea')"><picture><source srcset="/img/tea-pickers-field.webp" type="image/webp"><img class="grow-i-img" src="/img/tea-pickers-field.jpg" alt="Tea pickers in the field at Doi Tung" loading="lazy"></picture><svg class="grow-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><div class="grow-n"><span class="lang-en">Heritage tea</span><span class="lang-th th-text">ชามรดก</span></div><div class="grow-s"><span class="lang-en">15 varieties</span><span class="lang-th th-text">15 ชนิด</span></div></div>
+    <div class="grow-i" tabindex="0" role="button" onclick="go('produce')" onkeydown="if(event.key==='Enter')go('produce')"><picture><source srcset="/img/chrysanthemum-field.webp" type="image/webp"><img class="grow-i-img" src="/img/chrysanthemum-field.jpg" alt="Chrysanthemum field" loading="lazy"></picture><svg class="grow-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="2.5"/><path d="M10 5.5c0-2.5 2-3.5 2-3.5"/><path d="M7.5 8c-2-1-3.5.5-3.5.5"/><path d="M12.5 8c2-1 3.5.5 3.5.5"/><path d="M8 10.2c-1.5 1.5-1 3.5-1 3.5"/><path d="M12 10.2c1.5 1.5 1 3.5 1 3.5"/><path d="M10 10.5V18"/></svg><div class="grow-n"><span class="lang-en">Mountain Produce</span><span class="lang-th th-text">ผลผลิตจากดอย</span></div><div class="grow-s"><span class="lang-en">Herbs, flowers, roots & seasonal fruit</span><span class="lang-th th-text">สมุนไพร ดอกไม้ ราก และผลไม้ตามฤดูกาล</span></div></div>
   </div>
 </div>
 
 <!-- Why N2G -->
 </div><!-- close .w for full-width sections -->
 
-<section class="sec-bleed bg-sand">
+<section class="sec-bleed bg-sand" aria-labelledby="why-n2g-heading">
 <div class="w">
 
-  <h2 class="sec-h sec-h-lg text-center sec-h-mb-zero"><span class="lang-en">Why N2G</span><span class="lang-th th-text">ทำไม N2G</span></h2>
+  <h2 id="why-n2g-heading" class="sec-h sec-h-lg text-center sec-h-mb-zero"><span class="lang-en">Why N2G</span><span class="lang-th th-text">ทำไม N2G</span></h2>
   <div class="why-n2g-grid">
     <div class="why-n2g-item">
       <div class="why-n2g-item-h"><span class="lang-en">Estate-Direct</span><span class="lang-th th-text">ตรงจากไร่</span></div>
@@ -800,13 +801,13 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </section>
 
 <!-- Sustainability -->
-<section class="sec-bleed bg-green">
+<section class="sec-bleed bg-green" aria-labelledby="sustainability-heading">
 <div class="w">
 
   <div class="sustainability-grid">
     <div>
       <div class="sec-label"><span class="lang-en">Sustainability</span><span class="lang-th th-text">ความยั่งยืน</span></div>
-      <h2 class="sec-h sec-h-lg sec-h-on-dark"><span class="lang-en">How We Grow</span><span class="lang-th th-text">ความยั่งยืนที่จับต้องได้</span></h2>
+      <h2 id="sustainability-heading" class="sec-h sec-h-lg sec-h-on-dark"><span class="lang-en">How We Grow</span><span class="lang-th th-text">ความยั่งยืนที่จับต้องได้</span></h2>
       <p class="sec-p">
         <span class="lang-en">N2G partners with the University of Phayao on a green production initiative covering our coffee and tea plants across Doi Tung and Mae Salong. The program focuses on measurable outcomes: water management, soil health, and low-carbon processing methods. We track and publish our results annually.</span>
         <span class="lang-th th-text">N2G ร่วมมือกับมหาวิทยาลัยพะเยาในโครงการผลิตสีเขียวที่ครอบคลุมต้นกาแฟและชาของเราทั่วดอยตุงและแม่สลอง โปรแกรมมุ่งเน้นผลลัพธ์ที่วัดได้: การจัดการน้ำ สุขภาพดิน และวิธีการแปรรูปคาร์บอนต่ำ</span>
@@ -823,7 +824,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <div class="w">
 <!-- Trust strip -->
-<div class="diff-strip" style="grid-template-columns:1.3fr 1fr;border-top:1px solid var(--border);margin-top:0">
+<div class="diff-strip" style="grid-template-columns:1.3fr 1fr;border-top:1px solid var(--border);margin-top:48px">
   <div class="diff-strip-i">
     <picture><source srcset="/img/anuga-2025.webp" type="image/webp"><img class="diff-strip-img" src="/img/anuga-2025.jpg" alt="Native2Global booth at Anuga 2025, Cologne" loading="lazy"></picture>
     <div class="diff-strip-label"><span class="lang-en">Anuga 2025</span><span class="lang-th th-text">Anuga 2025</span></div>
@@ -839,7 +840,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <div class="sec sec-pb-tight">
   <div class="home-cards-grid">
     <!-- Events card -->
-    <div class="home-card" onclick="go('events')">
+    <div class="home-card" tabindex="0" role="button" onclick="go('events')" onkeydown="if(event.key==='Enter')go('events')">
       <picture><source srcset="/img/coffee-tea-festival-judges-tasting.webp" type="image/webp"><img class="home-card-img" src="/img/coffee-tea-festival-judges-tasting.jpg" alt="Judges tasting tea at Eastern Lanna Coffee and Tea Festival" loading="lazy"></picture>
       <div class="home-card-body">
         <div class="sec-label"><span class="lang-en">Events & tastings</span><span class="lang-th th-text">อีเวนต์และชิม</span></div>
@@ -848,7 +849,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
       </div>
     </div>
     <!-- Estate card -->
-    <div class="home-card" onclick="go('about')">
+    <div class="home-card" tabindex="0" role="button" onclick="go('about')" onkeydown="if(event.key==='Enter')go('about')">
       <picture><source srcset="/img/doi-tung-estate-shade-grown-hillside.webp" type="image/webp"><img class="home-card-img" src="/img/doi-tung-estate-shade-grown-hillside.jpg" alt="Shade-grown coffee hillside on the Doi Tung estate" loading="lazy"></picture>
       <div class="home-card-body">
         <div class="sec-label"><span class="lang-en">The Estate</span><span class="lang-th th-text">ไร่ของเรา</span></div>
@@ -934,12 +935,12 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div>
 
 <!-- Coffee photo carousel -->
-<div class="carousel coffee-carousel" id="c-coffee"><div class="carousel-inner" id="c-coffee-s"><div class="carousel-slide carousel-slide-img"><img src="/img/coffee-cherry-sorting-tarp.jpeg" alt="Workers sorting coffee cherries on a tarp" loading="lazy"></div><div class="carousel-slide carousel-slide-img"><img src="/img/parchment-sorting-closeup.jpeg" alt="Worker sorting parchment coffee on drying beds" style="object-position:center 80%" loading="lazy"></div><div class="carousel-slide carousel-slide-img"><img src="/img/parchment-sorting-raised-beds.jpeg" alt="Workers sorting parchment coffee on raised beds" loading="lazy"></div><div class="carousel-slide carousel-slide-img"><img src="/img/green-beans-hand.jpeg" alt="Hand holding green coffee beans" loading="lazy"></div></div><div class="carousel-dots"><div class="carousel-dot active" onclick="gs('c-coffee',0)"></div><div class="carousel-dot" onclick="gs('c-coffee',1)"></div><div class="carousel-dot" onclick="gs('c-coffee',2)"></div><div class="carousel-dot" onclick="gs('c-coffee',3)"></div></div><button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-coffee',-1)">‹</button><button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-coffee',1)">›</button></div>
+<div class="carousel coffee-carousel" id="c-coffee"><div class="carousel-inner" id="c-coffee-s"><div class="carousel-slide carousel-slide-img"><img src="/img/coffee-cherry-sorting-tarp.jpeg" alt="Workers sorting coffee cherries on a tarp" loading="lazy"></div><div class="carousel-slide carousel-slide-img"><img src="/img/parchment-sorting-closeup.jpeg" alt="Worker sorting parchment coffee on drying beds" style="object-position:center 80%" loading="lazy"></div><div class="carousel-slide carousel-slide-img"><img src="/img/parchment-sorting-raised-beds.jpeg" alt="Workers sorting parchment coffee on raised beds" loading="lazy"></div><div class="carousel-slide carousel-slide-img"><img src="/img/green-beans-hand.jpeg" alt="Hand holding green coffee beans" loading="lazy"></div></div><div class="carousel-dots"><button class="carousel-dot active" aria-label="Go to slide 1" onclick="gs('c-coffee',0)"></button><button class="carousel-dot" aria-label="Go to slide 2" onclick="gs('c-coffee',1)"></button><button class="carousel-dot" aria-label="Go to slide 3" onclick="gs('c-coffee',2)"></button><button class="carousel-dot" aria-label="Go to slide 4" onclick="gs('c-coffee',3)"></button></div><button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-coffee',-1)">‹</button><button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-coffee',1)">›</button></div>
 
 <div class="format-callout">
-  <h3 class="format-callout-h"><span class="lang-en">Mountain to Cup.</span><span class="lang-th th-text">จากภูเขาสู่ถ้วย</span></h3>
+  <h2 class="format-callout-h"><span class="lang-en">Mountain to Cup.</span><span class="lang-th th-text">จากภูเขาสู่ถ้วย</span></h3>
   <div class="format-callout-p"><span class="lang-en">One origin, fully traceable.</span><span class="lang-th th-text">แหล่งเดียว ตรวจสอบย้อนกลับได้ทั้งหมด</span></div>
-  <span class="cta-btn cta-btn-green" onclick="go('contact')"><span class="lang-en">Enquire about coffee →</span><span class="lang-th th-text">สอบถามเรื่องกาแฟ →</span></span>
+  <a class="cta-btn cta-btn-green" href="#contact" onclick="go('contact');return false"><span class="lang-en">Enquire about coffee →</span><span class="lang-th th-text">สอบถามเรื่องกาแฟ →</span></a>
 </div>
 </div></div>
 
@@ -949,7 +950,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <span class="back-link" tabindex="0" role="button" onclick="go('home')" onkeydown="if(event.key==='Enter')go('home')">← <span class="lang-en">Back</span><span class="lang-th th-text">กลับ</span></span>
 <picture><source srcset="/img/tea-fresh-leaves-brew.webp" type="image/webp"><img class="page-hero" src="/img/tea-fresh-leaves-brew.jpg" alt="Fresh tea leaves with brewed golden tea on a bamboo tray" loading="lazy"></picture>
 <div class="accent accent-terra"></div>
-<div class="sec-label" style="color:var(--terra);font-size:12px"><span class="lang-en">Heritage tea · <span style="font-weight:600;color:var(--text)">TEA</span><span style="font-weight:300;text-transform:lowercase;color:var(--text)">organique</span> · <span style="color:#4CAF50;font-size:11px;letter-spacing:0.02em">山青茶語</span></span><span class="lang-th th-text">ชามรดก · <span style="font-weight:600;color:var(--text)">TEA</span><span style="font-weight:300;text-transform:lowercase;color:var(--text)">organique</span> · <span style="color:#4CAF50;font-size:11px;letter-spacing:0.02em">山青茶語</span></span> <svg style="width:20px;height:20px;vertical-align:-4px;margin-left:3px" viewBox="-5 0 115 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="48" r="42" fill="none" stroke="#8BC34A" stroke-width="2.5" opacity="0.7"/><polygon points="30,62 42,30 54,62" fill="#4CAF50"/><polygon points="40,62 52,34 64,62" fill="#66BB6A"/><polygon points="50,62 60,38 72,62" fill="#81C784"/><path d="M26,62 Q50,50 74,62" fill="#4FC3F7" opacity="0.8"/><path d="M70,50 C78,38 82,25 75,18" fill="none" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="74" cy="20" rx="5" ry="8" transform="rotate(-30 74 20)" fill="#4CAF50"/><ellipse cx="80" cy="28" rx="4" ry="7" transform="rotate(-50 80 28)" fill="#66BB6A"/></svg></div>
+<div class="sec-label" style="color:var(--terra);font-size:12px"><span class="lang-en">Heritage tea · <span style="font-weight:600;color:var(--text)">TEA</span><span style="font-weight:300;text-transform:lowercase;color:var(--text)">organique</span> · <span style="color:#4CAF50;font-size:11px;letter-spacing:0.02em">山青茶語</span></span><span class="lang-th th-text">ชามรดก · <span style="font-weight:600;color:var(--text)">TEA</span><span style="font-weight:300;text-transform:lowercase;color:var(--text)">organique</span> · <span style="color:#4CAF50;font-size:11px;letter-spacing:0.02em">山青茶語</span></span> <svg aria-hidden="true" style="width:20px;height:20px;vertical-align:-4px;margin-left:3px" viewBox="-5 0 115 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="48" r="42" fill="none" stroke="#8BC34A" stroke-width="2.5" opacity="0.7"/><polygon points="30,62 42,30 54,62" fill="#4CAF50"/><polygon points="40,62 52,34 64,62" fill="#66BB6A"/><polygon points="50,62 60,38 72,62" fill="#81C784"/><path d="M26,62 Q50,50 74,62" fill="#4FC3F7" opacity="0.8"/><path d="M70,50 C78,38 82,25 75,18" fill="none" stroke="#4CAF50" stroke-width="2.5" stroke-linecap="round"/><ellipse cx="74" cy="20" rx="5" ry="8" transform="rotate(-30 74 20)" fill="#4CAF50"/><ellipse cx="80" cy="28" rx="4" ry="7" transform="rotate(-50 80 28)" fill="#66BB6A"/></svg></div>
 <h1 class="sec-h"><span class="lang-en">15 teas from wild and cultivated trees</span><span class="lang-th th-text">ชา 15 ชนิดจากต้นชาป่าและต้นชาปลูก</span></h1>
 <p class="sec-p sec-p-mb-xl"><span class="lang-en">Oolongs from Mae Salong, wild red teas, aged raw puer, white tea, flower blends with mountain osmanthus and rose, and a natural matcha. Sourced from the AHLI Estate at Doi Tung and partner gardens in Mae Salong, Chiang Rai, in co-production with Akha and Lahu hill tribe partners. The wild gushu teas come from ancient trees, some over 500 years old.</span><span class="lang-th th-text">อู่หลงจากแม่สลอง ชาแดงป่า ผู่เอ๋อร์บ่ม ชาขาว ชาดอกไม้ และมัทฉะธรรมชาติ จากไร่ AHLI ดอยตุง และสวนพันธมิตรในแม่สลอง เชียงราย ร่วมผลิตกับพันธมิตรชนเผ่าบนดอยชาวอาข่าและลาหู่ ต้นชากู่ซู่บางต้นอายุกว่า 500 ปี</span></p>
 
@@ -984,12 +985,12 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div>
 
 <!-- Tea photo carousel -->
-<div class="carousel carousel-tea" id="c-tea"><div class="carousel-inner" id="c-tea-s"><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-valley-panorama.webp" type="image/webp"><img src="/img/tea-valley-panorama.jpg" alt="Tea valley panorama in the Doi Tung highlands" loading="lazy"></picture></div><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-leaves-sky.webp" type="image/webp"><img src="/img/tea-leaves-sky.jpg" alt="Tea leaves silhouetted against the sky" loading="lazy"></picture></div><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-pickers-hillside.webp" type="image/webp"><img src="/img/tea-pickers-hillside.jpg" alt="Workers harvesting tea on a highland hillside" loading="lazy"></picture></div><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-leaves-bamboo-basket.webp" type="image/webp"><img src="/img/tea-leaves-bamboo-basket.jpg" alt="Fresh tea leaves in bamboo basket close-up" loading="lazy"></picture></div></div><div class="carousel-dots"><div class="carousel-dot active" onclick="gs('c-tea',0)"></div><div class="carousel-dot" onclick="gs('c-tea',1)"></div><div class="carousel-dot" onclick="gs('c-tea',2)"></div><div class="carousel-dot" onclick="gs('c-tea',3)"></div></div><button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-tea',-1)">‹</button><button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-tea',1)">›</button></div>
+<div class="carousel carousel-tea" id="c-tea"><div class="carousel-inner" id="c-tea-s"><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-valley-panorama.webp" type="image/webp"><img src="/img/tea-valley-panorama.jpg" alt="Tea valley panorama in the Doi Tung highlands" loading="lazy"></picture></div><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-leaves-sky.webp" type="image/webp"><img src="/img/tea-leaves-sky.jpg" alt="Tea leaves silhouetted against the sky" loading="lazy"></picture></div><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-pickers-hillside.webp" type="image/webp"><img src="/img/tea-pickers-hillside.jpg" alt="Workers harvesting tea on a highland hillside" loading="lazy"></picture></div><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-leaves-bamboo-basket.webp" type="image/webp"><img src="/img/tea-leaves-bamboo-basket.jpg" alt="Fresh tea leaves in bamboo basket close-up" loading="lazy"></picture></div></div><div class="carousel-dots"><button class="carousel-dot active" aria-label="Go to slide 1" onclick="gs('c-tea',0)"></button><button class="carousel-dot" aria-label="Go to slide 2" onclick="gs('c-tea',1)"></button><button class="carousel-dot" aria-label="Go to slide 3" onclick="gs('c-tea',2)"></button><button class="carousel-dot" aria-label="Go to slide 4" onclick="gs('c-tea',3)"></button></div><button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-tea',-1)">‹</button><button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-tea',1)">›</button></div>
 
 <div class="format-callout">
-  <h3 class="format-callout-h"><span class="lang-en">Want to try our teas?</span><span class="lang-th th-text">อยากลองชาของเรา?</span></h3>
+  <h2 class="format-callout-h"><span class="lang-en">Want to try our teas?</span><span class="lang-th th-text">อยากลองชาของเรา?</span></h3>
   <div class="format-callout-p"><span class="lang-en">Loose leaf, sampler sets, and custom blends. Sourced from Doi Tung and Mae Salong, Chiang Rai.</span><span class="lang-th th-text">ใบชา ชุดชิม และเบลนด์พิเศษ จากดอยตุงและแม่สลอง เชียงราย</span></div>
-  <span class="cta-btn cta-btn-terra" onclick="go('contact')"><span class="lang-en">Enquire about tea →</span><span class="lang-th th-text">สอบถามเรื่องชา →</span></span>
+  <a class="cta-btn cta-btn-terra" href="#contact" onclick="go('contact');return false"><span class="lang-en">Enquire about tea →</span><span class="lang-th th-text">สอบถามเรื่องชา →</span></a>
 </div>
 </div></div>
 
@@ -1010,24 +1011,24 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <!-- Photo grid / carousel -->
 <div class="carousel photo-carousel" id="c-events">
   <div class="carousel-inner" id="c-events-s">
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/events-guests-seated.webp" type="image/webp"><img src="/img/events-guests-seated.jpg" alt="Coffee tasting event" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Coffee cupping</span><span class="lang-th th-text">คัปปิ้งกาแฟ</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/events-tea-tasting-setup.webp" type="image/webp"><img src="/img/events-tea-tasting-setup.jpg" alt="Tea tasting with gaiwan" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Tea tasting</span><span class="lang-th th-text">ชิมชา</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><img src="/img/farm-visit-trail.jpg" alt="Visitors on the farm trail" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Farm visit</span><span class="lang-th th-text">ดอยตุง · เยี่ยมชมไร่</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/events-popup-tasting.webp" type="image/webp"><img src="/img/events-popup-tasting.jpg" alt="Café pop-up tasting" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Pop-up tasting</span><span class="lang-th th-text">ป๊อปอัพชิม</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/cupping-team-session.webp" type="image/webp"><img src="/img/cupping-team-session.jpg" alt="Team cupping session" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Cupping session</span><span class="lang-th th-text">ดอยตุง · เซสชันคัปปิ้ง</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><img src="/img/farm-cafe-brewing.jpg" alt="Educational tasting at the estate" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Educational tasting</span><span class="lang-th th-text">ดอยตุง · ชิมเพื่อเรียนรู้</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><img src="/img/terrace-tasting.jpg" alt="Tasting on the mountain terrace" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Mountain Terrace</span><span class="lang-th th-text">ดอยตุง · ระเบียงภูเขา</span></div></div></div></div>
-    <div class="carousel-slide"><div class="photo-grid-item" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/tea-cupping-overhead.webp" type="image/webp"><img src="/img/tea-cupping-overhead.jpg" alt="Green tea cupping session" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Tea cupping</span><span class="lang-th th-text">คัปปิ้งชา</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><picture><source srcset="/img/events-guests-seated.webp" type="image/webp"><img src="/img/events-guests-seated.jpg" alt="Coffee tasting event" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Coffee cupping</span><span class="lang-th th-text">คัปปิ้งกาแฟ</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><picture><source srcset="/img/events-tea-tasting-setup.webp" type="image/webp"><img src="/img/events-tea-tasting-setup.jpg" alt="Tea tasting with gaiwan" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Tea tasting</span><span class="lang-th th-text">ชิมชา</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><img src="/img/farm-visit-trail.jpg" alt="Visitors on the farm trail" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Farm visit</span><span class="lang-th th-text">ดอยตุง · เยี่ยมชมไร่</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><picture><source srcset="/img/events-popup-tasting.webp" type="image/webp"><img src="/img/events-popup-tasting.jpg" alt="Café pop-up tasting" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Pop-up tasting</span><span class="lang-th th-text">ป๊อปอัพชิม</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><picture><source srcset="/img/cupping-team-session.webp" type="image/webp"><img src="/img/cupping-team-session.jpg" alt="Team cupping session" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Cupping session</span><span class="lang-th th-text">ดอยตุง · เซสชันคัปปิ้ง</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><img src="/img/farm-cafe-brewing.jpg" alt="Educational tasting at the estate" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Educational tasting</span><span class="lang-th th-text">ดอยตุง · ชิมเพื่อเรียนรู้</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><img src="/img/terrace-tasting.jpg" alt="Tasting on the mountain terrace" loading="lazy"><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Doi Tung · Mountain Terrace</span><span class="lang-th th-text">ดอยตุง · ระเบียงภูเขา</span></div></div></div></div>
+    <div class="carousel-slide"><div class="photo-grid-item" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><picture><source srcset="/img/tea-cupping-overhead.webp" type="image/webp"><img src="/img/tea-cupping-overhead.jpg" alt="Green tea cupping session" loading="lazy"></picture><div class="photo-grid-overlay"><div class="photo-grid-caption"><span class="lang-en">Tea cupping</span><span class="lang-th th-text">คัปปิ้งชา</span></div></div></div></div>
   </div>
   <div class="carousel-dots">
-    <div class="carousel-dot active" onclick="gs('c-events',0)"></div>
-    <div class="carousel-dot" onclick="gs('c-events',1)"></div>
-    <div class="carousel-dot" onclick="gs('c-events',2)"></div>
-    <div class="carousel-dot" onclick="gs('c-events',3)"></div>
-    <div class="carousel-dot" onclick="gs('c-events',4)"></div>
-    <div class="carousel-dot" onclick="gs('c-events',5)"></div>
-    <div class="carousel-dot" onclick="gs('c-events',6)"></div>
-    <div class="carousel-dot" onclick="gs('c-events',7)"></div>
+    <button class="carousel-dot active" aria-label="Go to slide 1" onclick="gs('c-events',0)"></button>
+    <button class="carousel-dot" aria-label="Go to slide 2" onclick="gs('c-events',1)"></button>
+    <button class="carousel-dot" aria-label="Go to slide 3" onclick="gs('c-events',2)"></button>
+    <button class="carousel-dot" aria-label="Go to slide 4" onclick="gs('c-events',3)"></button>
+    <button class="carousel-dot" aria-label="Go to slide 5" onclick="gs('c-events',4)"></button>
+    <button class="carousel-dot" aria-label="Go to slide 6" onclick="gs('c-events',5)"></button>
+    <button class="carousel-dot" aria-label="Go to slide 7" onclick="gs('c-events',6)"></button>
+    <button class="carousel-dot" aria-label="Go to slide 8" onclick="gs('c-events',7)"></button>
   </div>
   <button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-events',-1)">‹</button>
   <button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-events',1)">›</button>
@@ -1046,7 +1047,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:24px"><span class="events-tag"><span class="lang-en">Chiang Rai</span><span class="lang-th th-text">เชียงราย</span></span><span class="events-tag"><span class="lang-en">Bangkok</span><span class="lang-th th-text">กรุงเทพ</span></span><span class="events-tag"><span class="lang-en">Cuppings</span><span class="lang-th th-text">คัปปิ้ง</span></span><span class="events-tag"><span class="lang-en">Farm visits</span><span class="lang-th th-text">เยี่ยมชมไร่</span></span><span class="events-tag"><span class="lang-en">Pop-ups</span><span class="lang-th th-text">ป๊อปอัพ</span></span></div>
 
-<div class="sec-cta-center"><span class="cta-btn" onclick="go('contact')"><span class="lang-en">Book a tasting or visit →</span><span class="lang-th th-text">จองชิมหรือเยี่ยมชม →</span></span></div>
+<div class="sec-cta-center"><a class="cta-btn" href="#contact" onclick="go('contact');return false"><span class="lang-en">Book a tasting or visit →</span><span class="lang-th th-text">จองชิมหรือเยี่ยมชม →</span></a></div>
 </div></div>
 
 <!-- ===== ABOUT ===== -->
@@ -1070,9 +1071,9 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <!-- Image strip -->
 <div class="about-img-strip">
-  <div class="about-img-lb" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/drying-sunburst.webp" type="image/webp"><img src="/img/drying-sunburst.jpg" alt="Coffee drying in the sunlight" loading="lazy"></picture></div>
-  <div class="about-img-lb" onclick="openGalleryLightbox(this)"><img src="/img/village-visit.jpg" alt="N2G team visiting farming community" loading="lazy"></div>
-  <div class="about-img-lb" onclick="openGalleryLightbox(this)"><picture><source srcset="/img/roast-master.webp" type="image/webp"><img src="/img/roast-master.jpg" alt="Roast master operating the coffee roaster" loading="lazy"></picture></div>
+  <div class="about-img-lb" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><picture><source srcset="/img/drying-sunburst.webp" type="image/webp"><img src="/img/drying-sunburst.jpg" alt="Coffee drying in the sunlight" loading="lazy"></picture></div>
+  <div class="about-img-lb" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><img src="/img/village-visit.jpg" alt="N2G team visiting farming community" loading="lazy"></div>
+  <div class="about-img-lb" tabindex="0" role="button" onclick="openGalleryLightbox(this)" onkeydown="if(event.key==='Enter')openGalleryLightbox(this)"><picture><source srcset="/img/roast-master.webp" type="image/webp"><img src="/img/roast-master.jpg" alt="Roast master operating the coffee roaster" loading="lazy"></picture></div>
 </div>
 
 <!-- The estate -->
@@ -1090,7 +1091,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <p class="sec-p" style="margin-top:16px;margin-bottom:0"><span class="lang-en">N2G was founded by Daniel Choo in 2018. The team works across Doi Tung, Mae Salong, and Bangkok — in partnership with Akha and Lahu highland farming communities — to bring specialty coffee and heritage tea from the mountain to the cup.</span><span class="lang-th th-text">N2G ก่อตั้งโดย Daniel Choo ในปี 2018 ทีมงานของเราทำงานครอบคลุมดอยตุง แม่สลอง และกรุงเทพ — ร่วมกับชุมชนเกษตรกรชาวอาข่าและลาหู่บนดอย — เพื่อนำกาแฟพิเศษและชามรดกจากภูเขาสู่ถ้วย</span></p>
 </div>
 
-<div class="sec sec-sm text-center"><span class="cta-btn" onclick="go('contact')"><span class="lang-en">Interested? Contact us →</span><span class="lang-th th-text">สนใจ? ติดต่อเรา →</span></span></div>
+<div class="sec sec-sm text-center"><a class="cta-btn" href="#contact" onclick="go('contact');return false"><span class="lang-en">Interested? Contact us →</span><span class="lang-th th-text">สนใจ? ติดต่อเรา →</span></a></div>
 </div></div>
 
 <!-- ===== PRODUCE ===== -->
@@ -1154,16 +1155,16 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 
 <div class="format-callout">
-  <h3 class="format-callout-h"><span class="lang-en">Want to try our produce?</span><span class="lang-th th-text">อยากลองผลผลิตของเรา?</span></h3>
+  <h2 class="format-callout-h"><span class="lang-en">Want to try our produce?</span><span class="lang-th th-text">อยากลองผลผลิตของเรา?</span></h3>
   <div class="format-callout-p"><span class="lang-en">All produce is grown at elevation on the Doi Tung estate, harvested by hand, and processed on-site.</span><span class="lang-th th-text">ผลผลิตทั้งหมดปลูกบนที่สูงบนไร่ดอยตุง เก็บเกี่ยวด้วยมือ และแปรรูปที่ไร่</span></div>
-  <span class="cta-btn cta-btn-gold" onclick="go('contact')"><span class="lang-en">Enquire about produce →</span><span class="lang-th th-text">สอบถามเรื่องผลผลิต →</span></span>
+  <a class="cta-btn cta-btn-gold" href="#contact" onclick="go('contact');return false"><span class="lang-en">Enquire about produce →</span><span class="lang-th th-text">สอบถามเรื่องผลผลิต →</span></a>
 </div>
 </div></div>
 
 <!-- ===== CONTACT ===== -->
 <div class="page" id="page-contact">
 <div class="w w-page">
-<span class="back-link" onclick="go('home')"><span class="lang-en">← Home</span><span class="lang-th th-text">← หน้าแรก</span></span>
+<span class="back-link" tabindex="0" role="button" onclick="go('home')" onkeydown="if(event.key==='Enter')go('home')"><span class="lang-en">← Home</span><span class="lang-th th-text">← หน้าแรก</span></span>
 
 <div class="sec sec-pt-lg">
   <div class="accent accent-terra"></div>
@@ -1174,9 +1175,9 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
     <div class="con-card">
     <!-- mailto: based contact form — submit handler in handleContact() builds mailto link to n2g.contact@gmail.com -->
     <form id="contact-form" action="mailto:n2g.contact@gmail.com" method="POST" enctype="text/plain" onsubmit="return handleContact(event)">
-      <div class="ff"><label class="fl" for="f-name"><span class="lang-en">Name</span><span class="lang-th th-text">ชื่อ</span></label><input class="fi" id="f-name" name="name" placeholder="Your name" data-placeholder-en="Your name" data-placeholder-th="ชื่อของคุณ" aria-label="Name" required></div>
-      <div class="ff"><label class="fl" for="f-company"><span class="lang-en">Cafe / Company</span><span class="lang-th th-text">ร้าน / บริษัท</span></label><input class="fi" id="f-company" name="company" placeholder="Optional" data-placeholder-en="Optional" data-placeholder-th="ไม่จำเป็น" aria-label="Cafe or Company"></div>
-      <div class="ff"><label class="fl" for="f-contact"><span class="lang-en">Email</span><span class="lang-th th-text">อีเมล</span></label><input class="fi" id="f-contact" name="contact" placeholder="How can we reach you?" data-placeholder-en="How can we reach you?" data-placeholder-th="ติดต่อคุณได้อย่างไร?" aria-label="Email" required></div>
+      <div class="ff"><label class="fl" for="f-name"><span class="lang-en">Name</span><span class="lang-th th-text">ชื่อ</span></label><input class="fi" id="f-name" name="name" placeholder="Your name" data-placeholder-en="Your name" data-placeholder-th="ชื่อของคุณ" aria-label="Name" autocomplete="name" required></div>
+      <div class="ff"><label class="fl" for="f-company"><span class="lang-en">Cafe / Company</span><span class="lang-th th-text">ร้าน / บริษัท</span></label><input class="fi" id="f-company" name="company" placeholder="Optional" data-placeholder-en="Optional" data-placeholder-th="ไม่จำเป็น" aria-label="Cafe or Company" autocomplete="organization"></div>
+      <div class="ff"><label class="fl" for="f-contact"><span class="lang-en">Email</span><span class="lang-th th-text">อีเมล</span></label><input class="fi" id="f-contact" name="contact" type="email" placeholder="How can we reach you?" data-placeholder-en="How can we reach you?" data-placeholder-th="ติดต่อคุณได้อย่างไร?" aria-label="Email" autocomplete="email" required></div>
       <div class="ff"><label class="fl" for="f-message"><span class="lang-en">What are you interested in?</span><span class="lang-th th-text">สนใจอะไร?</span></label><textarea class="fi" id="f-message" name="message" placeholder="Coffee, tea, samples, wholesale, green beans, events" data-placeholder-en="Coffee, tea, samples, wholesale, green beans, events" data-placeholder-th="กาแฟ, ชา, ตัวอย่าง, ค้าส่ง, กรีนบีน, อีเวนต์" aria-label="What are you interested in?"></textarea></div>
       <button class="fb" type="submit"><span class="lang-en">Send</span><span class="lang-th th-text">ส่ง</span></button>
     </form>
@@ -1185,9 +1186,9 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
     <div class="ci">
       <strong>Native2Global</strong><br>Doi Tung, Amphoe Mae Fah Luang<br>Chiang Rai, Thailand<br><br>
       <div class="ci-social">
-        <a href="https://www.facebook.com/nativetoglobal.organique" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook (Coffee)</a>
-        <a href="https://www.facebook.com/teaorganique.hill.5" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook (Tea)</a>
-        <a href="https://www.instagram.com/hillorganique.n2g" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a>
+        <a href="https://www.facebook.com/nativetoglobal.organique" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook (Coffee)</a>
+        <a href="https://www.facebook.com/teaorganique.hill.5" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Facebook (Tea)</a>
+        <a href="https://www.instagram.com/hillorganique.n2g" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a>
       </div>
     </div>
   </div>
@@ -1233,42 +1234,43 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 </div>
 </div>
 
+</main>
 <div class="foot-waves"><img src="/img/footer-waves.svg" alt=""></div>
 <div class="email-capture">
-  <h3 class="email-capture-h"><span class="lang-en">Join our mailing list.</span><span class="lang-th th-text">สมัครรับจดหมายข่าว</span></h3>
+  <h2 class="email-capture-h"><span class="lang-en">Join our mailing list.</span><span class="lang-th th-text">สมัครรับจดหมายข่าว</span></h3>
   <p class="email-capture-p"><span class="lang-en">New lots, seasonal releases, tastings, and estate updates. Email us and we'll add you to the list.</span><span class="lang-th th-text">ล็อตใหม่ ผลผลิตตามฤดูกาล การชิม และข่าวสารจากไร่ ส่งอีเมลหาเราเพื่อเข้าร่วมรายชื่อ</span></p>
   <a class="email-capture-btn" href="mailto:n2g.contact@gmail.com?subject=Subscribe%20to%20N2G%20updates&amp;body=Please%20add%20me%20to%20the%20N2G%20mailing%20list." style="display:inline-block;text-decoration:none"><span class="lang-en">Email us to subscribe →</span><span class="lang-th th-text">ส่งอีเมลเพื่อสมัคร →</span></a>
 </div>
 
 <footer class="foot">
   <div class="foot-col"><div class="foot-brand"><div class="nav-dot">N2G</div><span class="foot-brand-name">Native2Global</span></div><div class="nav-tagline"><span class="lang-en">Mountain | People | Ecology</span><span class="lang-th th-text">ภูเขา | ผู้คน | ระบบนิเวศ</span></div><div class="foot-tagline"><span class="lang-en">Single-estate specialty coffee, tea &amp; produce from Doi Tung &amp; Mae Salong, Chiang Rai, Thailand</span><span class="lang-th th-text">กาแฟพิเศษ ชา และผลผลิตจากไร่เดียว ดอยตุงและแม่สลอง เชียงราย</span></div></div>
-  <div class="foot-col"><div class="foot-col-title"><span class="lang-en">Products</span><span class="lang-th th-text">ผลิตภัณฑ์</span></div><a href="#coffee" onclick="go('coffee');return false"><svg class="foot-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><span class="lang-en">Coffee</span><span class="lang-th th-text">กาแฟ</span></a><a href="#tea" onclick="go('tea');return false"><svg class="foot-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><span class="lang-en">Tea</span><span class="lang-th th-text">ชา</span></a><a href="#produce" onclick="go('produce');return false"><svg class="foot-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="2.5"/><path d="M10 5.5c0-2.5 2-3.5 2-3.5"/><path d="M7.5 8c-2-1-3.5.5-3.5.5"/><path d="M12.5 8c2-1 3.5.5 3.5.5"/><path d="M8 10.2c-1.5 1.5-1 3.5-1 3.5"/><path d="M12 10.2c1.5 1.5 1 3.5 1 3.5"/><path d="M10 10.5V18"/></svg><span class="lang-en">Mountain Produce</span><span class="lang-th th-text">ผลผลิตจากดอย</span></a><a href="#events" onclick="go('events');return false"><svg class="foot-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" rx="1.5"/><path d="M3 8h14"/><path d="M7 2v4"/><path d="M13 2v4"/><circle cx="10" cy="13" r="1" fill="currentColor" stroke="none"/></svg><span class="lang-en">Events</span><span class="lang-th th-text">อีเวนต์</span></a><a href="#about" onclick="go('about');return false"><svg class="foot-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16l6-10 4 6 3-3 3 7"/></svg><span class="lang-en">About</span><span class="lang-th th-text">เกี่ยวกับ</span></a></div>
-  <div class="foot-col"><div class="foot-col-title"><span class="lang-en">Contact</span><span class="lang-th th-text">ติดต่อ</span></div><a class="foot-contact-link" href="#contact" onclick="go('contact');return false"><span class="lang-en">Contact us →</span><span class="lang-th th-text">ติดต่อเรา →</span></a><!-- TODO: Replace with professional domain email before launch --><div class="foot-col-title" style="margin-top:14px"><span class="lang-en">Follow</span><span class="lang-th th-text">ติดตาม</span></div><div class="foot-social"><a href="https://www.facebook.com/nativetoglobal.organique" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Coffee</a><a href="https://www.facebook.com/teaorganique.hill.5" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Tea</a><a href="https://www.instagram.com/hillorganique.n2g" target="_blank" rel="noopener"><svg width="14" height="14" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a></div></div>
+  <div class="foot-col"><div class="foot-col-title"><span class="lang-en">Products</span><span class="lang-th th-text">ผลิตภัณฑ์</span></div><a href="#coffee" onclick="go('coffee');return false"><svg class="foot-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><span class="lang-en">Coffee</span><span class="lang-th th-text">กาแฟ</span></a><a href="#tea" onclick="go('tea');return false"><svg class="foot-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><span class="lang-en">Tea</span><span class="lang-th th-text">ชา</span></a><a href="#produce" onclick="go('produce');return false"><svg class="foot-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="2.5"/><path d="M10 5.5c0-2.5 2-3.5 2-3.5"/><path d="M7.5 8c-2-1-3.5.5-3.5.5"/><path d="M12.5 8c2-1 3.5.5 3.5.5"/><path d="M8 10.2c-1.5 1.5-1 3.5-1 3.5"/><path d="M12 10.2c1.5 1.5 1 3.5 1 3.5"/><path d="M10 10.5V18"/></svg><span class="lang-en">Mountain Produce</span><span class="lang-th th-text">ผลผลิตจากดอย</span></a><a href="#events" onclick="go('events');return false"><svg class="foot-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" rx="1.5"/><path d="M3 8h14"/><path d="M7 2v4"/><path d="M13 2v4"/><circle cx="10" cy="13" r="1" fill="currentColor" stroke="none"/></svg><span class="lang-en">Events</span><span class="lang-th th-text">อีเวนต์</span></a><a href="#about" onclick="go('about');return false"><svg class="foot-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16l6-10 4 6 3-3 3 7"/></svg><span class="lang-en">About</span><span class="lang-th th-text">เกี่ยวกับ</span></a></div>
+  <div class="foot-col"><div class="foot-col-title"><span class="lang-en">Contact</span><span class="lang-th th-text">ติดต่อ</span></div><a class="foot-contact-link" href="#contact" onclick="go('contact');return false"><span class="lang-en">Contact us →</span><span class="lang-th th-text">ติดต่อเรา →</span></a><!-- TODO: Replace with professional domain email before launch --><div class="foot-col-title" style="margin-top:14px"><span class="lang-en">Follow</span><span class="lang-th th-text">ติดตาม</span></div><div class="foot-social"><a href="https://www.facebook.com/nativetoglobal.organique" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Coffee</a><a href="https://www.facebook.com/teaorganique.hill.5" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Tea</a><a href="https://www.instagram.com/hillorganique.n2g" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a></div></div>
   <div class="foot-copy">© 2018–2026 Native2Global Co. Ltd. · Doi Tung &amp; Mae Salong, Chiang Rai, Thailand · <a href="#privacy" onclick="go('privacy');return false">Privacy Policy</a></div>
 </footer>
 
 <!-- Lightbox -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox()"><button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">×</button><button class="lightbox-nav lightbox-prev" aria-label="Previous" onclick="event.stopPropagation();lbNav(-1)">‹</button><div class="lightbox-content" onclick="event.stopPropagation()"><img id="lightbox-img" src="" alt=""><div class="lightbox-caption" id="lightbox-caption"></div></div><button class="lightbox-nav lightbox-next" aria-label="Next" onclick="event.stopPropagation();lbNav(1)">›</button></div>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox" onclick="closeLightbox()"><button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">×</button><button class="lightbox-nav lightbox-prev" aria-label="Previous" onclick="event.stopPropagation();lbNav(-1)">‹</button><div class="lightbox-content" onclick="event.stopPropagation()"><img id="lightbox-img" src="" alt=""><div class="lightbox-caption" id="lightbox-caption"></div></div><button class="lightbox-nav lightbox-next" aria-label="Next" onclick="event.stopPropagation();lbNav(1)">›</button></div>
 
 <script>
-var lbGallery=[],lbIndex=0;
-function openLightbox(src,alt,gallery,idx){var lb=document.getElementById('lightbox');var img=document.getElementById('lightbox-img');img.src=src;img.alt=alt||'';if(gallery&&gallery.length>1){lbGallery=gallery;lbIndex=idx||0;lb.classList.add('has-gallery');lbCaption()}else{lbGallery=[];lbIndex=0;lb.classList.remove('has-gallery');document.getElementById('lightbox-caption').textContent=''}lb.classList.add('open');document.body.style.overflow='hidden'}
+var lbGallery=[],lbIndex=0,lbTrigger=null;
+function openLightbox(src,alt,gallery,idx){var lb=document.getElementById('lightbox');var img=document.getElementById('lightbox-img');lbTrigger=document.activeElement;img.src=src;img.alt=alt||'';if(gallery&&gallery.length>1){lbGallery=gallery;lbIndex=idx||0;lb.classList.add('has-gallery');lbCaption()}else{lbGallery=[];lbIndex=0;lb.classList.remove('has-gallery');document.getElementById('lightbox-caption').textContent=''}lb.classList.add('open');document.body.style.overflow='hidden';lb.querySelector('.lightbox-close').focus()}
 function lbCaption(){var c=document.getElementById('lightbox-caption');if(lbGallery.length&&lbGallery[lbIndex]){c.textContent=lbGallery[lbIndex].caption}else{c.textContent=''}}
 function lbNav(dir){if(lbGallery.length<2)return;lbIndex+=dir;if(lbIndex<0)lbIndex=lbGallery.length-1;if(lbIndex>=lbGallery.length)lbIndex=0;var item=lbGallery[lbIndex];document.getElementById('lightbox-img').src=item.src;document.getElementById('lightbox-img').alt=item.alt||'';lbCaption()}
-function closeLightbox(){document.getElementById('lightbox').classList.remove('open','has-gallery');document.body.style.overflow='';lbGallery=[];lbIndex=0}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open','has-gallery');document.body.style.overflow='';lbGallery=[];lbIndex=0;if(lbTrigger){lbTrigger.focus();lbTrigger=null}}
 function openGalleryLightbox(el){var items=el.closest('.carousel-inner')?el.closest('.carousel-inner').querySelectorAll('.photo-grid-item'):el.closest('.about-img-strip')?el.closest('.about-img-strip').querySelectorAll('.about-img-lb'):null;if(!items){openLightbox(el.querySelector('img').src,el.querySelector('img').alt);return}var itemsArr=items;items=itemsArr;var gallery=[];var idx=0;var lang=document.body.classList.contains('thai')?'th':'en';items.forEach(function(item,i){var img=item.querySelector('img');var capEl=item.querySelector('.photo-grid-caption');var cap='';if(capEl){var span=capEl.querySelector('.lang-'+(lang==='th'?'th':'en'));if(span)cap=span.textContent}gallery.push({src:img.src,alt:img.alt,caption:cap});if(item===el)idx=i});openLightbox(el.querySelector('img').src,el.querySelector('img').alt,gallery,idx)}
-document.addEventListener('keydown',function(e){if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1)});
+document.addEventListener('keydown',function(e){var lb=document.getElementById('lightbox');if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')lbNav(-1);if(e.key==='ArrowRight')lbNav(1);if(e.key==='Tab'){var focusable=lb.querySelectorAll('button');var first=focusable[0],last=focusable[focusable.length-1];if(e.shiftKey){if(document.activeElement===first){e.preventDefault();last.focus()}}else{if(document.activeElement===last){e.preventDefault();first.focus()}}}});
 (function(){var lb=document.getElementById('lightbox'),lsx=0,lsy=0;lb.addEventListener('touchstart',function(e){lsx=e.touches[0].clientX;lsy=e.touches[0].clientY},{passive:true});lb.addEventListener('touchend',function(e){var dx=e.changedTouches[0].clientX-lsx,dy=e.changedTouches[0].clientY-lsy;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)){e.preventDefault();lbNav(dx<0?1:-1)}},{passive:false})})();
 
 function setLang(lang,skipUrl){
   document.documentElement.lang=lang;
   document.body.classList.toggle('thai',lang==='th');
-  document.querySelectorAll('.lang-btn').forEach(function(b){var isTh=b.textContent.trim()==='ไทย';b.classList.toggle('active',lang==='th'?isTh:!isTh)});
+  document.querySelectorAll('.lang-btn').forEach(function(b){var isTh=b.textContent.trim()==='ไทย';var isActive=lang==='th'?isTh:!isTh;b.classList.toggle('active',isActive);b.setAttribute('aria-pressed',isActive)});
   document.querySelectorAll('[data-placeholder-'+lang+']').forEach(function(el){el.placeholder=el.getAttribute('data-placeholder-'+lang)});
   if(!skipUrl){var hash=window.location.hash;if(lang==='th'){if(!window.location.pathname.startsWith('/th')){window.location.href='/th/'+hash;return}}else{if(window.location.pathname.startsWith('/th')){window.location.href='/'+hash;return}}}
 }
 function closeMenu(){
-  var h=document.querySelector('.hamburger');if(h)h.classList.remove('open');
+  var h=document.querySelector('.hamburger');if(h){h.classList.remove('open');h.setAttribute('aria-expanded','false')}
   var m=document.querySelector('.nav-links');if(m)m.classList.remove('open');
 }
 function go(page,scrollTo,skipHash){
