@@ -72,6 +72,7 @@ img{display:block;max-width:100%}
 .nav-links{display:flex;gap:20px;transition:gap 0.3s ease}
 .nav-links a{font-size:13px;letter-spacing:0.06em;color:var(--text3);cursor:pointer}
 .nav-links a:hover,.nav-links a.active{color:var(--green)}
+/* nav-cta removed — Contact Us now matches other nav links */
 .lang-toggle{display:flex;border:1px solid var(--border);overflow:hidden;border-radius:3px}
 .lang-btn{padding:6px 14px;font-size:12px;cursor:pointer;border:none;background:transparent;color:var(--text3);font-family:'Karla',sans-serif;transition:all 0.2s}
 .lang-btn.active{background:var(--green);color:#fff}
@@ -130,8 +131,10 @@ source{display:none}
 .hero-h em{font-style:italic;color:var(--gold)}
 .hero-p{font-size:17px;line-height:1.8;color:rgba(253,251,247,0.72);font-weight:300;max-width:520px}
 .hero-tagline{font-family:'EB Garamond',serif;font-size:22px;font-style:italic;font-weight:500;letter-spacing:0.04em;color:var(--gold);margin-bottom:20px}
-.hero-cta{display:inline-block;padding:14px 32px;border:1px solid rgba(253,251,247,0.3);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:rgba(253,251,247,0.85);cursor:pointer;transition:all 0.2s;margin-top:24px;font-family:'Karla',sans-serif;font-weight:500}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.hero-cta{display:inline-block;padding:14px 32px;border:1px solid rgba(253,251,247,0.3);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:rgba(253,251,247,0.85);cursor:pointer;transition:all 0.2s;font-family:'Karla',sans-serif;font-weight:500}
 .hero-cta:hover{border-color:var(--gold);color:var(--gold)}
+.hero-cta-primary{background:rgba(253,251,247,0.12);border-color:rgba(253,251,247,0.5)}.hero-cta-primary:hover{background:rgba(253,251,247,0.2);border-color:var(--gold);color:var(--gold)}
 
 /* Products */
 .prod{padding:14px 0;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.prod:first-child{border-top:1px solid var(--border)}
@@ -177,14 +180,19 @@ source{display:none}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg);top:13px}
 
 /* CTA */
-.cta-btn{display:inline-block;padding:10px 24px;border:1px solid var(--border);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text2);cursor:pointer;transition:all 0.2s}.cta-btn:hover{border-color:var(--green);color:var(--green)}
+.cta-btn{display:inline-block;padding:10px 24px;border:1px solid var(--border);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text2);cursor:pointer;transition:all 0.2s;font-family:'Karla',sans-serif;font-weight:500}.cta-btn:hover{border-color:var(--green);color:var(--green)}
 .cta-btn-terra{border-color:var(--terra);color:var(--terra)}.cta-btn-terra:hover{border-color:var(--terra);color:var(--terra)}
 .cta-btn-gold{border-color:var(--gold);color:var(--gold)}.cta-btn-gold:hover{border-color:var(--gold);color:var(--gold)}
 .cta-btn-green{border-color:var(--green);color:var(--green)}.cta-btn-green:hover{border-color:var(--green);color:var(--green)}
+/* Filled CTA variants — primary conversion actions */
+.cta-btn-green-fill{background:var(--green);color:#fff;border-color:var(--green);padding:12px 28px}.cta-btn-green-fill:hover{background:var(--green-dark);border-color:var(--green-dark);color:#fff}
+.cta-btn-terra-fill{background:var(--terra);color:#fff;border-color:var(--terra);padding:12px 28px}.cta-btn-terra-fill:hover{background:#9A4E30;border-color:#9A4E30;color:#fff}
+.cta-btn-gold-fill{background:var(--gold);color:#fff;border-color:var(--gold);padding:12px 28px}.cta-btn-gold-fill:hover{background:#B07F3E;border-color:#B07F3E;color:#fff}
 
 /* Contact page */
 .ff{margin-bottom:16px}.fl{font-size:12px;letter-spacing:0.07em;text-transform:uppercase;color:var(--text4);margin-bottom:6px}
-.fi{width:100%;padding:11px 14px;font-size:16px;font-family:'Karla',sans-serif;border:1px solid var(--border);background:var(--white);color:var(--text);font-weight:300}.fi:focus{border-color:var(--green);outline:2px solid rgba(58,107,74,0.3);outline-offset:1px}.fi::placeholder{color:var(--text4)}
+.fi{width:100%;padding:11px 14px;font-size:16px;font-family:'Karla',sans-serif;border:1px solid var(--border);background:var(--white);color:var(--text);font-weight:300}.fi:focus{border-color:var(--green);outline:2px solid rgba(58,107,74,0.3);outline-offset:1px}
+.freq{color:var(--terra);font-weight:400}.fopt{font-weight:400;text-transform:none;letter-spacing:0;color:var(--text4);font-size:11px}.fi::placeholder{color:var(--text4)}
 textarea.fi{resize:vertical;min-height:84px}
 .fb{padding:14px 32px;background:var(--green);color:#fff;border:none;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;font-family:'Karla',sans-serif;margin-top:8px}.fb:hover{background:var(--green-dark)}
 .ci{font-size:14px;color:var(--text3);line-height:1.8}.ci strong{color:var(--text2);font-weight:400}
@@ -236,7 +244,7 @@ textarea.fi{resize:vertical;min-height:84px}
 
 /* Footer */
 .foot-waves{line-height:0;margin-top:48px;overflow:hidden}.foot-waves svg{width:100%;height:180px;display:block}.foot-waves img{width:200%;max-width:none;height:180px;display:block;margin-left:-50%}
-.foot{max-width:1120px;margin:0 auto;padding:48px 32px 32px;border-top:none;display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:48px}
+.foot{max-width:1120px;margin:0 auto;padding:48px 32px 32px;border-top:none;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:40px}
 .foot-brand{display:flex;align-items:center;gap:8px;margin-bottom:8px}
 .foot-brand .nav-dot{width:22px;height:22px;font-size:9px}
 body.thai .foot .lang-th{display:inline}
@@ -246,9 +254,15 @@ body.thai .foot .lang-th{display:inline}
 .foot-col a{display:block;font-size:12px;color:var(--text3);cursor:pointer;padding:3px 0}.foot-col a:hover{color:var(--green)}
 .foot .nav-tagline{margin-left:0;margin-bottom:12px}
 .foot-contact-link{font-weight:500;color:var(--green)!important}
-.foot-social{display:flex;gap:10px;align-items:center;margin-top:4px}
+.foot-contact-email{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--text3);margin-top:8px}.foot-contact-email:hover{color:var(--green)}
+.foot-contact-email svg{flex-shrink:0}
+.foot-social{display:flex;gap:10px;align-items:center;margin-top:12px}
 .foot-social a{display:flex;align-items:center;gap:4px;padding:0;font-size:11px;color:var(--text3)}
 .foot-social a svg{fill:var(--text3)}
+.foot-social a:hover{color:var(--green)}.foot-social a:hover svg{fill:var(--green)}
+.foot-newsletter-form{display:flex;gap:8px;margin-top:8px}
+.foot-newsletter-input{flex:1;padding:9px 12px;font-size:13px;font-family:'Karla',sans-serif;border:1px solid var(--border);background:var(--sand);color:var(--text);min-width:0}.foot-newsletter-input:focus{border-color:var(--green);outline:2px solid rgba(58,107,74,0.3);outline-offset:1px}
+.foot-newsletter-btn{padding:9px 16px;background:transparent;color:var(--green);border:1px solid var(--green);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;font-family:'Karla',sans-serif;font-weight:500;white-space:nowrap;transition:all 0.2s}.foot-newsletter-btn:hover{background:var(--green);color:#fff}
 .foot-copy{grid-column:1/-1;font-size:11px;color:var(--text4);border-top:1px solid var(--border);padding-top:16px;margin-top:32px}
 .foot-copy a{color:var(--text4);text-decoration:underline}
 
@@ -341,15 +355,20 @@ body.thai .lang-en-inline{display:none}
 .page-hero{aspect-ratio:16/9}
 .scroll-gallery img{height:140px}
 .tea-category-img{aspect-ratio:2/1}
-.foot{grid-template-columns:1fr 1fr;gap:16px;padding:28px 20px 20px}
+.foot{grid-template-columns:1fr 1fr;gap:20px;padding:28px 20px 20px}
 .foot .foot-col:first-child{grid-column:1/-1;order:3;text-align:center;display:flex;flex-direction:column;align-items:center;border-top:1px solid var(--border);padding-top:16px;margin-top:8px}
 .foot .foot-col:first-child .foot-brand{display:none}
 .foot .foot-col:first-child .nav-tagline{order:1;margin-bottom:4px}
 .foot .foot-col:first-child .foot-tagline{order:2;margin-bottom:0}
+.foot .foot-col-newsletter{grid-column:1/-1;order:2;text-align:center}
+.foot .foot-col-newsletter .foot-newsletter-form{max-width:360px;margin:8px auto 0}
+.foot .foot-col-newsletter .foot-social{justify-content:center}
 .foot-copy{margin-top:0;grid-column:1/-1;order:4}
 .con-card{padding:28px 24px}
-.email-capture-form{flex-direction:column}
-.email-capture-input,.email-capture-btn{width:100%}
+.foot-newsletter-form{flex-direction:column}
+.foot-newsletter-input,.foot-newsletter-btn{width:100%}
+.hero-ctas{flex-direction:column;align-items:flex-start;gap:10px}
+/* nav-cta mobile overrides removed */
 }
 
 /* Nav: medium screens - hide tagline, tighten gaps */
@@ -369,7 +388,8 @@ body.thai .lang-en-inline{display:none}
 }
 /* Responsive fixes */
 @media(min-width:681px) and (max-width:900px){
-.foot{grid-template-columns:1fr 1fr;gap:32px}
+.foot{grid-template-columns:1fr 1fr;gap:28px}
+.foot .foot-col-newsletter{grid-column:1/-1}
 .hero{padding:96px 32px 64px}
 }
 @media(max-width:680px){
@@ -590,13 +610,13 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 .wholesale-cta-primary{display:inline-block;padding:12px 28px;background:var(--green);color:#fff;font-size:12px;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;border:none;font-family:'Karla',sans-serif;font-weight:500;transition:background 0.2s}.wholesale-cta-primary:hover{background:var(--green-dark)}
 .wholesale-cta-secondary{display:inline-block;padding:12px 28px;border:1px solid var(--green);color:var(--green);font-size:12px;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;background:transparent;font-family:'Karla',sans-serif;font-weight:500;transition:all 0.2s}.wholesale-cta-secondary:hover{background:var(--green);color:#fff}
 
-/* Email capture */
-.email-capture{padding:48px 0;text-align:center;border-top:1px solid var(--border)}
-.email-capture-h{font-family:'EB Garamond',serif;font-size:var(--t-h3);margin-bottom:8px}
-.email-capture-p{font-size:15px;color:var(--text2);margin-bottom:16px}
+/* Email capture — compact secondary strip */
+.email-capture{padding:28px 0;text-align:center;border-top:1px solid var(--border)}
+.email-capture-h{font-family:'EB Garamond',serif;font-size:17px;margin-bottom:4px;font-weight:400;color:var(--text2)}
+.email-capture-p{font-size:13px;color:var(--text3);margin-bottom:12px}
 .email-capture-form{display:flex;gap:8px;max-width:420px;margin:0 auto}
-.email-capture-input{flex:1;padding:12px 16px;font-size:14px;font-family:'Karla',sans-serif;border:1px solid var(--border);background:var(--sand);color:var(--text)}.email-capture-input:focus{border-color:var(--green);outline:2px solid rgba(58,107,74,0.3);outline-offset:1px}
-.email-capture-btn{padding:12px 24px;background:var(--green);color:#fff;border:none;font-size:12px;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;font-family:'Karla',sans-serif;font-weight:500;white-space:nowrap}.email-capture-btn:hover{background:var(--green-dark)}
+.email-capture-input{flex:1;padding:10px 14px;font-size:14px;font-family:'Karla',sans-serif;border:1px solid var(--border);background:var(--sand);color:var(--text)}.email-capture-input:focus{border-color:var(--green);outline:2px solid rgba(58,107,74,0.3);outline-offset:1px}
+.email-capture-btn{padding:10px 20px;background:transparent;color:var(--green);border:1px solid var(--green);font-size:11px;letter-spacing:0.07em;text-transform:uppercase;cursor:pointer;font-family:'Karla',sans-serif;font-weight:500;white-space:nowrap;transition:all 0.2s}.email-capture-btn:hover{background:var(--green);color:#fff}
 
 /* Draft indicator for placeholder sections */
 .draft-label{display:inline-block;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--terra);border:1px dashed var(--terra);padding:2px 8px;margin-bottom:12px;opacity:0.7}
@@ -696,7 +716,9 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
     <span class="lang-th th-text">กาแฟพิเศษ ชา และผลผลิตจากไร่เดียว</span>
   </h1>
   <div class="hero-tagline"><span class="lang-en">Mountain to Cup.</span><span class="lang-th th-text">จากภูเขาสู่ถ้วย</span></div>
-  <a class="hero-cta" onclick="document.getElementById('forest-coffee').scrollIntoView({behavior:'smooth'});return false" href="#forest-coffee"><span class="lang-en">Explore our products →</span><span class="lang-th th-text">สำรวจผลิตภัณฑ์ →</span></a>
+  <div class="hero-ctas">
+    <a class="hero-cta" onclick="document.getElementById('forest-coffee').scrollIntoView({behavior:'smooth'});return false" href="#forest-coffee"><span class="lang-en">Explore our products →</span><span class="lang-th th-text">สำรวจผลิตภัณฑ์ →</span></a>
+  </div>
 </div>
 </div>
 
@@ -937,11 +959,8 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <!-- Coffee photo carousel -->
 <div class="carousel coffee-carousel" id="c-coffee"><div class="carousel-inner" id="c-coffee-s"><div class="carousel-slide carousel-slide-img"><img src="/img/coffee-cherry-sorting-tarp.jpeg" alt="Workers sorting coffee cherries on a tarp" loading="lazy"></div><div class="carousel-slide carousel-slide-img"><img src="/img/parchment-sorting-closeup.jpeg" alt="Worker sorting parchment coffee on drying beds" style="object-position:center 80%" loading="lazy"></div><div class="carousel-slide carousel-slide-img"><img src="/img/parchment-sorting-raised-beds.jpeg" alt="Workers sorting parchment coffee on raised beds" loading="lazy"></div><div class="carousel-slide carousel-slide-img"><img src="/img/green-beans-hand.jpeg" alt="Hand holding green coffee beans" loading="lazy"></div></div><div class="carousel-dots"><button class="carousel-dot active" aria-label="Go to slide 1" onclick="gs('c-coffee',0)"></button><button class="carousel-dot" aria-label="Go to slide 2" onclick="gs('c-coffee',1)"></button><button class="carousel-dot" aria-label="Go to slide 3" onclick="gs('c-coffee',2)"></button><button class="carousel-dot" aria-label="Go to slide 4" onclick="gs('c-coffee',3)"></button></div><button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-coffee',-1)">‹</button><button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-coffee',1)">›</button></div>
 
-<div class="format-callout">
-  <h2 class="format-callout-h"><span class="lang-en">Mountain to Cup.</span><span class="lang-th th-text">จากภูเขาสู่ถ้วย</span></h3>
-  <div class="format-callout-p"><span class="lang-en">One origin, fully traceable.</span><span class="lang-th th-text">แหล่งเดียว ตรวจสอบย้อนกลับได้ทั้งหมด</span></div>
-  <a class="cta-btn cta-btn-green" href="#contact" onclick="go('contact');return false"><span class="lang-en">Enquire about coffee →</span><span class="lang-th th-text">สอบถามเรื่องกาแฟ →</span></a>
-</div>
+<div class="sec-cta-center"><a class="cta-btn cta-btn-green-fill" href="#contact" onclick="go('contact');return false"><span class="lang-en">Interested in our coffee? Get in touch →</span><span class="lang-th th-text">สนใจกาแฟของเรา? ติดต่อเรา →</span></a></div>
+
 </div></div>
 
 <!-- ===== TEA ===== -->
@@ -987,11 +1006,8 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 <!-- Tea photo carousel -->
 <div class="carousel carousel-tea" id="c-tea"><div class="carousel-inner" id="c-tea-s"><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-valley-panorama.webp" type="image/webp"><img src="/img/tea-valley-panorama.jpg" alt="Tea valley panorama in the Doi Tung highlands" loading="lazy"></picture></div><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-leaves-sky.webp" type="image/webp"><img src="/img/tea-leaves-sky.jpg" alt="Tea leaves silhouetted against the sky" loading="lazy"></picture></div><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-pickers-hillside.webp" type="image/webp"><img src="/img/tea-pickers-hillside.jpg" alt="Workers harvesting tea on a highland hillside" loading="lazy"></picture></div><div class="carousel-slide carousel-slide-img"><picture><source srcset="/img/tea-leaves-bamboo-basket.webp" type="image/webp"><img src="/img/tea-leaves-bamboo-basket.jpg" alt="Fresh tea leaves in bamboo basket close-up" loading="lazy"></picture></div></div><div class="carousel-dots"><button class="carousel-dot active" aria-label="Go to slide 1" onclick="gs('c-tea',0)"></button><button class="carousel-dot" aria-label="Go to slide 2" onclick="gs('c-tea',1)"></button><button class="carousel-dot" aria-label="Go to slide 3" onclick="gs('c-tea',2)"></button><button class="carousel-dot" aria-label="Go to slide 4" onclick="gs('c-tea',3)"></button></div><button class="carousel-nav prev" aria-label="Previous slide" onclick="ms('c-tea',-1)">‹</button><button class="carousel-nav next" aria-label="Next slide" onclick="ms('c-tea',1)">›</button></div>
 
-<div class="format-callout">
-  <h2 class="format-callout-h"><span class="lang-en">Want to try our teas?</span><span class="lang-th th-text">อยากลองชาของเรา?</span></h3>
-  <div class="format-callout-p"><span class="lang-en">Loose leaf, sampler sets, and custom blends. Sourced from Doi Tung and Mae Salong, Chiang Rai.</span><span class="lang-th th-text">ใบชา ชุดชิม และเบลนด์พิเศษ จากดอยตุงและแม่สลอง เชียงราย</span></div>
-  <a class="cta-btn cta-btn-terra" href="#contact" onclick="go('contact');return false"><span class="lang-en">Enquire about tea →</span><span class="lang-th th-text">สอบถามเรื่องชา →</span></a>
-</div>
+<div class="sec-cta-center"><a class="cta-btn cta-btn-green-fill" href="#contact" onclick="go('contact');return false"><span class="lang-en">Interested in our teas? Get in touch →</span><span class="lang-th th-text">สนใจชาของเรา? ติดต่อเรา →</span></a></div>
+
 </div></div>
 
 <!-- ===== EVENTS ===== -->
@@ -1047,7 +1063,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:24px"><span class="events-tag"><span class="lang-en">Chiang Rai</span><span class="lang-th th-text">เชียงราย</span></span><span class="events-tag"><span class="lang-en">Bangkok</span><span class="lang-th th-text">กรุงเทพ</span></span><span class="events-tag"><span class="lang-en">Cuppings</span><span class="lang-th th-text">คัปปิ้ง</span></span><span class="events-tag"><span class="lang-en">Farm visits</span><span class="lang-th th-text">เยี่ยมชมไร่</span></span><span class="events-tag"><span class="lang-en">Pop-ups</span><span class="lang-th th-text">ป๊อปอัพ</span></span></div>
 
-<div class="sec-cta-center"><a class="cta-btn" href="#contact" onclick="go('contact');return false"><span class="lang-en">Book a tasting or visit →</span><span class="lang-th th-text">จองชิมหรือเยี่ยมชม →</span></a></div>
+<div class="sec-cta-center"><a class="cta-btn cta-btn-green-fill" href="#contact" onclick="go('contact');return false"><span class="lang-en">Book a tasting or visit →</span><span class="lang-th th-text">จองชิมหรือเยี่ยมชม →</span></a></div>
 </div></div>
 
 <!-- ===== ABOUT ===== -->
@@ -1091,7 +1107,7 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <p class="sec-p" style="margin-top:16px;margin-bottom:0"><span class="lang-en">N2G was founded by Daniel Choo in 2018. The team works across Doi Tung, Mae Salong, and Bangkok — in partnership with Akha and Lahu highland farming communities — to bring specialty coffee and heritage tea from the mountain to the cup.</span><span class="lang-th th-text">N2G ก่อตั้งโดย Daniel Choo ในปี 2018 ทีมงานของเราทำงานครอบคลุมดอยตุง แม่สลอง และกรุงเทพ — ร่วมกับชุมชนเกษตรกรชาวอาข่าและลาหู่บนดอย — เพื่อนำกาแฟพิเศษและชามรดกจากภูเขาสู่ถ้วย</span></p>
 </div>
 
-<div class="sec sec-sm text-center"><a class="cta-btn" href="#contact" onclick="go('contact');return false"><span class="lang-en">Interested? Contact us →</span><span class="lang-th th-text">สนใจ? ติดต่อเรา →</span></a></div>
+<div class="sec sec-sm text-center"><a class="cta-btn cta-btn-green-fill" href="#contact" onclick="go('contact');return false"><span class="lang-en">Interested? Contact us →</span><span class="lang-th th-text">สนใจ? ติดต่อเรา →</span></a></div>
 </div></div>
 
 <!-- ===== PRODUCE ===== -->
@@ -1153,12 +1169,8 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   </div>
 </div>
 
+<div class="sec-cta-center"><a class="cta-btn cta-btn-green-fill" href="#contact" onclick="go('contact');return false"><span class="lang-en">Interested in our produce? Get in touch →</span><span class="lang-th th-text">สนใจผลผลิตของเรา? ติดต่อเรา →</span></a></div>
 
-<div class="format-callout">
-  <h2 class="format-callout-h"><span class="lang-en">Want to try our produce?</span><span class="lang-th th-text">อยากลองผลผลิตของเรา?</span></h3>
-  <div class="format-callout-p"><span class="lang-en">All produce is grown at elevation on the Doi Tung estate, harvested by hand, and processed on-site.</span><span class="lang-th th-text">ผลผลิตทั้งหมดปลูกบนที่สูงบนไร่ดอยตุง เก็บเกี่ยวด้วยมือ และแปรรูปที่ไร่</span></div>
-  <a class="cta-btn cta-btn-gold" href="#contact" onclick="go('contact');return false"><span class="lang-en">Enquire about produce →</span><span class="lang-th th-text">สอบถามเรื่องผลผลิต →</span></a>
-</div>
 </div></div>
 
 <!-- ===== CONTACT ===== -->
@@ -1173,15 +1185,20 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <p class="sec-p sec-p-mb-lg"><span class="lang-en">Wholesale, retail, or just curious. We'd love to hear from you. Samples available.</span><span class="lang-th th-text">ขายส่ง ขายปลีก หรือแค่อยากรู้ เรายินดีพูดคุยกับคุณ ตัวอย่างสินค้าพร้อมให้</span></p>
   <div class="con-g">
     <div class="con-card">
-    <!-- mailto: based contact form — submit handler in handleContact() builds mailto link to n2g.contact@gmail.com -->
-    <form id="contact-form" action="mailto:n2g.contact@gmail.com" method="POST" enctype="text/plain" onsubmit="return handleContact(event)">
-      <div class="ff"><label class="fl" for="f-name"><span class="lang-en">Name</span><span class="lang-th th-text">ชื่อ</span></label><input class="fi" id="f-name" name="name" placeholder="Your name" data-placeholder-en="Your name" data-placeholder-th="ชื่อของคุณ" aria-label="Name" autocomplete="name" required></div>
-      <div class="ff"><label class="fl" for="f-company"><span class="lang-en">Cafe / Company</span><span class="lang-th th-text">ร้าน / บริษัท</span></label><input class="fi" id="f-company" name="company" placeholder="Optional" data-placeholder-en="Optional" data-placeholder-th="ไม่จำเป็น" aria-label="Cafe or Company" autocomplete="organization"></div>
-      <div class="ff"><label class="fl" for="f-contact"><span class="lang-en">Email</span><span class="lang-th th-text">อีเมล</span></label><input class="fi" id="f-contact" name="contact" type="email" placeholder="How can we reach you?" data-placeholder-en="How can we reach you?" data-placeholder-th="ติดต่อคุณได้อย่างไร?" aria-label="Email" autocomplete="email" required></div>
+    <!-- Web3Forms contact form — replace YOUR_ACCESS_KEY_HERE with your Web3Forms access key -->
+    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" onsubmit="return handleContact(event)">
+      <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="New inquiry from N2G website">
+      <input type="hidden" name="from_name" value="N2G Website">
+      <input type="hidden" name="replyto" class="replyto-field">
+      <input type="checkbox" name="botcheck" class="hidden" style="display:none!important" tabindex="-1" autocomplete="off">
+      <div class="ff"><label class="fl" for="f-name"><span class="lang-en">Name <span class="freq">*</span></span><span class="lang-th th-text">ชื่อ <span class="freq">*</span></span></label><input class="fi" id="f-name" name="name" placeholder="Your name" data-placeholder-en="Your name" data-placeholder-th="ชื่อของคุณ" aria-label="Name" autocomplete="name" required></div>
+      <div class="ff"><label class="fl" for="f-company"><span class="lang-en">Cafe / Company <span class="fopt">(optional)</span></span><span class="lang-th th-text">ร้าน / บริษัท <span class="fopt">(ไม่จำเป็น)</span></span></label><input class="fi" id="f-company" name="company" aria-label="Cafe or Company" autocomplete="organization"></div>
+      <div class="ff"><label class="fl" for="f-contact"><span class="lang-en">Email <span class="freq">*</span></span><span class="lang-th th-text">อีเมล <span class="freq">*</span></span></label><input class="fi" id="f-contact" name="email" type="email" placeholder="you@example.com" data-placeholder-en="you@example.com" data-placeholder-th="you@example.com" aria-label="Email" autocomplete="email" required></div>
       <div class="ff"><label class="fl" for="f-message"><span class="lang-en">What are you interested in?</span><span class="lang-th th-text">สนใจอะไร?</span></label><textarea class="fi" id="f-message" name="message" placeholder="Coffee, tea, samples, wholesale, green beans, events" data-placeholder-en="Coffee, tea, samples, wholesale, green beans, events" data-placeholder-th="กาแฟ, ชา, ตัวอย่าง, ค้าส่ง, กรีนบีน, อีเวนต์" aria-label="What are you interested in?"></textarea></div>
       <button class="fb" type="submit"><span class="lang-en">Send</span><span class="lang-th th-text">ส่ง</span></button>
+      <p style="margin-top:12px;font-size:12px;color:var(--text4);text-align:center"><span class="lang-en">Or email us directly at <a class="link-green" href="mailto:n2g.contact@gmail.com">n2g.contact@gmail.com</a></span><span class="lang-th th-text">หรือส่งอีเมลถึงเราโดยตรงที่ <a class="link-green" href="mailto:n2g.contact@gmail.com">n2g.contact@gmail.com</a></span></p>
     </form>
-    <p style="margin-top:12px;font-size:12px;color:var(--text4);text-align:center"><span class="lang-en">Or email us directly at <a class="link-green" href="mailto:n2g.contact@gmail.com">n2g.contact@gmail.com</a></span><span class="lang-th th-text">หรือส่งอีเมลถึงเราโดยตรงที่ <a class="link-green" href="mailto:n2g.contact@gmail.com">n2g.contact@gmail.com</a></span></p>
     </div>
     <div class="ci">
       <strong>Native2Global</strong><br>Doi Tung, Amphoe Mae Fah Luang<br>Chiang Rai, Thailand<br><br>
@@ -1236,16 +1253,20 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
 
 </main>
 <div class="foot-waves"><img src="/img/footer-waves.svg" alt=""></div>
-<div class="email-capture">
-  <h2 class="email-capture-h"><span class="lang-en">Join our mailing list.</span><span class="lang-th th-text">สมัครรับจดหมายข่าว</span></h3>
-  <p class="email-capture-p"><span class="lang-en">New lots, seasonal releases, tastings, and estate updates. Email us and we'll add you to the list.</span><span class="lang-th th-text">ล็อตใหม่ ผลผลิตตามฤดูกาล การชิม และข่าวสารจากไร่ ส่งอีเมลหาเราเพื่อเข้าร่วมรายชื่อ</span></p>
-  <a class="email-capture-btn" href="mailto:n2g.contact@gmail.com?subject=Subscribe%20to%20N2G%20updates&amp;body=Please%20add%20me%20to%20the%20N2G%20mailing%20list." style="display:inline-block;text-decoration:none"><span class="lang-en">Email us to subscribe →</span><span class="lang-th th-text">ส่งอีเมลเพื่อสมัคร →</span></a>
-</div>
 
 <footer class="foot">
+  <!-- Brand -->
   <div class="foot-col"><div class="foot-brand"><div class="nav-dot">N2G</div><span class="foot-brand-name">Native2Global</span></div><div class="nav-tagline"><span class="lang-en">Mountain | People | Ecology</span><span class="lang-th th-text">ภูเขา | ผู้คน | ระบบนิเวศ</span></div><div class="foot-tagline"><span class="lang-en">Single-estate specialty coffee, tea &amp; produce from Doi Tung &amp; Mae Salong, Chiang Rai, Thailand</span><span class="lang-th th-text">กาแฟพิเศษ ชา และผลผลิตจากไร่เดียว ดอยตุงและแม่สลอง เชียงราย</span></div></div>
+
+  <!-- Products -->
   <div class="foot-col"><div class="foot-col-title"><span class="lang-en">Products</span><span class="lang-th th-text">ผลิตภัณฑ์</span></div><a href="#coffee" onclick="go('coffee');return false"><svg class="foot-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><span class="lang-en">Coffee</span><span class="lang-th th-text">กาแฟ</span></a><a href="#tea" onclick="go('tea');return false"><svg class="foot-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2c-4 3-6 7-4 11 1 2 3 4 5 5"/><path d="M10 2c4 3 6 7 4 11-1 2-3 4-5 5"/><path d="M10 5v13"/></svg><span class="lang-en">Tea</span><span class="lang-th th-text">ชา</span></a><a href="#produce" onclick="go('produce');return false"><svg class="foot-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8" r="2.5"/><path d="M10 5.5c0-2.5 2-3.5 2-3.5"/><path d="M7.5 8c-2-1-3.5.5-3.5.5"/><path d="M12.5 8c2-1 3.5.5 3.5.5"/><path d="M8 10.2c-1.5 1.5-1 3.5-1 3.5"/><path d="M12 10.2c1.5 1.5 1 3.5 1 3.5"/><path d="M10 10.5V18"/></svg><span class="lang-en">Mountain Produce</span><span class="lang-th th-text">ผลผลิตจากดอย</span></a><a href="#events" onclick="go('events');return false"><svg class="foot-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" rx="1.5"/><path d="M3 8h14"/><path d="M7 2v4"/><path d="M13 2v4"/><circle cx="10" cy="13" r="1" fill="currentColor" stroke="none"/></svg><span class="lang-en">Events</span><span class="lang-th th-text">อีเวนต์</span></a><a href="#about" onclick="go('about');return false"><svg class="foot-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 16l6-10 4 6 3-3 3 7"/></svg><span class="lang-en">About</span><span class="lang-th th-text">เกี่ยวกับ</span></a></div>
-  <div class="foot-col"><div class="foot-col-title"><span class="lang-en">Contact</span><span class="lang-th th-text">ติดต่อ</span></div><a class="foot-contact-link" href="#contact" onclick="go('contact');return false"><span class="lang-en">Contact us →</span><span class="lang-th th-text">ติดต่อเรา →</span></a><!-- TODO: Replace with professional domain email before launch --><div class="foot-col-title" style="margin-top:14px"><span class="lang-en">Follow</span><span class="lang-th th-text">ติดตาม</span></div><div class="foot-social"><a href="https://www.facebook.com/nativetoglobal.organique" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Coffee</a><a href="https://www.facebook.com/teaorganique.hill.5" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>Tea</a><a href="https://www.instagram.com/hillorganique.n2g" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a></div></div>
+
+  <!-- Contact Us -->
+  <div class="foot-col"><div class="foot-col-title" style="font-family:'EB Garamond',serif;font-size:15px;letter-spacing:0.04em;color:var(--text2)"><span class="lang-en">Contact Us</span><span class="lang-th th-text">ติดต่อเรา</span></div><a class="foot-contact-link" href="#contact" onclick="go('contact');return false"><span class="lang-en">Contact form →</span><span class="lang-th th-text">แบบฟอร์มติดต่อ →</span></a><a class="foot-contact-email" href="mailto:n2g.contact@gmail.com">n2g.contact@gmail.com</a></div>
+
+  <!-- Stay Updated + Socials -->
+  <div class="foot-col foot-col-newsletter"><div class="foot-col-title" style="font-family:'EB Garamond',serif;font-size:15px;letter-spacing:0.04em;color:var(--text2)"><span class="lang-en">Join Our Mailing List</span><span class="lang-th th-text">สมัครรับข่าวสาร</span></div><p style="font-size:12px;color:var(--text3);margin:0 0 8px;line-height:1.5"><span class="lang-en">New lots, seasonal releases, tastings, and updates.</span><span class="lang-th th-text">ล็อตใหม่ ผลผลิตตามฤดูกาล การชิม และข่าวสาร</span></p><!-- TODO: Replace action URL with your Mailchimp form action URL --><form class="foot-newsletter-form" action="#" method="POST" onsubmit="return handleNewsletter(event)"><input class="foot-newsletter-input" type="email" name="EMAIL" placeholder="Your email" data-placeholder-en="Your email" data-placeholder-th="อีเมลของคุณ" aria-label="Email address" required><button class="foot-newsletter-btn" type="submit"><span class="lang-en">Subscribe</span><span class="lang-th th-text">สมัคร</span></button></form><div class="foot-social" style="margin-top:14px"><a href="https://www.facebook.com/nativetoglobal.organique" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg><span class="lang-en">Coffee</span><span class="lang-th th-text">กาแฟ</span></a><a href="https://www.facebook.com/teaorganique.hill.5" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg><span class="lang-en">Tea</span><span class="lang-th th-text">ชา</span></a><a href="https://www.instagram.com/hillorganique.n2g" target="_blank" rel="noopener"><svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>Instagram</a></div></div>
+
   <div class="foot-copy">© 2018–2026 Native2Global Co. Ltd. · Doi Tung &amp; Mae Salong, Chiang Rai, Thailand · <a href="#privacy" onclick="go('privacy');return false">Privacy Policy</a></div>
 </footer>
 
@@ -1303,11 +1324,39 @@ window.addEventListener('hashchange',function(){
 function handleContact(e){
   e.preventDefault();
   var f=document.getElementById('contact-form');
+  var btn=f.querySelector('.fb');
+  btn.disabled=true;btn.textContent='Sending...';
   var d=new FormData(f);
-  var name=d.get('name'),contact=d.get('contact'),company=d.get('company')||'',message=d.get('message')||'';
-  var body='Name: '+name+'\n'+(company?'Company: '+company+'\n':'')+'Contact: '+contact+'\n'+(message?'Interested in: '+message:'');
-  window.location.href='mailto:n2g.contact@gmail.com?subject='+encodeURIComponent('Inquiry from '+name)+'&body='+encodeURIComponent(body);
-  f.reset();
+  var emailVal=d.get('email');
+  if(emailVal)f.querySelector('.replyto-field').value=emailVal;
+  d=new FormData(f);
+  fetch('https://api.web3forms.com/submit',{method:'POST',body:d})
+    .then(function(r){return r.json()})
+    .then(function(data){
+      if(data.success){
+        btn.textContent='Sent!';btn.style.background='var(--green)';
+        f.reset();
+        setTimeout(function(){btn.disabled=false;btn.textContent=document.body.classList.contains('thai')?'ส่ง':'Send';btn.style.background=''},3000);
+      }else{
+        btn.textContent='Error — try again';btn.disabled=false;
+        setTimeout(function(){btn.textContent=document.body.classList.contains('thai')?'ส่ง':'Send'},3000);
+      }
+    })
+    .catch(function(){
+      btn.textContent='Error — try again';btn.disabled=false;
+      setTimeout(function(){btn.textContent=document.body.classList.contains('thai')?'ส่ง':'Send'},3000);
+    });
+  return false;
+}
+function handleNewsletter(e){
+  e.preventDefault();
+  /* TODO: Replace with Mailchimp AJAX submission once account is set up.
+     For now, falls back to mailto. Replace the form action URL with your
+     Mailchimp form action URL and remove this handler. */
+  var input=e.target.querySelector('.foot-newsletter-input');
+  var email=input.value;
+  window.location.href='mailto:n2g.contact@gmail.com?subject='+encodeURIComponent('Newsletter signup: '+email)+'&body='+encodeURIComponent('Please add '+email+' to the N2G mailing list.');
+  input.value='';
   return false;
 }
 var cState={};
