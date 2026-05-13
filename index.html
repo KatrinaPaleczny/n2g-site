@@ -54,7 +54,10 @@
   /* Type scale */
   --t-eyebrow:11px;--t-meta:13px;--t-body:16px;--t-body-lead:18px;
   --t-h3:22px;--t-h2:28px;--t-h2-lg:36px;
-  --lh-tight:1.2;--lh-snug:1.45;--lh-body:1.7;--lh-loose:1.9
+  --lh-tight:1.2;--lh-snug:1.45;--lh-body:1.7;--lh-loose:1.9;
+  /* Coffee roast scale (used by specimen card roast band + 5-dot indicator) */
+  --roast-cinnamon:#B58656;--roast-light:#8C5E38;--roast-city:#5C3E25;
+  --roast-medium:#3E2614;--roast-full-city:#1F1308;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Karla',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased;font-weight:400}
@@ -473,16 +476,118 @@ body.thai .lang-en-inline{display:none}
 .offer-card-name{font-size:15px;font-weight:500;font-family:'EB Garamond',serif;color:var(--text);margin-bottom:6px}
 .offer-card-desc{font-size:12px;color:var(--text3);line-height:1.5}
 
-/* Coffee: product card with image */
-.coffee-card{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:24px;margin-bottom:20px;border-bottom:none;border-radius:8px;background:var(--sand);align-items:start}
-.coffee-card-img{aspect-ratio:3/4;overflow:hidden;border-radius:6px}
-.coffee-card-img img{width:100%;height:100%;object-fit:cover}
-.coffee-card .prod-name{font-size:18px;margin-bottom:6px}
-.coffee-card .prod-sub{margin-bottom:10px}
-.coffee-card .flavs{margin-top:12px}
-@media(max-width:680px){.coffee-card-img{aspect-ratio:4/3}}
-.coffee-card-tasting{display:block;margin-top:14px;padding-top:14px;border-top:1px solid rgba(44,36,23,0.08);font-size:13px;color:var(--text3);font-style:italic}
-.spec-line{font-size:11px;color:var(--text4);margin-top:6px;letter-spacing:0.02em}
+/* Coffee: specimen card with printed-label preview */
+.spec-card{display:grid;grid-template-columns:200px 1fr;gap:36px;padding:32px 0;align-items:start}
+.spec-card+.spec-card{border-top:1px solid var(--border)}
+.spec-card:last-of-type{border-bottom:1px solid var(--border)}
+@media(max-width:680px){.spec-card{grid-template-columns:1fr;gap:24px}}
+
+/* Label panel — the designed sticker preview. Sizes by content (no aspect-ratio
+   constraint) so flavor lists of different lengths don't get clipped at the foot. */
+.label-panel{position:relative;width:100%;padding:22px 18px 18px;display:flex;flex-direction:column;font-family:'EB Garamond',serif;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08);isolation:isolate;min-height:260px}
+.label-panel .lp-body{flex:1}
+.label-panel::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse at 28% 18%,rgba(255,255,255,0.06) 0%,transparent 55%),radial-gradient(ellipse at 72% 82%,rgba(0,0,0,0.05) 0%,transparent 55%);pointer-events:none;z-index:0}
+.label-panel::after{content:'';position:absolute;inset:6px;border:1px solid currentColor;opacity:0.18;pointer-events:none;z-index:0}
+/* Spirits-luxe (X.O.) — deep green-black + gold ring + cream type, cognac-label feel */
+.label-panel.lp-light{background:linear-gradient(178deg,#1B2D22 0%,#0D1A11 100%);color:var(--cream)}
+.lp-light .lp-mark-b{border-color:var(--gold);color:var(--gold)}
+.lp-light::after{border-color:var(--gold);opacity:0.42}
+/* Forest (Special) */
+.label-panel.lp-mid{background:linear-gradient(178deg,#336046 0%,#244029 100%);color:var(--cream)}
+/* Cream + terra (Classic) */
+.label-panel.lp-warm{background:linear-gradient(178deg,#FCF6E8 0%,#F4EBD3 100%);color:var(--text)}
+.lp-warm .lp-mark-b{border-color:var(--terra);color:var(--terra)}
+.lp-warm .lp-rule{background:var(--terra);opacity:0.85}
+
+.lp-head{display:flex;justify-content:center;align-items:center;position:relative;z-index:1}
+.lp-mark-b{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1.4px solid currentColor;font-family:'EB Garamond',serif;font-style:italic;font-size:13px;font-weight:500;letter-spacing:-0.015em;padding-top:1px;flex-shrink:0}
+
+.lp-body{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:10px 0}
+.lp-name{font-family:'EB Garamond',serif;font-weight:400;font-size:40px;line-height:0.95;letter-spacing:-0.012em;white-space:nowrap}
+.lp-name em{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;display:block;margin-top:6px;font-size:1.05em;line-height:1}
+.lp-name-sub{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:17px;line-height:1;margin-top:10px;letter-spacing:0.02em;opacity:0.72}
+.lp-name--long em{font-size:26px;letter-spacing:-0.005em;line-height:1}
+
+.lp-rule{width:30px;height:1px;background:var(--gold);margin:16px auto 14px;opacity:0.7}
+.lp-flavors{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:13px;line-height:1.5;max-width:26ch;margin:0 auto;letter-spacing:0.005em}
+.lp-cup{position:relative;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:12px;line-height:1.45;max-width:24ch;margin:12px auto 0;padding:7px 0 0;opacity:0.88}
+.lp-cup::before{content:'';display:block;width:16px;height:1px;background:var(--gold);margin:0 auto 8px;opacity:0.7}
+.lp-warm .lp-cup::before{background:var(--terra)}
+
+.lp-foot{display:flex;flex-direction:column;gap:5px;padding-top:8px;position:relative;z-index:1}
+.lp-foot::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:currentColor;opacity:0.18}
+.lp-foot-row{display:flex;justify-content:space-between;align-items:center;gap:8px;font-family:'Karla',sans-serif;font-size:9.5px;letter-spacing:0.10em;text-transform:uppercase;font-weight:500;line-height:1.4;opacity:0.85}
+
+/* Spec text (right side) */
+.spec-text{padding-top:4px}
+.spec-name{font-family:'EB Garamond',serif;font-weight:400;font-size:34px;line-height:1.05;letter-spacing:-0.01em;color:var(--text);margin-bottom:4px;display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.spec-name em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--text)}
+.spec-name-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:0.55em;color:var(--text3);letter-spacing:0.01em}
+.spec-grade-tag{font-family:'Karla',sans-serif;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text4);font-weight:500;border:1px solid var(--border);padding:3px 8px;border-radius:2px;align-self:center}
+.spec-tagline{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:15px;color:var(--text3);margin:0 0 14px}
+.spec-description{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;line-height:1.55;color:var(--text2);margin:0 0 20px;padding:2px 0 2px 12px;border-left:2px solid var(--gold);max-width:50ch}
+.spec-flavors-list{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;line-height:1.55;color:var(--text2);margin:0 0 8px;max-width:50ch}
+.spec-flavors-list .label{font-family:'Karla',sans-serif;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text4);font-weight:500;font-style:normal;margin-right:10px;vertical-align:1px}
+.spec-cup-finish{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;line-height:1.5;color:var(--text3);margin:0 0 20px;padding:2px 0 2px 12px;border-left:1px solid var(--gold);max-width:44ch;opacity:0.9}
+
+/* Roast band */
+.spec-roast{margin:0 0 20px;padding:16px 0 0;border-top:1px solid var(--border)}
+.spec-roast-row{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px}
+.spec-roast-label{font-family:'Karla',sans-serif;font-size:9.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text4);font-weight:500}
+.spec-roast-range{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--text3)}
+.spec-roast-track{position:relative;height:5px;background:linear-gradient(to right,var(--roast-cinnamon) 0%,var(--roast-light) 25%,var(--roast-city) 50%,var(--roast-medium) 75%,var(--roast-full-city) 100%);border-radius:1px;margin-bottom:12px}
+.spec-roast-track::before{content:'';position:absolute;top:-3px;bottom:-3px;left:var(--roast-start);right:calc(100% - var(--roast-end));border-left:1px solid var(--text);border-right:1px solid var(--text)}
+.spec-roast-scale{position:relative;height:14px;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;color:var(--text4)}
+.spec-roast-scale span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.spec-roast-scale span:first-child{transform:translateX(0)}
+.spec-roast-scale span:last-child{transform:translateX(-100%)}
+.spec-roast-scale span.active{color:var(--text);font-weight:500}
+
+/* Spec strip */
+.spec-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--border);padding-top:14px}
+.spec-strip-i{padding:0 16px;border-right:1px solid var(--border);min-width:0}
+.spec-strip-i:first-child{padding-left:0}
+.spec-strip-i:last-child{border-right:none;padding-right:0}
+.spec-strip-k{font-family:'Karla',sans-serif;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text4);font-weight:500;margin-bottom:4px}
+.spec-strip-v{font-family:'EB Garamond',serif;font-size:13px;color:var(--text);line-height:1.3}
+@media(max-width:520px){.spec-strip{grid-template-columns:repeat(2,1fr);gap:12px 0}.spec-strip-i{padding-right:0;border-right:none}.spec-strip-i:nth-child(odd){padding-right:12px;border-right:1px solid var(--border)}}
+
+/* Compact label panel — homepage teaser (inside .prod-with-thumb) */
+.label-panel-c{position:relative;aspect-ratio:1;width:100%;max-width:120px;padding:10px 10px 9px;display:grid;grid-template-rows:auto 1fr auto;font-family:'EB Garamond',serif;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08);isolation:isolate}
+.label-panel-c::after{content:'';position:absolute;inset:4px;border:1px solid currentColor;opacity:0.18;pointer-events:none;z-index:0}
+.label-panel-c.lp-light{background:linear-gradient(178deg,#1B2D22 0%,#0D1A11 100%);color:var(--cream)}
+.label-panel-c.lp-light .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+.label-panel-c.lp-light::after{border-color:var(--gold);opacity:0.42}
+.label-panel-c.lp-mid{background:linear-gradient(178deg,#336046 0%,#244029 100%);color:var(--cream)}
+.label-panel-c.lp-warm{background:linear-gradient(178deg,#FCF6E8 0%,#F4EBD3 100%);color:var(--text)}
+.label-panel-c.lp-warm .lpc-mark-b{border-color:var(--terra);color:var(--terra)}
+.lpc-head{position:relative;z-index:1;display:flex;justify-content:center;align-items:center}
+.lpc-mark-b{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;border:1px solid currentColor;font-family:'EB Garamond',serif;font-style:italic;font-size:9px;font-weight:500;letter-spacing:-0.02em;padding-top:1px}
+.lpc-body{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.lpc-name{font-family:'EB Garamond',serif;font-weight:400;font-size:18px;line-height:1;letter-spacing:-0.01em}
+.lpc-name em{font-family:'Cormorant Garamond',serif;font-style:italic;display:block;margin-top:2px;font-size:1.1em}
+.lpc-name--long em{font-size:13px;line-height:1.05;letter-spacing:-0.005em}
+.lpc-name-sub{display:block;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:10px;line-height:1;margin-top:4px;letter-spacing:0.02em;opacity:0.7}
+.lpc-foot{position:relative;z-index:1;font-family:'Karla',sans-serif;font-size:7.5px;letter-spacing:0.10em;text-transform:uppercase;font-weight:500;text-align:center;opacity:0.72}
+
+/* Compact card right side (used inside .prod-with-thumb for coffee) */
+.spec-c-text{padding-top:2px}
+.spec-c-name{font-family:'EB Garamond',serif;font-weight:400;font-size:20px;line-height:1.15;margin-bottom:4px;color:var(--text);display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.spec-c-name em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--text)}
+.spec-c-name-sub{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--text3)}
+.spec-c-grade-tag{font-family:'Karla',sans-serif;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--text4);font-weight:500;border:1px solid var(--border);padding:2px 6px;border-radius:2px}
+.spec-c-roast{display:flex;align-items:center;gap:8px;margin:6px 0 8px}
+.spec-c-roast-dots{display:flex;gap:3px}
+.spec-c-roast-dots i{display:inline-block;width:6px;height:6px;border:1px solid var(--border);border-radius:50%;background:transparent}
+.spec-c-roast-dots i.r1{background:var(--roast-cinnamon);border-color:var(--roast-cinnamon)}
+.spec-c-roast-dots i.r2{background:var(--roast-light);border-color:var(--roast-light)}
+.spec-c-roast-dots i.r3{background:var(--roast-city);border-color:var(--roast-city)}
+.spec-c-roast-dots i.r4{background:var(--roast-medium);border-color:var(--roast-medium)}
+.spec-c-roast-dots i.r5{background:var(--roast-full-city);border-color:var(--roast-full-city)}
+.spec-c-roast-label{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;color:var(--text3)}
+.spec-c-tasting{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;line-height:1.45;color:var(--text2)}
+/* Override the .prod-with-thumb grid: panel column width 120px */
+.prod-with-thumb .label-panel-c{margin:0}
 .coffee-carousel{aspect-ratio:21/9;margin-top:32px;border:none;border-radius:8px}
 @media(max-width:600px){.coffee-carousel{aspect-ratio:16/9}}
 .home-cards-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
@@ -760,9 +865,9 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   <div class="accent"></div>
   <div class="sec-label"><svg class="sec-icon" aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="10" cy="10" rx="5" ry="7"/><path d="M10 3c-1 2.5-1 4.5 0 7s1 4.5 0 7"/></svg><span class="lang-en">Forest coffee</span><span class="lang-th th-text">กาแฟป่า</span></div>
   <p class="sec-p"><span class="lang-en">Arabica. Catimor, Caturra, Catuai. Fully washed, sun-dried on raised beds. Available as parchment, green beans, roasted beans, capsules, and drip bags.</span><span class="lang-th th-text">อราบิก้า Catimor, Caturra, Catuai ล้างสะอาด ตากแดดบนแคร่ยกสูง มีทั้งกาแฟกะลา กรีนบีน เมล็ดคั่ว แคปซูล และดริปแบ็ก</span></p>
-  <div class="prod prod-with-thumb"><picture><source srcset="/img/pourover-brewing.webp" type="image/webp"><img class="prod-thumb" src="/img/pourover-brewing.jpg" alt="Pour-over brewing" loading="lazy"></picture><div><div class="prod-name">Drip Select X.O.</div><div class="prod-sub"><span class="lang-en">Filter / Pour-over · AA-A</span><span class="lang-th th-text">ฟิลเตอร์ / พัวร์โอเวอร์ · AA-A</span></div><div class="flavs"><span class="flav"><span class="lang-en">Brown sugar</span><span class="lang-th th-text">บราวน์ชูการ์</span></span><span class="flav"><span class="lang-en">Orange blossom</span><span class="lang-th th-text">ดอกส้ม</span></span><span class="flav"><span class="lang-en">Mandarin</span><span class="lang-th th-text">แมนดาริน</span></span><span class="flav"><span class="lang-en">Lychee</span><span class="lang-th th-text">ลิ้นจี่</span></span><span class="flav"><span class="lang-en">Peach</span><span class="lang-th th-text">พีช</span></span></div></div></div>
-  <div class="prod prod-with-thumb"><picture><source srcset="/img/roasted-beans-container-closeup.webp" type="image/webp"><img class="prod-thumb" src="/img/roasted-beans-container-closeup.jpg" alt="Roasted coffee beans in container" loading="lazy"></picture><div><div class="prod-name">Espresso Select Special</div><div class="prod-sub"><span class="lang-en">Espresso · AA-A</span><span class="lang-th th-text">เอสเพรสโซ่ · AA-A</span></div><div class="flavs"><span class="flav"><span class="lang-en">Caramel</span><span class="lang-th th-text">คาราเมล</span></span><span class="flav"><span class="lang-en">Osmanthus</span><span class="lang-th th-text">ออสแมนทัส</span></span><span class="flav"><span class="lang-en">Passion fruit</span><span class="lang-th th-text">เสาวรส</span></span><span class="flav"><span class="lang-en">Dark chocolate</span><span class="lang-th th-text">ดาร์กช็อกโกแลต</span></span></div></div></div>
-  <div class="prod prod-with-thumb"><picture><source srcset="/img/espresso-classic-bag.webp" type="image/webp"><img class="prod-thumb" src="/img/espresso-classic-bag.jpg" alt="Espresso Select Classic coffee bag" loading="lazy"></picture><div><div class="prod-name">Espresso Select Classic</div><div class="prod-sub"><span class="lang-en">Espresso · Mixed</span><span class="lang-th th-text">เอสเพรสโซ่ · มิกซ์</span></div><div class="flavs"><span class="flav"><span class="lang-en">Butterscotch</span><span class="lang-th th-text">บัตเตอร์สก็อตช์</span></span><span class="flav"><span class="lang-en">Sweet orange</span><span class="lang-th th-text">ส้มหวาน</span></span><span class="flav"><span class="lang-en">Vanilla</span><span class="lang-th th-text">วานิลลา</span></span></div></div></div>
+  <div class="prod prod-with-thumb"><div class="label-panel-c lp-light"><div class="lpc-head"><span class="lpc-mark-b">N2G</span></div><div class="lpc-body"><div class="lpc-name lpc-name--long"><em>ExtraOrdinary</em><span class="lpc-name-sub">(X.O.)</span></div></div><div class="lpc-foot"><span class="lang-en">Cinnamon — City</span><span class="lang-th th-text">Cinnamon — City</span></div></div><div class="spec-c-text"><h4 class="spec-c-name"><em>ExtraOrdinary</em> <span class="spec-c-name-sub">(X.O.)</span> <span class="spec-c-grade-tag">AA—A</span></h4><div class="spec-c-roast"><div class="spec-c-roast-dots"><i class="r1"></i><i class="r2"></i><i class="r3"></i><i></i><i></i></div><div class="spec-c-roast-label"><span class="lang-en">Top grade · light-roast drip</span><span class="lang-th th-text">เกรดสูงสุด · ดริปคั่วอ่อน</span></div></div><p class="spec-c-tasting"><span class="lang-en">Brown sugar, orange blossom, lychee. Soft body with juicy sweet finish.</span><span class="lang-th th-text">บราวน์ชูการ์ ดอกส้ม ลิ้นจี่ บอดี้นุ่มกับฟินิชหวานฉ่ำ</span></p></div></div>
+  <div class="prod prod-with-thumb"><div class="label-panel-c lp-mid"><div class="lpc-head"><span class="lpc-mark-b">N2G</span></div><div class="lpc-body"><div class="lpc-name"><em>Special</em></div></div><div class="lpc-foot"><span class="lang-en">City — Full City</span><span class="lang-th th-text">City — Full City</span></div></div><div class="spec-c-text"><h4 class="spec-c-name"><em>Special</em> <span class="spec-c-grade-tag">AA—A</span></h4><div class="spec-c-roast"><div class="spec-c-roast-dots"><i></i><i></i><i class="r3"></i><i class="r4"></i><i class="r5"></i></div><div class="spec-c-roast-label"><span class="lang-en">Drip &amp; espresso</span><span class="lang-th th-text">ดริปและเอสเพรสโซ่</span></div></div><p class="spec-c-tasting"><span class="lang-en">Caramel, osmanthus, dark chocolate. Good body with long sweet finish.</span><span class="lang-th th-text">คาราเมล ออสแมนทัส ดาร์กช็อกโกแลต บอดี้ดีกับฟินิชหวานยาว</span></p></div></div>
+  <div class="prod prod-with-thumb"><div class="label-panel-c lp-warm"><div class="lpc-head"><span class="lpc-mark-b">N2G</span></div><div class="lpc-body"><div class="lpc-name"><em>Classic</em></div></div><div class="lpc-foot"><span class="lang-en">Medium — Full City</span><span class="lang-th th-text">Medium — Full City</span></div></div><div class="spec-c-text"><h4 class="spec-c-name"><em>Classic</em> <span class="spec-c-grade-tag"><span class="lang-en">Mixed</span><span class="lang-th th-text">มิกซ์</span></span></h4><div class="spec-c-roast"><div class="spec-c-roast-dots"><i></i><i></i><i></i><i class="r4"></i><i class="r5"></i></div><div class="spec-c-roast-label"><span class="lang-en">All roasts · drip &amp; espresso</span><span class="lang-th th-text">การคั่วทุกประเภท · ดริปและเอสเพรสโซ่</span></div></div><p class="spec-c-tasting"><span class="lang-en">Butterscotch, sweet orange, vanilla. Mellow body with lingering sweet finish.</span><span class="lang-th th-text">บัตเตอร์สก็อตช์ ส้มหวาน วานิลลา บอดี้นุ่มนวลกับฟินิชหวานยาวนาน</span></p></div></div>
   <a class="more-link" href="#coffee" onclick="go('coffee');return false"><span class="lang-en">See all coffee details →</span><span class="lang-th th-text">ดูข้อมูลกาแฟทั้งหมด →</span></a>
 </div>
 
@@ -928,19 +1033,97 @@ a:focus-visible,button:focus-visible,.back-link:focus-visible,.cta-btn:focus-vis
   </div>
 </div>
 
-<!-- Coffee product cards with photos -->
-<div class="coffee-card">
-  <div class="coffee-card-img"><img src="/img/files/n2g-drip-cinnamon-roast-100g.webp" alt="Drip Select X.O. coffee bag" loading="lazy"></div>
-  <div><div class="prod-name">Drip Select X.O.</div><div class="prod-sub"><span class="lang-en">Filter / Pour-over · AA-A · Roast: Cinnamon, Light, City</span><span class="lang-th th-text">ฟิลเตอร์ / พัวร์โอเวอร์ · AA-A · คั่ว: Cinnamon, Light, City</span></div><p style="font-size:13px;color:var(--text2);margin-top:10px;line-height:1.6;font-style:italic"><span class="lang-en">Our top grade. Complex and juicy. Best as a light-roast filter coffee.</span><span class="lang-th th-text">คัดสรรพิเศษสุด — ซับซ้อนและฉ่ำ เหมาะเป็นกาแฟฟิลเตอร์คั่วอ่อน</span></p><div class="flavs"><span class="flav"><span class="lang-en">Brown sugar</span><span class="lang-th th-text">บราวน์ชูการ์</span></span><span class="flav"><span class="lang-en">Orange blossom</span><span class="lang-th th-text">ดอกส้ม</span></span><span class="flav"><span class="lang-en">Sweet mandarin</span><span class="lang-th th-text">แมนดารินหวาน</span></span><span class="flav"><span class="lang-en">Lychee</span><span class="lang-th th-text">ลิ้นจี่</span></span><span class="flav"><span class="lang-en">Peach</span><span class="lang-th th-text">พีช</span></span></div><span class="coffee-card-tasting"><span class="lang-en">Soft body with juicy sweet finish</span><span class="lang-th th-text">บอดี้นุ่มกับฟินิชหวานฉ่ำ</span></span></div>
-</div>
-<div class="coffee-card">
-  <div class="coffee-card-img"><img src="/img/files/n2g-drip-city-roast-100g.webp" alt="Espresso Select Special coffee bag" loading="lazy"></div>
-  <div><div class="prod-name">Espresso Select Special</div><div class="prod-sub"><span class="lang-en">Espresso · AA-A · Roast: City, Medium, Full City</span><span class="lang-th th-text">เอสเพรสโซ่ · AA-A · คั่ว: City, Medium, Full City</span></div><p style="font-size:13px;color:var(--text2);margin-top:10px;line-height:1.6;font-style:italic"><span class="lang-en">The osmanthus flower note is distinctive to our Doi Tung terroir.</span><span class="lang-th th-text">กลิ่นดอกออสแมนทัสเป็นเอกลักษณ์ของเทอร์รัวร์ดอยตุง</span></p><div class="flavs"><span class="flav"><span class="lang-en">Caramel</span><span class="lang-th th-text">คาราเมล</span></span><span class="flav"><span class="lang-en">Palm sugar</span><span class="lang-th th-text">น้ำตาลปาล์ม</span></span><span class="flav"><span class="lang-en">Osmanthus</span><span class="lang-th th-text">ออสแมนทัส</span></span><span class="flav"><span class="lang-en">Passion fruit</span><span class="lang-th th-text">เสาวรส</span></span><span class="flav"><span class="lang-en">Dark chocolate</span><span class="lang-th th-text">ดาร์กช็อกโกแลต</span></span></div><span class="coffee-card-tasting"><span class="lang-en">Good body with long sweet finish</span><span class="lang-th th-text">บอดี้ดีกับฟินิชหวานยาว</span></span></div>
-</div>
-<div class="coffee-card">
-  <div class="coffee-card-img"><img src="/img/files/n2g-espresso-medium-roast-200g.webp" alt="Espresso Select Classic coffee bag" loading="lazy"></div>
-  <div><div class="prod-name">Espresso Select Classic</div><div class="prod-sub"><span class="lang-en">Espresso · Mixed · Roast: Medium, Full City</span><span class="lang-th th-text">เอสเพรสโซ่ · มิกซ์ · คั่ว: Medium, Full City</span></div><p style="font-size:13px;color:var(--text2);margin-top:10px;line-height:1.6;font-style:italic"><span class="lang-en">Our everyday espresso. Works beautifully in milk-based drinks.</span><span class="lang-th th-text">เอสเพรสโซ่สำหรับทุกวัน เข้ากันดีกับเครื่องดื่มนม</span></p><div class="flavs"><span class="flav"><span class="lang-en">Butterscotch</span><span class="lang-th th-text">บัตเตอร์สก็อตช์</span></span><span class="flav"><span class="lang-en">Sweet orange</span><span class="lang-th th-text">ส้มหวาน</span></span><span class="flav"><span class="lang-en">Vanilla</span><span class="lang-th th-text">วานิลลา</span></span></div><span class="coffee-card-tasting"><span class="lang-en">Mellow body with lingering sweet finish</span><span class="lang-th th-text">บอดี้นุ่มนวลกับฟินิชหวานยาวนาน</span></span></div>
-</div>
+<!-- Coffee product cards — specimen card with printed-label preview -->
+<!-- TODO: Thai translations for new strings (lot descriptions + spec labels + "Sample [Roast] roast") need native review. English fallback used where Thai is uncertain. -->
+<article class="spec-card" style="--roast-start:0%;--roast-end:50%">
+  <div class="label-panel lp-light">
+    <div class="lp-head"><span class="lp-mark-b">N2G</span></div>
+    <div class="lp-body">
+      <div class="lp-name lp-name--long"><em>ExtraOrdinary</em><span class="lp-name-sub">(X.O.)</span></div>
+      <div class="lp-rule"></div>
+      <p class="lp-flavors"><span class="lang-en">Brown sugar · orange blossom · sweet mandarin · lychee · peach</span><span class="lang-th th-text">บราวน์ชูการ์ · ดอกส้ม · แมนดารินหวาน · ลิ้นจี่ · พีช</span></p>
+    </div>
+    <div class="lp-foot"><div class="lp-foot-row"><span><span class="lang-en">Sample Cinnamon roast · Fully washed</span><span class="lang-th th-text">ตัวอย่างคั่ว Cinnamon · ล้างสะอาด</span></span><span><span class="lang-en">Chiang Rai, Thailand</span><span class="lang-th th-text">เชียงราย, ประเทศไทย</span></span></div></div>
+  </div>
+  <div class="spec-text">
+    <h3 class="spec-name"><em>ExtraOrdinary</em> <span class="spec-name-sub">(X.O.)</span> <span class="spec-grade-tag">AA—A</span></h3>
+    <p class="spec-tagline"><span class="lang-en">Top grade · light-roast drip</span><span class="lang-th th-text">เกรดสูงสุด · ดริปคั่วอ่อน</span></p>
+    <p class="spec-description"><span class="lang-en">Carefully selected ripe cherries, fully washed and gradual sun-dried in the forest valley — resulting in complex flavor and good body, most suitable for light-roast drip coffee.</span><span class="lang-th th-text">คัดสรรเชอร์รี่สุกอย่างพิถีพิถัน ล้างสะอาดและตากแดดในหุบเขาป่า — ได้รสชาติซับซ้อนและบอดี้ดี เหมาะที่สุดสำหรับกาแฟดริปคั่วอ่อน</span></p>
+    <div class="spec-roast" role="img" aria-label="Roast range from Cinnamon to City">
+      <div class="spec-roast-row"><div class="spec-roast-label"><span class="lang-en">Roast Range</span><span class="lang-th th-text">ระดับการคั่ว</span></div><div class="spec-roast-range">Cinnamon — City</div></div>
+      <div class="spec-roast-track"></div>
+      <div class="spec-roast-scale"><span class="active" style="left:0%">Cinnamon</span><span class="active" style="left:25%">Light</span><span class="active" style="left:50%">City</span><span style="left:75%">Medium</span><span style="left:100%;transform:translateX(-100%)">Full City</span></div>
+    </div>
+    <div class="spec-flavors-list"><span class="label">Notes</span><span class="lang-en">Brown sugar · orange blossom · sweet mandarin · lychee · peach</span><span class="lang-th th-text">บราวน์ชูการ์ · ดอกส้ม · แมนดารินหวาน · ลิ้นจี่ · พีช</span></div>
+    <p class="spec-cup-finish"><span class="lang-en">Soft body with juicy sweet finish.</span><span class="lang-th th-text">บอดี้นุ่มกับฟินิชหวานฉ่ำ</span></p>
+    <div class="spec-strip">
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Origin</span><span class="lang-th th-text">แหล่ง</span></div><div class="spec-strip-v"><span class="lang-en">Doi Tung</span><span class="lang-th th-text">ดอยตุง</span></div></div>
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Altitude</span><span class="lang-th th-text">ระดับความสูง</span></div><div class="spec-strip-v">1,200–1,400 m</div></div>
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Variety</span><span class="lang-th th-text">สายพันธุ์</span></div><div class="spec-strip-v">Catimor · Caturra · Catuai</div></div>
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Process</span><span class="lang-th th-text">กระบวนการ</span></div><div class="spec-strip-v"><span class="lang-en">Fully washed</span><span class="lang-th th-text">ล้างสะอาด</span></div></div>
+    </div>
+  </div>
+</article>
+
+<article class="spec-card" style="--roast-start:50%;--roast-end:100%">
+  <div class="label-panel lp-mid">
+    <div class="lp-head"><span class="lp-mark-b">N2G</span></div>
+    <div class="lp-body">
+      <div class="lp-name"><em>Special</em></div>
+      <div class="lp-rule"></div>
+      <p class="lp-flavors"><span class="lang-en">Caramel · palm sugar · osmanthus · passion fruit · dark chocolate</span><span class="lang-th th-text">คาราเมล · น้ำตาลปาล์ม · ออสแมนทัส · เสาวรส · ดาร์กช็อกโกแลต</span></p>
+    </div>
+    <div class="lp-foot"><div class="lp-foot-row"><span><span class="lang-en">Sample Full City roast · Fully washed</span><span class="lang-th th-text">ตัวอย่างคั่ว Full City · ล้างสะอาด</span></span><span><span class="lang-en">Chiang Rai, Thailand</span><span class="lang-th th-text">เชียงราย, ประเทศไทย</span></span></div></div>
+  </div>
+  <div class="spec-text">
+    <h3 class="spec-name"><em>Special</em> <span class="spec-grade-tag">AA—A</span></h3>
+    <p class="spec-tagline"><span class="lang-en">Drip &amp; espresso · versatile</span><span class="lang-th th-text">ดริปและเอสเพรสโซ่ · หลากหลาย</span></p>
+    <p class="spec-description"><span class="lang-en">Signature of forest coffee with complex flavor and good body — versatile, suitable for artisan roasters to create outstanding drip &amp; espresso coffee.</span><span class="lang-th th-text">ลายเซ็นของกาแฟป่าด้วยรสชาติซับซ้อนและบอดี้ดี — หลากหลาย เหมาะสำหรับช่างคั่วฝีมือดีในการสร้างกาแฟดริปและเอสเพรสโซ่ที่โดดเด่น</span></p>
+    <div class="spec-roast" role="img" aria-label="Roast range from City to Full City">
+      <div class="spec-roast-row"><div class="spec-roast-label"><span class="lang-en">Roast Range</span><span class="lang-th th-text">ระดับการคั่ว</span></div><div class="spec-roast-range">City — Full City</div></div>
+      <div class="spec-roast-track"></div>
+      <div class="spec-roast-scale"><span style="left:0%">Cinnamon</span><span style="left:25%">Light</span><span class="active" style="left:50%">City</span><span class="active" style="left:75%">Medium</span><span class="active" style="left:100%;transform:translateX(-100%)">Full City</span></div>
+    </div>
+    <div class="spec-flavors-list"><span class="label">Notes</span><span class="lang-en">Caramel · palm sugar · osmanthus · passion fruit · dark chocolate</span><span class="lang-th th-text">คาราเมล · น้ำตาลปาล์ม · ออสแมนทัส · เสาวรส · ดาร์กช็อกโกแลต</span></div>
+    <p class="spec-cup-finish"><span class="lang-en">Good body with long sweet finish.</span><span class="lang-th th-text">บอดี้ดีกับฟินิชหวานยาว</span></p>
+    <div class="spec-strip">
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Origin</span><span class="lang-th th-text">แหล่ง</span></div><div class="spec-strip-v"><span class="lang-en">Doi Tung</span><span class="lang-th th-text">ดอยตุง</span></div></div>
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Altitude</span><span class="lang-th th-text">ระดับความสูง</span></div><div class="spec-strip-v">1,200–1,400 m</div></div>
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Variety</span><span class="lang-th th-text">สายพันธุ์</span></div><div class="spec-strip-v">Catimor · Caturra · Catuai</div></div>
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Process</span><span class="lang-th th-text">กระบวนการ</span></div><div class="spec-strip-v"><span class="lang-en">Fully washed</span><span class="lang-th th-text">ล้างสะอาด</span></div></div>
+    </div>
+  </div>
+</article>
+
+<article class="spec-card" style="--roast-start:75%;--roast-end:100%">
+  <div class="label-panel lp-warm">
+    <div class="lp-head"><span class="lp-mark-b">N2G</span></div>
+    <div class="lp-body">
+      <div class="lp-name"><em>Classic</em></div>
+      <div class="lp-rule"></div>
+      <p class="lp-flavors"><span class="lang-en">Butterscotch · sweet orange · vanilla</span><span class="lang-th th-text">บัตเตอร์สก็อตช์ · ส้มหวาน · วานิลลา</span></p>
+    </div>
+    <div class="lp-foot"><div class="lp-foot-row"><span><span class="lang-en">Sample Medium roast · Fully washed</span><span class="lang-th th-text">ตัวอย่างคั่ว Medium · ล้างสะอาด</span></span><span><span class="lang-en">Chiang Rai, Thailand</span><span class="lang-th th-text">เชียงราย, ประเทศไทย</span></span></div></div>
+  </div>
+  <div class="spec-text">
+    <h3 class="spec-name"><em>Classic</em> <span class="spec-grade-tag"><span class="lang-en">Mixed</span><span class="lang-th th-text">มิกซ์</span></span></h3>
+    <p class="spec-tagline"><span class="lang-en">All roasts · drip &amp; espresso</span><span class="lang-th th-text">การคั่วทุกประเภท · ดริปและเอสเพรสโซ่</span></p>
+    <p class="spec-description"><span class="lang-en">Retaining its complex characters of forest coffee with a brighter flavor &amp; yet mellow body — suitable for all type of roasts for both drip and espresso.</span><span class="lang-th th-text">ยังคงคุณลักษณะซับซ้อนของกาแฟป่าด้วยรสชาติสดใสและบอดี้นุ่มนวล — เหมาะสำหรับการคั่วทุกประเภท ทั้งดริปและเอสเพรสโซ่</span></p>
+    <div class="spec-roast" role="img" aria-label="Roast range from Medium to Full City">
+      <div class="spec-roast-row"><div class="spec-roast-label"><span class="lang-en">Roast Range</span><span class="lang-th th-text">ระดับการคั่ว</span></div><div class="spec-roast-range">Medium — Full City</div></div>
+      <div class="spec-roast-track"></div>
+      <div class="spec-roast-scale"><span style="left:0%">Cinnamon</span><span style="left:25%">Light</span><span style="left:50%">City</span><span class="active" style="left:75%">Medium</span><span class="active" style="left:100%;transform:translateX(-100%)">Full City</span></div>
+    </div>
+    <div class="spec-flavors-list"><span class="label">Notes</span><span class="lang-en">Butterscotch · sweet orange · vanilla</span><span class="lang-th th-text">บัตเตอร์สก็อตช์ · ส้มหวาน · วานิลลา</span></div>
+    <p class="spec-cup-finish"><span class="lang-en">Mellow body with lingering sweet finish.</span><span class="lang-th th-text">บอดี้นุ่มนวลกับฟินิชหวานยาวนาน</span></p>
+    <div class="spec-strip">
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Origin</span><span class="lang-th th-text">แหล่ง</span></div><div class="spec-strip-v"><span class="lang-en">Doi Tung</span><span class="lang-th th-text">ดอยตุง</span></div></div>
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Altitude</span><span class="lang-th th-text">ระดับความสูง</span></div><div class="spec-strip-v">1,200–1,400 m</div></div>
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Variety</span><span class="lang-th th-text">สายพันธุ์</span></div><div class="spec-strip-v">Catimor · Caturra · Catuai</div></div>
+      <div class="spec-strip-i"><div class="spec-strip-k"><span class="lang-en">Process</span><span class="lang-th th-text">กระบวนการ</span></div><div class="spec-strip-v"><span class="lang-en">Fully washed</span><span class="lang-th th-text">ล้างสะอาด</span></div></div>
+    </div>
+  </div>
+</article>
 
 <!-- From estate to cup: copy only -->
 <div class="sec-pt-tight">
