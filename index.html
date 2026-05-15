@@ -488,16 +488,22 @@ body.thai .lang-en-inline{display:none}
 .label-panel .lp-body{flex:1}
 .label-panel::before{content:'';position:absolute;inset:0;background-image:radial-gradient(ellipse at 28% 18%,rgba(255,255,255,0.06) 0%,transparent 55%),radial-gradient(ellipse at 72% 82%,rgba(0,0,0,0.05) 0%,transparent 55%);pointer-events:none;z-index:0}
 .label-panel::after{content:'';position:absolute;inset:6px;border:1px solid currentColor;opacity:0.18;pointer-events:none;z-index:0}
-/* Spirits-luxe (X.O.) — deep green-black + gold ring + cream type, cognac-label feel */
-.label-panel.lp-light{background:linear-gradient(178deg,#1B2D22 0%,#0D1A11 100%);color:var(--cream)}
+/* Emerald jewel (X.O.) — saturated deep green + gold ring + gold SKU name */
+.label-panel.lp-light{background:linear-gradient(178deg,#0A5C3E 0%,#043624 100%);color:var(--cream)}
 .lp-light .lp-mark-b{border-color:var(--gold);color:var(--gold)}
 .lp-light::after{border-color:var(--gold);opacity:0.42}
-/* Forest (Special) */
-.label-panel.lp-mid{background:linear-gradient(178deg,#336046 0%,#244029 100%);color:var(--cream)}
-/* Cream + terra (Classic) */
-.label-panel.lp-warm{background:linear-gradient(178deg,#FCF6E8 0%,#F4EBD3 100%);color:var(--text)}
-.lp-warm .lp-mark-b{border-color:var(--terra);color:var(--terra)}
-.lp-warm .lp-rule{background:var(--terra);opacity:0.85}
+.lp-light .lp-name{color:var(--gold)}
+/* Buttercream (Special) — warm yellow + gold mark + gold SKU name + white inner frame */
+.label-panel.lp-mid{background:linear-gradient(178deg,#F8E9A8 0%,#EDD675 100%);color:#5A4327}
+.lp-mid .lp-mark-b{border-color:var(--gold);color:var(--gold)}
+.lp-mid::after{border-color:#fff;opacity:0.85}
+.lp-mid .lp-name{color:var(--gold)}
+/* Matte black (Classic) — solid black + gold ring + gold SKU name */
+.label-panel.lp-warm{background:#0E0E0E;color:var(--cream)}
+.lp-warm .lp-mark-b{border-color:var(--gold);color:var(--gold)}
+.lp-warm::after{border-color:var(--gold);opacity:0.42}
+.lp-warm .lp-rule{background:var(--gold);opacity:0.85}
+.lp-warm .lp-name{color:var(--gold)}
 
 .lp-head{display:flex;justify-content:center;align-items:center;position:relative;z-index:1}
 .lp-mark-b{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:50%;border:1.4px solid currentColor;font-family:'EB Garamond',serif;font-style:italic;font-size:13px;font-weight:500;letter-spacing:-0.015em;padding-top:1px;flex-shrink:0}
@@ -512,7 +518,7 @@ body.thai .lang-en-inline{display:none}
 .lp-flavors{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:500;font-size:13px;line-height:1.5;max-width:26ch;margin:0 auto;letter-spacing:0.005em}
 .lp-cup{position:relative;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:12px;line-height:1.45;max-width:24ch;margin:12px auto 0;padding:7px 0 0;opacity:0.88}
 .lp-cup::before{content:'';display:block;width:16px;height:1px;background:var(--gold);margin:0 auto 8px;opacity:0.7}
-.lp-warm .lp-cup::before{background:var(--terra)}
+.lp-warm .lp-cup::before{background:var(--gold)}
 
 .lp-foot{display:flex;flex-direction:column;gap:5px;padding-top:8px;position:relative;z-index:1}
 .lp-foot::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:currentColor;opacity:0.18}
@@ -555,12 +561,18 @@ body.thai .lang-en-inline{display:none}
 /* Compact label panel — homepage teaser (inside .prod-with-thumb) */
 .label-panel-c{position:relative;aspect-ratio:1;width:100%;max-width:120px;padding:10px 10px 9px;display:grid;grid-template-rows:auto 1fr auto;font-family:'EB Garamond',serif;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.08);isolation:isolate}
 .label-panel-c::after{content:'';position:absolute;inset:4px;border:1px solid currentColor;opacity:0.18;pointer-events:none;z-index:0}
-.label-panel-c.lp-light{background:linear-gradient(178deg,#1B2D22 0%,#0D1A11 100%);color:var(--cream)}
+.label-panel-c.lp-light{background:linear-gradient(178deg,#0A5C3E 0%,#043624 100%);color:var(--cream)}
 .label-panel-c.lp-light .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
 .label-panel-c.lp-light::after{border-color:var(--gold);opacity:0.42}
-.label-panel-c.lp-mid{background:linear-gradient(178deg,#336046 0%,#244029 100%);color:var(--cream)}
-.label-panel-c.lp-warm{background:linear-gradient(178deg,#FCF6E8 0%,#F4EBD3 100%);color:var(--text)}
-.label-panel-c.lp-warm .lpc-mark-b{border-color:var(--terra);color:var(--terra)}
+.label-panel-c.lp-light .lpc-name{color:var(--gold)}
+.label-panel-c.lp-mid{background:linear-gradient(178deg,#F8E9A8 0%,#EDD675 100%);color:#5A4327}
+.label-panel-c.lp-mid .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+.label-panel-c.lp-mid::after{border-color:#fff;opacity:0.85}
+.label-panel-c.lp-mid .lpc-name{color:var(--gold)}
+.label-panel-c.lp-warm{background:#0E0E0E;color:var(--cream)}
+.label-panel-c.lp-warm .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+.label-panel-c.lp-warm::after{border-color:var(--gold);opacity:0.42}
+.label-panel-c.lp-warm .lpc-name{color:var(--gold)}
 .lpc-head{position:relative;z-index:1;display:flex;justify-content:center;align-items:center}
 .lpc-mark-b{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;border:1px solid currentColor;font-family:'EB Garamond',serif;font-style:italic;font-size:9px;font-weight:500;letter-spacing:-0.02em;padding-top:1px}
 .lpc-body{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
