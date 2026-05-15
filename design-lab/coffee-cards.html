@@ -1382,6 +1382,7 @@ body{
       <a href="#today">Today</a>
       <a class="is-rec" href="#a">The specimen card</a>
       <a class="is-rec" href="#home">Homepage block</a>
+      <a href="#palette-v2">Palette refresh</a>
       <a href="#alts">Considered alternatives</a>
       <a href="#tokens">Tokens & swap-points</a>
     </nav>
@@ -1713,6 +1714,475 @@ body{
         </div>
       </article>
     </div>
+  </section>
+
+
+  <!-- ===================================================
+       Palette refresh — May 2026
+       Ya's direction: X.O. dark green + gold,
+                       Special yellow/white + gold,
+                       Classic black/brown + gold.
+       Self-contained — scoped under #palette-v2 so it
+       does not affect the other variants on this page.
+       =================================================== -->
+  <style>
+    #palette-v2 .pv-intro{
+      font-family:'Karla',sans-serif;
+      font-size:14px;line-height:1.6;color:var(--text3);
+      max-width:680px;margin-bottom:36px;
+    }
+    #palette-v2 .pv-intro b{color:var(--text);font-weight:500}
+    #palette-v2 .pv-row{margin-bottom:48px}
+    #palette-v2 .pv-row-h{
+      display:flex;align-items:baseline;gap:14px;
+      margin-bottom:6px;
+    }
+    #palette-v2 .pv-row-h h3{
+      font-family:'Cormorant Garamond',serif;
+      font-style:italic;font-weight:400;
+      font-size:26px;line-height:1.1;color:var(--text);
+    }
+    #palette-v2 .pv-row-h .pv-row-q{
+      font-family:'Karla',sans-serif;
+      font-size:11px;letter-spacing:0.18em;text-transform:uppercase;
+      color:var(--green);
+    }
+    #palette-v2 .pv-row-note{
+      font-family:'Karla',sans-serif;
+      font-size:13px;line-height:1.55;color:var(--text3);
+      max-width:600px;margin-bottom:20px;
+    }
+    #palette-v2 .pv-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,260px));
+      gap:28px;
+      align-items:start;
+    }
+    @media(max-width:560px){
+      #palette-v2 .pv-grid{grid-template-columns:1fr}
+    }
+    #palette-v2 .pv-card{display:flex;flex-direction:column}
+    #palette-v2 .pv-card .label-panel-c{margin-bottom:10px}
+    #palette-v2 .pv-cap{
+      font-family:'Karla',sans-serif;
+      font-size:12px;font-weight:500;
+      letter-spacing:0.08em;text-transform:uppercase;
+      color:var(--text);margin-bottom:4px;
+    }
+    #palette-v2 .pv-why{
+      font-family:'Karla',sans-serif;
+      font-size:13px;line-height:1.5;color:var(--text3);
+    }
+
+    /* ---------- X.O. — deep green-black + gold ---------- */
+    #palette-v2 .pv2-xo-1,
+    #palette-v2 .pv2-xo-2{
+      background:linear-gradient(178deg,#1B2D22 0%,#0D1A11 100%);
+    }
+    /* V1 — gold mark + gold name; body stays cream */
+    #palette-v2 .pv2-xo-1{color:var(--cream)}
+    #palette-v2 .pv2-xo-1 .lpc-name{color:var(--gold)}
+    #palette-v2 .pv2-xo-1 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-xo-1::after{border-color:var(--gold);opacity:0.42}
+    /* V2 — everything in gold */
+    #palette-v2 .pv2-xo-2{color:var(--gold)}
+    #palette-v2 .pv2-xo-2 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-xo-2::after{border-color:var(--gold);opacity:0.42}
+
+    /* ---------- Special — yellow + white + gold ---------- */
+    /* V1 — pale champagne yellow */
+    #palette-v2 .pv2-sp-1{
+      background:linear-gradient(178deg,#F0E4B8 0%,#E6D69A 100%);
+      color:#5A4327;
+    }
+    #palette-v2 .pv2-sp-1 .lpc-name{color:var(--gold)}
+    #palette-v2 .pv2-sp-1 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-sp-1::after{border-color:#fff;opacity:0.85}
+    /* V2 — warmer cream-yellow (more buttercream) */
+    #palette-v2 .pv2-sp-2{
+      background:linear-gradient(178deg,#F8E9A8 0%,#EDD675 100%);
+      color:#5A4327;
+    }
+    #palette-v2 .pv2-sp-2 .lpc-name{color:var(--gold)}
+    #palette-v2 .pv2-sp-2 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-sp-2::after{border-color:#fff;opacity:0.85}
+
+    /* ---------- Classic — black / brown + gold ---------- */
+    /* V1 — solid matte black */
+    #palette-v2 .pv2-cl-1{
+      background:#0E0E0E;
+      color:var(--cream);
+    }
+    #palette-v2 .pv2-cl-1 .lpc-name{color:var(--gold)}
+    #palette-v2 .pv2-cl-1 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-cl-1::after{border-color:var(--gold);opacity:0.42}
+    /* V2 — deep espresso brown */
+    #palette-v2 .pv2-cl-2{
+      background:linear-gradient(178deg,#3D2614 0%,#2A1A0E 100%);
+      color:var(--cream);
+    }
+    #palette-v2 .pv2-cl-2 .lpc-name{color:var(--gold)}
+    #palette-v2 .pv2-cl-2 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-cl-2::after{border-color:var(--gold);opacity:0.42}
+    /* V3 — oxblood / wine */
+    #palette-v2 .pv2-cl-3{
+      background:linear-gradient(178deg,#5C1F1F 0%,#3A0F0F 100%);
+      color:var(--cream);
+    }
+    #palette-v2 .pv2-cl-3 .lpc-name{color:var(--gold)}
+    #palette-v2 .pv2-cl-3 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-cl-3::after{border-color:var(--gold);opacity:0.42}
+
+    /* ---------- Copper system — same panels, copper instead of gold ---------- */
+    /* Copper token (prototype only): #B87333 */
+    #palette-v2 .pv2-cu-xo{
+      background:linear-gradient(178deg,#1B2D22 0%,#0D1A11 100%);
+      color:var(--cream);
+    }
+    #palette-v2 .pv2-cu-xo .lpc-name{color:#B87333}
+    #palette-v2 .pv2-cu-xo .lpc-mark-b{border-color:#B87333;color:#B87333}
+    #palette-v2 .pv2-cu-xo::after{border-color:#B87333;opacity:0.5}
+    #palette-v2 .pv2-cu-sp{
+      background:linear-gradient(178deg,#F0E4B8 0%,#E6D69A 100%);
+      color:#5A4327;
+    }
+    #palette-v2 .pv2-cu-sp .lpc-name{color:#B87333}
+    #palette-v2 .pv2-cu-sp .lpc-mark-b{border-color:#B87333;color:#B87333}
+    #palette-v2 .pv2-cu-sp::after{border-color:#fff;opacity:0.85}
+    #palette-v2 .pv2-cu-cl{
+      background:linear-gradient(178deg,#3D2614 0%,#2A1A0E 100%);
+      color:var(--cream);
+    }
+    #palette-v2 .pv2-cu-cl .lpc-name{color:#B87333}
+    #palette-v2 .pv2-cu-cl .lpc-mark-b{border-color:#B87333;color:#B87333}
+    #palette-v2 .pv2-cu-cl::after{border-color:#B87333;opacity:0.5}
+
+    /* 3-column variant for rows showing 3 options or all SKUs */
+    #palette-v2 .pv-grid-3{
+      grid-template-columns:repeat(3, minmax(0, 220px));
+    }
+    @media(max-width:780px){
+      #palette-v2 .pv-grid-3{grid-template-columns:repeat(2, minmax(0, 220px))}
+    }
+    @media(max-width:560px){
+      #palette-v2 .pv-grid-3{grid-template-columns:1fr}
+    }
+    /* 4-column variant for rows showing 4 panel options */
+    #palette-v2 .pv-grid-4{
+      grid-template-columns:repeat(4, minmax(0, 180px));
+    }
+    @media(max-width:960px){
+      #palette-v2 .pv-grid-4{grid-template-columns:repeat(2, minmax(0, 220px))}
+    }
+    @media(max-width:560px){
+      #palette-v2 .pv-grid-4{grid-template-columns:1fr}
+    }
+
+    /* ---------- X.O. alternative panels (all with gold name) ---------- */
+    /* V3 — pure ink black */
+    #palette-v2 .pv2-xo-3{
+      background:linear-gradient(178deg,#0F0F0F 0%,#050505 100%);
+      color:var(--cream);
+    }
+    #palette-v2 .pv2-xo-3 .lpc-name{color:var(--gold)}
+    #palette-v2 .pv2-xo-3 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-xo-3::after{border-color:var(--gold);opacity:0.42}
+    /* V4 — deep emerald jewel */
+    #palette-v2 .pv2-xo-4{
+      background:linear-gradient(178deg,#0A5C3E 0%,#043624 100%);
+      color:var(--cream);
+    }
+    #palette-v2 .pv2-xo-4 .lpc-name{color:var(--gold)}
+    #palette-v2 .pv2-xo-4 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-xo-4::after{border-color:var(--gold);opacity:0.42}
+    /* V5 — midnight navy */
+    #palette-v2 .pv2-xo-5{
+      background:linear-gradient(178deg,#0F2240 0%,#061025 100%);
+      color:var(--cream);
+    }
+    #palette-v2 .pv2-xo-5 .lpc-name{color:var(--gold)}
+    #palette-v2 .pv2-xo-5 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-xo-5::after{border-color:var(--gold);opacity:0.42}
+    /* V6 — cream parchment (inversion — light panel with gold typography) */
+    #palette-v2 .pv2-xo-6{
+      background:linear-gradient(178deg,#F5EBC8 0%,#E8D89E 100%);
+      color:#3A2E1A;
+    }
+    #palette-v2 .pv2-xo-6 .lpc-name{color:var(--gold)}
+    #palette-v2 .pv2-xo-6 .lpc-mark-b{border-color:var(--gold);color:var(--gold)}
+    #palette-v2 .pv2-xo-6::after{border-color:var(--gold);opacity:0.55}
+  </style>
+
+  <section class="variant" id="palette-v2">
+    <div class="variant-head">
+      <div class="variant-tag"><span class="pill pill-warn">Exploring</span></div>
+      <div>
+        <h2 class="variant-h">Palette refresh <em>· May 2026</em></h2>
+        <p class="variant-note">
+          Ya's direction: <b>X.O. dark green + gold</b>, <b>Special yellow/white + gold</b>, <b>Classic black/brown + gold</b>. Trying gold first (rose-gold to follow if Ya wants). Each row below answers one open question; pick a winner per row.
+        </p>
+      </div>
+    </div>
+
+    <!-- X.O. — type-treatment question -->
+    <div class="pv-row">
+      <div class="pv-row-h">
+        <h3>X.O. <em>— deep green-black</em></h3>
+        <span class="pv-row-q">Question: how much gold?</span>
+      </div>
+      <p class="pv-row-note">Panel color is settled (already live). Open question is whether body text should stay neutral cream or also be gold. Gold body type feels more "luxe spirits label" but loses legibility at small sizes.</p>
+      <div class="pv-grid">
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-xo-1">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>X.O.</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Cinnamon — City</div>
+            </div>
+          </div>
+          <div class="pv-cap">A · Gold name only</div>
+          <p class="pv-why">Mark and SKU name in gold; foot copy stays cream for legibility. Closer to today's card — the safest variant.</p>
+        </div>
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-xo-2">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>X.O.</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Cinnamon — City</div>
+            </div>
+          </div>
+          <div class="pv-cap">B · All gold</div>
+          <p class="pv-why">Mark, SKU name, <em>and</em> foot copy all gold. Reads more like a vintage cognac label. Foot text gets thin at small sizes — watch on mobile.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- X.O. — alternative panel colors (all with gold name) -->
+    <div class="pv-row">
+      <div class="pv-row-h">
+        <h3>X.O. <em>— alternative panels</em></h3>
+        <span class="pv-row-q">Question: a different dark?</span>
+      </div>
+      <p class="pv-row-note">All four use the gold-name-only treatment so only the panel color varies. Ink black is the cleanest "spirits cellar"; emerald keeps the green family but more jewel-toned; navy pulls the lineup off green entirely; parchment is the inversion — light panel, heavy gold typography, like a vintage cognac label.</p>
+      <div class="pv-grid pv-grid-4">
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-xo-3">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>X.O.</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Cinnamon — City</div>
+            </div>
+          </div>
+          <div class="pv-cap">C · Ink black</div>
+          <p class="pv-why">Pure black panel, no green undertone. Cleaner "spirits cellar / tuxedo" register than the current green-black. Most contrast with the gold.</p>
+        </div>
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-xo-4">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>X.O.</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Cinnamon — City</div>
+            </div>
+          </div>
+          <div class="pv-cap">D · Emerald jewel</div>
+          <p class="pv-why">Stays in the green family but more saturated and vibrant — reads "treasure / heirloom" rather than "forest at dusk." Brighter on a shelf.</p>
+        </div>
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-xo-5">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>X.O.</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Cinnamon — City</div>
+            </div>
+          </div>
+          <div class="pv-cap">E · Midnight navy</div>
+          <p class="pv-why">Totally different dark — "classic prestige" register (Hermès / vintage menu). Pulls the lineup away from green entirely; pairs nicely with the yellow Special.</p>
+        </div>
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-xo-6">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>X.O.</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Cinnamon — City</div>
+            </div>
+          </div>
+          <div class="pv-cap">F · Cream parchment</div>
+          <p class="pv-why">Inverts the direction — light aged-paper panel with gold typography. Vintage cognac label energy. Biggest shelf differentiation; biggest pivot from current.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Special — yellow-shade question -->
+    <div class="pv-row">
+      <div class="pv-row-h">
+        <h3>Special <em>— yellow + white + gold</em></h3>
+        <span class="pv-row-q">Question: which yellow?</span>
+      </div>
+      <p class="pv-row-note">White inner frame on both, gold mark and gold SKU name on both. Difference is the panel's yellow tone — pale champagne reads understated/premium, warmer buttercream reads brighter/cheerful. "All gold" isn't shown here because gold on yellow disappears.</p>
+      <div class="pv-grid">
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-sp-1">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>Special</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">City — Full City</div>
+            </div>
+          </div>
+          <div class="pv-cap">A · Pale champagne</div>
+          <p class="pv-why">Muted, dessert-wine yellow. Sits closer in tone to the X.O. and Classic panels — feels like one family. White frame keeps it crisp.</p>
+        </div>
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-sp-2">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>Special</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">City — Full City</div>
+            </div>
+          </div>
+          <div class="pv-cap">B · Buttercream</div>
+          <p class="pv-why">Brighter, warmer, more "honey." More visible on the shelf next to the two dark panels. Risk: feels slightly more retail/bakery than spirits.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Classic — color question -->
+    <div class="pv-row">
+      <div class="pv-row-h">
+        <h3>Classic <em>— black / brown / wine</em></h3>
+        <span class="pv-row-q">Question: which dark?</span>
+      </div>
+      <p class="pv-row-note">Gold mark + gold SKU name on all three. Solid matte black reads "wine cellar / tuxedo"; espresso brown reads "coffee bean / leather"; oxblood/wine reads "cognac bottle / aged spirit." Black is the most dramatic, brown ties back to the product, oxblood gives the lineup a "wine-shop family" feel alongside the green and yellow.</p>
+      <div class="pv-grid pv-grid-3">
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-cl-1">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>Classic</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Medium — Full City</div>
+            </div>
+          </div>
+          <div class="pv-cap">A · Solid matte black</div>
+          <p class="pv-why">Most dramatic contrast against the gold. Reads as the "premium-most" SKU on the shelf, which may or may not be the intent (Classic is the everyday lot, not the rare one).</p>
+        </div>
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-cl-2">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>Classic</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Medium — Full City</div>
+            </div>
+          </div>
+          <div class="pv-cap">B · Espresso brown</div>
+          <p class="pv-why">Warmer, more "actual roasted coffee." Less stark than black, ties the lineup back to the product. Gold still reads cleanly on the brown.</p>
+        </div>
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-cl-3">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>Classic</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Medium — Full City</div>
+            </div>
+          </div>
+          <div class="pv-cap">C · Oxblood / wine</div>
+          <p class="pv-why">Deep burgundy. Reads "cognac bottle / aged spirit" — pairs with the green X.O. and yellow Special as a wine-shop family. Warmer than black, more distinctive than brown.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Copper system — substitute copper for gold across all three -->
+    <div class="pv-row">
+      <div class="pv-row-h">
+        <h3>Copper instead of gold <em>— system swap</em></h3>
+        <span class="pv-row-q">Question: which metal?</span>
+      </div>
+      <p class="pv-row-note">Same panel colors as the recommended variants above, but the metallic accent is <b>copper (#B87333)</b> instead of gold. Copper is more "artisan roaster / cuprum kettle," less "spirits cellar." Genuinely coffee-native — copper kettles and roasters live in the same shops as these beans. Whole lineup with the metal swapped is shown below.</p>
+      <div class="pv-grid pv-grid-3">
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-cu-xo">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>X.O.</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Cinnamon — City</div>
+            </div>
+          </div>
+          <div class="pv-cap">X.O. · Copper</div>
+          <p class="pv-why">Same deep green-black panel. Copper reads warmer and more orange than gold against the dark green — slightly more "kettle / hammered metal" than "ingot / gilt."</p>
+        </div>
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-cu-sp">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>Special</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">City — Full City</div>
+            </div>
+          </div>
+          <div class="pv-cap">Special · Copper</div>
+          <p class="pv-why">Champagne yellow panel. Copper actually reads <em>better</em> on yellow than gold does — more orange contrast vs the yellow base. Possibly the strongest argument for copper.</p>
+        </div>
+
+        <div class="pv-card">
+          <div class="label-panel-c pv2-cu-cl">
+            <div class="lpc-head"><span class="lpc-mark-b">N2G</span></div>
+            <div class="lpc-body">
+              <div class="lpc-name"><em>Classic</em></div>
+            </div>
+            <div class="lpc-foot">
+              <div class="lpc-foot-row">Medium — Full City</div>
+            </div>
+          </div>
+          <div class="pv-cap">Classic · Copper</div>
+          <p class="pv-why">Shown on espresso brown (V2 above). Copper-on-brown is the most "monochrome" of the three — same family of warm earth tones. Quiet, grounded.</p>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="pv-row-note" style="max-width:680px;margin-top:8px">
+      <b style="color:var(--text);font-weight:500">Once Ya picks per row</b>, we promote the winning combination to the live <code>.label-panel</code> / <code>.label-panel-c</code> classes in <code>index.html</code> (lp-light / lp-mid / lp-warm) and the Coffee &amp; Homepage sections both update at once.
+    </p>
   </section>
 
 
